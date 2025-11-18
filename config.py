@@ -11,22 +11,33 @@ FEED_URL = "https://www.empleospublicos.cl/pub/feed/feed.aspx?i=334"
 
 # Archivo donde guardamos los IDs ya vistos para no repetir notificaciones
 STATE_FILE = "ep_state.json"
-
-# Palabras que indican que el cargo está relacionado con informática / TI.
-# Si quieres que te lleguen TODOS los cargos (menos los de salud),
-# puedes dejar esta lista vacía: INCLUDE_KEYWORDS = []
+# Palabras que indican que el cargo está relacionado con:
+# - Informática / TI
+# - Compras públicas / abastecimiento / logística
+# - Educación parvularia
+#
+# OJO: se buscan como "subcadenas" dentro del texto.
 INCLUDE_KEYWORDS = [
-    # Informática general
-    "informática", "informatica", "computación", "computacion",
-    "tecnologías de la información", "tic", "ti",
+    # --- Informática / TI ---
+    "informática", "informatica",
+    "informático", "informatico",
+    "computación", "computacion",
+    "tecnologías de la información", "tecnologias de la informacion",
+    "gobierno digital",
+    "transformación digital", "transformacion digital",
 
     # Cargos típicos TI
     "analista de sistemas", "analista programador",
-    "ingeniero en informática", "ingeniero de sistemas",
-    "soporte informático", "soporte tecnico", "soporte técnico",
+    "ingeniero en informática", "ingeniero en informatica",
+    "ingeniero informático", "ingeniero informatico",
+    "ingeniero de sistemas",
+    "soporte informático", "soporte informatico",
+    "soporte tecnico", "soporte técnico",
     "administrador de sistemas", "administrador de redes",
-    "jefe de informática", "jefe de ti",
-    "coordinador de informática", "coordinador ti",
+    "jefe de informática", "jefe de informatica",
+    "jefe de ti",
+    "coordinador de informática", "coordinador de informatica",
+    "coordinador ti",
 
     # Desarrollo de software
     "desarrollador", "programador", "desarrollo de software",
@@ -38,16 +49,31 @@ INCLUDE_KEYWORDS = [
 
     # Infraestructura / seguridad
     "redes", "infraestructura ti",
-    "seguridad informática", "ciberseguridad", "firewall", "servidores",
+    "seguridad informática", "seguridad informatica",
+    "ciberseguridad", "firewall", "servidores",
     "virtualización", "virtualizacion",
-
-    # Modernización / digitalización
-    "transformación digital", "transformacion digital",
-    "gobierno digital", "modernización", "modernizacion",
-    "automatización", "automatizacion",
 
     # Nube / DevOps
     "aws", "azure", "cloud", "nube", "devops",
+
+    # --- Compras públicas / abastecimiento / logística ---
+    "compras públicas", "compras publicas",
+    "encargado de compras", "encargada de compras",
+    "encargado de compras públicas", "encargada de compras publicas",
+    "encargado de adquisiciones", "encargada de adquisiciones",
+    "jefe de abastecimiento", "encargado de abastecimiento",
+    "unidad de abastecimiento",
+    "logística", "logistica",
+    "gestión de abastecimiento", "gestion de abastecimiento",
+    "mercado público", "mercado publico",
+    "chilecompra",
+
+    # --- Educación parvularia ---
+    "educadora de párvulos", "educadora de parvulos",
+    "educador de párvulos", "educador de parvulos",
+    "educación parvularia", "educacion parvularia",
+    "parvulario", "parvularia",
+    "párvulo", "parvulo", "párvulos", "parvulos",
 ]
 
 # Palabras que indican que es un profesional de salud (no queremos estos cargos).

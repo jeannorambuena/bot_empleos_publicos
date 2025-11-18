@@ -1,282 +1,588 @@
-import os
-import json
-import csv
-from datetime import datetime
+"""
+Bot de Empleos Públicos (versión HTML + MySQL)
 
-import feedparser
+- Lee la página "feed" HTML de Empleos Públicos (no es RSS real) usando feed_html.get_entries().
+- Aplica filtros INCLUDE / EXCLUDE (config.py).
+- Guarda / actualiza concursos en MySQL.
+- Genera:
+    - concursos_relevantes.csv
+    - reporte_concursos.html
+- Envía un correo con el resumen (si hay resultados).
+"""
+
+import csv
+import os
+import webbrowser
+from datetime import datetime
+import smtplib
+from email.mime.multipart import MIMEMultipart
+from email.mime.text import MIMEText
+
+from dotenv import load_dotenv
 
 from config import (
     FEED_URL,
-    STATE_FILE,
     INCLUDE_KEYWORDS,
     EXCLUDE_KEYWORDS,
+    EMAIL_SUBJECT,
 )
+from db_utils import upsert_concurso
+from feed_html import get_entries
 
 
-def load_state() -> set:
+# -------------------------------
+# Utilidades de scraping del "feed"
+# -------------------------------
+
+
+def fetch_html_entries():
     """
-    Carga el conjunto de IDs de concursos ya vistos desde STATE_FILE.
-    Si el archivo no existe o hay error, devuelve un conjunto vacío.
+    Usa feed_html.get_entries() para leer la página HTML "feed" de Empleos Públicos
+    y adaptarla al formato esperado por el resto del script:
+
+    Cada dict devuelto tiene:
+    - title
+    - link
+    - published (por ahora None o lo que rellene feed_html)
+    - raw_text (texto completo o resumen de la "tarjeta")
     """
-    if not os.path.exists(STATE_FILE):
-        return set()
+    print(f"Descargando feed HTML desde: {FEED_URL}")
+    raw_entries = get_entries()
+    entries = []
 
-    try:
-        with open(STATE_FILE, "r", encoding="utf-8") as f:
-            data = json.load(f)
-        return set(data)
-    except Exception:
-        # Si hay algún problema leyendo el JSON, empezamos desde cero.
-        return set()
-
-
-def save_state(ids: set) -> None:
-    """Guarda el conjunto de IDs de concursos ya vistos en STATE_FILE."""
-    with open(STATE_FILE, "w", encoding="utf-8") as f:
-        json.dump(list(ids), f, ensure_ascii=False, indent=2)
-
-
-def es_relevante(texto: str) -> bool:
-    """
-    Determina si un concurso es relevante según el texto (título + resumen).
-
-    Reglas:
-    - Si contiene alguna palabra de EXCLUDE_KEYWORDS (profesiones de salud) -> False.
-    - Si INCLUDE_KEYWORDS está vacío -> True (acepta todo lo que no sea salud).
-    - Si INCLUDE_KEYWORDS tiene elementos -> True sólo si aparece al menos
-      una palabra de inclusión.
-    """
-    t = texto.lower()
-
-    # 1) Excluir profesionales de salud
-    if any(pal.lower() in t for pal in EXCLUDE_KEYWORDS):
-        return False
-
-    # 2) Si no hay palabras de inclusión, aceptamos todo lo no-salud
-    if not INCLUDE_KEYWORDS:
-        return True
-
-    # 3) Requiere al menos una palabra de inclusión
-    return any(pal.lower() in t for pal in INCLUDE_KEYWORDS)
-
-
-def save_csv(entries: list, filename: str) -> None:
-    """
-    Guarda los concursos relevantes en un archivo CSV.
-    Columnas: titulo, link, fecha_publicacion, es_nuevo
-    """
-    fieldnames = ["titulo", "link", "fecha_publicacion", "es_nuevo"]
-
-    with open(filename, "w", newline="", encoding="utf-8") as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames)
-        writer.writeheader()
-
-        for e in entries:
-            writer.writerow(
-                {
-                    "titulo": e["title"],
-                    "link": e["link"],
-                    "fecha_publicacion": e["published"],
-                    "es_nuevo": "sí" if e["nuevo"] else "no",
-                }
-            )
-
-
-def save_html(entries: list, filename: str) -> None:
-    """
-    Genera un archivo HTML responsivo con la tabla de concursos relevantes.
-    Cada fila muestra: título (con enlace), etiqueta 'Nuevo' cuando corresponda,
-    fecha de publicación.
-    """
-    now_str = datetime.now().strftime("%Y-%m-%d %H:%M")
-
-    rows = []
-    for e in entries:
-        title = e["title"]
-        link = e["link"]
-        published = e["published"]
-        badge = (
-            "<span class='badge badge-new'>Nuevo</span>"
-            if e["nuevo"]
-            else ""
+    for e in raw_entries:
+        entries.append(
+            {
+                "title": e["title"],
+                "link": e["link"],
+                "published": e.get("published"),
+                "raw_text": e.get("summary", ""),
+            }
         )
 
-        rows.append(
+    print(f"Entradas detectadas en el HTML: {len(entries)}")
+    return entries
+
+
+# -------------------------------
+# Filtros de relevancia
+# -------------------------------
+
+# (Por ahora dejamos definidas regiones por si luego queremos usarlas con datos
+# de la ficha detallada, pero NO se usan en es_relevante.)
+
+REGION_KEYWORDS = [
+    # Región Metropolitana
+    "región metropolitana de santiago",
+    "region metropolitana de santiago",
+    "región metropolitana",
+    "region metropolitana",
+
+    # Región de O'Higgins
+    "región de o'higgins",
+    "region de o'higgins",
+    "región del libertador general bernardo o'higgins",
+    "region del libertador general bernardo o'higgins",
+
+    # Región del Maule
+    "región del maule",
+    "region del maule",
+]
+
+
+def esta_en_region_permitida(entry) -> bool:
+    """
+    Devuelve True solo si el concurso menciona alguna de las regiones permitidas
+    o si es explícitamente para 'todas las regiones' / 'todo el país'.
+
+    OJO: con el feed HTML estándar, normalmente NO viene la región,
+    así que esta función solo será útil cuando tengamos más texto.
+    """
+    texto = entry["raw_text"].lower()
+
+    # Concursos nacionales
+    if "todas las regiones" in texto or "todo el país" in texto or "todo el pais" in texto:
+        return True
+
+    for region in REGION_KEYWORDS:
+        if region in texto:
+            return True
+
+    return False
+
+
+def es_relevante(entry) -> bool:
+    """
+    Aplica la lógica INCLUDE / EXCLUDE usando título + texto completo.
+    - Si alguna palabra EXCLUDE aparece, se descarta.
+    - Si INCLUDE_KEYWORDS está vacío -> se acepta todo (menos EXCLUDE).
+    - Si INCLUDE_KEYWORDS tiene cosas -> se acepta solo si alguna aparece
+      o si el texto contiene 'TI' como sigla en mayúsculas.
+
+    Por ahora NO filtramos por región, porque el feed no trae esa información
+    de forma confiable. Más adelante podremos hacerlo usando los detalles
+    guardados en la base de datos.
+    """
+    texto = entry["title"] + " " + entry["raw_text"]
+    texto_lower = texto.lower()
+
+    # 1) Excluir profesiones de salud u otros términos no deseados
+    for bad in EXCLUDE_KEYWORDS:
+        if bad.lower() in texto_lower:
+            return False
+
+    # 2) Palabras clave positivas (TI, compras, educación parvularia, etc.)
+    if not INCLUDE_KEYWORDS:
+        tiene_match = True
+    else:
+        tiene_match = any(
+            good.lower() in texto_lower for good in INCLUDE_KEYWORDS)
+
+        # Caso especial: 'TI' como sigla en mayúsculas (Tecnologías de la Información)
+        if not tiene_match:
+            patrones_ti = [" TI ", " TI,", " TI.", "(TI)", "[TI]", "TI "]
+            for p in patrones_ti:
+                if p in texto:
+                    tiene_match = True
+                    break
+
+    if not tiene_match:
+        return False
+
+    # 3) (Desactivado por ahora) Filtrar por región
+    # if not esta_en_region_permitida(entry):
+    #     return False
+
+    return True
+
+
+# -------------------------------
+# Email
+# -------------------------------
+
+
+def send_email(subject: str, html_body: str, plain_body: str):
+    """
+    Envía un correo usando los datos SMTP del .env.
+    Si falta algo crítico, muestra un mensaje y no envía.
+    """
+    host = os.getenv("SMTP_HOST")
+    port = int(os.getenv("SMTP_PORT", "465"))
+    user = os.getenv("SMTP_USER")
+    password = os.getenv("SMTP_PASS")
+    to_addr = os.getenv("MAIL_TO") or user
+
+    if not (host and user and password and to_addr):
+        print("SMTP no configurado completamente. No se envía correo.")
+        return
+
+    msg = MIMEMultipart("alternative")
+    msg["Subject"] = subject
+    msg["From"] = user
+    msg["To"] = to_addr
+
+    part1 = MIMEText(plain_body, "plain", "utf-8")
+    part2 = MIMEText(html_body, "html", "utf-8")
+
+    msg.attach(part1)
+    msg.attach(part2)
+
+    print(f"Enviando correo a {to_addr}...")
+    with smtplib.SMTP_SSL(host, port) as server:
+        server.login(user, password)
+        server.sendmail(user, [to_addr], msg.as_string())
+    print("Correo enviado.")
+
+
+# -------------------------------
+# Reportes (CSV + HTML)
+# -------------------------------
+
+
+def generar_csv(concursos_relevantes, filename="concursos_relevantes.csv"):
+    """
+    Genera un CSV con los concursos relevantes.
+    """
+    with open(filename, "w", newline="", encoding="utf-8") as f:
+        writer = csv.writer(f, delimiter=";")
+        writer.writerow(["Titulo", "Link", "Fecha_Publicacion", "Es_Nuevo"])
+        for c in concursos_relevantes:
+            pub = c["published"]
+            pub_str = pub.strftime(
+                "%Y-%m-%d") if isinstance(pub, datetime) else ""
+            writer.writerow(
+                [
+                    c["title"],
+                    c["link"],
+                    pub_str,
+                    "SI" if c["es_nuevo"] else "NO",
+                ]
+            )
+
+    print(f"CSV generado: {filename}")
+
+
+def generar_html(concursos_relevantes, filename="reporte_concursos.html"):
+    """
+    Genera un HTML responsivo y más agradable visualmente.
+    - Muestra título (link), badge NUEVO y un resumen.
+    - La tabla es desplazable horizontalmente en pantallas pequeñas.
+    """
+    filas_html = []
+    for c in concursos_relevantes:
+        pub = c["published"]
+        pub_str = pub.strftime("%Y-%m-%d") if isinstance(pub, datetime) else ""
+        es_nuevo = c["es_nuevo"]
+        clase = "nuevo" if es_nuevo else ""
+        badge_nuevo = '<span class="badge badge-new">Nuevo</span>' if es_nuevo else ""
+        resumen = (c.get("raw_text") or "").replace("\n", " ")
+
+        filas_html.append(
             f"""
-            <tr>
-                <td>
-                    <a href="{link}" target="_blank">{title}</a>
-                    {badge}
+            <tr class="{clase}">
+                <td class="title-cell">
+                    <a href="{c['link']}" target="_blank" rel="noopener noreferrer">
+                        {c['title']}
+                    </a>
+                    {badge_nuevo}
+                    <div class="summary">{resumen}</div>
                 </td>
-                <td>{published}</td>
+                <td class="date-cell">{pub_str}</td>
             </tr>
             """
         )
 
-    rows_html = "\n".join(rows)
+    if not filas_html:
+        cuerpo_tabla = """
+            <tr>
+                <td colspan="2" class="empty">
+                    No hay concursos relevantes para mostrar.
+                </td>
+            </tr>
+        """
+    else:
+        cuerpo_tabla = "\n".join(filas_html)
 
-    html = f"""<!DOCTYPE html>
+    html = f"""<!doctype html>
 <html lang="es">
 <head>
     <meta charset="utf-8">
-    <title>Concursos públicos relevantes (TI)</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Reporte de Concursos Relevantes</title>
     <style>
+        :root {{
+            --bg-body: #f4f6fb;
+            --bg-card: #ffffff;
+            --bg-header: #1f2937;
+            --bg-header-light: #374151;
+            --border-soft: #e5e7eb;
+            --text-main: #111827;
+            --text-muted: #6b7280;
+            --accent: #2563eb;
+            --accent-soft: #dbeafe;
+            --badge-new-bg: #dc2626;
+            --badge-new-text: #ffffff;
+        }}
+
+        * {{
+            box-sizing: border-box;
+        }}
+
         body {{
-            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
             margin: 0;
-            padding: 1rem;
-            background: #f5f7fa;
+            padding: 0;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+            background: radial-gradient(circle at top left, #e0f2fe, #f9fafb 40%, #e5e7eb 100%);
+            color: var(--text-main);
         }}
-        .container {{
-            max-width: 960px;
-            margin: 0 auto;
-            background: #ffffff;
-            padding: 1rem 1.5rem;
-            border-radius: 12px;
-            box-shadow: 0 4px 14px rgba(0,0,0,0.08);
+
+        .page-wrapper {{
+            min-height: 100vh;
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+            padding: 24px 12px;
         }}
-        h1 {{
+
+        .card {{
+            width: 100%;
+            max-width: 1200px;
+            background: var(--bg-card);
+            border-radius: 16px;
+            box-shadow: 0 18px 40px rgba(15, 23, 42, 0.18);
+            overflow: hidden;
+            border: 1px solid rgba(148, 163, 184, 0.35);
+        }}
+
+        .card-header {{
+            background: linear-gradient(135deg, #1d4ed8, #0f766e);
+            color: #f9fafb;
+            padding: 18px 20px;
+        }}
+
+        .title-row {{
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            align-items: baseline;
+            justify-content: space-between;
+        }}
+
+        .title-row h1 {{
+            margin: 0;
             font-size: 1.4rem;
-            margin-bottom: 0.25rem;
+            letter-spacing: 0.02em;
         }}
+
         .subtitle {{
-            font-size: 0.9rem;
-            color: #555;
-            margin-bottom: 1rem;
+            font-size: 0.85rem;
+            opacity: 0.9;
         }}
+
+        .generated-at {{
+            font-size: 0.8rem;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: rgba(15, 23, 42, 0.35);
+            border: 1px solid rgba(229, 231, 235, 0.5);
+        }}
+
+        .card-body {{
+            padding: 16px 18px 18px;
+        }}
+
+        .table-wrapper {{
+            width: 100%;
+            overflow-x: auto;
+        }}
+
         table {{
             width: 100%;
             border-collapse: collapse;
+            min-width: 600px;
         }}
+
+        thead tr {{
+            background-color: var(--bg-header);
+            color: #f9fafb;
+        }}
+
         th, td {{
-            padding: 0.75rem;
-            text-align: left;
+            padding: 10px 12px;
+            border-bottom: 1px solid var(--border-soft);
             vertical-align: top;
+            font-size: 0.9rem;
         }}
+
         th {{
-            border-bottom: 2px solid #e0e4ec;
+            text-align: left;
+            font-weight: 600;
             font-size: 0.85rem;
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            color: #666;
+            white-space: nowrap;
         }}
-        tr:nth-child(even) td {{
-            background: #fafbff;
+
+        tbody tr:nth-child(even) {{
+            background-color: #f9fafb;
         }}
-        a {{
-            color: #1a73e8;
+
+        tbody tr:hover {{
+            background-color: #eff6ff;
+        }}
+
+        .title-cell a {{
+            color: var(--accent);
+            font-weight: 600;
             text-decoration: none;
         }}
-        a:hover {{
+
+        .title-cell a:hover {{
             text-decoration: underline;
         }}
+
+        .summary {{
+            margin-top: 4px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+            max-height: 3.6em;
+            overflow: hidden;
+            line-height: 1.2;
+        }}
+
+        .date-cell {{
+            white-space: nowrap;
+            text-align: right;
+            font-variant-numeric: tabular-nums;
+            color: var(--text-muted);
+        }}
+
         .badge {{
             display: inline-block;
-            margin-left: 0.5rem;
-            padding: 0.15rem 0.45rem;
+            padding: 2px 8px;
             border-radius: 999px;
             font-size: 0.7rem;
             font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 0.06em;
+            margin-left: 6px;
         }}
+
         .badge-new {{
-            background: #0f9d58;
-            color: #fff;
+            background-color: var(--badge-new-bg);
+            color: var(--badge-new-text);
         }}
-        @media (max-width: 600px) {{
-            th:nth-child(2), td:nth-child(2) {{
-                font-size: 0.8rem;
-                white-space: nowrap;
+
+        .empty {{
+            text-align: center;
+            padding: 32px 12px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }}
+
+        @media (max-width: 768px) {{
+            .card {{
+                border-radius: 0;
+                box-shadow: none;
+                border-left: none;
+                border-right: none;
+                max-width: 100%;
+            }}
+
+            .card-body {{
+                padding: 12px;
+            }}
+
+            .title-row h1 {{
+                font-size: 1.1rem;
+            }}
+
+            table {{
+                min-width: 100%;
+            }}
+
+            th, td {{
+                padding: 8px;
+            }}
+
+            .summary {{
+                max-height: none;
             }}
         }}
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Concursos públicos relevantes (TI)</h1>
-        <p class="subtitle">Última actualización: {now_str}</p>
-        <table>
-            <thead>
-                <tr>
-                    <th>Concurso</th>
-                    <th>Publicación</th>
-                </tr>
-            </thead>
-            <tbody>
-                {rows_html}
-            </tbody>
-        </table>
+    <div class="page-wrapper">
+        <div class="card">
+            <div class="card-header">
+                <div class="title-row">
+                    <div>
+                        <h1>Concursos Públicos Relevantes</h1>
+                        <div class="subtitle">
+                            Filtro: TI / compras / educación parvularia, sin salud (según palabras clave configuradas).
+                        </div>
+                    </div>
+                    <div class="generated-at">
+                        Generado el {datetime.now().strftime("%Y-%m-%d %H:%M:%S")}
+                    </div>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Título y resumen</th>
+                                <th>Fecha publicación</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {cuerpo_tabla}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
 """
-
     with open(filename, "w", encoding="utf-8") as f:
         f.write(html)
 
+    print(f"HTML generado: {filename}")
+    webbrowser.open(os.path.abspath(filename))
 
-def main() -> None:
-    """
-    Flujo principal del bot (modo archivos):
-    - Carga estado previo (ep_state.json).
-    - Lee el feed RSS de Empleos Públicos.
-    - Detecta concursos nuevos.
-    - Filtra según lógica TI / no-salud.
-    - Genera:
-        - concursos_relevantes.csv
-        - reporte_concursos.html
-    - Actualiza el estado.
-    """
-    vistos = load_state()
-    nuevos_ids = set(vistos)
-    relevantes = []
 
-    feed = feedparser.parse(FEED_URL)
+# -------------------------------
+# MAIN
+# -------------------------------
 
-    print("Cantidad de entradas en el feed:", len(feed.entries))
 
-    for e in feed.entries:
-        guid = e.get("id") or e.get("link")
-        if not guid:
-            continue
+def main():
+    load_dotenv()
 
-        es_nuevo = guid not in vistos
-        nuevos_ids.add(guid)
+    # 1) Leer "feed" HTML (vía feed_html.get_entries)
+    entries = fetch_html_entries()
+    print(f"Cantidad total de entradas encontradas: {len(entries)}")
 
-        title_raw = e.get("title", "(Sin título)")
-        link = e.get("link", "#")
-        summary = e.get("summary", "") or ""
-        published = e.get("published", "")
+    # 2) Filtrar por relevancia
+    relevantes = [e for e in entries if es_relevante(e)]
+    print(f"Total concursos relevantes (según filtros): {len(relevantes)}")
 
-        texto = f"{title_raw} {summary}"
-        relevante = es_relevante(texto)
+    concursos_relevantes = []
 
-        if relevante:
-            title = title_raw + (" (nuevo)" if es_nuevo else "")
-            relevantes.append(
-                {
-                    "id": guid,
-                    "title": title,
-                    "link": link,
-                    "published": published,
-                    "nuevo": es_nuevo,
-                }
-            )
+    # 3) Guardar / actualizar en MySQL
+    for e in relevantes:
+        guid = e["link"]  # usamos el link como identificador único
+        titulo = e["title"]
+        link = e["link"]
+        fecha_publicacion = e["published"]
 
-    print(f"Total concursos relevantes (TI / no salud): {len(relevantes)}")
+        es_nuevo = upsert_concurso(
+            guid=guid,
+            titulo=titulo,
+            link=link,
+            fecha_publicacion=fecha_publicacion,
+        )
 
-    # Generar archivos sólo con los relevantes
-    save_csv(relevantes, "concursos_relevantes.csv")
-    save_html(relevantes, "reporte_concursos.html")
-    print("Archivos generados:")
-    print(" - concursos_relevantes.csv")
-    print(" - reporte_concursos.html")
+        concursos_relevantes.append(
+            {
+                "title": titulo,
+                "link": link,
+                "published": fecha_publicacion,
+                "es_nuevo": es_nuevo,
+                "raw_text": e.get("raw_text", ""),
+            }
+        )
 
-    # Actualizar estado
-    save_state(nuevos_ids)
-    print("Estado guardado en", STATE_FILE)
+    # 4) Generar reportes
+    generar_csv(concursos_relevantes)
+    generar_html(concursos_relevantes)
+
+    # 5) Enviar correo (solo si hay algo relevante)
+    if concursos_relevantes:
+        nuevos = [c for c in concursos_relevantes if c["es_nuevo"]]
+        total = len(concursos_relevantes)
+        total_nuevos = len(nuevos)
+
+        plain = [
+            f"Concursos relevantes encontrados: {total}",
+            f"Nuevos en esta ejecución: {total_nuevos}",
+            "",
+            "Listado:",
+        ]
+        for c in concursos_relevantes:
+            pub = c["published"]
+            pub_str = pub.strftime(
+                "%Y-%m-%d") if isinstance(pub, datetime) else ""
+            marca = " (NUEVO)" if c["es_nuevo"] else ""
+            plain.append(f"- {c['title']} [{pub_str}]{marca} -> {c['link']}")
+
+        plain_body = "\n".join(plain)
+
+        with open("reporte_concursos.html", "r", encoding="utf-8") as f:
+            html_body = f.read()
+
+        send_email(EMAIL_SUBJECT, html_body, plain_body)
+    else:
+        print("No hay concursos relevantes, no se envía correo.")
 
 
 if __name__ == "__main__":
