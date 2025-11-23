@@ -7,7 +7,15 @@ Configuración del bot de empleos públicos:
 """
 
 # Feed general de concursos
-FEED_URL = "https://www.empleospublicos.cl/pub/feed/feed.aspx?i=334"
+FEED_URL = "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx"
+
+# Listado de convocatorias filtradas por región (RM, O'Higgins, Maule)
+FEED_URLS_REGIONES = [
+    "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
+    "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=7&region=Libertador-Bernardo-OHiggins",
+    "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=8&region=Regi%C3%B3n-del-Maule",
+]
+
 
 # Archivo donde guardamos los IDs ya vistos para no repetir notificaciones
 STATE_FILE = "ep_state.json"

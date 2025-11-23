@@ -7,11 +7,12 @@ Bot de Empleos Públicos (versión HTML + MySQL)
 - Genera:
     - concursos_relevantes.csv
     - reporte_concursos.html
-- Envía un correo con el resumen (si hay resultados).
+- Envía un correo con el resumen (si hay resultados Y hay concursos nuevos).
 """
 
 import csv
 import os
+import shutil
 import webbrowser
 from datetime import datetime
 import smtplib
@@ -21,7 +22,6 @@ from email.mime.text import MIMEText
 from dotenv import load_dotenv
 
 from config import (
-    FEED_URL,
     INCLUDE_KEYWORDS,
     EXCLUDE_KEYWORDS,
     EMAIL_SUBJECT,
@@ -46,7 +46,7 @@ def fetch_html_entries():
     - published (por ahora None o lo que rellene feed_html)
     - raw_text (texto completo o resumen de la "tarjeta")
     """
-    print(f"Descargando feed HTML desde: {FEED_URL}")
+    print("Descargando feed HTML (según configuración de feed_html)...")
     raw_entries = get_entries()
     entries = []
 
@@ -136,7 +136,8 @@ def es_relevante(entry) -> bool:
         tiene_match = True
     else:
         tiene_match = any(
-            good.lower() in texto_lower for good in INCLUDE_KEYWORDS)
+            good.lower() in texto_lower for good in INCLUDE_KEYWORDS
+        )
 
         # Caso especial: 'TI' como sigla en mayúsculas (Tecnologías de la Información)
         if not tiene_match:
@@ -209,7 +210,8 @@ def generar_csv(concursos_relevantes, filename="concursos_relevantes.csv"):
         for c in concursos_relevantes:
             pub = c["published"]
             pub_str = pub.strftime(
-                "%Y-%m-%d") if isinstance(pub, datetime) else ""
+                "%Y-%m-%d"
+            ) if isinstance(pub, datetime) else ""
             writer.writerow(
                 [
                     c["title"],
@@ -234,7 +236,9 @@ def generar_html(concursos_relevantes, filename="reporte_concursos.html"):
         pub_str = pub.strftime("%Y-%m-%d") if isinstance(pub, datetime) else ""
         es_nuevo = c["es_nuevo"]
         clase = "nuevo" if es_nuevo else ""
-        badge_nuevo = '<span class="badge badge-new">Nuevo</span>' if es_nuevo else ""
+        badge_nuevo = (
+            '<span class="badge badge-new">Nuevo</span>' if es_nuevo else ""
+        )
         resumen = (c.get("raw_text") or "").replace("\n", " ")
 
         filas_html.append(
@@ -507,7 +511,9 @@ def generar_html(concursos_relevantes, filename="reporte_concursos.html"):
         f.write(html)
 
     print(f"HTML generado: {filename}")
-    webbrowser.open(os.path.abspath(filename))
+    # Si lo ejecutas manualmente y quieres abrir el reporte automáticamente,
+    # puedes descomentar la siguiente línea:
+    # webbrowser.open(os.path.abspath(filename))
 
 
 # -------------------------------
@@ -552,16 +558,52 @@ def main():
             }
         )
 
-    # 4) Generar reportes
+    # 4) Si no hay concursos relevantes, no hacemos nada más
+    if not concursos_relevantes:
+        print("No hay concursos relevantes, no se generan reportes ni correo.")
+        return
+
+    # 5) Revisar si hay concursos NUEVOS
+    nuevos = [c for c in concursos_relevantes if c["es_nuevo"]]
+    total = len(concursos_relevantes)
+    total_nuevos = len(nuevos)
+
+    if total_nuevos == 0:
+        print(
+            f"No hay concursos nuevos ({total} relevantes, 0 nuevos). "
+            "Se genera reporte, sin copias históricas ni correo."
+        )
+    else:
+        print(
+            f"Hay {total_nuevos} concursos nuevos (de {total} relevantes). "
+            "Se actualizan reportes, se crean copias con fecha y se puede enviar correo."
+        )
+
+    # 6) Generar reportes (siempre que haya relevantes)
     generar_csv(concursos_relevantes)
     generar_html(concursos_relevantes)
 
-    # 5) Enviar correo (solo si hay algo relevante)
-    if concursos_relevantes:
-        nuevos = [c for c in concursos_relevantes if c["es_nuevo"]]
-        total = len(concursos_relevantes)
-        total_nuevos = len(nuevos)
+    # 7) Solo si hay concursos nuevos: copiar a reportes/ y enviar correo
+    if total_nuevos > 0:
+        import os
+        import shutil
 
+        os.makedirs("reportes", exist_ok=True)
+        hoy = datetime.now().strftime("%Y-%m-%d")
+
+        # Copia del HTML
+        shutil.copy(
+            "reporte_concursos.html",
+            os.path.join("reportes", f"reporte_concursos_{hoy}.html"),
+        )
+
+        # Copia del CSV
+        shutil.copy(
+            "concursos_relevantes.csv",
+            os.path.join("reportes", f"concursos_relevantes_{hoy}.csv"),
+        )
+
+        # Preparar cuerpo del correo
         plain = [
             f"Concursos relevantes encontrados: {total}",
             f"Nuevos en esta ejecución: {total_nuevos}",
@@ -577,12 +619,17 @@ def main():
 
         plain_body = "\n".join(plain)
 
-        with open("reporte_concursos.html", "r", encoding="utf-8") as f:
-            html_body = f.read()
+        try:
+            with open("reporte_concursos.html", "r", encoding="utf-8") as f:
+                html_body = f.read()
+        except FileNotFoundError:
+            html_body = plain_body  # fallback
 
         send_email(EMAIL_SUBJECT, html_body, plain_body)
     else:
-        print("No hay concursos relevantes, no se envía correo.")
+        print(
+            "Como no hay concursos nuevos, no se envía correo ni se crean copias fechadas."
+        )
 
 
 if __name__ == "__main__":

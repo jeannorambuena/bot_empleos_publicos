@@ -1,21 +1,17 @@
-# Entorno virtual de Python
+# Entorno y Python
 venv/
-
-# Configuración sensible (claves SMTP, MySQL, etc.)
-.env
-
-# Archivos de Python compilados / caché
 __pycache__/
 *.pyc
-*.pyo
-*.pyd
 
-# Archivos de base de datos locales (por si algún día usas SQLite)
-*.db
+# Config local / secretos
+.env
 
 # Archivos generados por el bot
 concursos_relevantes.csv
 reporte_concursos.html
+reportes/
+logs/
+ep_state.json
 
-# Archivos de logs (si luego agregas)
-*.log
+# Opcional (si no quieres versionar .ini personales)
+*.ini
