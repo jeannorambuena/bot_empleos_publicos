@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Radar comunitario de oportunidades laborales del sector público en Chile."
+    />
+    <title>Radar Laboral Público Chile</title>
+    <link rel="stylesheet" href="assets/styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="container header-content">
+        <div class="brand">
+          <span class="brand-mark" aria-hidden="true">RL</span>
+          <div>
+            <p class="eyebrow">Monitor comunitario de convocatorias</p>
+            <h1>Radar Laboral Público Chile</h1>
+          </div>
+        </div>
+        <span class="prototype-badge">Datos de ejemplo / prototipo</span>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">Explora oportunidades relevantes</p>
+          <h2>Encuentra convocatorias públicas alineadas con tu experiencia.</h2>
+          <p class="hero-copy">
+            Una vista inicial para seguir oportunidades tecnológicas, administrativas
+            y de transformación digital en instituciones públicas de Chile.
+          </p>
+        </div>
+        <aside class="update-panel" aria-label="Estado de actualización">
+          <p class="panel-label">Última actualización</p>
+          <strong id="last-updated">Cargando...</strong>
+          <p id="run-status">Consultando estado del radar</p>
+        </aside>
+      </section>
+
+      <section class="metrics-grid" aria-label="Resumen del radar">
+        <article class="metric-card">
+          <span class="metric-icon" aria-hidden="true">FR</span>
+          <div>
+            <p>Fuentes revisadas</p>
+            <strong id="sources-reviewed">--</strong>
+          </div>
+        </article>
+        <article class="metric-card">
+          <span class="metric-icon" aria-hidden="true">OV</span>
+          <div>
+            <p>Oportunidades vigentes</p>
+            <strong id="active-opportunities">--</strong>
+          </div>
+        </article>
+        <article class="metric-card">
+          <span class="metric-icon" aria-hidden="true">NO</span>
+          <div>
+            <p>Nuevas oportunidades</p>
+            <strong id="new-opportunities">--</strong>
+          </div>
+        </article>
+        <article class="metric-card">
+          <span class="metric-icon" aria-hidden="true">AC</span>
+          <div>
+            <p>Alta coincidencia</p>
+            <strong id="high-match">--</strong>
+          </div>
+        </article>
+        <article class="metric-card">
+          <span class="metric-icon" aria-hidden="true">CP</span>
+          <div>
+            <p>Cierre próximo</p>
+            <strong id="closing-soon">--</strong>
+          </div>
+        </article>
+      </section>
+
+      <section class="dashboard">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">Convocatorias vigentes</p>
+            <h2>Oportunidades detectadas</h2>
+          </div>
+          <p id="results-count">Cargando oportunidades...</p>
+        </div>
+
+        <form class="filters" id="filters-form">
+          <label>
+            Área
+            <select id="area-filter">
+              <option value="">Todas las áreas</option>
+            </select>
+          </label>
+          <label>
+            Región
+            <select id="region-filter">
+              <option value="">Todas las regiones</option>
+            </select>
+          </label>
+          <label>
+            Fuente
+            <select id="source-filter">
+              <option value="">Todas las fuentes</option>
+            </select>
+          </label>
+          <label>
+            Urgencia
+            <select id="urgency-filter">
+              <option value="">Todas</option>
+              <option value="proximo">Cierre próximo</option>
+              <option value="normal">Plazo normal</option>
+            </select>
+          </label>
+          <button class="secondary-button" id="reset-filters" type="button">
+            Limpiar filtros
+          </button>
+        </form>
+
+        <div class="opportunities-grid" id="opportunities-list" aria-live="polite"></div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container footer-content">
+        <p>Radar Laboral Público Chile · Base visual inicial para GitHub Pages.</p>
+        <span>Prototipo comunitario</span>
+      </div>
+    </footer>
+
+    <template id="opportunity-template">
+      <article class="opportunity-card">
+        <div class="card-topline">
+          <span class="institution-type"></span>
+          <span class="urgency-tag"></span>
+        </div>
+        <h3 class="opportunity-title"></h3>
+        <p class="institution"></p>
+        <div class="card-meta">
+          <span class="region"></span>
+          <span class="area"></span>
+          <span class="source"></span>
+        </div>
+        <p class="description"></p>
+        <div class="tags"></div>
+        <p class="demo-note" hidden>
+          Esta oportunidad es de ejemplo. Los enlaces reales se activarán cuando el
+          scraper esté conectado.
+        </p>
+        <div class="card-footer">
+          <div class="match-score">
+            <span>Puntaje de coincidencia</span>
+            <strong></strong>
+          </div>
+          <a class="primary-button" target="_blank" rel="noopener noreferrer">
+            Ver convocatoria
+          </a>
+        </div>
+      </article>
+    </template>
+
+    <script src="assets/app.js"></script>
+  </body>
+</html>
