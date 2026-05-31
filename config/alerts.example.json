@@ -1,0 +1,64 @@
+{
+  "alerts_enabled": false,
+  "rules": [
+    {
+      "id": "new-opportunity",
+      "event": "new_opportunity",
+      "enabled": true,
+      "description": "Alerta por nueva oportunidad detectada."
+    },
+    {
+      "id": "high-match",
+      "event": "high_match",
+      "enabled": true,
+      "minimum_match_score": 85,
+      "description": "Alerta por oportunidad con alta coincidencia."
+    },
+    {
+      "id": "closing-in-7-days",
+      "event": "closing_soon",
+      "enabled": true,
+      "days_before_closing": 7,
+      "description": "Recordatorio cuando faltan 7 días para el cierre."
+    },
+    {
+      "id": "closing-in-3-days",
+      "event": "closing_soon",
+      "enabled": true,
+      "days_before_closing": 3,
+      "description": "Recordatorio cuando faltan 3 días para el cierre."
+    },
+    {
+      "id": "closing-in-1-day",
+      "event": "closing_soon",
+      "enabled": true,
+      "days_before_closing": 1,
+      "description": "Recordatorio cuando falta 1 día para el cierre."
+    },
+    {
+      "id": "opportunity-updated",
+      "event": "opportunity_updated",
+      "enabled": true,
+      "description": "Alerta cuando cambia una convocatoria conocida."
+    }
+  ],
+  "email": {
+    "format": "html_and_text",
+    "subject_template": "[Radar Laboral Público Chile] {alert_type}: {title}",
+    "include_fields": [
+      "title",
+      "institution",
+      "region",
+      "commune",
+      "closing_date",
+      "match_score",
+      "match_level",
+      "source_url"
+    ]
+  },
+  "calendar": {
+    "ics_generation_enabled": false,
+    "planned": true,
+    "description": "Generación futura de archivos .ics para recordar cierres de convocatorias."
+  }
+}

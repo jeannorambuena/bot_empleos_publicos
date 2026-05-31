@@ -1,0 +1,50 @@
+{
+  "profile_name": "perfil-comunitario-demo",
+  "priority_regions": [
+    "Maule",
+    "O’Higgins",
+    "Metropolitana",
+    "Nacional"
+  ],
+  "areas": [
+    "informática",
+    "soporte TI",
+    "redes",
+    "servidores",
+    "ciberseguridad",
+    "desarrollo web",
+    "compras públicas",
+    "transparencia pública",
+    "SLEP"
+  ],
+  "positive_keywords": [
+    "informática",
+    "soporte TI",
+    "redes",
+    "Linux",
+    "Windows Server",
+    "ciberseguridad",
+    "frontend",
+    "backend",
+    "SQL",
+    "transformación digital",
+    "gobierno digital",
+    "compras públicas",
+    "transparencia"
+  ],
+  "negative_keywords": [
+    "práctica profesional",
+    "reemplazo por licencia",
+    "voluntariado"
+  ],
+  "minimum_alert_score": 70,
+  "areas_of_interest": [
+    "Talca",
+    "Curicó",
+    "Linares",
+    "Rancagua",
+    "Santiago",
+    "Remoto",
+    "No especificada"
+  ]
+}
