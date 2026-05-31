@@ -20,6 +20,7 @@ reporte_concursos.html
 reportes/
 logs/
 ep_state.json
+output/
 
 # Opcional (si no quieres versionar .ini personales)
 *.ini
