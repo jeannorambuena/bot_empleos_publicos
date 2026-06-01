@@ -43,6 +43,17 @@ function hasValidSourceUrl(opportunity) {
   }
 }
 
+function renderDataMode(opportunities) {
+  const badge = document.querySelector(".prototype-badge");
+  const realCount = opportunities.filter(({ is_demo: isDemo }) => isDemo === false).length;
+  const isMostlyReal = realCount > opportunities.length / 2;
+
+  badge.textContent = isMostlyReal
+    ? "Captura local de Empleos Públicos"
+    : "Datos de ejemplo / prototipo";
+  badge.classList.toggle("real-data", isMostlyReal);
+}
+
 function renderOpportunities() {
   const selected = Object.fromEntries(
     Object.entries(filters).map(([key, select]) => [key, select.value]),
@@ -143,6 +154,7 @@ async function initialize() {
     ]);
 
     state.opportunities = opportunities;
+    renderDataMode(opportunities);
     fillSelect(filters.area, opportunities.map(({ area }) => area));
     fillSelect(filters.region, opportunities.map(({ region }) => region));
     fillSelect(filters.source, opportunities.map(({ source }) => source));

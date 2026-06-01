@@ -26,6 +26,10 @@ concepto.
 - Comuna o zona de interés: 4 puntos.
 - Fuente informada: 3 puntos.
 
+Los términos ambiguos `sistemas`, `plataforma` y `abastecimiento` suman menos por
+sí solos. Solo recuperan peso parcial cuando aparecen con contexto tecnológico o
+de compras públicas según corresponda.
+
 El resultado final se limita a un máximo de 100 puntos. Además del puntaje, el motor
 devuelve palabras clave encontradas y motivos legibles para futuras alertas.
 

@@ -116,6 +116,12 @@ h2 {
   text-align: center;
 }
 
+.prototype-badge.real-data {
+  color: #dcfff8;
+  border-color: rgba(197, 255, 244, 0.45);
+  background: rgba(101, 214, 191, 0.2);
+}
+
 .hero {
   display: grid;
   grid-template-columns: minmax(0, 1fr) 290px;

@@ -9,12 +9,17 @@ from .normalizer import prepare_search_text
 
 TITLE_KEYWORD_POINTS = 22
 DESCRIPTION_KEYWORD_POINTS = 6
+AMBIGUOUS_TITLE_POINTS = 4
+AMBIGUOUS_DESCRIPTION_POINTS = 1
+SUPPORTED_AMBIGUOUS_TITLE_POINTS = 12
+SUPPORTED_AMBIGUOUS_DESCRIPTION_POINTS = 3
 STRONG_TITLE_BONUS = 30
 PRIORITY_REGION_POINTS = 8
 PROFILE_AREA_POINTS = 10
 PROFILE_ZONE_POINTS = 4
 KNOWN_SOURCE_POINTS = 3
 MAX_SCORE = 100
+AMBIGUOUS_KEYWORDS = {"sistemas", "plataforma", "abastecimiento"}
 
 
 def match_level_for_score(score: int) -> str:
@@ -68,6 +73,35 @@ def _matching_keywords(search_text: str, keywords: Iterable[object]) -> list[str
     return matches
 
 
+def _keyword_points(
+    keywords: Iterable[str],
+    *,
+    is_title: bool,
+    supported_ambiguous: set[str],
+) -> int:
+    points = 0
+    for keyword in keywords:
+        normalized_keyword = prepare_search_text(keyword)
+        if normalized_keyword not in AMBIGUOUS_KEYWORDS:
+            points += TITLE_KEYWORD_POINTS if is_title else DESCRIPTION_KEYWORD_POINTS
+        elif normalized_keyword in supported_ambiguous:
+            points += SUPPORTED_AMBIGUOUS_TITLE_POINTS if is_title else SUPPORTED_AMBIGUOUS_DESCRIPTION_POINTS
+        else:
+            points += AMBIGUOUS_TITLE_POINTS if is_title else AMBIGUOUS_DESCRIPTION_POINTS
+    return points
+
+
+def _supported_ambiguous_keywords(search_text: str, profile: dict[str, Any]) -> set[str]:
+    supported = set()
+    platform_context = _matching_keywords(search_text, profile.get("platform_context_keywords", []))
+    procurement_context = _matching_keywords(search_text, profile.get("procurement_context_keywords", []))
+    if platform_context:
+        supported.add("plataforma")
+    if procurement_context:
+        supported.add("abastecimiento")
+    return supported
+
+
 def calculate_match(opportunity: dict[str, Any], profile: dict[str, Any]) -> dict[str, Any]:
     """Calculate an initial score and explain the resulting match.
 
@@ -83,6 +117,12 @@ def calculate_match(opportunity: dict[str, Any], profile: dict[str, Any]) -> dic
     excluded_keywords = _matching_keywords(search_text, profile.get("negative_keywords", []))
     clinical_keywords = _matching_keywords(title_text, profile.get("clinical_negative_keywords", []))
     strong_title_keywords = _matching_keywords(title_text, profile.get("strong_title_keywords", []))
+    supported_ambiguous = _supported_ambiguous_keywords(search_text, profile)
+    ambiguous_keywords = [
+        keyword
+        for keyword in matched_keywords
+        if prepare_search_text(keyword) in AMBIGUOUS_KEYWORDS
+    ]
 
     if excluded_keywords:
         return {
@@ -102,13 +142,23 @@ def calculate_match(opportunity: dict[str, Any], profile: dict[str, Any]) -> dic
             "excluded_keywords": clinical_keywords,
         }
 
-    score = len(title_keywords) * TITLE_KEYWORD_POINTS
-    score += len([keyword for keyword in description_keywords if keyword not in title_keywords]) * DESCRIPTION_KEYWORD_POINTS
+    score = _keyword_points(
+        title_keywords,
+        is_title=True,
+        supported_ambiguous=supported_ambiguous,
+    )
+    score += _keyword_points(
+        [keyword for keyword in description_keywords if keyword not in title_keywords],
+        is_title=False,
+        supported_ambiguous=supported_ambiguous,
+    )
     reasons = []
 
     if strong_title_keywords:
         score += STRONG_TITLE_BONUS
         reasons.append("Coincidencia fuerte en título")
+    if ambiguous_keywords:
+        reasons.append(f"Revisar términos ambiguos: {', '.join(ambiguous_keywords)}")
 
     region = prepare_search_text(opportunity.get("region"))
     priority_regions = _normalized_values(profile.get("priority_regions", []))
