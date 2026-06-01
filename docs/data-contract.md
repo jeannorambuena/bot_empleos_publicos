@@ -28,7 +28,9 @@ Arreglo de oportunidades normalizadas.
 | `url_status` | string | Sí | `demo`, `available` o estado equivalente acordado. |
 
 El dashboard actual también utiliza `institution_type`, `area` y `urgency` como
-campos auxiliares de presentación y filtrado.
+campos auxiliares de presentación y filtrado. Cuando existe historial público,
+también incluye `is_new_since_last_run`, `first_seen_at`, `last_seen_at` y
+`seen_count`.
 
 Rangos de coincidencia:
 
@@ -72,6 +74,11 @@ Objeto con métricas del dashboard.
 | `new_opportunities` | integer | Sí | Oportunidades nuevas. |
 | `high_match` | integer | Sí | Oportunidades con coincidencia alta. |
 | `closing_soon` | integer | Sí | Oportunidades con cierre próximo. |
+| `total_opportunities` | integer | Sí con historial | Total visible en la captura más reciente. |
+| `high_relevance` | integer | Sí con historial | Alias legible de coincidencias altas. |
+| `previously_seen` | integer | Sí con historial | Oportunidades visibles que ya aparecieron antes. |
+| `first_seen_this_run` | integer | Sí con historial | Oportunidades detectadas por primera vez en esta ejecución. |
+| `not_seen_in_latest_capture` | integer | Sí con historial | Registros históricos ausentes de la captura más reciente. |
 
 ```json
 {
@@ -82,6 +89,23 @@ Objeto con métricas del dashboard.
   "closing_soon": 4
 }
 ```
+
+## `history.json`
+
+Arreglo público versionable que permite distinguir oportunidades nuevas reales de
+registros ya vistos. No contiene secretos ni datos privados.
+
+| Campo | Tipo | Obligatorio | Descripción |
+| --- | --- | --- | --- |
+| `id` | string | Sí | Identificador estable de la oportunidad. |
+| `first_seen_at` | string | Sí | Primera detección en formato ISO 8601. |
+| `last_seen_at` | string | Sí | Última detección en formato ISO 8601. |
+| `seen_count` | integer | Sí | Cantidad de capturas en que apareció. |
+| `last_title` | string | Sí | Último título público conocido. |
+| `last_institution` | string | Sí | Última institución pública conocida. |
+| `last_level` | string | Sí | Último nivel de coincidencia. |
+| `last_score` | integer | Sí | Último puntaje calculado. |
+| `currently_visible` | boolean | Sí | Indica si apareció en la última captura. |
 
 ## `last_run.json`
 

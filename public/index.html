@@ -59,7 +59,7 @@
         <article class="metric-card">
           <span class="metric-icon" aria-hidden="true">NO</span>
           <div>
-            <p>Nuevas oportunidades</p>
+            <p id="new-opportunities-label">Nuevas oportunidades</p>
             <strong id="new-opportunities">--</strong>
           </div>
         </article>
@@ -89,6 +89,17 @@
         </div>
 
         <form class="filters" id="filters-form">
+          <label>
+            Relevancia
+            <select id="relevance-filter">
+              <option value="relevant" selected>Relevantes</option>
+              <option value="Alta">Alta</option>
+              <option value="Media">Media</option>
+              <option value="Baja">Baja</option>
+              <option value="discarded">Descartadas</option>
+              <option value="all">Todas</option>
+            </select>
+          </label>
           <label>
             Área
             <select id="area-filter">
@@ -127,7 +138,7 @@
     <footer>
       <div class="container footer-content">
         <p>Radar Laboral Público Chile · Base visual inicial para GitHub Pages.</p>
-        <span>Prototipo comunitario</span>
+        <span><a class="footer-link" href="review.html">Panel de revisión humana</a></span>
       </div>
     </footer>
 

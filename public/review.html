@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Panel de revisión humana | Radar Laboral Público Chile</title>
+    <link rel="stylesheet" href="assets/review.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <p class="eyebrow">Radar Laboral Público Chile</p>
+        <h1>Panel de revisión humana</h1>
+        <p>Marca oportunidades útiles, falsos positivos y casos para recalibrar más adelante.</p>
+        <a href="index.html">Volver al dashboard</a>
+      </div>
+    </header>
+    <main class="container">
+      <section class="toolbar">
+        <p id="review-count">Cargando oportunidades...</p>
+        <div>
+          <button id="copy-feedback" type="button">Copiar JSON</button>
+          <button id="download-feedback" type="button">Descargar JSON</button>
+        </div>
+      </section>
+      <p class="notice">El feedback se guarda solo en este navegador y no se envía automáticamente.</p>
+      <section id="review-list" class="review-grid" aria-live="polite"></section>
+    </main>
+    <script src="assets/review.js"></script>
+  </body>
+</html>

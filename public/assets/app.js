@@ -8,6 +8,8 @@ const filters = {
   source: document.querySelector("#source-filter"),
   urgency: document.querySelector("#urgency-filter"),
 };
+const relevanceFilter = document.querySelector("#relevance-filter");
+const RELEVANT_LEVELS = new Set(["Alta", "Media", "Baja"]);
 
 function formatDate(value) {
   return new Intl.DateTimeFormat("es-CL", {
@@ -54,11 +56,21 @@ function renderDataMode(opportunities) {
   badge.classList.toggle("real-data", isMostlyReal);
 }
 
+function matchesRelevance(opportunity, relevance) {
+  if (relevance === "all") return true;
+  if (relevance === "discarded") return opportunity.match_level === "Descartada";
+  if (relevance === "relevant") {
+    return RELEVANT_LEVELS.has(opportunity.match_level) || opportunity.is_alertable === true;
+  }
+  return opportunity.match_level === relevance;
+}
+
 function renderOpportunities() {
   const selected = Object.fromEntries(
     Object.entries(filters).map(([key, select]) => [key, select.value]),
   );
   const filtered = state.opportunities.filter((opportunity) =>
+    matchesRelevance(opportunity, relevanceFilter.value) &&
     Object.entries(selected).every(
       ([key, value]) => !value || opportunity[key] === value,
     ),
@@ -68,7 +80,7 @@ function renderOpportunities() {
 
   list.replaceChildren();
   document.querySelector("#results-count").textContent =
-    `${filtered.length} de ${state.opportunities.length} oportunidades`;
+    `${filtered.length} de ${state.opportunities.length} oportunidades visibles`;
 
   if (!filtered.length) {
     const emptyState = document.createElement("p");
@@ -130,6 +142,10 @@ function renderMetrics(summary, lastRun) {
   document.querySelector("#sources-reviewed").textContent = summary.sources_reviewed;
   document.querySelector("#active-opportunities").textContent =
     summary.active_opportunities;
+  document.querySelector("#new-opportunities-label").textContent =
+    "first_seen_this_run" in summary
+      ? "Nuevas desde última actualización"
+      : "Nuevas oportunidades";
   document.querySelector("#new-opportunities").textContent = summary.new_opportunities;
   document.querySelector("#high-match").textContent = summary.high_match;
   document.querySelector("#closing-soon").textContent = summary.closing_soon;
@@ -170,11 +186,13 @@ async function initialize() {
 Object.values(filters).forEach((select) => {
   select.addEventListener("change", renderOpportunities);
 });
+relevanceFilter.addEventListener("change", renderOpportunities);
 
 document.querySelector("#reset-filters").addEventListener("click", () => {
   Object.values(filters).forEach((select) => {
     select.value = "";
   });
+  relevanceFilter.value = "relevant";
   renderOpportunities();
 });
 

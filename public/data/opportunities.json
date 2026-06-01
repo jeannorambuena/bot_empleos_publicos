@@ -35,7 +35,11 @@
       "corrientes débiles",
       "BMS"
     ],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140504",
@@ -77,7 +81,11 @@
       "infraestructura tecnológica",
       "sistemas"
     ],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140502",
@@ -117,7 +125,11 @@
       "plataforma",
       "compras públicas"
     ],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140631",
@@ -157,7 +169,11 @@
       "plataforma",
       "sistemas"
     ],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140510",
@@ -194,7 +210,11 @@
       "soporte T.I",
       "gestión tecnológica"
     ],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140511",
@@ -231,7 +251,11 @@
       "redes",
       "gestión tecnológica"
     ],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140506",
@@ -267,7 +291,11 @@
       "organismos compradores",
       "compras públicas"
     ],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140210",
@@ -301,7 +329,11 @@
     "matched_keywords": [
       "plataforma"
     ],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-139347",
@@ -335,7 +367,11 @@
     "matched_keywords": [
       "sistemas"
     ],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140483",
@@ -369,7 +405,11 @@
     "matched_keywords": [
       "sistemas"
     ],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140485",
@@ -403,7 +443,11 @@
     "matched_keywords": [
       "sistemas"
     ],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140494",
@@ -437,7 +481,11 @@
     "matched_keywords": [
       "sistemas"
     ],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140372",
@@ -471,7 +519,11 @@
     "matched_keywords": [
       "sistemas"
     ],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140481",
@@ -501,7 +553,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140482",
@@ -531,7 +587,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140484",
@@ -561,7 +621,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-3367",
@@ -591,7 +655,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140288",
@@ -621,7 +689,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140423",
@@ -651,7 +723,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140424",
@@ -681,7 +757,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140425",
@@ -711,7 +791,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140426",
@@ -741,7 +825,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140427",
@@ -771,7 +859,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140429",
@@ -801,7 +893,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140433",
@@ -831,7 +927,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140434",
@@ -861,7 +961,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-137729",
@@ -891,7 +995,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-137730",
@@ -921,7 +1029,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-137731",
@@ -951,7 +1063,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-139452",
@@ -981,7 +1097,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-139469",
@@ -1011,7 +1131,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-139470",
@@ -1041,7 +1165,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140381",
@@ -1071,7 +1199,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-139348",
@@ -1101,7 +1233,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140227",
@@ -1131,7 +1267,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140228",
@@ -1161,7 +1301,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140455",
@@ -1191,7 +1335,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140459",
@@ -1221,7 +1369,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140461",
@@ -1251,7 +1403,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140499",
@@ -1281,7 +1437,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140422",
@@ -1311,7 +1471,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-139453",
@@ -1341,7 +1505,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-139457",
@@ -1371,7 +1539,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140153",
@@ -1401,7 +1573,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140588",
@@ -1431,7 +1607,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140362",
@@ -1461,7 +1641,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140522",
@@ -1491,7 +1675,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140529",
@@ -1521,7 +1709,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140530",
@@ -1551,7 +1743,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-139349",
@@ -1581,7 +1777,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140568",
@@ -1611,7 +1811,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140594",
@@ -1641,7 +1845,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-138149",
@@ -1671,7 +1879,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140226",
@@ -1701,7 +1913,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140428",
@@ -1731,7 +1947,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140431",
@@ -1761,7 +1981,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140432",
@@ -1791,7 +2015,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140497",
@@ -1821,7 +2049,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140155",
@@ -1851,7 +2083,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140628",
@@ -1881,7 +2117,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-138148",
@@ -1911,7 +2151,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140458",
@@ -1941,7 +2185,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140590",
@@ -1971,7 +2219,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140630",
@@ -2001,7 +2253,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140378",
@@ -2031,7 +2287,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140379",
@@ -2061,7 +2321,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140380",
@@ -2091,7 +2355,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140527",
@@ -2121,7 +2389,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-134589",
@@ -2151,7 +2423,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-139690",
@@ -2181,7 +2457,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140570",
@@ -2211,7 +2491,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140521",
@@ -2241,7 +2525,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-139741",
@@ -2271,7 +2559,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140589",
@@ -2301,7 +2593,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140501",
@@ -2331,7 +2627,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140632",
@@ -2361,7 +2661,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140420",
@@ -2391,7 +2695,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140468",
@@ -2421,7 +2729,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140507",
@@ -2451,7 +2763,11 @@
     "match_score": 15,
     "match_level": "Descartada",
     "matched_keywords": [],
-    "excluded_keywords": []
+    "excluded_keywords": [],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-139677",
@@ -2483,7 +2799,11 @@
       "médico",
       "paramédico",
       "técnico paramédico"
-    ]
+    ],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-139679",
@@ -2513,7 +2833,11 @@
     "matched_keywords": [],
     "excluded_keywords": [
       "medicina"
-    ]
+    ],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140496",
@@ -2543,7 +2867,11 @@
     "matched_keywords": [],
     "excluded_keywords": [
       "médico"
-    ]
+    ],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-139688",
@@ -2573,7 +2901,11 @@
     "matched_keywords": [],
     "excluded_keywords": [
       "enfermero"
-    ]
+    ],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-137732",
@@ -2605,7 +2937,11 @@
       "médico",
       "paramédico",
       "técnico paramédico"
-    ]
+    ],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140154",
@@ -2635,7 +2971,11 @@
     "matched_keywords": [],
     "excluded_keywords": [
       "enfermera"
-    ]
+    ],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140516",
@@ -2665,7 +3005,11 @@
     "matched_keywords": [],
     "excluded_keywords": [
       "médico"
-    ]
+    ],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140479",
@@ -2695,7 +3039,11 @@
     "matched_keywords": [],
     "excluded_keywords": [
       "enfermero"
-    ]
+    ],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-139384",
@@ -2725,7 +3073,11 @@
     "matched_keywords": [],
     "excluded_keywords": [
       "enfermería"
-    ]
+    ],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-139426",
@@ -2755,7 +3107,11 @@
     "matched_keywords": [],
     "excluded_keywords": [
       "fonoaudiólogo"
-    ]
+    ],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140318",
@@ -2785,7 +3141,11 @@
     "matched_keywords": [],
     "excluded_keywords": [
       "enfermería"
-    ]
+    ],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140536",
@@ -2815,7 +3175,11 @@
     "matched_keywords": [],
     "excluded_keywords": [
       "enfermero"
-    ]
+    ],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140537",
@@ -2845,7 +3209,11 @@
     "matched_keywords": [],
     "excluded_keywords": [
       "enfermera"
-    ]
+    ],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140538",
@@ -2875,7 +3243,11 @@
     "matched_keywords": [],
     "excluded_keywords": [
       "enfermera"
-    ]
+    ],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140569",
@@ -2905,7 +3277,11 @@
     "matched_keywords": [],
     "excluded_keywords": [
       "médico"
-    ]
+    ],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140579",
@@ -2935,7 +3311,11 @@
     "matched_keywords": [],
     "excluded_keywords": [
       "kinesiólogo"
-    ]
+    ],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140551",
@@ -2965,7 +3345,11 @@
     "matched_keywords": [],
     "excluded_keywords": [
       "enfermería"
-    ]
+    ],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140448",
@@ -2995,7 +3379,11 @@
     "matched_keywords": [],
     "excluded_keywords": [
       "médico"
-    ]
+    ],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-139710",
@@ -3025,7 +3413,11 @@
     "matched_keywords": [],
     "excluded_keywords": [
       "médico"
-    ]
+    ],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140243",
@@ -3055,7 +3447,11 @@
     "matched_keywords": [],
     "excluded_keywords": [
       "médico"
-    ]
+    ],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140578",
@@ -3085,7 +3481,11 @@
     "matched_keywords": [],
     "excluded_keywords": [
       "médico"
-    ]
+    ],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-139689",
@@ -3115,7 +3515,11 @@
     "matched_keywords": [],
     "excluded_keywords": [
       "enfermero"
-    ]
+    ],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-139711",
@@ -3145,7 +3549,11 @@
     "matched_keywords": [],
     "excluded_keywords": [
       "médico"
-    ]
+    ],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140565",
@@ -3175,7 +3583,11 @@
     "matched_keywords": [],
     "excluded_keywords": [
       "médico"
-    ]
+    ],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140462",
@@ -3205,7 +3617,11 @@
     "matched_keywords": [],
     "excluded_keywords": [
       "médico"
-    ]
+    ],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140250",
@@ -3235,7 +3651,11 @@
     "matched_keywords": [],
     "excluded_keywords": [
       "médico"
-    ]
+    ],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140386",
@@ -3265,7 +3685,11 @@
     "matched_keywords": [],
     "excluded_keywords": [
       "médico"
-    ]
+    ],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-135366",
@@ -3295,7 +3719,11 @@
     "matched_keywords": [],
     "excluded_keywords": [
       "médico"
-    ]
+    ],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140251",
@@ -3325,7 +3753,11 @@
     "matched_keywords": [],
     "excluded_keywords": [
       "médico"
-    ]
+    ],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140252",
@@ -3355,7 +3787,11 @@
     "matched_keywords": [],
     "excluded_keywords": [
       "médico"
-    ]
+    ],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140435",
@@ -3385,6 +3821,10 @@
     "matched_keywords": [],
     "excluded_keywords": [
       "médico"
-    ]
+    ],
+    "is_new_since_last_run": false,
+    "first_seen_at": "2026-06-01T15:28:09-04:00",
+    "last_seen_at": "2026-06-01T15:43:24-04:00",
+    "seen_count": 2
   }
 ]

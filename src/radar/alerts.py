@@ -166,6 +166,8 @@ def _alert_reasons(
 
 
 def _is_new(opportunity: dict[str, Any], reference_time: datetime) -> bool:
+    if "is_new_since_last_run" in opportunity:
+        return opportunity.get("is_new_since_last_run") is True
     detected_at = _parse_datetime(opportunity.get("detected_at"))
     if detected_at is None:
         return False
