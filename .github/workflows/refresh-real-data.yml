@@ -1,0 +1,95 @@
+name: Refresh real data
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  actions: write
+
+concurrency:
+  group: refresh-real-data
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          ref: main
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: python -m pip install -r requirements.txt
+
+      - name: Fetch Empleos Publicos data
+        run: python scripts/fetch_empleos_publicos.py
+
+      - name: Validate real data
+        run: python scripts/check_real_data.py
+
+      - name: Build public dashboard data
+        run: python scripts/build_public_data_from_real.py
+
+      - name: Validate public dashboard data
+        run: python scripts/check_public_data.py
+
+      - name: Analyze real scoring
+        run: python scripts/analyze_real_scoring.py
+
+      - name: Validate Pages readiness
+        run: python scripts/check_pages_ready.py
+
+      - name: Build email alert preview
+        run: python scripts/build_alert_preview.py
+
+      - name: Validate email alert preview
+        run: python scripts/check_alert_preview.py
+
+      - name: Build calendar preview
+        run: python scripts/build_calendar_preview.py
+
+      - name: Validate calendar preview
+        run: python scripts/check_calendar_preview.py
+
+      - name: Show Git diagnostics
+        run: |
+          git status --short
+          git diff -- public/data/
+
+      - name: Check for public data changes
+        id: public-data
+        shell: bash
+        run: |
+          if git diff --quiet -- public/data/opportunities.json public/data/summary.json public/data/last_run.json; then
+            echo "changed=false" >> "$GITHUB_OUTPUT"
+            echo "No public data changes to commit"
+          else
+            echo "changed=true" >> "$GITHUB_OUTPUT"
+            echo "Public data changes detected"
+          fi
+
+      - name: Commit refreshed public data
+        if: steps.public-data.outputs.changed == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -- public/data/opportunities.json public/data/summary.json public/data/last_run.json
+          git status --short
+          git diff --cached --stat
+          git commit -m "chore(data): refresh empleos publicos dashboard data"
+          git push origin HEAD:main
+
+      # Pushes created with GITHUB_TOKEN do not start other workflows. Dispatch
+      # Pages explicitly after the scoped data commit, without using a PAT.
+      - name: Dispatch GitHub Pages deployment
+        if: steps.public-data.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: gh workflow run pages.yml --ref main
