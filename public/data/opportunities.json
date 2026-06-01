@@ -56,6 +56,7 @@
       "Alta coincidencia",
       "Palabras clave positivas",
       "Coincidencia fuerte en título",
+      "Revisar términos ambiguos: plataforma, sistemas",
       "Región priorizada",
       "Zona de interés",
       "Fuente disponible",
@@ -66,7 +67,7 @@
     "area": "No especificada",
     "institution_type": "Institución pública",
     "urgency": "proximo",
-    "match_score": 100,
+    "match_score": 98,
     "match_level": "Alta",
     "matched_keywords": [
       "plataforma",
@@ -74,45 +75,6 @@
       "informática",
       "soporte informático",
       "infraestructura tecnológica",
-      "sistemas"
-    ],
-    "excluded_keywords": []
-  },
-  {
-    "id": "empleos-publicos-140631",
-    "source_id": "140631",
-    "title": "PROFESIONAL DESARROLLADOR, GRADO 12° DE LA E.U.S, ÁREA DE INFORMÁTICA, DIVISIÓN DE ADMINISTRACIÓN Y FINANZAS, REGIÓN METROPOLITANA, MINISTERIO DE LA MUJER Y LA EQUIDAD DE GÉNERO",
-    "institution": "Subsecretaría de la Mujer y la Equidad de Género",
-    "source": "Empleos Públicos",
-    "source_url": "https://www.empleospublicos.cl/pub/convocatorias/convpostularavisoTrabajo.aspx?i=140631&c=0&j=0&tipo=convpostularavisoTrabajo",
-    "region": "Metropolitana",
-    "commune": "No especificada",
-    "closing_date": "2026-06-05",
-    "detected_at": "2026-06-01T00:29:37-04:00",
-    "description": "En el marco de la mantención evolutiva de sus sistemas informáticos, la Subsecretaría requiere contratar un/a desarrollador/a informático/a con la finalidad de mantener las plataformas informáticas de la Institución, Contribuir al aseguramiento de la calidad, seguridad de la información, ... [+]",
-    "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
-    "status": "abierta",
-    "tags": [],
-    "alert_reasons": [
-      "Alta coincidencia",
-      "Palabras clave positivas",
-      "Coincidencia fuerte en título",
-      "Región priorizada",
-      "Zona de interés",
-      "Fuente disponible",
-      "Supera puntaje mínimo de alerta"
-    ],
-    "is_demo": false,
-    "url_status": "ok",
-    "area": "No especificada",
-    "institution_type": "Institución pública",
-    "urgency": "proximo",
-    "match_score": 100,
-    "match_level": "Alta",
-    "matched_keywords": [
-      "informática",
-      "desarrollador",
-      "plataforma",
       "sistemas"
     ],
     "excluded_keywords": []
@@ -136,6 +98,7 @@
       "Alta coincidencia",
       "Palabras clave positivas",
       "Coincidencia fuerte en título",
+      "Revisar términos ambiguos: plataforma",
       "Región priorizada",
       "Zona de interés",
       "Fuente disponible",
@@ -146,13 +109,90 @@
     "area": "No especificada",
     "institution_type": "Institución pública",
     "urgency": "normal",
-    "match_score": 100,
+    "match_score": 98,
     "match_level": "Alta",
     "matched_keywords": [
       "desarrollador",
       "full stack",
       "plataforma",
       "compras públicas"
+    ],
+    "excluded_keywords": []
+  },
+  {
+    "id": "empleos-publicos-140631",
+    "source_id": "140631",
+    "title": "PROFESIONAL DESARROLLADOR, GRADO 12° DE LA E.U.S, ÁREA DE INFORMÁTICA, DIVISIÓN DE ADMINISTRACIÓN Y FINANZAS, REGIÓN METROPOLITANA, MINISTERIO DE LA MUJER Y LA EQUIDAD DE GÉNERO",
+    "institution": "Subsecretaría de la Mujer y la Equidad de Género",
+    "source": "Empleos Públicos",
+    "source_url": "https://www.empleospublicos.cl/pub/convocatorias/convpostularavisoTrabajo.aspx?i=140631&c=0&j=0&tipo=convpostularavisoTrabajo",
+    "region": "Metropolitana",
+    "commune": "No especificada",
+    "closing_date": "2026-06-05",
+    "detected_at": "2026-06-01T00:29:37-04:00",
+    "description": "En el marco de la mantención evolutiva de sus sistemas informáticos, la Subsecretaría requiere contratar un/a desarrollador/a informático/a con la finalidad de mantener las plataformas informáticas de la Institución, Contribuir al aseguramiento de la calidad, seguridad de la información, ... [+]",
+    "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
+    "status": "abierta",
+    "tags": [],
+    "alert_reasons": [
+      "Alta coincidencia",
+      "Palabras clave positivas",
+      "Coincidencia fuerte en título",
+      "Revisar términos ambiguos: plataforma, sistemas",
+      "Región priorizada",
+      "Zona de interés",
+      "Fuente disponible",
+      "Supera puntaje mínimo de alerta"
+    ],
+    "is_demo": false,
+    "url_status": "ok",
+    "area": "No especificada",
+    "institution_type": "Institución pública",
+    "urgency": "proximo",
+    "match_score": 93,
+    "match_level": "Alta",
+    "matched_keywords": [
+      "informática",
+      "desarrollador",
+      "plataforma",
+      "sistemas"
+    ],
+    "excluded_keywords": []
+  },
+  {
+    "id": "empleos-publicos-140510",
+    "source_id": "140510",
+    "title": "030-26 TÉCNICO SOPORTE T.I G°16-21 (SEGÚN EXPERIENCIA), UNIDAD DE GESTIÓN TECNOLÓGICA, DEPARTAMENTO DE TECNOLOGÍAS DE LA INFORMACIÓN, SUBDIRECCIÓN ADMINISTRATIVA",
+    "institution": "Hospital Metropolitano de Santiago",
+    "source": "Empleos Públicos",
+    "source_url": "https://www.empleospublicos.cl/pub/convocatorias/convpostularavisoTrabajo.aspx?i=140510&c=0&j=0&tipo=convpostularavisoTrabajo",
+    "region": "Metropolitana",
+    "commune": "No especificada",
+    "closing_date": "2026-06-02",
+    "detected_at": "2026-06-01T00:29:37-04:00",
+    "description": "Proporcionar mantención y soporte de todo equipamiento tecnológico y de comunicaciones. Además, brindar asistencia técnica a usuarios de servicios informáticos del Hospital, ya sea de hardware o software, al momento de presentarse algún problema, dando respuesta presencial o remota rápida y eficaz frente a las necesidades de soporte para los usuarios, de acuerdo a tabla de resolución por criticidad. También ejecutar ... [+]",
+    "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
+    "status": "abierta",
+    "tags": [],
+    "alert_reasons": [
+      "Alta coincidencia",
+      "Palabras clave positivas",
+      "Coincidencia fuerte en título",
+      "Región priorizada",
+      "Zona de interés",
+      "Fuente disponible",
+      "Supera puntaje mínimo de alerta"
+    ],
+    "is_demo": false,
+    "url_status": "ok",
+    "area": "No especificada",
+    "institution_type": "Institución pública",
+    "urgency": "proximo",
+    "match_score": 89,
+    "match_level": "Alta",
+    "matched_keywords": [
+      "soporte T.I",
+      "gestión tecnológica"
     ],
     "excluded_keywords": []
   },
@@ -230,23 +270,23 @@
     "excluded_keywords": []
   },
   {
-    "id": "empleos-publicos-140510",
-    "source_id": "140510",
-    "title": "030-26 TÉCNICO SOPORTE T.I G°16-21 (SEGÚN EXPERIENCIA), UNIDAD DE GESTIÓN TECNOLÓGICA, DEPARTAMENTO DE TECNOLOGÍAS DE LA INFORMACIÓN, SUBDIRECCIÓN ADMINISTRATIVA",
-    "institution": "Hospital Metropolitano de Santiago",
+    "id": "empleos-publicos-140210",
+    "source_id": "140210",
+    "title": "ANALISTA DE TRANSFERENCIA TECNOLÓGICA - CENTRO TECNOLÓGICO UCAMPUS - FACULTAD DE CIENCIAS FÍSICAS Y MATEMÁTICAS (FCFM)",
+    "institution": "Facultad de Ciencias Físicas y Matemáticas",
     "source": "Empleos Públicos",
-    "source_url": "https://www.empleospublicos.cl/pub/convocatorias/convpostularavisoTrabajo.aspx?i=140510&c=0&j=0&tipo=convpostularavisoTrabajo",
+    "source_url": "https://www.empleospublicos.cl/pub/convocatorias/convpostularavisoTrabajo.aspx?i=140210&c=0&j=0&tipo=convpostularavisoTrabajo",
     "region": "Metropolitana",
     "commune": "No especificada",
-    "closing_date": "2026-06-02",
+    "closing_date": "2026-06-03",
     "detected_at": "2026-06-01T00:29:37-04:00",
-    "description": "Proporcionar mantención y soporte de todo equipamiento tecnológico y de comunicaciones. Además, brindar asistencia técnica a usuarios de servicios informáticos del Hospital, ya sea de hardware o software, al momento de presentarse algún problema, dando respuesta presencial o remota rápida y eficaz frente a las necesidades de soporte para los usuarios, de acuerdo a tabla de resolución por criticidad. También ejecutar ... [+]",
+    "description": "Ejecutar y dar soporte directo a los procesos de implementación y adopción de las soluciones tecnológicas de la Plataforma Ucampus en instituciones de Educación Superior. Interactuar con los usuarios, asegurando la correcta puesta en marcha y la mejora continua de los proyectos de transferencia, facilitando la capacitación y el uso ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
     "tags": [],
     "alert_reasons": [
       "Palabras clave positivas",
-      "Coincidencia fuerte en título",
+      "Revisar términos ambiguos: plataforma",
       "Región priorizada",
       "Zona de interés",
       "Fuente disponible"
@@ -256,10 +296,10 @@
     "area": "No especificada",
     "institution_type": "Institución pública",
     "urgency": "proximo",
-    "match_score": 67,
-    "match_level": "Media",
+    "match_score": 18,
+    "match_level": "Descartada",
     "matched_keywords": [
-      "gestión tecnológica"
+      "plataforma"
     ],
     "excluded_keywords": []
   },
@@ -280,6 +320,7 @@
     "tags": [],
     "alert_reasons": [
       "Palabras clave positivas",
+      "Revisar términos ambiguos: sistemas",
       "Región priorizada",
       "Zona de interés",
       "Fuente disponible"
@@ -289,7 +330,7 @@
     "area": "No especificada",
     "institution_type": "Institución pública",
     "urgency": "proximo",
-    "match_score": 21,
+    "match_score": 16,
     "match_level": "Descartada",
     "matched_keywords": [
       "sistemas"
@@ -313,6 +354,7 @@
     "tags": [],
     "alert_reasons": [
       "Palabras clave positivas",
+      "Revisar términos ambiguos: sistemas",
       "Región priorizada",
       "Zona de interés",
       "Fuente disponible"
@@ -322,7 +364,7 @@
     "area": "No especificada",
     "institution_type": "Institución pública",
     "urgency": "proximo",
-    "match_score": 21,
+    "match_score": 16,
     "match_level": "Descartada",
     "matched_keywords": [
       "sistemas"
@@ -346,6 +388,7 @@
     "tags": [],
     "alert_reasons": [
       "Palabras clave positivas",
+      "Revisar términos ambiguos: sistemas",
       "Región priorizada",
       "Zona de interés",
       "Fuente disponible"
@@ -355,7 +398,7 @@
     "area": "No especificada",
     "institution_type": "Institución pública",
     "urgency": "proximo",
-    "match_score": 21,
+    "match_score": 16,
     "match_level": "Descartada",
     "matched_keywords": [
       "sistemas"
@@ -379,6 +422,7 @@
     "tags": [],
     "alert_reasons": [
       "Palabras clave positivas",
+      "Revisar términos ambiguos: sistemas",
       "Región priorizada",
       "Zona de interés",
       "Fuente disponible"
@@ -388,7 +432,7 @@
     "area": "No especificada",
     "institution_type": "Institución pública",
     "urgency": "proximo",
-    "match_score": 21,
+    "match_score": 16,
     "match_level": "Descartada",
     "matched_keywords": [
       "sistemas"
@@ -412,6 +456,7 @@
     "tags": [],
     "alert_reasons": [
       "Palabras clave positivas",
+      "Revisar términos ambiguos: sistemas",
       "Región priorizada",
       "Zona de interés",
       "Fuente disponible"
@@ -421,109 +466,10 @@
     "area": "No especificada",
     "institution_type": "Institución pública",
     "urgency": "proximo",
-    "match_score": 21,
+    "match_score": 16,
     "match_level": "Descartada",
     "matched_keywords": [
       "sistemas"
-    ],
-    "excluded_keywords": []
-  },
-  {
-    "id": "empleos-publicos-140529",
-    "source_id": "140529",
-    "title": "GESTOR(A) SECCIÓN LOGÍSTICA SISTEMA PÚBLICO",
-    "institution": "Central de Abastecimiento del Sistema Nacional de Servicios de Salud",
-    "source": "Empleos Públicos",
-    "source_url": "https://www.empleospublicos.cl/pub/convocatorias/convpostularavisoTrabajo.aspx?i=140529&c=0&j=0&tipo=convpostularavisoTrabajo",
-    "region": "Metropolitana",
-    "commune": "No especificada",
-    "closing_date": "2026-06-03",
-    "detected_at": "2026-06-01T00:29:37-04:00",
-    "description": "Asegurar la gestión integral de los procesos logísticos para el abastecimiento del sistema de salud público, dando cumplimiento a los marcos normativos de calidad y garantizando la continuidad del suministro de medicamentos, dispositivos médicos, alimentos e insumos.",
-    "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
-    "status": "abierta",
-    "tags": [],
-    "alert_reasons": [
-      "Palabras clave positivas",
-      "Región priorizada",
-      "Zona de interés",
-      "Fuente disponible"
-    ],
-    "is_demo": false,
-    "url_status": "ok",
-    "area": "No especificada",
-    "institution_type": "Institución pública",
-    "urgency": "proximo",
-    "match_score": 21,
-    "match_level": "Descartada",
-    "matched_keywords": [
-      "abastecimiento"
-    ],
-    "excluded_keywords": []
-  },
-  {
-    "id": "empleos-publicos-140530",
-    "source_id": "140530",
-    "title": "GESTOR(A) SECCIÓN LOGÍSTICA FARMACIAS PRIVADAS",
-    "institution": "Central de Abastecimiento del Sistema Nacional de Servicios de Salud",
-    "source": "Empleos Públicos",
-    "source_url": "https://www.empleospublicos.cl/pub/convocatorias/convpostularavisoTrabajo.aspx?i=140530&c=0&j=0&tipo=convpostularavisoTrabajo",
-    "region": "Metropolitana",
-    "commune": "No especificada",
-    "closing_date": "2026-06-03",
-    "detected_at": "2026-06-01T00:29:37-04:00",
-    "description": "Gestionar de manera integral los procesos logísticos para las farmacias adheridas a la Ley Cenabast (21.198), garantizando el cumplimiento de los estándares de abastecimiento y calidad exigidos por la red privada para asegurar la disponibilidad oportuna de los productos.",
-    "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
-    "status": "abierta",
-    "tags": [],
-    "alert_reasons": [
-      "Palabras clave positivas",
-      "Región priorizada",
-      "Zona de interés",
-      "Fuente disponible"
-    ],
-    "is_demo": false,
-    "url_status": "ok",
-    "area": "No especificada",
-    "institution_type": "Institución pública",
-    "urgency": "proximo",
-    "match_score": 21,
-    "match_level": "Descartada",
-    "matched_keywords": [
-      "abastecimiento"
-    ],
-    "excluded_keywords": []
-  },
-  {
-    "id": "empleos-publicos-140210",
-    "source_id": "140210",
-    "title": "ANALISTA DE TRANSFERENCIA TECNOLÓGICA - CENTRO TECNOLÓGICO UCAMPUS - FACULTAD DE CIENCIAS FÍSICAS Y MATEMÁTICAS (FCFM)",
-    "institution": "Facultad de Ciencias Físicas y Matemáticas",
-    "source": "Empleos Públicos",
-    "source_url": "https://www.empleospublicos.cl/pub/convocatorias/convpostularavisoTrabajo.aspx?i=140210&c=0&j=0&tipo=convpostularavisoTrabajo",
-    "region": "Metropolitana",
-    "commune": "No especificada",
-    "closing_date": "2026-06-03",
-    "detected_at": "2026-06-01T00:29:37-04:00",
-    "description": "Ejecutar y dar soporte directo a los procesos de implementación y adopción de las soluciones tecnológicas de la Plataforma Ucampus en instituciones de Educación Superior. Interactuar con los usuarios, asegurando la correcta puesta en marcha y la mejora continua de los proyectos de transferencia, facilitando la capacitación y el uso ... [+]",
-    "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
-    "status": "abierta",
-    "tags": [],
-    "alert_reasons": [
-      "Palabras clave positivas",
-      "Región priorizada",
-      "Zona de interés",
-      "Fuente disponible"
-    ],
-    "is_demo": false,
-    "url_status": "ok",
-    "area": "No especificada",
-    "institution_type": "Institución pública",
-    "urgency": "proximo",
-    "match_score": 21,
-    "match_level": "Descartada",
-    "matched_keywords": [
-      "plataforma"
     ],
     "excluded_keywords": []
   },
@@ -1529,6 +1475,66 @@
     "closing_date": "2026-06-03",
     "detected_at": "2026-06-01T00:29:37-04:00",
     "description": "Gestionar los requerimientos de los establecimientos adheridos a la Ley 21.198, proponer y ejecutar mejoras operativas y establecer lazos comerciales con los usuarios.",
+    "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
+    "status": "abierta",
+    "tags": [],
+    "alert_reasons": [
+      "Región priorizada",
+      "Zona de interés",
+      "Fuente disponible"
+    ],
+    "is_demo": false,
+    "url_status": "ok",
+    "area": "No especificada",
+    "institution_type": "Institución pública",
+    "urgency": "proximo",
+    "match_score": 15,
+    "match_level": "Descartada",
+    "matched_keywords": [],
+    "excluded_keywords": []
+  },
+  {
+    "id": "empleos-publicos-140529",
+    "source_id": "140529",
+    "title": "GESTOR(A) SECCIÓN LOGÍSTICA SISTEMA PÚBLICO",
+    "institution": "Central de Abastecimiento del Sistema Nacional de Servicios de Salud",
+    "source": "Empleos Públicos",
+    "source_url": "https://www.empleospublicos.cl/pub/convocatorias/convpostularavisoTrabajo.aspx?i=140529&c=0&j=0&tipo=convpostularavisoTrabajo",
+    "region": "Metropolitana",
+    "commune": "No especificada",
+    "closing_date": "2026-06-03",
+    "detected_at": "2026-06-01T00:29:37-04:00",
+    "description": "Asegurar la gestión integral de los procesos logísticos para el abastecimiento del sistema de salud público, dando cumplimiento a los marcos normativos de calidad y garantizando la continuidad del suministro de medicamentos, dispositivos médicos, alimentos e insumos.",
+    "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
+    "status": "abierta",
+    "tags": [],
+    "alert_reasons": [
+      "Región priorizada",
+      "Zona de interés",
+      "Fuente disponible"
+    ],
+    "is_demo": false,
+    "url_status": "ok",
+    "area": "No especificada",
+    "institution_type": "Institución pública",
+    "urgency": "proximo",
+    "match_score": 15,
+    "match_level": "Descartada",
+    "matched_keywords": [],
+    "excluded_keywords": []
+  },
+  {
+    "id": "empleos-publicos-140530",
+    "source_id": "140530",
+    "title": "GESTOR(A) SECCIÓN LOGÍSTICA FARMACIAS PRIVADAS",
+    "institution": "Central de Abastecimiento del Sistema Nacional de Servicios de Salud",
+    "source": "Empleos Públicos",
+    "source_url": "https://www.empleospublicos.cl/pub/convocatorias/convpostularavisoTrabajo.aspx?i=140530&c=0&j=0&tipo=convpostularavisoTrabajo",
+    "region": "Metropolitana",
+    "commune": "No especificada",
+    "closing_date": "2026-06-03",
+    "detected_at": "2026-06-01T00:29:37-04:00",
+    "description": "Gestionar de manera integral los procesos logísticos para las farmacias adheridas a la Ley Cenabast (21.198), garantizando el cumplimiento de los estándares de abastecimiento y calidad exigidos por la red privada para asegurar la disponibilidad oportuna de los productos.",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
     "tags": [],

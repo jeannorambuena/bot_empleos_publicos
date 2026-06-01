@@ -25,6 +25,7 @@ EXPECTED_SCORE_THRESHOLDS = (
     "if (score >= 35)",
     'return "discarded"',
 )
+EXPECTED_DATA_MODE_LABEL = "Captura local de Empleos Públicos"
 
 
 def _load_json(path: Path) -> Any:
@@ -57,6 +58,8 @@ def main() -> int:
         for expected_threshold in EXPECTED_SCORE_THRESHOLDS:
             if expected_threshold not in app_js:
                 errors.append(f"public/assets/app.js no contiene: {expected_threshold}")
+        if EXPECTED_DATA_MODE_LABEL not in app_js:
+            errors.append("public/assets/app.js no contiene la etiqueta para datos reales.")
 
     if (ROOT / ".env").exists():
         errors.append("Existe .env en la raíz. No debe publicarse ni mantenerse en el repositorio.")

@@ -16,6 +16,20 @@ CCTV o compras públicas.
 - Las palabras negativas generales, como práctica profesional o voluntariado,
   mantienen descarte directo.
 
+## Reglas contra falsos positivos
+
+- `sistemas` es una señal débil por sí sola.
+- `plataforma` solo gana peso adicional cuando aparece junto a contexto digital,
+  informático, TI, soporte o gestión tecnológica.
+- `abastecimiento` solo gana peso adicional cuando aparece junto a compras públicas,
+  Mercado Público, ChileCompra, contratación pública u organismos compradores.
+- Instalaciones eléctricas, sanitarias, mecánicas y climatización no se consideran
+  relevantes salvo que incluyan señales como CCTV, BMS, redes, corrientes débiles o
+  infraestructura tecnológica.
+
+Los términos ambiguos permanecen visibles en los motivos para facilitar revisión
+manual.
+
 ## Rangos
 
 - `Alta`: 80 a 100.
@@ -35,8 +49,15 @@ Después de regenerar el dashboard con datos reales:
 El analizador muestra distribución, mejores puntajes, descartadas con coincidencias
 positivas, términos relevantes pendientes de revisión y frecuencia de keywords.
 
+Para una muestra enfocada en revisión humana:
+
+```powershell
+.\venv\Scripts\python.exe scripts\review_relevance_sample.py
+```
+
 ## Pendientes
 
 Esta calibración sigue siendo inicial. Hará falta revisar capturas sucesivas, añadir
 casos de prueba guardados y ajustar sinónimos para evitar falsos positivos en cargos
-administrativos o clínicos.
+administrativos o clínicos. También queda pendiente incorporar feedback humano
+repetible para entrenar y calibrar mejor las reglas.
