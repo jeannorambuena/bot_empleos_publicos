@@ -114,13 +114,15 @@ def generate_event(
 
     prefix = "Decidir postulación" if event_kind == "decision" else "Cierre de convocatoria"
     uid = stable_event_uid(opportunity, event_kind)
+    title = str(opportunity.get("title") or "Oportunidad sin título")
+    summary = f"{prefix}: {title}"
     lines = [
         "BEGIN:VEVENT",
         f"UID:{uid}",
         f"DTSTAMP:{_utc_stamp(generated_at)}",
         f"DTSTART;VALUE=DATE:{event_date.strftime('%Y%m%d')}",
         f"DTEND;VALUE=DATE:{(event_date + timedelta(days=1)).strftime('%Y%m%d')}",
-        f"SUMMARY:{_escape_ics(f'{prefix}: {opportunity.get("title", "Oportunidad sin título")}')}",
+        f"SUMMARY:{_escape_ics(summary)}",
         f"DESCRIPTION:{_escape_ics(_description(opportunity))}",
     ]
 
