@@ -22,7 +22,7 @@ def select_alertable_opportunities(
     """Return active, non-discarded opportunities that match enabled alert rules."""
     selected = []
     for opportunity in opportunities:
-        if opportunity.get("status") != "vigente":
+        if opportunity.get("status") not in {"vigente", "abierta"}:
             continue
         if opportunity.get("match_level") == "Descartada":
             continue

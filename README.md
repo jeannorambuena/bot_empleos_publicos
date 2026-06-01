@@ -5,8 +5,9 @@ laborales del sector público chileno. El objetivo es facilitar el seguimiento d
 convocatorias relevantes mediante filtros configurables, alertas y una vista pública
 simple de consultar.
 
-> Estado actual: prototipo en desarrollo. El dashboard de `public/` usa datos demo y
-> todavía no representa convocatorias reales obtenidas por el scraper.
+> Estado actual: prototipo en desarrollo. El dashboard de `public/` puede regenerarse
+> con datos demo o con una captura real local explícita. Todavía no existe publicación
+> automática ni operación productiva.
 
 ## Qué problema resuelve
 
@@ -21,10 +22,10 @@ El repositorio conserva una implementación histórica local y suma gradualmente
 arquitectura reutilizable. En esta etapa:
 
 - Existe un dashboard estático responsivo en `public/`.
-- Los JSON publicados contienen oportunidades de ejemplo.
+- Los JSON públicos pueden regenerarse con oportunidades demo o datos reales locales.
 - Hay archivos de configuración de referencia en `config/`.
 - Están documentados el contrato de datos, la arquitectura, la seguridad y el roadmap.
-- El scraper antiguo todavía no se conecta al dashboard público.
+- El scraper antiguo no se conecta al dashboard público; existe un flujo local nuevo y controlado.
 - Las alertas, recordatorios, GitHub Pages y GitHub Actions aún no están habilitados.
 
 ## Instalación en Windows
@@ -62,6 +63,21 @@ Luego abre `http://localhost:8000`. La página muestra exclusivamente datos demo
 El repositorio está preparado para publicar `public/` mediante GitHub Pages después
 de revisión y merge a `main`. La publicación puede no estar activa todavía. Consulta
 `docs/github-pages.md` para validar el sitio y conocer los pasos manuales futuros.
+
+## Flujo local con datos reales
+
+El primer conector local puede capturar convocatorias públicas desde Empleos Públicos
+y regenerar el dashboard sin modificar el scraper histórico:
+
+```powershell
+python scripts/fetch_empleos_publicos.py
+python scripts/check_real_data.py
+python scripts/build_public_data_from_real.py
+python -m http.server 8000 --directory public
+```
+
+Este flujo todavía no se ejecuta automáticamente y no envía alertas ni recordatorios
+reales. Consulta `docs/real-data.md` antes de publicar resultados.
 
 ## Configuración futura
 

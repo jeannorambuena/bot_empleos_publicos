@@ -18,27 +18,30 @@ concepto.
 
 ## Qué suma puntos
 
-- Cada palabra clave positiva encontrada: 12 puntos.
-- Región priorizada: 18 puntos.
-- Área incluida en el perfil: 14 puntos.
-- Comuna o zona de interés: 8 puntos.
-- Fuente informada: 4 puntos.
+- Cada palabra clave positiva encontrada en el título: 22 puntos.
+- Cada palabra clave adicional encontrada en descripción o tags: 6 puntos.
+- Presencia de una palabra fuerte en el título: 30 puntos.
+- Región priorizada: 8 puntos.
+- Área incluida en el perfil: 10 puntos.
+- Comuna o zona de interés: 4 puntos.
+- Fuente informada: 3 puntos.
 
 El resultado final se limita a un máximo de 100 puntos. Además del puntaje, el motor
 devuelve palabras clave encontradas y motivos legibles para futuras alertas.
 
 ## Qué descarta
 
-Si aparece cualquier palabra clave negativa configurada, la oportunidad se descarta
-de inmediato con puntaje `0`. El resultado incluye las palabras que causaron el
-descarte para facilitar la revisión.
+Si aparece una palabra negativa general configurada, la oportunidad se descarta con
+puntaje `0`. Los cargos clínicos evidentes también se descartan cuando no existe una
+señal tecnológica fuerte en el título. Una institución de salud no provoca descarte
+por sí sola: infraestructura, redes, soporte o CCTV pueden seguir siendo relevantes.
 
 ## Rangos
 
-- `Alta`: 85 a 100.
-- `Media`: 70 a 84.
-- `Baja`: 50 a 69.
-- `Descartada`: menos de 50.
+- `Alta`: 80 a 100.
+- `Media`: 60 a 79.
+- `Baja`: 35 a 59.
+- `Descartada`: 0 a 34 o descarte fuerte.
 
 Una oportunidad también puede marcarse como descartada directamente por una palabra
 negativa.

@@ -21,6 +21,8 @@ reportes/
 logs/
 ep_state.json
 output/
+data/raw/
+data/normalized/
 
 # Opcional (si no quieres versionar .ini personales)
 *.ini

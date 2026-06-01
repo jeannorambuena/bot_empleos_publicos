@@ -103,7 +103,7 @@ def summarize_opportunities(
 ) -> dict[str, int]:
     """Create the metrics currently consumed by the dashboard."""
     items = list(opportunities)
-    active = [item for item in items if item.get("status") == "vigente"]
+    active = [item for item in items if item.get("status") in {"vigente", "abierta"}]
     sources = {item.get("source") for item in items if item.get("source")}
     return {
         "sources_reviewed": len(sources),

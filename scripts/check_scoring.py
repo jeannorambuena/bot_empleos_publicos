@@ -45,6 +45,29 @@ def main() -> int:
         reasons = ", ".join(result["alert_reasons"]) or "-"
         print(f"{opportunity.get('id', '-')} | {opportunity.get('title', '-')} | {score} | {level} | {reasons}")
 
+    clinical = calculate_match(
+        {
+            "title": "Técnico en enfermería para hospital",
+            "source": "Empleos Públicos",
+            "region": "Metropolitana",
+        },
+        profile,
+    )
+    hospital_technology = calculate_match(
+        {
+            "title": "Especialista CCTV y redes para hospital",
+            "source": "Empleos Públicos",
+            "region": "Metropolitana",
+        },
+        profile,
+    )
+    if clinical["match_level"] != "Descartada":
+        print("ERROR: Un cargo clínico evidente no fue descartado.", file=sys.stderr)
+        return 1
+    if hospital_technology["match_level"] == "Descartada":
+        print("ERROR: Un cargo tecnológico hospitalario fue descartado.", file=sys.stderr)
+        return 1
+
     return 0
 
 
