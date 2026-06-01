@@ -9,7 +9,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-01",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Apoyar al Inspector Técnico de Obras en la fiscalización técnica integral de las partidas de corrientes débiles, CCTV y BMS del proyecto hospitalario, verificando que su ejecución se ajuste al contrato, bases administrativas, especificaciones técnicas, planos aprobados, normativa aplicable, protocolos de calidad y requerimientos operacionales del establecimiento de salud.",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -36,10 +36,16 @@
       "BMS"
     ],
     "excluded_keywords": [],
+    "base_match_score": 100,
+    "base_match_level": "Alta",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140504",
@@ -51,7 +57,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-08",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Diseñar, desarrollar y documentar la mantención y continuidad operacional de plataformas digitales, infraestructura tecnológica, sistemas de información y microinformática, además de proveer soporte técnico para resolver incidencias y atender requerimientos, para asegurar un soporte informático de excelencia que incluya el monitoreo y protección de los sistemas y datos contra ciberamenazas; mediante la generación ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -82,10 +88,16 @@
       "sistemas"
     ],
     "excluded_keywords": [],
+    "base_match_score": 98,
+    "base_match_level": "Alta",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140502",
@@ -97,7 +109,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-09",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Entregar valor a través del diseño e implementación de productos para la plataforma de compras públicas, resolviendo las necesidades del negocio, de los usuarios (internos y externos) y ajustándose a los lineamientos y valores institucionales.",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -126,10 +138,16 @@
       "compras públicas"
     ],
     "excluded_keywords": [],
+    "base_match_score": 98,
+    "base_match_level": "Alta",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140631",
@@ -141,7 +159,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-05",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "En el marco de la mantención evolutiva de sus sistemas informáticos, la Subsecretaría requiere contratar un/a desarrollador/a informático/a con la finalidad de mantener las plataformas informáticas de la Institución, Contribuir al aseguramiento de la calidad, seguridad de la información, ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -170,10 +188,16 @@
       "sistemas"
     ],
     "excluded_keywords": [],
+    "base_match_score": 93,
+    "base_match_level": "Alta",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140510",
@@ -185,7 +209,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-02",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Proporcionar mantención y soporte de todo equipamiento tecnológico y de comunicaciones. Además, brindar asistencia técnica a usuarios de servicios informáticos del Hospital, ya sea de hardware o software, al momento de presentarse algún problema, dando respuesta presencial o remota rápida y eficaz frente a las necesidades de soporte para los usuarios, de acuerdo a tabla de resolución por criticidad. También ejecutar ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -211,10 +235,16 @@
       "gestión tecnológica"
     ],
     "excluded_keywords": [],
+    "base_match_score": 89,
+    "base_match_level": "Alta",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140511",
@@ -226,7 +256,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-02",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Ejecutar labores de apoyo técnico, mantenimiento y normalización de la infraestructura de red y comunicaciones del Hospital Metropolitano, asegurando la conectividad estable del backbone y dispositivos periféricos para ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -252,10 +282,16 @@
       "gestión tecnológica"
     ],
     "excluded_keywords": [],
+    "base_match_score": 89,
+    "base_match_level": "Alta",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140506",
@@ -267,7 +303,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-08",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Diseñar e implementar estrategias y herramientas de asesoría, asistencia y apoyo a los organismos compradores, para promover el uso eficaz de los mecanismos del sistema de compras públicas, contribuyendo a la eficiencia del gasto público. Además de orientar en el diseño e implementación de estrategias de compra a organismos compradores, realizar compras ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -292,10 +328,16 @@
       "compras públicas"
     ],
     "excluded_keywords": [],
+    "base_match_score": 73,
+    "base_match_level": "Media",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140210",
@@ -307,7 +349,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-03",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Ejecutar y dar soporte directo a los procesos de implementación y adopción de las soluciones tecnológicas de la Plataforma Ucampus en instituciones de Educación Superior. Interactuar con los usuarios, asegurando la correcta puesta en marcha y la mejora continua de los proyectos de transferencia, facilitando la capacitación y el uso ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -330,10 +372,16 @@
       "plataforma"
     ],
     "excluded_keywords": [],
+    "base_match_score": 18,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-139347",
@@ -345,7 +393,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-01",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "El Profesional Unidad de Costos 10º será responsable de fortalecer la gestión institucional mediante el análisis, validación y seguimiento de los costos de la actividad hospitalarios (SIGCOM) y la producción asistencial integrando datos provenientes de múltiples sistemas, asegurando su trazabilidad, ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -368,10 +416,16 @@
       "sistemas"
     ],
     "excluded_keywords": [],
+    "base_match_score": 16,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140483",
@@ -383,7 +437,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-01",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Asesorar al Inspector Técnico de Obra en la revisión, evaluación y control de las instalaciones eléctricas del proyecto, velando por el cumplimiento de la normativa vigente, la calidad de ejecución y la continuidad operativa de los sistemas eléctricos.",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -406,10 +460,16 @@
       "sistemas"
     ],
     "excluded_keywords": [],
+    "base_match_score": 16,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140485",
@@ -421,7 +481,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-01",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Asesorar al Inspector Técnico de Obra en la revisión, evaluación y control de las instalaciones sanitarias del proyecto, velando por el cumplimiento de la normativa vigente, la calidad de ejecución y la correcta operación de los sistemas sanitarios.",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -444,10 +504,16 @@
       "sistemas"
     ],
     "excluded_keywords": [],
+    "base_match_score": 16,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140494",
@@ -459,7 +525,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-01",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Ejecutar las acciones respecto al desarrollo y gestión de iniciativas sobre el transporte marítimo, fluvial y lacustre y su relación con el resto de los sistemas logísticos, medios de transporte y procesos de atención, al desarrollo de nuevos proyectos y proponiendo mejoras en los ya existentes, así como apoyo en la ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -482,10 +548,16 @@
       "sistemas"
     ],
     "excluded_keywords": [],
+    "base_match_score": 16,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140372",
@@ -497,7 +569,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-02",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Liderar y supervisar la gestión integral de la Unidad de Sistemas de Información y Soporte, definiendo lineamientos estratégicos para el uso de tecnologías de la información en coherencia con los objetivos institucionales de la Dirección General de Concesiones (DGC). Fomentar la innovación, la mejora continua y la seguridad de la información, asegurando la eficiencia de los procesos, la continuidad operativa y el fortalecimiento ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -520,10 +592,16 @@
       "sistemas"
     ],
     "excluded_keywords": [],
+    "base_match_score": 16,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140481",
@@ -535,7 +613,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-01",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Apoyar al Inspector Técnico de Obras en la fiscalización técnica integral de las partidas de climatización del proyecto, verificando que su ejecución se ajuste al contrato, bases administrativas, especificaciones técnicas, planos aprobados, normativa aplicable, protocolos de calidad y requerimientos operacionales del establecimiento de salud.",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -554,10 +632,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140482",
@@ -569,7 +653,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-01",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Gestionar, controlar y mantener actualizada toda la documentación técnica y administrativa del proyecto, asegurando su correcta trazabilidad, disponibilidad y resguardo, apoyando al equipo de Inspección Técnica de Obra en el cumplimiento de los procedimientos establecidos.",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -588,10 +672,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140484",
@@ -603,7 +693,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-01",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Apoyar al Inspector Técnico de Obras en la fiscalización técnica integral de las partidas mecánicas del proyecto hospitalario, verificando que su ejecución se ajuste al contrato, bases administrativas, especificaciones técnicas, planos aprobados, normativa aplicable, protocolos de calidad y requerimientos operacionales del establecimiento de salud.",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -622,10 +712,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140288",
@@ -637,7 +733,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-01",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Realizar diagnóstico y tratamiento de rehabilitación en adolescente y jóvenes ingresados al sistema penal por la ley N° 20.084, con consumo problemático de alcohol, drogas y otros trastornos de salud mental, desde un enfoque interdisciplinario, género y comunitario. \"Arial ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -656,10 +752,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140423",
@@ -671,7 +773,7 @@
     "region": "O’Higgins",
     "commune": "No especificada",
     "closing_date": "2026-06-01",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Fortalecer el desarrollo profesional de Docentes, Directivos y Asistentes de la Educación, mediante el diagnóstico, la planificación, ejecución y seguimiento de procesos formativos, vinculados con las políticas y lineamientos del Ministerio de Educación, promoviendo la mejora continua, el trabajo colaborativo, la innovación pedagógica y la articulación en el territorio, con el fin de promover una educación ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=7&region=Libertador-Bernardo-OHiggins",
     "status": "abierta",
@@ -690,10 +792,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140424",
@@ -705,7 +813,7 @@
     "region": "O’Higgins",
     "commune": "No especificada",
     "closing_date": "2026-06-01",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Construir alianzas estratégicas y/o relaciones colaborativas con actores externos claves (empresas, universidades, ONGs, Municipios, ente otros) que potencien el desarrollo integral del servicio educativo en los establecimientos educacionales y territorio, fomentando la innovación, asegurando recursos y legitimando el impacto del SLEP en la comunidad.",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=7&region=Libertador-Bernardo-OHiggins",
     "status": "abierta",
@@ -724,10 +832,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140425",
@@ -739,7 +853,7 @@
     "region": "O’Higgins",
     "commune": "No especificada",
     "closing_date": "2026-06-01",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Liderar técnicamente el desarrollo de los instrumentos de gestión de la institución, así como la implementación, integración y evaluación de metas y objetivos institucionales, contribuyendo a la elaboración de definiciones estratégicas, en el diseño, monitoreo y evaluación de la ejecución de los planes anuales y convenios de desempeño de los directivos, así como de los resultados ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=7&region=Libertador-Bernardo-OHiggins",
     "status": "abierta",
@@ -758,10 +872,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140426",
@@ -773,7 +893,7 @@
     "region": "O’Higgins",
     "commune": "No especificada",
     "closing_date": "2026-06-01",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Apoyar y acompañar a los equipos de los establecimientos educacionales, en todos los niveles y modalidades educativas (Educación Parvularia, Básica, Media Técnico Profesional, Especial, de Adultos, en situación hospitalaria, en contexto de encierro o de ruralidad) mediante un plan de apoyo consensuado con ellos. Este plan se materializa mediante estrategias de asesoría directa, trabajo colaborativo y en red para Fortalecer y desarrollar ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=7&region=Libertador-Bernardo-OHiggins",
     "status": "abierta",
@@ -792,10 +912,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140427",
@@ -807,7 +933,7 @@
     "region": "O’Higgins",
     "commune": "No especificada",
     "closing_date": "2026-06-01",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Apoyar en la supervisión técnica de proyectos de infraestructura y mantenimiento, elaboración de especificaciones técnicas, cubicaciones y presupuestos de proyectos de mantenimiento, mejoramiento e inversión de los establecimientos educacionales y jardines infantiles, así como control y gestión de contratos, de aquellos proyectos que son financiados por el Servicio o por terceros de acuerdo con lo establecido por el Plan Estratégico ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=7&region=Libertador-Bernardo-OHiggins",
     "status": "abierta",
@@ -826,10 +952,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140429",
@@ -841,7 +973,7 @@
     "region": "O’Higgins",
     "commune": "No especificada",
     "closing_date": "2026-06-01",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Coordinar, gestionar y ejecutar el proceso de atención ciudadana del Servicio, en relación con el Sistema de Información y Atención Ciudadana (SIAC), con el objeto de asegurar la entrega de una atención integral y de calidad a los usuarios, garantizar el cumplimiento de los procedimientos y plazos de atención y respuestas ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=7&region=Libertador-Bernardo-OHiggins",
     "status": "abierta",
@@ -860,10 +992,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140433",
@@ -875,7 +1013,7 @@
     "region": "O’Higgins",
     "commune": "No especificada",
     "closing_date": "2026-06-01",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Liderar la unidad de planificación, control y mejora, considerando el diseño e implementación de los procesos de planificación estratégica del Servicio Local, con el objetivo de asegurar la funcionalidad para la provisión permanente y continua del servicio educacional. Además de supervisar y monitorear el cumplimiento de las metas y compromisos contemplados en los diferentes instrumentos de gestión institucional, levantando ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=7&region=Libertador-Bernardo-OHiggins",
     "status": "abierta",
@@ -894,10 +1032,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140434",
@@ -909,7 +1053,7 @@
     "region": "O’Higgins",
     "commune": "No especificada",
     "closing_date": "2026-06-01",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Asegurar el cumplimiento de las normas legales y reglamentarias por parte de las unidades del SLEP Valle Cachapoal, resguardando el buen uso de los recursos públicos y promoviendo el cumplimiento de los planes, programas y presupuestos mediante la implementación de un sistema de control interno de auditoría que permita controlar, evaluar y mejorar la eficiencia operativa del Servicio.",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=7&region=Libertador-Bernardo-OHiggins",
     "status": "abierta",
@@ -928,10 +1072,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-137729",
@@ -943,7 +1093,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-02",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Integrar el equipo de la Unidad de Laboratorio, contribuyendo de manera eficiente, oportuna y segura en el desarrollo de las actividades de apoyo clínico, administrativo y logístico asociadas a los procesos preanalíticos y postanalíticos del laboratorio, ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -962,10 +1112,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-137730",
@@ -977,7 +1133,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-02",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Gestionar y ejecutar de manera eficiente todos los requerimientos asociados a la gestión de la demanda provenientes de los usuarios del CRS y de otros establecimientos de la red pública de salud, asegurando la correcta programación, coordinación ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -996,10 +1152,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-137731",
@@ -1011,7 +1173,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-02",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Contribuir al bienestar integral y calidad de vida laboral de los(as) funcionarios(as) del CRSCO, mediante el apoyo administrativo, operativo y de gestión en las distintas áreas de la Unidad de Calidad de Vida Laboral y Servicio de Bienestar, promoviendo el acceso ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -1030,10 +1192,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-139452",
@@ -1045,7 +1213,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-02",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Liderar la unidad de admisión y agendamiento para optimizar la gestión de agendas y el trabajo del equipo en relación a dar cumplimiento a las directrices de priorización, contactabilidad y gestiones correspondientes a lista de espera, agendas médicas y no médicas.",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -1064,10 +1232,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-139469",
@@ -1079,7 +1253,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-02",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Coordinar, gestionar y analizar el sistema institucional de notificación, investigación y control de eventos adversos, incidentes y cuasi eventos, promoviendo una cultura de seguridad del paciente. Asegurar el cumplimiento de la normativa vigente y contribuir ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -1098,10 +1272,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-139470",
@@ -1113,7 +1293,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-02",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Integrar el equipo de la Unidad de Obstetricia, contribuyendo a la atención integral y humanizada de la mujer durante el proceso reproductivo, mediante la coordinación eficiente de recursos clínicos, técnicos, administrativos y asistenciales, asegurando ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -1132,10 +1312,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140381",
@@ -1147,7 +1333,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-02",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Ejecutar con precisión y oportunidad las etapas, actividades y tareas del proceso de pago de remuneraciones a funcionarios/as y prestadores de servicios a honorarios del Servicio, ello, a través del análisis y la preparación de la información de movimientos de personal de cada mes, ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -1166,10 +1352,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-139348",
@@ -1181,7 +1373,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-02",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Apoyar técnica y operativamente la implementación y habilitación de la droguería institucional del nuevo Hospital del Salvador, contribuyendo a la obtención de la resolución sanitaria y asegurando el cumplimiento de la normativa sanitaria vigente y de los estándares de calidad asociados al almacenamiento, custodia y distribución ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -1200,10 +1392,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140227",
@@ -1215,7 +1413,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-02",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "El técnico de enfermería de nivel superior (TENS) debe colaborar en la atención del paciente pediátrico atendido en Oncología Ambulatorio, asistencia a los profesionales del equipo en los diferentes procesos que se llevan a cabo para asegurar una atención de calidad y seguridad. Estará también bajo su responsabilidad el uso eficiente de los recursos físicos y materiales asignados. Teniendo en consideración ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -1234,10 +1432,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140228",
@@ -1249,7 +1453,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-02",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "El cargo es responsable de ejecutar y mantener actualizados los procesos asociados a la gestión de bienes inventariables del Hospital, asegurando el correcto registro, control y trazabilidad de los activos institucionales. Asimismo, deberá gestionar la documentación administrativa vinculada a los movimientos de bienes, tales como actas de altas, bajas y traspasos, conforme a la normativa vigente. Entre sus funciones se encuentra coordinar acciones ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -1268,10 +1472,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140455",
@@ -1283,7 +1493,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-02",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Cumplir sus funciones técnicas y administrativas conforme a los lineamientos institucionales vigentes con el fin de asegurar una atención oportuna, continua, segura y de calidad para los usuarios y sus familias. Proporcionar y dirigir la atención directa e integral de los pacientes que acuden al Servicio de Neurorradiología aplicando sus conocimientos profesionales ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -1302,10 +1512,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140459",
@@ -1317,7 +1533,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-02",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Brindar atención integral del paciente neuroquirúrgico tanto programado como de urgencia, asistiendo directamente a los profesionales médicos y de enfermería en labores de arsenalería, anestesia o circulación de pabellón según distribución, cumpliendo sus funciones técnicas y administrativas conforme a los lineamientos institucionales vigentes con el fin de asegurar una atención oportuna, continua, segura ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -1336,10 +1552,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140461",
@@ -1351,7 +1573,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-02",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Contribuir con la ejecución de los paquetes turísticos relacionados al programa de Turismo Interno correspondiente, asegurando y monitoreando el cumplimiento y calidad de los compromisos licitados o contratados, por medio de la coordinación y articulación con los analistas regionales, elaborando respuestas a reclamos y colaborando en la resolución ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -1370,10 +1592,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140499",
@@ -1385,7 +1613,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-02",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Contribuir en la atención de salud que se otorga al paciente y usuario en el establecimiento, cumpliendo las funciones de apoyo relacionadas con aseo recurrente y terminal, el manejo de ropa, materiales, insumos y unidad del paciente, el apoyo a procedimientos y la coordinación con otros Servicios y Unidades; poniendo en práctica los valores institucionales ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -1404,10 +1632,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140422",
@@ -1419,7 +1653,7 @@
     "region": "Maule",
     "commune": "No especificada",
     "closing_date": "2026-06-02",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Responsable de asegurar el correcto funcionamiento de los equipos médicos, mediante la atención en terreno de las solicitudes de las unidades clínicas, el control predictivo de los equipos, supervisión en terreno de empresas externas y la ejecución de mantenimiento correctivo según sea solicitado por la jefatura./spa... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=8&region=Regi%C3%B3n-del-Maule",
     "status": "abierta",
@@ -1438,10 +1672,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-139453",
@@ -1453,7 +1693,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-03",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Velar por la correcta digitación y parametrización de las distintas prestaciones GES del Hospital, trabajando en forma complementaria al equipo GES.",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -1472,10 +1712,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-139457",
@@ -1487,7 +1733,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-03",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Gestionar y controlar los procesos de la Unidad de Desarrollo Organizacional en temáticas relacionadas a Evaluación de Desempeño, Clima laboral, Violencia y Acoso Laboral o Sexual, Buen Trato, Inclusión y Perfiles de Cargo, dando respuestas y proponiendo soluciones a problemas institucionales en las materias de su competencia con la ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -1506,10 +1752,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140153",
@@ -1521,7 +1773,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-03",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Profesional encargado de gestionar el almacenamiento, y distribución de los productos farmacéuticos para el Instituto Nacional del Cáncer, velando por el cumplimiento de la normativa vigente de la Unidad de Farmacia con la finalidad de entregar un servicio de calidad.",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -1540,10 +1792,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140588",
@@ -1555,7 +1813,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-03",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Profesional encargada de llevar a cabo las actividades de Servicio Social relativas a materias de apoyo a pacientes ambulatorios y hospitalizados en base a la normativa vigente en esta materia.",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -1574,10 +1832,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140362",
@@ -1589,7 +1853,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-03",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Realizar vigilancia epidemiológica de Infecciones Asociadas a la Atención en Salud, pesquisando las infecciones y dándolas a conocer para que se tomen las medidas y/o planes de mejora correspondientes, a fin de corregir las tasas de infecciones, brindando de esta manera una atención segura y de calidad a los pacientes y usuarios del Hospital Dr. Sótero del R&ia... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -1608,10 +1872,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140522",
@@ -1623,7 +1893,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-03",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Gestionar los requerimientos de los establecimientos adheridos a la Ley 21.198, proponer y ejecutar mejoras operativas y establecer lazos comerciales con los usuarios.",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -1642,10 +1912,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140529",
@@ -1657,7 +1933,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-03",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Asegurar la gestión integral de los procesos logísticos para el abastecimiento del sistema de salud público, dando cumplimiento a los marcos normativos de calidad y garantizando la continuidad del suministro de medicamentos, dispositivos médicos, alimentos e insumos.",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -1676,10 +1952,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140530",
@@ -1691,7 +1973,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-03",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Gestionar de manera integral los procesos logísticos para las farmacias adheridas a la Ley Cenabast (21.198), garantizando el cumplimiento de los estándares de abastecimiento y calidad exigidos por la red privada para asegurar la disponibilidad oportuna de los productos.",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -1710,10 +1992,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-139349",
@@ -1725,7 +2013,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-04",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Es el/la responsable administrativo(a) del proceso de compras asociado a los requerimientos de adquisición, previamente autorizados por la Subdirección Administrativa. Su función principal consiste en gestionar convenios mediante la elaboración de licitaciones, convenios marco, tratos directos, entre otros mecanismos ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -1744,10 +2032,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140568",
@@ -1759,7 +2053,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-04",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Apoyar la implementación de estrategias y actividades orientadas a la mejora continua y al desarrollo integral de las/os funcionarias/os, contribuyendo al fortalecimiento y eficacia de los procesos de Gestión y Desarrollo de Personas. Asimismo, aportar al bienestar y a la calidad de vida laboral, personal ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -1778,10 +2072,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140594",
@@ -1793,7 +2093,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-04",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Apoyar la implementación y ejecución de estrategias, procesos y actividades orientadas al desarrollo integral de las/os funcionarias/os, contribuyendo al fortalecimiento y mejora continua de la Gestión y Desarrollo de Personas. Asimismo, brindar apoyo técnico y administrativo al área, ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -1812,10 +2112,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-138149",
@@ -1827,7 +2133,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-04",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Planificar, monitorear, revisar y controlar el cumplimiento de la programación, actividades y tareas de los equipos de recolección, informando el cumplimiento de los protocolos y de la calidad de los datos levantados de acuerdo con los estándares definidos para el proyecto Encuesta de Presupuestos Familiares, EPF. ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -1846,10 +2152,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140226",
@@ -1861,7 +2173,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-04",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Cargo que tiene la responsabilidad de la asistencia administrativa y apoyo logístico en su Servicio/Unidad, en concordancia con las metas asistenciales, bajo el marco ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -1880,10 +2192,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140428",
@@ -1895,7 +2213,7 @@
     "region": "O’Higgins",
     "commune": "No especificada",
     "closing_date": "2026-06-04",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Gestionar el presupuesto del Servicio Local de Educación Pública Valle Cachapoal, programas P01 y P02 el cuan contempla los establecimientos educacionales, salas cunas y jardines infantiles VTF, efectuando la planificación, seguimiento y control de la ejecución presupuestaria, brindando asesoría e información necesaria para tales efectos a la jefatura y al Director(a) del Servicio.",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=7&region=Libertador-Bernardo-OHiggins",
     "status": "abierta",
@@ -1914,10 +2232,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140431",
@@ -1929,7 +2253,7 @@
     "region": "O’Higgins",
     "commune": "No especificada",
     "closing_date": "2026-06-04",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Ejecutar las acciones relacionadas a los diferentes procesos de compras de la Servicio, del nivel central, como de los establecimientos educacionales, salas cunas y jardines infantiles dependientes del Servicio Local, dando cumplimiento a la normativa vigente, y alineado al Plan de Compras, ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=7&region=Libertador-Bernardo-OHiggins",
     "status": "abierta",
@@ -1948,10 +2272,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140432",
@@ -1963,7 +2293,7 @@
     "region": "O’Higgins",
     "commune": "No especificada",
     "closing_date": "2026-06-04",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Gestionar los procesos contables y financieros del Servicio Local, a través del registro actualizado de los hechos económicos, del control y análisis financiero contable, conforme a lo establecido en la normativa contable y legal vigente, propiciando la eficiencia, eficacia y correcta aplicación de los procedimientos administrativos establecidos. Asimismo, velar por la adecuada ejecución presupuestaria, garantizando el uso eficiente y eficaz ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=7&region=Libertador-Bernardo-OHiggins",
     "status": "abierta",
@@ -1982,10 +2312,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140497",
@@ -1997,7 +2333,7 @@
     "region": "O’Higgins",
     "commune": "No especificada",
     "closing_date": "2026-06-04",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Conducir el Móvil de Rehabilitación Rural en los territorios de la Región de O’Higgins, asegurando el traslado oportuno y seguro del equipo médico móvil, usuarios y/o prestaciones, de acuerdo con las órdenes de traslado y protocolos establecidos y apoyar labores relacionadas con el equipo rural móvil con el objeto de entregar prestaciones de calidad ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=7&region=Libertador-Bernardo-OHiggins",
     "status": "abierta",
@@ -2016,10 +2352,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-136612",
@@ -2031,7 +2373,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-05",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Analizar, gestionar y asesorar a la Dirección de Aeropuertos en todos los aspectos forestales, ambientales y de manejo de vegetación en relacionados con los proyectos generados en la Dirección.",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -2050,10 +2392,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
-    "is_new_since_last_run": true,
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
+    "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T21:17:41+00:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 1
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-139742",
@@ -2065,7 +2413,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-05",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Mantener en óptimas condiciones de aseo todos los espacios físicos asignados por jefatura de acuerdo a las normas técnicas institucionales y decretos ministeriales.",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -2084,10 +2432,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
-    "is_new_since_last_run": true,
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
+    "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T21:17:41+00:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 1
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140155",
@@ -2099,7 +2453,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-05",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Apoyar y contribuir al óptimo desarrollo del área de asistencia del Establecimiento, asegurando la obtención, resguardo y actualización oportuna y fidedigna de la información necesaria, permitiendo formalizar y ejecutar todos los actos administrativos que involucran a la asistencia ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -2118,10 +2472,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140225",
@@ -2133,7 +2493,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-05",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Responsable de apoyo administrativo, logístico, de manejo de documentación y registros ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -2152,10 +2512,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
-    "is_new_since_last_run": true,
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
+    "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T21:17:41+00:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 1
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140535",
@@ -2167,7 +2533,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-05",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Levantar, procesar y gestionar información topográfica y geoespacial para apoyar la formulación, planificación, inspección y control de proyectos y contratos de la Dirección de Aeropuertos, asegurando la calidad de los datos, la trazabilidad de los ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -2186,10 +2552,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
-    "is_new_since_last_run": true,
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
+    "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T21:17:41+00:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 1
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140628",
@@ -2201,7 +2573,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-05",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Identificar situaciones, en las cuáles se requiere análisis de variables y/o de sus componentes, brindando asesoría técnica y generando información confiable de acuerdo a los estándares, que permita el apoyo oportuno y pertinente para la toma de decisiones.",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -2220,10 +2592,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140682",
@@ -2235,7 +2613,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-05",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Liderar, dirigir, supervisar y articular el proceso de captura, codificación, análisis y gestión de información clínica bajo el sistema GRD, asegurando la calidad, oportunidad y trazabilidad de los datos clínicos y administrativos de egresos hospitalarios. Esto con el objetivo de apoyar la gestión clínica, operativa y estratégica de ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -2254,10 +2632,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
-    "is_new_since_last_run": true,
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
+    "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T21:17:41+00:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 1
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140689",
@@ -2269,7 +2653,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-05",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Liderar, controlar, supervisar y coordinar la gestión integral de los servicios concesionados y de apoyo, asegurando la continuidad operacional institucional, la calidad y seguridad de los servicios prestados, junto con el cumplimiento de las obligaciones contractuales, financieras, normativas y de los estándares definidos para el establecimiento. Asimismo, ejercer las atribuciones ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -2288,10 +2672,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
-    "is_new_since_last_run": true,
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
+    "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T21:17:41+00:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 1
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-138148",
@@ -2303,7 +2693,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-05",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Recolectar información de forma presencial en los hogares seleccionados, para el proyecto Encuesta de Presupuestos Familiares, EPF, mediante la aplicación de técnicas de recolección definidas por el estudio y de acuerdo con los estándares establecidos por la institución. /spa... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -2322,10 +2712,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140458",
@@ -2337,7 +2733,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-05",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Brindar atención integral y segura a los pacientes que ingresan al servicio de Neurorradiología, asistiendo directamente a los profesionales médicos y de enfermería en labores de arsenalería, anestesia o circulación de sala según distribución interna, cumpliendo además funciones técnicas y administrativas conforme a los lineamientos ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -2356,10 +2752,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140590",
@@ -2371,7 +2773,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-05",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "El Fiscal será Ministro de Fe, tanto de los Actos que suscriba la Rectora en representación del Centro de Formación Técnica Estatal de la Región Metropolitana, como de las actuaciones del Directorio de la Institución.",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -2390,10 +2792,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140630",
@@ -2405,7 +2813,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-05",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Realizar procedimientos básicos de aseo y confort del paciente; administración de medicamentos por vía oral e intramuscular a pacientes de la Unidad de emergencia indiferenciada. Colaborar con la enfermera y médico tratante en el examen físico y procedimientos que se realicen a pacientes que llegan a la Unidad de emergencia indiferenciada",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -2424,10 +2832,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140378",
@@ -2439,7 +2853,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-05",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Acompañar y ejecutar las actividades socio educativas incluidas en la rutina diaria y los planes de intervención individual, garantizando el cuidado efectivo y desarrollo de las potencialidades de las y los NNAJ atendidos; de acuerdo con lo establecido en la normativa, orientaciones técnicas y protocolos vigentes.",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -2458,10 +2872,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140379",
@@ -2473,7 +2893,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-05",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Coliderar el proceso de intervención desde el ámbito psicológico de las y los NNAJ atendidos y sus familias, desarrollando las acciones tendientes a la superación de las experiencias de vulneración de sus derechos y al logro de la reunificación familiar o preparación para la vida independiente; de acuerdo a lo establecido ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -2492,10 +2912,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140380",
@@ -2507,7 +2933,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-05",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Asegurar la función socioeducativa de la residencia familiar, a través del diseño participativo de la rutina general y específica, en concordancia con las necesidades de desarrollo de las y los NNAJ atendidos, los planes personalizados de intervención y de acuerdo con lo establecido en la normativa, orientaciones técnicas ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -2526,10 +2952,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140527",
@@ -2541,7 +2973,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-05",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Dirigir y coordinar integralmente la Unidad de Desarrollo Organizacional, liderando los equipos de Reclutamiento y Selección, Capacitación y Formación, Calidad de Vida Laboral y Salud Ocupacional, asegurando la coherencia técnica y estratégica de sus acciones con la planificación institucional y las políticas de gestión de personas. Su propósito es promover una gestión moderna, ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -2560,10 +2992,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-134589",
@@ -2575,7 +3013,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-05",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Evaluar e intervenir en los factores de riesgo de reincidencia delictiva y la motivación al cambio de la persona cumpliendo una pena de Libertad Vigilada o Libertad Vigilada Intensiva, con la finalidad de disminuir sus probabilidades de reincidencia, mediante la ejecución de programas ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -2594,10 +3032,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-139690",
@@ -2609,7 +3053,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-05",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Gestionar de forma integral el funcionamiento pedagógico, administrativo y operativo de la Sala Cuna y Jardín Infantil destinada a los hijos/as de los funcionarios del Hospital Dr. Félix Bulnes Cerda, asegurando un ambiente seguro, afectivo y estimulante que favorezca ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -2628,10 +3072,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140570",
@@ -2643,7 +3093,7 @@
     "region": "O’Higgins",
     "commune": "No especificada",
     "closing_date": "2026-06-05",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Liderar y coordinar un equipo de trabajo para cumplir con los objetivos organizacionales, optimizando los recursos disponibles y asegurando el desempeño efectivo de las tareas asignadas",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=7&region=Libertador-Bernardo-OHiggins",
     "status": "abierta",
@@ -2662,10 +3112,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-139500",
@@ -2677,7 +3133,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-08",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Atender psicoterapéuticamente para el abordaje de los casos de menores detectados en riesgo psicosocial que tengan necesidades de salud mental, otorgando atención especializada, con perspectiva de salud integral, en el marco del modelo de salud familiar integral, contribuyendo a asegurar la continuidad de cuidados para los NNAJ atendidos, de acuerdo a ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -2696,10 +3152,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
-    "is_new_since_last_run": true,
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
+    "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T21:17:41+00:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 1
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-139501",
@@ -2711,7 +3173,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-08",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Asesorar técnica y estratégicamente en materias relacionadas con bases de licitación, procesos de compra, contratos y su administración, procesos judiciales, análisis de informes de Contraloría y elaboración y envío de informes a la CGR, así como en otros procesos propios de su ámbito. Todo ello, ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -2730,10 +3192,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
-    "is_new_since_last_run": true,
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
+    "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T21:17:41+00:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 1
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-139680",
@@ -2745,7 +3213,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-08",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Profesional del ámbito educativo o psicoeducativo que se especializa en la evaluación integral de los adolescentes, enfocándose en el desarrollo de competencias educativas, socioemocionales y la promoción de la salud mental. A través de estrategias educativas y/o psicopedagógicas innovadoras, busca prevenir e intervenir problemáticas ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -2764,10 +3232,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
-    "is_new_since_last_run": true,
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
+    "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T21:17:41+00:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 1
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140457",
@@ -2779,7 +3253,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-08",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Personal de colaboración y apoyo Técnico que tiene la responsabilidad de ejecutar los procedimientos de alimentación (operaciones de Técnicas Culinarias y de Gastronomía aplicada a dietoterapia), de acuerdo a Normas Vigentes, por indicación y supervisión directa del Nutricionista. Atención directa al paciente.",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -2798,10 +3272,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
-    "is_new_since_last_run": true,
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
+    "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T21:17:41+00:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 1
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140525",
@@ -2813,7 +3293,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-08",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Brindar apoyo técnico y operativo en levantamientos, supervisión en terreno, registro y control básico de obras de infraestructura escolar, asegurando calidad, trazabilidad y cumplimiento técnico.",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -2832,10 +3312,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
-    "is_new_since_last_run": true,
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
+    "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T21:17:41+00:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 1
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140683",
@@ -2847,7 +3333,7 @@
     "region": "Maule",
     "commune": "No especificada",
     "closing_date": "2026-06-08",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Dirigir y gestionar el funcionamiento del equipo y sus recursos, mediante la planificación, la colaboración, la coordinación del trabajo, el liderazgo de las personas, la comunicación efectiva y la aplicación de normativas y procesos institucionales, considerando los procesos de gestión de personas como marco para la gestión del equipo, con el fin de asegurar la entrega de un servicio oportuno y de calidad, fomentando la mejora ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=8&region=Regi%C3%B3n-del-Maule",
     "status": "abierta",
@@ -2866,10 +3352,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
-    "is_new_since_last_run": true,
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
+    "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T21:17:41+00:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 1
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-139692",
@@ -2881,7 +3373,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-10",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Participar junto a Trabajador Social apoyando el desarrollo Biopsicosocial: articular, desplegar y hacer seguimiento a trayectoria del desarrollo de los niños y niñas en primera infancia./... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -2900,10 +3392,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
-    "is_new_since_last_run": true,
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
+    "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T21:17:41+00:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 1
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140521",
@@ -2915,7 +3413,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-10",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Ejecutar rondas de control y monitoreo en espacios comunes, controlar la recepción de documentos, retiro de desechos, controlar acceso de personas y vehículos.",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -2934,10 +3432,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-139741",
@@ -2949,7 +3453,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-10",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Realizar vigilancia, controles de usuarios, participar en activación de clave verde (contra agresión de funcionarios) y clave roja y azul (riesgo vital) y registros, entrega de información y orientación, en el puesto y/o sector de trabajo asignado de acuerdo al procedimiento de Seguridad del Hospital Roberto del ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -2968,10 +3472,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140589",
@@ -2983,7 +3493,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-11",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Encargado(a) de supervisar el adecuado cumplimiento de las condiciones de toma de muestra, aplicando criterios de aceptación y rechazos, con el fin de garantizar la calidad de las muestras clínicas para su adecuado procesamiento a nivel local, en los distintos centros asistenciales de la red del SSMO y extrasistema. Jornada: ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -3002,10 +3512,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140501",
@@ -3017,7 +3533,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-11",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Asegurar el cumplimiento de procedimientos, normativas y protocolos que garanticen la calidad de la atención en salud mental de usuarios adultos, manteniendo la organización eficiente de bodegas clínicas y de insumos y colaborando con el equipo multidisciplinario en la atención y supervisión de usuarios y familiares.",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -3036,10 +3552,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140632",
@@ -3051,7 +3573,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-12",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Apoyar la toma de decisiones mediante el análisis de datos, la creación de informes y visualizaciones, y la generación de modelos analíticos. Este cargo está enfocado principalmente en el análisis de datos, incorporando conocimientos básicos de ingeniería de datos para facilitar la recolección, ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -3070,10 +3592,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140420",
@@ -3085,7 +3613,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-12",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Determinar si lo dispuesto por la Comisión Ergonómica Nacional (CEN) en su dictamen de la calificación de trabajo pesado, respecto a un puesto de trabajo invocado, cumple con los requisitos para ser considerado como Trabajo Pesado de acuerdo con lo dispuesto en la Ley N° 19.404 y su Reglamento comprendido en ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -3104,10 +3632,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140468",
@@ -3119,7 +3653,7 @@
     "region": "O’Higgins",
     "commune": "No especificada",
     "closing_date": "2026-06-12",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Operacionalizar la gestión de acciones que contribuyan a fomentar, mantener y desarrollar entornos laborales saludables para los trabajadores del Hospital de Graneros a través de acciones de promoción, prevención y protección de la salud y seguridad en el trabajo de acuerdo a los lineamientos ministeriales y en el marco del buen trato laboral.",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=7&region=Libertador-Bernardo-OHiggins",
     "status": "abierta",
@@ -3138,10 +3672,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140684",
@@ -3153,7 +3693,7 @@
     "region": "Maule",
     "commune": "No especificada",
     "closing_date": "2026-06-12",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Garantizar, a través de los procesos de lavado, secado, control de calidad y doblado, el suministro de ropa limpia y desinfectada de manera eficiente y oportuna cumpliendo con los estándares de calidad y seguridad. Además, asegurar la administración adecuada del inventario de ropa a su cargo, ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=8&region=Regi%C3%B3n-del-Maule",
     "status": "abierta",
@@ -3172,10 +3712,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
-    "is_new_since_last_run": true,
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
+    "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T21:17:41+00:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 1
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140507",
@@ -3187,7 +3733,7 @@
     "region": "O’Higgins",
     "commune": "No especificada",
     "closing_date": "2026-06-19",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Ejecutar, coordinar y optimizar los procesos administrativos y de atención al público del laboratorio clínico. Esto abarca desde el primer contacto con el paciente hasta la entrega de los resultados de exámenes, garantizando un servicio eficiente, seguro, empático y bajo estrictas normas de confidencialidad./B... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=7&region=Libertador-Bernardo-OHiggins",
     "status": "abierta",
@@ -3206,10 +3752,16 @@
     "match_level": "Descartada",
     "matched_keywords": [],
     "excluded_keywords": [],
+    "base_match_score": 15,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-139677",
@@ -3221,7 +3773,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-01",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Formar parte del equipo de Consultas y procedimientos ambulatorios, brindando una atención segura y de calidad, aplicando conocimientos técnicos y teóricos para la atención de nuestros usuarios desde el ingreso y durante toda su estancia en el Hospital Eloísa Diaz Inzunza cumpliendo ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -3242,10 +3794,16 @@
       "paramédico",
       "técnico paramédico"
     ],
+    "base_match_score": 0,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-139679",
@@ -3257,7 +3815,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-01",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Colaborar con la atención clínica asistencial y administrativa que brinda la Unidad, mediante el mantenimiento del orden y el aseo de las instalaciones y equipos, movilización de pacientes y traslado de insumos desde y hacia la Unidad. /... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -3276,10 +3834,16 @@
     "excluded_keywords": [
       "medicina"
     ],
+    "base_match_score": 0,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140496",
@@ -3291,7 +3855,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-01",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Fortalecer la implementación y operación del tamizaje primario de Virus del Papiloma Humano (VPH) en mujeres de 35 a 45 años en la red asistencial pública, mediante la incorporación de Tecnólogos Médicos con formación en biología molecular, contribuyendo a la continuidad operativa, la calidad diagnóstica y la ampliación ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -3310,10 +3874,16 @@
     "excluded_keywords": [
       "médico"
     ],
+    "base_match_score": 0,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-139688",
@@ -3325,7 +3895,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-01",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Otorgar atención de Enfermería integral a todos los pacientes a su cargo, actualizando en forma continua sus conocimientos y aplicando el uso correcto de técnicas y procedimientos específicos con ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -3344,10 +3914,16 @@
     "excluded_keywords": [
       "enfermero"
     ],
+    "base_match_score": 0,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-137732",
@@ -3359,7 +3935,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-02",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Brindar apoyo técnico y asistencial a los profesionales especialistas en la atención de los pacientes, contribuyendo al desarrollo eficiente y oportuno de los procesos clínicos y quirúrgicos, resguardando el cumplimiento de los estándares ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -3380,10 +3956,16 @@
       "paramédico",
       "técnico paramédico"
     ],
+    "base_match_score": 0,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140154",
@@ -3395,7 +3977,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-02",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Entregar una atención de enfermería basada en evidencia, segura, oportuna, eficiente y eficaz a los pacientes hospitalizados en la Unidad de Cuidados Intermedio, pesquisando oportunamente complicaciones en su estado, para poder recuperar y rehabilitar su salud en compañía de un equipo multidisciplinario. ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -3414,10 +3996,16 @@
     "excluded_keywords": [
       "enfermera"
     ],
+    "base_match_score": 0,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140516",
@@ -3429,7 +4017,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-02",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Planificar, dirigir y supervisar de manera integral la gestión de todos los equipos médicos y equipamiento médico del hospital, asegurando su funcionamiento óptimo, la seguridad operativa y el cumplimiento riguroso de todas las normativas aplicables, garantizando así la continuidad y calidad de la atención a los pacientes. Lo anterior, considerando la necesidad de fortalecer la gestión técnica y administrativa del ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -3448,10 +4036,16 @@
     "excluded_keywords": [
       "médico"
     ],
+    "base_match_score": 0,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140479",
@@ -3463,7 +4057,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-02",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Liderar, gestionar y supervisar la implementación, desarrollo, evaluación y sostenibilidad de la estrategia BPSO; promoviendo la incorporación de buenas prácticas clínicas basadas en evidencia en los procesos asistenciales y de gestión del cuidado; con el propósito de fortalecer la calidad, seguridad, eficiencia y mejora continua de la atención, contribuyendo al cumplimiento de los objetivos estratégicos instituci... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -3482,10 +4076,16 @@
     "excluded_keywords": [
       "enfermero"
     ],
+    "base_match_score": 0,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-139384",
@@ -3497,7 +4097,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-03",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "El Instituto Nacional del Tórax, una institución sólida y con orientación a las y los pacientes, desea incorporar a su equipo de trabajo Técnico en Enfermería para la Unidad de Hemodinamia. Dentro de sus funciones, deberá verificar el plan de operación y el tipo de intervención que se realizará en el pabellón designado, además de colaborar y asistir ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -3516,10 +4116,16 @@
     "excluded_keywords": [
       "enfermería"
     ],
+    "base_match_score": 0,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-139426",
@@ -3531,7 +4137,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-04",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Ser el encargado de la rehabilitación integral de aspectos comunicativo-cognitivos en Niños, Niñas, Adolescentes y Jóvenes (NNAJ) con el objetivo de facilitar su integración en entornos sociales, familiares y académicos. Promover y mantener la comunicación funcional en NNAJ que enfrentan desafíos de salud mental.",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -3550,10 +4156,16 @@
     "excluded_keywords": [
       "fonoaudiólogo"
     ],
+    "base_match_score": 0,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140318",
@@ -3565,7 +4177,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-04",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Brindar una atención eficiente y oportuna colaborando y apoyando a los profesionales del Servicio y ejecutando los procedimientos relacionados a su área de desempeño, con énfasis en el respeto hacia el usuario y cumpliendo con las normativas de IAAS, Calidad, seguridad del paciente y otras específicas de su área de desempeño.",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -3584,10 +4196,16 @@
     "excluded_keywords": [
       "enfermería"
     ],
+    "base_match_score": 0,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140536",
@@ -3599,7 +4217,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-04",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Coordinar y gestionar la continuidad operativa del pabellón quirúrgico, organizando y articulando los recursos humanos, físicos e insumos necesarios para el desarrollo de la tabla operatoria en conjunto con el equipo clínico, con el fin de optimizar los tiempos quirúrgicos y asegurar la eficiencia del pabellón frente a la planificación y eventuales contingencias.",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -3618,10 +4236,16 @@
     "excluded_keywords": [
       "enfermero"
     ],
+    "base_match_score": 0,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140537",
@@ -3633,7 +4257,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-04",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Coordinar, gestionar y ejecutar funciones clínicas orientadas al correcto funcionamiento de la Unidad de Tratamiento Intensivo, asegurando que los procedimientos de enfermería se realicen conforme a normativa y protocolos institucionales vigentes, otorgando una atención segura, oportuna y de calidad centrada en el cuidado integral del paciente crítico",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -3652,10 +4276,16 @@
     "excluded_keywords": [
       "enfermera"
     ],
+    "base_match_score": 0,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140538",
@@ -3667,7 +4297,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-04",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Coordinar, gestionar y ejecutar funciones clínicas orientadas al correcto funcionamiento de la Unidad de Cuidados Intensivos, asegurando que los procedimientos de enfermería sean realizados conforme a normativa y protocolos institucionales vigentes, otorgando una atención segura, oportuna y de calidad centrada en el cuidado integral del paciente crítico",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -3686,10 +4316,16 @@
     "excluded_keywords": [
       "enfermera"
     ],
+    "base_match_score": 0,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140569",
@@ -3701,7 +4337,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-04",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Otorgar tratamiento integral y realizar seguimiento médico de usuarios con TEA, Neurodivergencias y otras condiciones de salud mental.",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -3720,10 +4356,16 @@
     "excluded_keywords": [
       "médico"
     ],
+    "base_match_score": 0,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140579",
@@ -3735,7 +4377,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-05",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Brindar atención kinesiológica integral y oportuna, desarrollando acciones de apoyo terapéutico, en el ámbito recuperación y rehabilitación física de la salud de los usuarios en atención cerrada, mediante la utilización del movimiento y la reeducación, la ejercitación y la fisioterapia, con apego a los lineamientos estratégicos ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -3754,10 +4396,56 @@
     "excluded_keywords": [
       "kinesiólogo"
     ],
+    "base_match_score": 0,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
+  },
+  {
+    "id": "empleos-publicos-140687",
+    "source_id": "140687",
+    "title": "025-26 ENFERMERA(O) CLINICA(O), UTI 2 SUR, SUBDIRECCION DE GESTION DEL CUIDADO",
+    "institution": "Hospital Metropolitano de Santiago",
+    "source": "Empleos Públicos",
+    "source_url": "https://www.empleospublicos.cl/pub/convocatorias/convpostularavisoTrabajo.aspx?i=140687&c=0&j=0&tipo=convpostularavisoTrabajo",
+    "region": "Metropolitana",
+    "commune": "No especificada",
+    "closing_date": "2026-06-05",
+    "detected_at": "2026-06-01T18:12:27-04:00",
+    "description": "Entregar una atención de enfermería integral, humanizada, eficiente y oportuna a pacientes críticos en HOSMET.",
+    "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
+    "status": "abierta",
+    "tags": [],
+    "alert_reasons": [
+      "Descartada por cargo clínico"
+    ],
+    "is_demo": false,
+    "url_status": "ok",
+    "area": "No especificada",
+    "institution_type": "Institución pública",
+    "urgency": "proximo",
+    "match_score": 0,
+    "match_level": "Descartada",
+    "matched_keywords": [],
+    "excluded_keywords": [
+      "enfermera"
+    ],
+    "base_match_score": 0,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
+    "is_new_since_last_run": true,
+    "first_seen_at": "2026-06-01T18:12:33-04:00",
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 1
   },
   {
     "id": "empleos-publicos-140551",
@@ -3769,7 +4457,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-05",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Otorgar atención integral al usuario de acuerdo a planificación de los cuidados efectuada por profesional de enfermería.",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -3788,10 +4476,16 @@
     "excluded_keywords": [
       "enfermería"
     ],
+    "base_match_score": 0,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140448",
@@ -3803,7 +4497,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-05",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Hospital de Talagante requiere contrata a médico para el servicio de Hospitalización Domiciliaria en una jornada de 22 hrs. modalidad de contratación por empresa externa a honorarios, se paga por hora a $23.000 bruto.",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -3822,10 +4516,16 @@
     "excluded_keywords": [
       "médico"
     ],
+    "base_match_score": 0,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-139710",
@@ -3837,7 +4537,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-05",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Brindar atención integral especializada en Salud Mental y/o Psiquiatría a población adulta y sus familias, formando parte de un equipo interdisciplinario que organiza su trabajo en concordancia con el modelo comunitario de atención en salud mental.",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -3856,10 +4556,16 @@
     "excluded_keywords": [
       "médico"
     ],
+    "base_match_score": 0,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140243",
@@ -3871,7 +4577,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-05",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Asegurar la operatividad, seguridad y continuidad del funcionamiento de los equipos médicos del establecimiento, mediante diagnóstico, mantenimiento y soporte técnico oportuno, contribuyendo a la calidad de la atención clínica y cumplimiento ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -3890,10 +4596,16 @@
     "excluded_keywords": [
       "médico"
     ],
+    "base_match_score": 0,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140578",
@@ -3905,7 +4617,7 @@
     "region": "O’Higgins",
     "commune": "No especificada",
     "closing_date": "2026-06-05",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Brindar atención médica integral relacionada a la salud de las personas privadas de libertad focalizando su trabajo en desarrollar estrategias de prevención y promoción de la salud, de acuerdo a la normativa ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=7&region=Libertador-Bernardo-OHiggins",
     "status": "abierta",
@@ -3924,10 +4636,16 @@
     "excluded_keywords": [
       "médico"
     ],
+    "base_match_score": 0,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140690",
@@ -3939,7 +4657,7 @@
     "region": "Maule",
     "commune": "No especificada",
     "closing_date": "2026-06-05",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Contribuir con el funcionamiento seguro y eficiente de las unidades clínicas del establecimiento, brindando apoyo técnico y asistencial al equipo de salud en la atención del paciente, asegurando el cumplimiento de normas de IAAS, la correcta preparación de los recintos y el registro oportuno de la ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=8&region=Regi%C3%B3n-del-Maule",
     "status": "abierta",
@@ -3958,10 +4676,16 @@
     "excluded_keywords": [
       "enfermería"
     ],
-    "is_new_since_last_run": true,
+    "base_match_score": 0,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
+    "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T21:17:41+00:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 1
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140694",
@@ -3973,7 +4697,7 @@
     "region": "Maule",
     "commune": "No especificada",
     "closing_date": "2026-06-05",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Desarrollar las labores clínicas y administrativas en el servicio de hospitalización y otros servicios relacionados, de acuerdo a los protocolos, estándares y normativas establecidos con el fin de entregar apoyo clínico a las unidades y servicios que lo requieran.",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=8&region=Regi%C3%B3n-del-Maule",
     "status": "abierta",
@@ -3992,10 +4716,16 @@
     "excluded_keywords": [
       "enfermero"
     ],
-    "is_new_since_last_run": true,
+    "base_match_score": 0,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
+    "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T21:17:41+00:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 1
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140635",
@@ -4007,7 +4737,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-08",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Realizar la gestión del cuidado y atención directa a los pacientes a su cargo, aplicando el juicio y criterio profesional en; la planificación, ejecución, organización, motivación, y control de la provisión de cuidados, oportunos, seguros e integrales, que aseguren la continuidad de la atención ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -4026,10 +4756,16 @@
     "excluded_keywords": [
       "enfermero"
     ],
-    "is_new_since_last_run": true,
+    "base_match_score": 0,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
+    "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T21:17:41+00:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 1
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-140490",
@@ -4041,7 +4777,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-09",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "La enfermera diurna de continuidad será responsable de realizar el control de los subprocesos de esterilización, garantizando su cumplimiento de acuerdo con los estándares de seguridad de atención de los pacientes, colaborando con el buen funcionamiento administrativo del servicio, lo que incluye apoyo directo en el desarrollo de los subprocesos y funciones delegadas por la jefatura.",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -4060,10 +4796,16 @@
     "excluded_keywords": [
       "enfermera"
     ],
-    "is_new_since_last_run": true,
+    "base_match_score": 0,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
+    "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T21:17:41+00:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 1
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-139691",
@@ -4075,7 +4817,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-10",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Proporcionar cuidados previos, durante y post procedimientos de cualquiera de las áreas que conforman la Unidad en forma integral, eficaz, oportuna, de calidad, segura y humanizada a nuestros usuarios.",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -4094,10 +4836,16 @@
     "excluded_keywords": [
       "enfermería"
     ],
-    "is_new_since_last_run": true,
+    "base_match_score": 0,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
+    "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T21:17:41+00:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 1
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 2
   },
   {
     "id": "empleos-publicos-139689",
@@ -4109,7 +4857,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-10",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Brindar atención integral, segura y oportuna de enfermería a pacientes en el período de recuperación postanestésica y postquirúrgica inmediata, asegurando la vigilancia continua, estabilidad clínica y continuidad de los cuidados, además de mantener la operatividad y cumplimiento de los estándares técnicos, administrativos ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -4128,10 +4876,16 @@
     "excluded_keywords": [
       "enfermero"
     ],
+    "base_match_score": 0,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-139711",
@@ -4143,7 +4897,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-12",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Al Subdirector/a Médico del Hospital le corresponderá liderar y desarrollar la gestión clínica y asistencial del establecimiento, así como las tareas de articulación y coordinación con la red interna y externa de salud. Para ello, deberá desempeñar funciones ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -4162,10 +4916,16 @@
     "excluded_keywords": [
       "médico"
     ],
+    "base_match_score": 0,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140565",
@@ -4177,7 +4937,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-12",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Brindar atención médica especializada en Otorrinolaringología a usuarios y usuarias del CRS Maipú, mediante evaluación clínica, diagnóstico, indicación terapéutica, seguimiento y coordinación en red, contribuyendo a mejorar la oportunidad, resolutividad, continuidad y calidad de la atención ambulatoria de especialidad, ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -4196,10 +4956,16 @@
     "excluded_keywords": [
       "médico"
     ],
+    "base_match_score": 0,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140462",
@@ -4211,7 +4977,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-12",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Hospital de Talagante busca contratar a médico especialista en pediatría para un periodo de pre y post natal.Las funciones se realizarán en el servicio de urgencia en una jornada de turno de 28 hrs.",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -4230,10 +4996,16 @@
     "excluded_keywords": [
       "médico"
     ],
+    "base_match_score": 0,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140250",
@@ -4245,7 +5017,7 @@
     "region": "Maule",
     "commune": "No especificada",
     "closing_date": "2026-06-22",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Descripción no disponible",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=8&region=Regi%C3%B3n-del-Maule",
     "status": "abierta",
@@ -4264,10 +5036,16 @@
     "excluded_keywords": [
       "médico"
     ],
+    "base_match_score": 0,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140386",
@@ -4279,7 +5057,7 @@
     "region": "Metropolitana",
     "commune": "No especificada",
     "closing_date": "2026-06-30",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Brindar atención médica integral, oportuna y de calidad a usuarios/as derivados a la Unidad de Medicina Interna del Centro de Referencia de Salud Dr. Salvador Allende Gossens, mediante la evaluación, diagnóstico, tratamiento, control y seguimiento clínico en el nivel secundario de atención, asegurando la continuidad del cuidado, el manejo integral de ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=15&region=Regi%C3%B3n-Metropolitana-de-Santiago",
     "status": "abierta",
@@ -4298,10 +5076,16 @@
     "excluded_keywords": [
       "médico"
     ],
+    "base_match_score": 0,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-135366",
@@ -4313,7 +5097,7 @@
     "region": "O’Higgins",
     "commune": "No especificada",
     "closing_date": "2026-06-30",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Otorgar una atención integral, oportuna y eficiente, con la finalidad de fomentar, proteger y recuperar la salud de la población beneficiara.",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=7&region=Libertador-Bernardo-OHiggins",
     "status": "abierta",
@@ -4332,10 +5116,16 @@
     "excluded_keywords": [
       "médico"
     ],
+    "base_match_score": 0,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140251",
@@ -4347,7 +5137,7 @@
     "region": "Maule",
     "commune": "No especificada",
     "closing_date": "2026-06-30",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Descripción no disponible",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=8&region=Regi%C3%B3n-del-Maule",
     "status": "abierta",
@@ -4366,10 +5156,16 @@
     "excluded_keywords": [
       "médico"
     ],
+    "base_match_score": 0,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140252",
@@ -4381,7 +5177,7 @@
     "region": "Maule",
     "commune": "No especificada",
     "closing_date": "2026-06-30",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "Descripción no disponible",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=8&region=Regi%C3%B3n-del-Maule",
     "status": "abierta",
@@ -4400,10 +5196,16 @@
     "excluded_keywords": [
       "médico"
     ],
+    "base_match_score": 0,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   },
   {
     "id": "empleos-publicos-140435",
@@ -4415,7 +5217,7 @@
     "region": "O’Higgins",
     "commune": "No especificada",
     "closing_date": "2026-08-17",
-    "detected_at": "2026-06-01T21:17:40+00:00",
+    "detected_at": "2026-06-01T18:12:27-04:00",
     "description": "El Servicio de Salud O'Higgins llama a interesados (as) a participar en la conformación de un registro de: Enfermeras(os), Terapeutas Ocupacionales, Fonoaudiólogos(as) Kinesiólogas (os), Tecnólogos(as) Médicos(as) Generales, Médicos(as) Especialistas, Técnicos en Enfermería y Auxiliares de Servicios para que pueda ser ... [+]",
     "listing_url": "https://www.empleospublicos.cl/pub/convocatorias/convocatorias.aspx?i=7&region=Libertador-Bernardo-OHiggins",
     "status": "abierta",
@@ -4434,9 +5236,15 @@
     "excluded_keywords": [
       "médico"
     ],
+    "base_match_score": 0,
+    "base_match_level": "Descartada",
+    "human_reviewed": false,
+    "human_feedback_action": null,
+    "human_feedback_reason": null,
+    "manual_review": false,
     "is_new_since_last_run": false,
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-01T21:17:41+00:00",
-    "seen_count": 3
+    "last_seen_at": "2026-06-01T18:12:33-04:00",
+    "seen_count": 6
   }
 ]

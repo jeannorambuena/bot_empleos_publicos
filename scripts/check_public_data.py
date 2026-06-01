@@ -19,6 +19,7 @@ from radar.scoring import match_level_for_score
 
 PUBLIC_DATA = ROOT / "public" / "data"
 MATCH_LEVELS = {"Alta", "Media", "Baja", "Descartada"}
+FEEDBACK_ACTIONS = {"useful", "false_positive", "review", "boost_priority", "lower_priority"}
 
 
 def _load_json(path: Path) -> Any:
@@ -51,6 +52,16 @@ def _validate_opportunity(opportunity: Any, index: int) -> list[str]:
 
     if opportunity.get("is_demo") is True and opportunity.get("source_url") is not None:
         errors.append(f"{label}: source_url debe ser null cuando is_demo es true.")
+
+    if "human_reviewed" in opportunity and not isinstance(opportunity.get("human_reviewed"), bool):
+        errors.append(f"{label}: human_reviewed debe ser booleano.")
+    action = opportunity.get("human_feedback_action")
+    if action is not None and action not in FEEDBACK_ACTIONS:
+        errors.append(f"{label}: human_feedback_action no permitida.")
+    if action == "false_positive" and opportunity.get("match_level") != "Descartada":
+        errors.append(f"{label}: false_positive debe quedar como Descartada.")
+    if "manual_review" in opportunity and not isinstance(opportunity.get("manual_review"), bool):
+        errors.append(f"{label}: manual_review debe ser booleano.")
     return errors
 
 

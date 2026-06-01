@@ -13,6 +13,12 @@ if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
 from radar.config_loader import ConfigurationError, load_json, load_profile
+from radar.feedback import (
+    apply_feedback_to_opportunity,
+    build_feedback_index,
+    build_feedback_summary,
+    load_feedback_config,
+)
 from radar.history import (
     apply_history_to_opportunities,
     build_history_summary,
@@ -27,6 +33,7 @@ from radar.public_data import summarize_opportunities, write_public_data
 NORMALIZED_PATH = ROOT / "data" / "normalized" / "empleos_publicos_normalized.json"
 PUBLIC_DATA = ROOT / "public" / "data"
 HISTORY_PATH = PUBLIC_DATA / "history.json"
+FEEDBACK_PATH = ROOT / "config" / "feedback.json"
 
 
 def main() -> int:
@@ -43,6 +50,13 @@ def main() -> int:
 
     generated_at = datetime.now().astimezone()
     scored = [score_real_opportunity(item, profile) for item in opportunities]
+    try:
+        feedback_entries = load_feedback_config(FEEDBACK_PATH)
+    except (OSError, ValueError) as error:
+        print(f"ERROR: No fue posible cargar config/feedback.json: {error}", file=sys.stderr)
+        return 1
+    feedback_index = build_feedback_index(feedback_entries)
+    scored = [apply_feedback_to_opportunity(item, feedback_index) for item in scored]
     scored.sort(key=lambda item: (-item["match_score"], item.get("closing_date") or "9999-12-31"))
     try:
         previous_history = load_history(HISTORY_PATH)
@@ -57,6 +71,7 @@ def main() -> int:
     summary.update(history_summary)
     summary["active_opportunities"] = history_summary["total_opportunities"]
     summary["high_relevance"] = summary["high_match"]
+    summary.update(build_feedback_summary(scored))
     last_run = {
         "finished_at": generated_at.isoformat(timespec="seconds"),
         "status": "real-local",
