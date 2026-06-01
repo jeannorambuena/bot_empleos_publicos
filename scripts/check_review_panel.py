@@ -24,6 +24,9 @@ def main() -> int:
         review_js = (PUBLIC / "assets" / "review.js").read_text(encoding="utf-8")
         if 'fetch("data/opportunities.json")' not in review_js:
             errors.append("review.js no lee data/opportunities.json localmente.")
+        for expected in ("version: 1", "items:", "opportunity_id:", '"boost_priority"'):
+            if expected not in review_js:
+                errors.append(f"review.js no contiene exportación compatible: {expected}")
         index_html = (PUBLIC / "index.html").read_text(encoding="utf-8")
         if 'href="review.html"' not in index_html:
             errors.append("public/index.html no enlaza el panel de revisión.")

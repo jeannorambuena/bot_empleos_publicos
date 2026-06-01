@@ -102,6 +102,7 @@ h2 {
 .prototype-badge,
 .urgency-tag,
 .institution-type,
+.feedback-badge,
 .tags span {
   border-radius: 999px;
   font-size: 0.72rem;
@@ -330,6 +331,18 @@ a {
 .urgency-tag.normal {
   color: var(--muted);
   background: #f0f4f4;
+}
+
+.feedback-badge {
+  margin-right: 6px;
+  padding: 5px 8px;
+  color: #175f56;
+  background: #dff5f0;
+}
+
+.feedback-badge.false-positive {
+  color: #8d3a2d;
+  background: #ffebe7;
 }
 
 .opportunity-title {

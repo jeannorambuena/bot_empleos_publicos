@@ -45,6 +45,15 @@ function hasValidSourceUrl(opportunity) {
   }
 }
 
+function feedbackLabel(opportunity) {
+  if (opportunity.human_feedback_action === "false_positive") return "Falso positivo";
+  if (["boost_priority", "lower_priority"].includes(opportunity.human_feedback_action)) {
+    return "Prioridad ajustada";
+  }
+  if (opportunity.human_reviewed) return "Revisada";
+  return "";
+}
+
 function renderDataMode(opportunities) {
   const badge = document.querySelector(".prototype-badge");
   const realCount = opportunities.filter(({ is_demo: isDemo }) => isDemo === false).length;
@@ -94,6 +103,7 @@ function renderOpportunities() {
     const card = template.content.cloneNode(true);
     const urgency = card.querySelector(".urgency-tag");
     const score = card.querySelector(".match-score strong");
+    const feedbackBadge = card.querySelector(".feedback-badge");
 
     card.querySelector(".institution-type").textContent = opportunity.institution_type;
     urgency.textContent =
@@ -107,6 +117,12 @@ function renderOpportunities() {
     card.querySelector(".description").textContent = opportunity.description;
     score.textContent = `${opportunity.match_score}%`;
     score.classList.add(scoreClass(opportunity.match_score));
+    const feedbackText = feedbackLabel(opportunity);
+    if (feedbackText) {
+      feedbackBadge.textContent = feedbackText;
+      feedbackBadge.hidden = false;
+      feedbackBadge.classList.toggle("false-positive", opportunity.human_feedback_action === "false_positive");
+    }
 
     opportunity.tags.forEach((tag) => {
       const tagElement = document.createElement("span");

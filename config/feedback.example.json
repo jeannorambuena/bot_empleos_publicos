@@ -1,0 +1,11 @@
+{
+  "version": 1,
+  "items": [
+    {
+      "opportunity_id": "demo-feedback-001",
+      "action": "false_positive",
+      "reason": "Ejemplo: cargo no relacionado con el perfil",
+      "created_at": "2026-06-01"
+    }
+  ]
+}

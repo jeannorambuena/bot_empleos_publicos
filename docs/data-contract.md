@@ -30,7 +30,16 @@ Arreglo de oportunidades normalizadas.
 El dashboard actual también utiliza `institution_type`, `area` y `urgency` como
 campos auxiliares de presentación y filtrado. Cuando existe historial público,
 también incluye `is_new_since_last_run`, `first_seen_at`, `last_seen_at` y
-`seen_count`.
+`seen_count`. Cuando existe una capa de feedback humano también publica:
+
+| Campo | Tipo | Descripción |
+| --- | --- | --- |
+| `base_match_score` | integer | Puntaje anterior a feedback humano. |
+| `base_match_level` | string | Nivel anterior a feedback humano. |
+| `human_reviewed` | boolean | Indica si se aplicó feedback versionado. |
+| `human_feedback_action` | string o null | `useful`, `false_positive`, `review`, `boost_priority` o `lower_priority`. |
+| `human_feedback_reason` | string o null | Motivo humano opcional. |
+| `manual_review` | boolean | Indica revisión manual pendiente. |
 
 Rangos de coincidencia:
 
@@ -79,6 +88,11 @@ Objeto con métricas del dashboard.
 | `previously_seen` | integer | Sí con historial | Oportunidades visibles que ya aparecieron antes. |
 | `first_seen_this_run` | integer | Sí con historial | Oportunidades detectadas por primera vez en esta ejecución. |
 | `not_seen_in_latest_capture` | integer | Sí con historial | Registros históricos ausentes de la captura más reciente. |
+| `human_feedback_applied` | integer | Sí con capa de feedback | Oportunidades con feedback versionado aplicado. |
+| `human_false_positives` | integer | Sí con capa de feedback | Falsos positivos marcados humanamente. |
+| `human_boosted` | integer | Sí con capa de feedback | Oportunidades promovidas humanamente. |
+| `human_lowered` | integer | Sí con capa de feedback | Oportunidades con prioridad reducida. |
+| `manual_review_count` | integer | Sí con capa de feedback | Oportunidades marcadas para revisión manual. |
 
 ```json
 {

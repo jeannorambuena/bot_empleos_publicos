@@ -3,7 +3,7 @@ const OPTIONS = [
   ["useful", "Útil"],
   ["false_positive", "Falso positivo"],
   ["review", "Revisar"],
-  ["raise_priority", "Subir prioridad"],
+  ["boost_priority", "Subir prioridad"],
   ["lower_priority", "Bajar prioridad"],
 ];
 
@@ -27,9 +27,17 @@ function isReviewCandidate(item) {
 
 function exportPayload(feedback) {
   return JSON.stringify({
+    version: 1,
     exported_at: new Date().toISOString(),
     source: "public-review-panel",
-    feedback,
+    items: Object.entries(feedback).map(([opportunityId, item]) => ({
+      opportunity_id: opportunityId,
+      action: item.action || item.label,
+      reason: item.reason || undefined,
+      created_at: item.created_at || item.updated_at,
+      title: item.title || undefined,
+      source_url: item.source_url || undefined,
+    })),
   }, null, 2);
 }
 
@@ -57,14 +65,13 @@ function render(items) {
       const button = document.createElement("button");
       button.type = "button";
       button.textContent = label;
-      button.classList.toggle("selected", feedback[item.id]?.label === value);
+      button.classList.toggle("selected", (feedback[item.id]?.action || feedback[item.id]?.label) === value);
       button.addEventListener("click", () => {
         feedback[item.id] = {
-          label: value,
+          action: value,
           title: item.title,
-          score: item.match_score,
-          level: item.match_level,
-          updated_at: new Date().toISOString(),
+          source_url: item.source_url,
+          created_at: new Date().toISOString(),
         };
         saveFeedback(feedback);
         render(items);

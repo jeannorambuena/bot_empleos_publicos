@@ -1,12 +1,17 @@
 {
   "sources_reviewed": 1,
-  "active_opportunities": 128,
-  "new_opportunities": 19,
+  "active_opportunities": 129,
+  "new_opportunities": 1,
   "high_match": 6,
-  "closing_soon": 105,
-  "total_opportunities": 128,
-  "previously_seen": 109,
-  "first_seen_this_run": 19,
+  "closing_soon": 106,
+  "total_opportunities": 129,
+  "previously_seen": 128,
+  "first_seen_this_run": 1,
   "not_seen_in_latest_capture": 1,
-  "high_relevance": 6
+  "high_relevance": 6,
+  "human_feedback_applied": 0,
+  "human_false_positives": 0,
+  "human_boosted": 0,
+  "human_lowered": 0,
+  "manual_review_count": 0
 }

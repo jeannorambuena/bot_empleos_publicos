@@ -44,6 +44,9 @@ jobs:
       - name: Validate real data
         run: python scripts/check_real_data.py
 
+      - name: Validate human feedback configuration
+        run: python scripts/check_feedback_config.py
+
       - name: Build public dashboard data
         run: python scripts/build_public_data_from_real.py
 

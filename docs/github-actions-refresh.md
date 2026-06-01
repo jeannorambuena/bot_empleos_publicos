@@ -25,6 +25,7 @@ ejecuta:
 ```text
 fetch_empleos_publicos.py
 check_real_data.py
+check_feedback_config.py
 build_public_data_from_real.py
 check_public_data.py
 check_history.py
