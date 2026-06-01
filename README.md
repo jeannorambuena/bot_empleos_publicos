@@ -26,7 +26,18 @@ arquitectura reutilizable. En esta etapa:
 - Hay archivos de configuración de referencia en `config/`.
 - Están documentados el contrato de datos, la arquitectura, la seguridad y el roadmap.
 - El scraper antiguo no se conecta al dashboard público; existe un flujo local nuevo y controlado.
-- Las alertas, recordatorios, GitHub Pages y GitHub Actions aún no están habilitados.
+- GitHub Pages y GitHub Actions están preparados; correo, calendario y Telegram real
+  permanecen desactivados por defecto.
+
+## Estado actual del bot
+
+- El dashboard público puede publicarse mediante GitHub Pages.
+- La captura real puede ejecutarse manualmente o una vez al día hábil desde GitHub Actions.
+- `public/data/history.json` distingue oportunidades nuevas reales de registros ya vistos.
+- Telegram dispone de preview local y envío real bloqueado por defecto.
+- `public/review.html` permite exportar feedback humano sin backend.
+- SLEP y municipalidades cercanas están declaradas como fuentes futuras.
+- Nitro/OpenClaw queda documentado como entorno de despliegue futuro controlado.
 
 ## Instalación en Windows
 
@@ -86,6 +97,9 @@ validar el resultado y actualizar solo los JSON públicos del dashboard. Si hay
 cambios, el commit automático en `main` solicita el despliegue existente de GitHub
 Pages mediante `workflow_dispatch`. Consulta `docs/github-actions-refresh.md` para
 conocer el alcance y las limitaciones.
+
+También existe una ejecución horaria segura de lunes a viernes a las `12:00 UTC`.
+Telegram real permanece desactivado en esa programación.
 
 ## Configuración futura
 

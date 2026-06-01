@@ -220,7 +220,7 @@ h2 {
 
 .filters {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr)) auto;
+  grid-template-columns: repeat(5, minmax(0, 1fr)) auto;
   align-items: end;
   gap: 12px;
   padding: 16px;
@@ -437,6 +437,10 @@ footer {
 
 .footer-content p {
   margin-bottom: 0;
+}
+
+.footer-link {
+  color: #d7f1ef;
 }
 
 @media (max-width: 980px) {

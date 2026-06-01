@@ -14,11 +14,15 @@ REQUIRED_FILES = (
     PUBLIC / "index.html",
     PUBLIC / "assets" / "styles.css",
     PUBLIC / "assets" / "app.js",
+    PUBLIC / "review.html",
+    PUBLIC / "assets" / "review.css",
+    PUBLIC / "assets" / "review.js",
     PUBLIC / "data" / "opportunities.json",
     PUBLIC / "data" / "summary.json",
     PUBLIC / "data" / "last_run.json",
+    PUBLIC / "data" / "history.json",
 )
-JSON_FILES = REQUIRED_FILES[3:]
+JSON_FILES = REQUIRED_FILES[6:]
 EXPECTED_SCORE_THRESHOLDS = (
     "if (score >= 80)",
     "if (score >= 60)",
@@ -26,6 +30,17 @@ EXPECTED_SCORE_THRESHOLDS = (
     'return "discarded"',
 )
 EXPECTED_DATA_MODE_LABEL = "Captura local de Empleos Públicos"
+EXPECTED_RELEVANCE_FILTER = (
+    'id="relevance-filter"',
+    '<option value="relevant" selected>Relevantes</option>',
+    '<option value="discarded">Descartadas</option>',
+    '<option value="all">Todas</option>',
+)
+EXPECTED_DEFAULT_RELEVANCE_LOGIC = (
+    'const RELEVANT_LEVELS = new Set(["Alta", "Media", "Baja"])',
+    'relevance === "relevant"',
+    'relevanceFilter.value = "relevant"',
+)
 
 
 def _load_json(path: Path) -> Any:
@@ -53,6 +68,9 @@ def main() -> int:
         index_html = (PUBLIC / "index.html").read_text(encoding="utf-8")
         if "Radar Laboral Público Chile" not in index_html:
             errors.append("public/index.html no contiene el título esperado.")
+        for expected_filter_text in EXPECTED_RELEVANCE_FILTER:
+            if expected_filter_text not in index_html:
+                errors.append(f"public/index.html no contiene: {expected_filter_text}")
 
         app_js = (PUBLIC / "assets" / "app.js").read_text(encoding="utf-8")
         for expected_threshold in EXPECTED_SCORE_THRESHOLDS:
@@ -60,6 +78,9 @@ def main() -> int:
                 errors.append(f"public/assets/app.js no contiene: {expected_threshold}")
         if EXPECTED_DATA_MODE_LABEL not in app_js:
             errors.append("public/assets/app.js no contiene la etiqueta para datos reales.")
+        for expected_logic in EXPECTED_DEFAULT_RELEVANCE_LOGIC:
+            if expected_logic not in app_js:
+                errors.append(f"public/assets/app.js no contiene: {expected_logic}")
 
     if (ROOT / ".env").exists():
         errors.append("Existe .env en la raíz. No debe publicarse ni mantenerse en el repositorio.")

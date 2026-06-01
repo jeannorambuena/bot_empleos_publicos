@@ -13,11 +13,20 @@ if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
 from radar.config_loader import ConfigurationError, load_json, load_profile
+from radar.history import (
+    apply_history_to_opportunities,
+    build_history_summary,
+    load_history,
+    update_history,
+    write_history,
+)
 from radar.normalize_opportunity import score_real_opportunity
 from radar.public_data import summarize_opportunities, write_public_data
 
 
 NORMALIZED_PATH = ROOT / "data" / "normalized" / "empleos_publicos_normalized.json"
+PUBLIC_DATA = ROOT / "public" / "data"
+HISTORY_PATH = PUBLIC_DATA / "history.json"
 
 
 def main() -> int:
@@ -35,13 +44,26 @@ def main() -> int:
     generated_at = datetime.now().astimezone()
     scored = [score_real_opportunity(item, profile) for item in opportunities]
     scored.sort(key=lambda item: (-item["match_score"], item.get("closing_date") or "9999-12-31"))
+    try:
+        previous_history = load_history(HISTORY_PATH)
+    except (OSError, ValueError) as error:
+        print(f"ERROR: No fue posible cargar history.json: {error}", file=sys.stderr)
+        return 1
+    previous_ids = {str(item.get("id")) for item in previous_history if item.get("id")}
+    history = update_history(scored, previous_history, generated_at.isoformat(timespec="seconds"))
+    scored = apply_history_to_opportunities(scored, history, previous_ids=previous_ids)
     summary = summarize_opportunities(scored, generated_at=generated_at)
+    history_summary = build_history_summary(scored, history)
+    summary.update(history_summary)
+    summary["active_opportunities"] = history_summary["total_opportunities"]
+    summary["high_relevance"] = summary["high_match"]
     last_run = {
         "finished_at": generated_at.isoformat(timespec="seconds"),
         "status": "real-local",
         "message": "Datos reales locales generados correctamente",
     }
-    write_public_data(ROOT / "public" / "data", scored, summary, last_run)
+    write_public_data(PUBLIC_DATA, scored, summary, last_run)
+    write_history(HISTORY_PATH, history)
 
     levels = {"Alta": 0, "Media": 0, "Baja": 0, "Descartada": 0}
     for item in scored:

@@ -1,7 +1,12 @@
 {
   "sources_reviewed": 1,
   "active_opportunities": 110,
-  "new_opportunities": 110,
+  "new_opportunities": 0,
   "high_match": 6,
-  "closing_soon": 91
+  "closing_soon": 91,
+  "total_opportunities": 110,
+  "previously_seen": 110,
+  "first_seen_this_run": 0,
+  "not_seen_in_latest_capture": 0,
+  "high_relevance": 6
 }

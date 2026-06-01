@@ -2,6 +2,16 @@ name: Refresh real data
 
 on:
   workflow_dispatch:
+    inputs:
+      send_telegram:
+        description: "Enviar Telegram real después de validar el preview"
+        required: false
+        default: false
+        type: boolean
+  schedule:
+    # 12:00 UTC, lunes a viernes. Corresponde aproximadamente a la mañana de
+    # Chile y puede variar según el horario de verano.
+    - cron: "0 12 * * 1-5"
 
 permissions:
   contents: write
@@ -40,6 +50,9 @@ jobs:
       - name: Validate public dashboard data
         run: python scripts/check_public_data.py
 
+      - name: Validate public opportunity history
+        run: python scripts/check_history.py
+
       - name: Analyze real scoring
         run: python scripts/analyze_real_scoring.py
 
@@ -58,6 +71,25 @@ jobs:
       - name: Validate calendar preview
         run: python scripts/check_calendar_preview.py
 
+      - name: Build Telegram preview
+        run: python scripts/build_telegram_preview.py
+
+      - name: Validate Telegram preview
+        run: python scripts/check_telegram_preview.py
+
+      - name: Validate configured sources
+        run: python scripts/check_sources_config.py
+
+      - name: Validate human review panel
+        run: python scripts/check_review_panel.py
+
+      - name: Send Telegram alert after explicit manual request
+        if: github.event_name == 'workflow_dispatch' && inputs.send_telegram == true
+        env:
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: python scripts/send_telegram_alerts.py --send
+
       - name: Show Git diagnostics
         run: |
           git status --short
@@ -67,7 +99,7 @@ jobs:
         id: public-data
         shell: bash
         run: |
-          if git diff --quiet -- public/data/opportunities.json public/data/summary.json public/data/last_run.json; then
+          if git diff --quiet -- public/data/opportunities.json public/data/summary.json public/data/last_run.json public/data/history.json; then
             echo "changed=false" >> "$GITHUB_OUTPUT"
             echo "No public data changes to commit"
           else
@@ -80,7 +112,7 @@ jobs:
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -- public/data/opportunities.json public/data/summary.json public/data/last_run.json
+          git add -- public/data/opportunities.json public/data/summary.json public/data/last_run.json public/data/history.json
           git status --short
           git diff --cached --stat
           git commit -m "chore(data): refresh empleos publicos dashboard data"
