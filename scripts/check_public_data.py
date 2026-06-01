@@ -18,6 +18,7 @@ from radar.scoring import match_level_for_score
 
 
 PUBLIC_DATA = ROOT / "public" / "data"
+MATCH_LEVELS = {"Alta", "Media", "Baja", "Descartada"}
 
 
 def _load_json(path: Path) -> Any:
@@ -45,6 +46,8 @@ def _validate_opportunity(opportunity: Any, index: int) -> list[str]:
         errors.append(f"{label}: match_score debe ser entero entre 0 y 100.")
     elif opportunity.get("match_level") != match_level_for_score(score):
         errors.append(f"{label}: match_level no corresponde al puntaje {score}.")
+    elif opportunity.get("match_level") not in MATCH_LEVELS:
+        errors.append(f"{label}: match_level no pertenece a los niveles permitidos.")
 
     if opportunity.get("is_demo") is True and opportunity.get("source_url") is not None:
         errors.append(f"{label}: source_url debe ser null cuando is_demo es true.")

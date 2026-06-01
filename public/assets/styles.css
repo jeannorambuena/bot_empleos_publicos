@@ -405,6 +405,10 @@ a {
   color: var(--low);
 }
 
+.match-score strong.discarded {
+  color: var(--muted);
+}
+
 .empty-state {
   grid-column: 1 / -1;
   padding: 42px 20px;

@@ -19,6 +19,12 @@ REQUIRED_FILES = (
     PUBLIC / "data" / "last_run.json",
 )
 JSON_FILES = REQUIRED_FILES[3:]
+EXPECTED_SCORE_THRESHOLDS = (
+    "if (score >= 80)",
+    "if (score >= 60)",
+    "if (score >= 35)",
+    'return "discarded"',
+)
 
 
 def _load_json(path: Path) -> Any:
@@ -46,6 +52,11 @@ def main() -> int:
         index_html = (PUBLIC / "index.html").read_text(encoding="utf-8")
         if "Radar Laboral Público Chile" not in index_html:
             errors.append("public/index.html no contiene el título esperado.")
+
+        app_js = (PUBLIC / "assets" / "app.js").read_text(encoding="utf-8")
+        for expected_threshold in EXPECTED_SCORE_THRESHOLDS:
+            if expected_threshold not in app_js:
+                errors.append(f"public/assets/app.js no contiene: {expected_threshold}")
 
     if (ROOT / ".env").exists():
         errors.append("Existe .env en la raíz. No debe publicarse ni mantenerse en el repositorio.")

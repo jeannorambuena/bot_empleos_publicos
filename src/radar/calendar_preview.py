@@ -20,7 +20,7 @@ def select_calendar_opportunities(
     """Select active, non-discarded opportunities that deserve reminders."""
     selected = []
     for opportunity in opportunities:
-        if opportunity.get("status") != "vigente":
+        if opportunity.get("status") not in {"vigente", "abierta"}:
             continue
         if opportunity.get("match_level") == "Descartada":
             continue

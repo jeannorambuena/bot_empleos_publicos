@@ -32,10 +32,10 @@ campos auxiliares de presentación y filtrado.
 
 Rangos de coincidencia:
 
-- `Alta`: 85 a 100.
-- `Media`: 70 a 84.
-- `Baja`: 50 a 69.
-- `Descartada`: menos de 50.
+- `Alta`: 80 a 100.
+- `Media`: 60 a 79.
+- `Baja`: 35 a 59.
+- `Descartada`: 0 a 34 o descarte fuerte.
 
 Ejemplo:
 

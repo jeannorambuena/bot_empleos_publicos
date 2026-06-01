@@ -7,21 +7,23 @@ from typing import Any, Iterable
 from .normalizer import prepare_search_text
 
 
-POSITIVE_KEYWORD_POINTS = 12
-PRIORITY_REGION_POINTS = 18
-PROFILE_AREA_POINTS = 14
-PROFILE_ZONE_POINTS = 8
-KNOWN_SOURCE_POINTS = 4
+TITLE_KEYWORD_POINTS = 22
+DESCRIPTION_KEYWORD_POINTS = 6
+STRONG_TITLE_BONUS = 30
+PRIORITY_REGION_POINTS = 8
+PROFILE_AREA_POINTS = 10
+PROFILE_ZONE_POINTS = 4
+KNOWN_SOURCE_POINTS = 3
 MAX_SCORE = 100
 
 
 def match_level_for_score(score: int) -> str:
     """Map a score to the public match levels documented by the project."""
-    if score >= 85:
+    if score >= 80:
         return "Alta"
-    if score >= 70:
+    if score >= 60:
         return "Media"
-    if score >= 50:
+    if score >= 35:
         return "Baja"
     return "Descartada"
 
@@ -44,6 +46,19 @@ def _opportunity_search_text(opportunity: dict[str, Any]) -> str:
     return prepare_search_text(" ".join(str(value) for value in values if value))
 
 
+def _title_search_text(opportunity: dict[str, Any]) -> str:
+    return prepare_search_text(opportunity.get("title"))
+
+
+def _description_search_text(opportunity: dict[str, Any]) -> str:
+    values = [
+        opportunity.get("description"),
+        opportunity.get("area"),
+        " ".join(str(tag) for tag in opportunity.get("tags", [])),
+    ]
+    return prepare_search_text(" ".join(str(value) for value in values if value))
+
+
 def _matching_keywords(search_text: str, keywords: Iterable[object]) -> list[str]:
     matches = []
     for keyword in keywords:
@@ -60,8 +75,14 @@ def calculate_match(opportunity: dict[str, Any], profile: dict[str, Any]) -> dic
     profile context then add points up to the public maximum of 100.
     """
     search_text = _opportunity_search_text(opportunity)
-    matched_keywords = _matching_keywords(search_text, profile.get("positive_keywords", []))
+    title_text = _title_search_text(opportunity)
+    description_text = _description_search_text(opportunity)
+    title_keywords = _matching_keywords(title_text, profile.get("positive_keywords", []))
+    description_keywords = _matching_keywords(description_text, profile.get("positive_keywords", []))
+    matched_keywords = list(dict.fromkeys([*title_keywords, *description_keywords]))
     excluded_keywords = _matching_keywords(search_text, profile.get("negative_keywords", []))
+    clinical_keywords = _matching_keywords(title_text, profile.get("clinical_negative_keywords", []))
+    strong_title_keywords = _matching_keywords(title_text, profile.get("strong_title_keywords", []))
 
     if excluded_keywords:
         return {
@@ -72,8 +93,22 @@ def calculate_match(opportunity: dict[str, Any], profile: dict[str, Any]) -> dic
             "excluded_keywords": excluded_keywords,
         }
 
-    score = len(matched_keywords) * POSITIVE_KEYWORD_POINTS
+    if clinical_keywords and not strong_title_keywords:
+        return {
+            "match_score": 0,
+            "match_level": "Descartada",
+            "alert_reasons": ["Descartada por cargo clínico"],
+            "matched_keywords": matched_keywords,
+            "excluded_keywords": clinical_keywords,
+        }
+
+    score = len(title_keywords) * TITLE_KEYWORD_POINTS
+    score += len([keyword for keyword in description_keywords if keyword not in title_keywords]) * DESCRIPTION_KEYWORD_POINTS
     reasons = []
+
+    if strong_title_keywords:
+        score += STRONG_TITLE_BONUS
+        reasons.append("Coincidencia fuerte en título")
 
     region = prepare_search_text(opportunity.get("region"))
     priority_regions = _normalized_values(profile.get("priority_regions", []))

@@ -26,9 +26,10 @@ function fillSelect(select, values) {
 }
 
 function scoreClass(score) {
-  if (score >= 85) return "high";
-  if (score >= 70) return "medium";
-  return "low";
+  if (score >= 80) return "high";
+  if (score >= 60) return "medium";
+  if (score >= 35) return "low";
+  return "discarded";
 }
 
 function hasValidSourceUrl(opportunity) {
