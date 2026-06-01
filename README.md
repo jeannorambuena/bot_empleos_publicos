@@ -79,6 +79,14 @@ python -m http.server 8000 --directory public
 Este flujo todavía no se ejecuta automáticamente y no envía alertas ni recordatorios
 reales. Consulta `docs/real-data.md` antes de publicar resultados.
 
+## Actualización manual desde GitHub Actions
+
+El workflow **Refresh real data** permite ejecutar manualmente la captura real,
+validar el resultado y actualizar solo los JSON públicos del dashboard. Si hay
+cambios, el commit automático en `main` solicita el despliegue existente de GitHub
+Pages mediante `workflow_dispatch`. Consulta `docs/github-actions-refresh.md` para
+conocer el alcance y las limitaciones.
+
 ## Configuración futura
 
 Los archivos de `config/` son ejemplos públicos y no contienen secretos:
