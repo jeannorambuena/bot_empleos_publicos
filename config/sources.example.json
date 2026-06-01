@@ -1,0 +1,43 @@
+{
+  "sources": [
+    {
+      "id": "empleos-publicos",
+      "name": "Empleos Públicos",
+      "category": "portal_general",
+      "base_url": "https://www.empleospublicos.cl/",
+      "enabled": true
+    },
+    {
+      "id": "slep",
+      "name": "Servicios Locales de Educación Pública",
+      "category": "slep",
+      "base_url": null,
+      "url_placeholder": "https://<sitio-oficial-del-slep>/",
+      "enabled": false
+    },
+    {
+      "id": "ministerios",
+      "name": "Ministerios",
+      "category": "ministerio",
+      "base_url": null,
+      "url_placeholder": "https://<sitio-oficial-del-ministerio>/",
+      "enabled": false
+    },
+    {
+      "id": "municipalidades",
+      "name": "Municipalidades",
+      "category": "municipalidad",
+      "base_url": null,
+      "url_placeholder": "https://<sitio-oficial-de-la-municipalidad>/",
+      "enabled": false
+    },
+    {
+      "id": "instituciones-genericas",
+      "name": "Otras páginas institucionales",
+      "category": "institucion_publica",
+      "base_url": null,
+      "url_placeholder": "https://<sitio-oficial-de-la-institucion>/",
+      "enabled": false
+    }
+  ]
+}

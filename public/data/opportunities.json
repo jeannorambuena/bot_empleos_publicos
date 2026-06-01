@@ -1,0 +1,189 @@
+[
+  {
+    "id": "sample-001",
+    "title": "Profesional de Redes y Servidores Linux",
+    "institution": "Ministerio de Ejemplo",
+    "source": "Empleos Públicos",
+    "region": "Metropolitana",
+    "commune": "Santiago",
+    "closing_date": "2026-06-03",
+    "detected_at": "2026-05-31T15:30:00-04:00",
+    "area": "redes",
+    "tags": [
+      "Linux",
+      "redes",
+      "servidores",
+      "Windows Server",
+      "ciberseguridad"
+    ],
+    "description": "Administración de redes institucionales, servidores Linux y controles de ciberseguridad.",
+    "status": "vigente",
+    "institution_type": "Institución pública",
+    "match_score": 92,
+    "match_level": "Alta",
+    "alert_reasons": [
+      "Alta coincidencia",
+      "Palabras clave positivas",
+      "Región priorizada",
+      "Área de interés",
+      "Zona de interés",
+      "Fuente disponible",
+      "Supera puntaje mínimo de alerta"
+    ],
+    "is_demo": true,
+    "source_url": null,
+    "url_status": "demo",
+    "urgency": "proximo"
+  },
+  {
+    "id": "sample-002",
+    "title": "Analista de Soporte TI y Windows Server",
+    "institution": "Servicio Local de Educación Pública de Ejemplo",
+    "source": "Empleos Públicos",
+    "region": "Maule",
+    "commune": "Talca",
+    "closing_date": "2026-06-07",
+    "detected_at": "2026-05-31T12:00:00-04:00",
+    "area": "soporte TI",
+    "tags": [
+      "soporte TI",
+      "Windows Server",
+      "informática",
+      "redes"
+    ],
+    "description": "Soporte a usuarios, redes y mantención de servicios informáticos.",
+    "status": "vigente",
+    "institution_type": "Institución pública",
+    "match_score": 92,
+    "match_level": "Alta",
+    "alert_reasons": [
+      "Alta coincidencia",
+      "Palabras clave positivas",
+      "Región priorizada",
+      "Área de interés",
+      "Zona de interés",
+      "Fuente disponible",
+      "Supera puntaje mínimo de alerta"
+    ],
+    "is_demo": true,
+    "source_url": null,
+    "url_status": "demo",
+    "urgency": "proximo"
+  },
+  {
+    "id": "sample-003",
+    "title": "Analista de Compras Públicas",
+    "institution": "Municipalidad de Ejemplo",
+    "source": "Portal Municipal",
+    "region": "O’Higgins",
+    "commune": "Rancagua",
+    "closing_date": "2026-06-14",
+    "detected_at": "2026-05-30T11:15:00-04:00",
+    "area": "compras públicas",
+    "tags": [
+      "compras públicas"
+    ],
+    "description": "Apoyo a procesos de adquisición y seguimiento administrativo.",
+    "status": "vigente",
+    "institution_type": "Institución pública",
+    "match_score": 56,
+    "match_level": "Baja",
+    "alert_reasons": [
+      "Palabras clave positivas",
+      "Región priorizada",
+      "Área de interés",
+      "Zona de interés",
+      "Fuente disponible"
+    ],
+    "is_demo": true,
+    "source_url": null,
+    "url_status": "demo",
+    "urgency": "normal"
+  },
+  {
+    "id": "sample-004",
+    "title": "Profesional de Transparencia Pública",
+    "institution": "Municipalidad de Ejemplo",
+    "source": "Portal Municipal",
+    "region": "Maule",
+    "commune": "Curicó",
+    "closing_date": "2026-06-18",
+    "detected_at": "2026-05-29T09:45:00-04:00",
+    "area": "transparencia pública",
+    "tags": [
+      "transparencia"
+    ],
+    "description": "Gestión de transparencia activa y solicitudes de información.",
+    "status": "vigente",
+    "institution_type": "Institución pública",
+    "match_score": 56,
+    "match_level": "Baja",
+    "alert_reasons": [
+      "Palabras clave positivas",
+      "Región priorizada",
+      "Área de interés",
+      "Zona de interés",
+      "Fuente disponible"
+    ],
+    "is_demo": true,
+    "source_url": null,
+    "url_status": "demo",
+    "urgency": "normal"
+  },
+  {
+    "id": "sample-005",
+    "title": "Asistente de Apoyo a Transparencia",
+    "institution": "Servicio Público de Ejemplo",
+    "source": "Página institucional",
+    "region": "Maule",
+    "commune": "No especificada",
+    "closing_date": "2026-06-25",
+    "detected_at": "2026-05-28T16:10:00-04:00",
+    "area": "transparencia pública",
+    "tags": [
+      "transparencia"
+    ],
+    "description": "Apoyo administrativo general para publicación de información.",
+    "status": "vigente",
+    "institution_type": "Institución pública",
+    "match_score": 56,
+    "match_level": "Baja",
+    "alert_reasons": [
+      "Palabras clave positivas",
+      "Región priorizada",
+      "Área de interés",
+      "Zona de interés",
+      "Fuente disponible"
+    ],
+    "is_demo": true,
+    "source_url": null,
+    "url_status": "demo",
+    "urgency": "normal"
+  },
+  {
+    "id": "sample-006",
+    "title": "Práctica profesional de Soporte TI",
+    "institution": "Institución Pública de Ejemplo",
+    "source": "Página institucional",
+    "region": "Metropolitana",
+    "commune": "Santiago",
+    "closing_date": "2026-06-05",
+    "detected_at": "2026-05-31T10:05:00-04:00",
+    "area": "soporte TI",
+    "tags": [
+      "informática"
+    ],
+    "description": "Práctica profesional para apoyo de mesa de ayuda.",
+    "status": "vigente",
+    "institution_type": "Institución pública",
+    "match_score": 0,
+    "match_level": "Descartada",
+    "alert_reasons": [
+      "Descartada por palabra negativa"
+    ],
+    "is_demo": true,
+    "source_url": null,
+    "url_status": "demo",
+    "urgency": "proximo"
+  }
+]

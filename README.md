@@ -1,70 +1,129 @@
-# Bot Empleos Públicos (Chile) – versión HTML + MySQL
+# Radar Laboral Público Chile
 
-Script en Python que consulta las **convocatorias públicas** de  
-[https://www.empleospublicos.cl](https://www.empleospublicos.cl), extrae las ofertas desde el **HTML**, aplica filtros (TI / compras públicas / educación parvularia, excluyendo salud), guarda un histórico en **MySQL** y genera:
+Herramienta comunitaria en evolución para detectar, ordenar y publicar oportunidades
+laborales del sector público chileno. El objetivo es facilitar el seguimiento de
+convocatorias relevantes mediante filtros configurables, alertas y una vista pública
+simple de consultar.
 
-- Un archivo `concursos_relevantes.csv` con los concursos relevantes del momento.
-- Un reporte HTML responsivo `reporte_concursos.html` con todos los concursos relevantes.
-- Opcionalmente, un correo con **solo los concursos nuevos** detectados desde la última ejecución.
-- Copias históricas fechadas en la carpeta `reportes/` (solo cuando hay novedades).
+> Estado actual: prototipo en desarrollo. El dashboard de `public/` usa datos demo y
+> todavía no representa convocatorias reales obtenidas por el scraper.
 
-La idea es que **cualquier persona** pueda:
+## Qué problema resuelve
 
-- Ajustar fácilmente los filtros de búsqueda (`config.py`).
-- Reutilizar la base de datos para sus propias postulaciones o análisis.
-- Automatizar la ejecución diaria en Windows (Programador de tareas).
+Las oportunidades públicas suelen estar distribuidas entre portales generales,
+ministerios, municipalidades, SLEP y otras instituciones. Radar Laboral Público Chile
+busca reunir señales útiles en una estructura común para reducir la revisión manual,
+priorizar convocatorias afines y recordar fechas de cierre.
 
----
+## Estado del proyecto
 
-## ¿Cómo funciona?
+El repositorio conserva una implementación histórica local y suma gradualmente una
+arquitectura reutilizable. En esta etapa:
 
-1. `main.py` llama a `feed_html.get_entries()` para leer las convocatorias desde la página HTML de Empleos Públicos.
-2. Cada convocatoria se transforma en un diccionario con:
-   - `title`, `link`, `published`, `raw_text`.
-3. Se aplican los filtros definidos en `config.py`:
-   - `INCLUDE_KEYWORDS`: TI, compras públicas, educación parvularia, etc.
-   - `EXCLUDE_KEYWORDS`: profesiones de salud (médico, enfermera, kinesiólogo, etc.).
-4. Por cada concurso relevante se llama a `upsert_concurso(...)` (definido en `db_utils.py`), que trabaja sobre la base de datos MySQL creada por `concursos.sql`:
-   - Si el concurso es nuevo → se inserta.
-   - Si ya existe → se actualiza lo necesario.
-   - La función devuelve un flag `es_nuevo` (True/False).
-5. Dependiendo del resultado:
-   - **Si no hay concursos relevantes** → no se genera nada.
-   - **Si hay relevantes pero ninguno nuevo** → se mantiene el reporte anterior.
-   - **Si hay al menos un concurso nuevo**:
-     - Se genera/actualiza:
-       - `concursos_relevantes.csv`
-       - `reporte_concursos.html`
-     - Se guardan copias con fecha en `reportes/`.
-     - Opcionalmente se envía un correo con el resumen (si SMTP está configurado).
+- Existe un dashboard estático responsivo en `public/`.
+- Los JSON publicados contienen oportunidades de ejemplo.
+- Hay archivos de configuración de referencia en `config/`.
+- Están documentados el contrato de datos, la arquitectura, la seguridad y el roadmap.
+- El scraper antiguo todavía no se conecta al dashboard público.
+- Las alertas, recordatorios, GitHub Pages y GitHub Actions aún no están habilitados.
 
----
+## Instalación en Windows
 
-## Requisitos
+Requisitos recomendados:
 
-- **Sistema operativo:** Windows
-- **Software base:**
-  - [WAMP](https://www.wampserver.com/) (incluye MySQL)
-  - Python **3.10+**
-- **Correo (opcional):**
-  - Cuenta SMTP (por ejemplo, Gmail) para enviar notificaciones de nuevos concursos.
+- Windows 10 u 11.
+- Python 3.10 o superior.
+- Git.
 
----
+Crear un entorno virtual local:
 
-## Configuración
+```powershell
+git clone <URL-DEL-REPOSITORIO>
+cd bot_empleos_publicos
+py -m venv venv
+.\venv\Scripts\Activate.ps1
+```
 
-### 1. Base de datos (MySQL)
+Esta fase documental no requiere instalar paquetes adicionales. La lógica histórica
+puede tener requisitos propios que deberán revisarse antes de reutilizarla.
 
-La estructura de la base de datos está definida en el archivo:
+## Ejecutar la página local
 
-- `concursos.sql`
+Desde la raíz del repositorio:
 
-Pasos típicos:
+```powershell
+.\venv\Scripts\python.exe -m http.server 8000 --directory public
+```
 
-1. Iniciar MySQL (por ejemplo desde WAMP).
-2. Crear la base de datos (si no existe), por ejemplo:
+Luego abre `http://localhost:8000`. La página muestra exclusivamente datos demo.
 
-   ```sql
-   CREATE DATABASE bot_empleos
-     CHARACTER SET utf8mb4
-     COLLATE utf8mb4_unicode_ci;
+## Publicación en GitHub Pages
+
+El repositorio está preparado para publicar `public/` mediante GitHub Pages después
+de revisión y merge a `main`. La publicación puede no estar activa todavía. Consulta
+`docs/github-pages.md` para validar el sitio y conocer los pasos manuales futuros.
+
+## Configuración futura
+
+Los archivos de `config/` son ejemplos públicos y no contienen secretos:
+
+- `config/profile.example.json`: regiones, áreas, palabras clave, zonas y puntaje
+  mínimo de alerta.
+- `config/sources.example.json`: fuentes configurables y URLs base o placeholders.
+- `config/alerts.example.json`: reglas de alerta por correo y preparación para
+  recordatorios de calendario.
+
+Para una instalación local futura, estos ejemplos podrán copiarse a archivos locales
+ignorados o transformarse en una configuración administrada por el bot. Todavía no
+están conectados a la lógica histórica.
+
+## Alertas y variables locales
+
+`.env.example` enumera variables esperadas para SMTP, destinatarios, zona horaria y
+URL pública. Es solo una plantilla. Nunca escribas secretos reales en ese archivo.
+
+Las credenciales locales deberán almacenarse en `.env`, que está excluido por Git.
+Cuando exista automatización con GitHub Actions, los secretos deberán configurarse
+mediante GitHub Secrets.
+
+## Archivos que no deben subirse
+
+No publiques:
+
+- `.env` ni variantes con credenciales.
+- Contraseñas SMTP, tokens o claves.
+- Bases de datos reales.
+- Logs privados.
+- Reportes locales con datos sensibles.
+- Información personal innecesaria de postulantes o contactos.
+
+Consulta `docs/security.md` para más detalles.
+
+## Documentación
+
+- `docs/architecture.md`: flujo técnico propuesto.
+- `docs/data-contract.md`: contrato de los JSON públicos.
+- `docs/security.md`: prácticas mínimas de seguridad.
+- `docs/roadmap.md`: evolución por fases.
+- `docs/parametros-iniciales.md`: alcance funcional inicial.
+
+## Roadmap resumido
+
+1. Dashboard demo.
+2. Documentación y configuración comunitaria.
+3. Motor de filtros y scoring.
+4. Datos reales locales.
+5. Alertas por correo.
+6. Recordatorios de calendario `.ics`.
+7. Publicación con GitHub Pages.
+8. Automatización con GitHub Actions.
+9. Incorporación gradual de múltiples fuentes.
+
+El detalle y los criterios de avance están en `docs/roadmap.md`.
+
+## Contribuir
+
+Las contribuciones pueden mejorar documentación, contratos, parsers, pruebas y
+fuentes compatibles. Antes de publicar cambios, verifica que no incluyan secretos,
+logs privados ni datos personales innecesarios. El proyecto debe seguir siendo
+comprensible y reutilizable por la comunidad.
