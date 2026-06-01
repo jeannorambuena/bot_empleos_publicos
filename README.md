@@ -57,6 +57,12 @@ Desde la raíz del repositorio:
 
 Luego abre `http://localhost:8000`. La página muestra exclusivamente datos demo.
 
+## Publicación en GitHub Pages
+
+El repositorio está preparado para publicar `public/` mediante GitHub Pages después
+de revisión y merge a `main`. La publicación puede no estar activa todavía. Consulta
+`docs/github-pages.md` para validar el sitio y conocer los pasos manuales futuros.
+
 ## Configuración futura
 
 Los archivos de `config/` son ejemplos públicos y no contienen secretos:

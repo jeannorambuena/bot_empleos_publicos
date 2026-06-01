@@ -51,6 +51,9 @@ Estado: completada como base documental inicial.
 - Publicar el dashboard estático.
 - Validar JSON antes del despliegue.
 - Revisar que no existan secretos ni datos privados.
+- Configurar Pages para usar GitHub Actions después de revisión y merge a `main`.
+
+Estado: workflow preparado en modo seguro; despliegue pendiente de activación manual.
 
 ## Fase 8: GitHub Actions
 
