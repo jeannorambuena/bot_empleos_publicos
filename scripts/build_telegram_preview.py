@@ -56,7 +56,7 @@ def main() -> int:
             lines.append(f"- {item.get('match_score', 0)}% | {item.get('title', 'Sin título')}")
     else:
         lines.append("- No hay oportunidades recomendadas en este corte.")
-    lines.extend(["", f"Dashboard: {DASHBOARD_URL}", "", "Envio manual seguro del radar laboral."])
+    lines.extend(["", f"Dashboard: {DASHBOARD_URL}", "", "Envío manual seguro del radar laboral."])
 
     OUTPUT.mkdir(parents=True, exist_ok=True)
     (OUTPUT / "telegram-preview.txt").write_text("\n".join(lines) + "\n", encoding="utf-8")

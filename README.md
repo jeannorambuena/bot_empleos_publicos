@@ -101,6 +101,17 @@ conocer el alcance y las limitaciones.
 También existe una ejecución horaria segura de lunes a viernes a las `12:00 UTC`.
 Telegram real permanece desactivado en esa programación.
 
+## Fase W: Telegram manual seguro
+
+La Fase W está cerrada. El envío real de Telegram fue probado correctamente mediante
+el workflow **Refresh real data** usando `workflow_dispatch` con
+`send_telegram=true`. El mensaje llegó al bot `@RADARLABORALJPBOT`.
+
+El envío sigue siendo deliberadamente manual. Requiere los secrets
+`TELEGRAM_BOT_TOKEN` y `TELEGRAM_CHAT_ID`; la ejecución horaria no envía Telegram
+real. El bot tampoco responde mensajes porque no tiene polling ni webhook. Consulta
+`docs/telegram-alerts.md` para conocer los controles y la política recomendada.
+
 ## Configuración futura
 
 Los archivos de `config/` son ejemplos públicos y no contienen secretos:
