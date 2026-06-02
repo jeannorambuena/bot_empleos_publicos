@@ -22,7 +22,9 @@ python scripts/check_telegram_preview.py
 ```
 
 El archivo `output/telegram/telegram-preview.txt` resume total de oportunidades,
-nuevas reales, altas, medias, cierres próximos y hasta cinco recomendaciones.
+nuevas relevantes, altas, medias, cierres próximos relevantes y hasta cinco recomendaciones
+accionables. Cada recomendación intenta incluir puntaje, nivel, título, organismo,
+ubicación, fecha de cierre, marca `NUEVA` cuando corresponde y enlace directo.
 `output/` está ignorado por Git.
 
 ## Envío real controlado
@@ -61,3 +63,21 @@ el envío saliente manual y controlado.
 
 El próximo paso recomendado es mantener el modo manual o definir por PR una política
 futura de envío automático con límites claros de frecuencia, contenido y operación.
+
+## Simulación de política futura
+
+La simulación local permite observar qué habría ocurrido sin enviar mensajes:
+
+```powershell
+python scripts/simulate_telegram_policy.py
+```
+
+La política candidata informa que habría enviado Telegram si existe al menos una
+oportunidad nueva relevante o una oportunidad de coincidencia Alta con cierre
+próximo. También reporta nuevas relevantes, altas, cierres próximos y las
+oportunidades que habría incluido.
+
+Esta política no está conectada al workflow ni al emisor real. Antes de considerar
+una automatización futura se debe aprobar otro PR con límites de frecuencia,
+deduplicación, ventanas horarias y criterios operativos explícitos. La ejecución
+programada actual sigue sin enviar Telegram real.

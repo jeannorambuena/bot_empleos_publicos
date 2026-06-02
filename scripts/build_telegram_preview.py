@@ -13,6 +13,9 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "output" / "telegram"
 DASHBOARD_URL = os.environ.get("PUBLIC_SITE_URL") or "https://jeannorambuena.github.io/bot_empleos_publicos/"
+RELEVANT_LEVELS = {"Alta", "Media", "Baja"}
+RECOMMENDED_LEVELS = {"Alta", "Media"}
+MAX_RECOMMENDATIONS = 5
 
 
 def _load(path: Path) -> Any:
@@ -20,23 +23,77 @@ def _load(path: Path) -> Any:
         return json.load(file)
 
 
+def load_public_data() -> tuple[list[dict[str, Any]], dict[str, Any], dict[str, Any]]:
+    """Load the public payloads used by Telegram preview and policy simulation."""
+    opportunities = _load(ROOT / "public" / "data" / "opportunities.json")
+    summary = _load(ROOT / "public" / "data" / "summary.json")
+    last_run = _load(ROOT / "public" / "data" / "last_run.json")
+    if not isinstance(opportunities, list) or not isinstance(summary, dict) or not isinstance(last_run, dict):
+        raise ValueError("JSON público inválido para preview Telegram.")
+    return opportunities, summary, last_run
+
+
+def select_recommended(opportunities: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    """Return a short actionable selection for a Telegram digest."""
+    recommended = [item for item in opportunities if item.get("match_level") in RECOMMENDED_LEVELS]
+    recommended.sort(
+        key=lambda item: (
+            item.get("is_new_since_last_run") is not True,
+            item.get("urgency") != "proximo",
+            -int(item.get("match_score", 0)),
+            item.get("closing_date") or "9999-12-31",
+        )
+    )
+    return recommended[:MAX_RECOMMENDATIONS]
+
+
+def is_new_relevant(opportunity: dict[str, Any]) -> bool:
+    return opportunity.get("is_new_since_last_run") is True and opportunity.get("match_level") in RELEVANT_LEVELS
+
+
+def is_high_closing_soon(opportunity: dict[str, Any]) -> bool:
+    return opportunity.get("match_level") == "Alta" and opportunity.get("urgency") == "proximo"
+
+
+def is_relevant_closing_soon(opportunity: dict[str, Any]) -> bool:
+    return opportunity.get("match_level") in RELEVANT_LEVELS and opportunity.get("urgency") == "proximo"
+
+
+def _short(value: Any, *, limit: int) -> str:
+    text = str(value or "No especificado").strip()
+    return text if len(text) <= limit else f"{text[: limit - 1].rstrip()}…"
+
+
+def _location(opportunity: dict[str, Any]) -> str:
+    values = [
+        opportunity.get("region"),
+        opportunity.get("commune"),
+    ]
+    visible = [str(value) for value in values if value and value != "No especificada"]
+    return " / ".join(visible) or "No especificada"
+
+
+def _format_recommendation(index: int, opportunity: dict[str, Any]) -> list[str]:
+    new_marker = " | NUEVA" if opportunity.get("is_new_since_last_run") is True else ""
+    return [
+        f"{index}. [{opportunity.get('match_level', 'Sin nivel')} | {opportunity.get('match_score', 0)}%{new_marker}] {_short(opportunity.get('title'), limit=120)}",
+        f"   Organismo: {_short(opportunity.get('institution'), limit=90)}",
+        f"   Ubicación: {_location(opportunity)}",
+        f"   Cierre: {opportunity.get('closing_date') or 'No especificado'}",
+        f"   Link: {opportunity.get('source_url') or 'Sin enlace directo'}",
+    ]
+
+
 def main() -> int:
     try:
-        opportunities = _load(ROOT / "public" / "data" / "opportunities.json")
-        summary = _load(ROOT / "public" / "data" / "summary.json")
-        last_run = _load(ROOT / "public" / "data" / "last_run.json")
-    except (OSError, json.JSONDecodeError) as error:
+        opportunities, summary, last_run = load_public_data()
+    except (OSError, json.JSONDecodeError, ValueError) as error:
         print(f"ERROR: {error}", file=sys.stderr)
         return 1
 
-    if not isinstance(opportunities, list) or not isinstance(summary, dict):
-        print("ERROR: JSON público inválido para preview Telegram.", file=sys.stderr)
-        return 1
-
-    recommended = [
-        item for item in opportunities
-        if item.get("match_level") in {"Alta", "Media"}
-    ][:5]
+    recommended = select_recommended(opportunities)
+    new_relevant = sum(is_new_relevant(item) for item in opportunities)
+    relevant_closing_soon = sum(is_relevant_closing_soon(item) for item in opportunities)
     generated_at = last_run.get("finished_at") or datetime.now().astimezone().isoformat(timespec="seconds")
     lines = [
         "Radar Laboral Público Chile",
@@ -44,16 +101,16 @@ def main() -> int:
         f"Fecha/hora: {generated_at}",
         "",
         f"Total oportunidades: {summary.get('total_opportunities', len(opportunities))}",
-        f"Nuevas reales: {summary.get('new_opportunities', 0)}",
+        f"Nuevas relevantes: {new_relevant}",
         f"Altas: {sum(item.get('match_level') == 'Alta' for item in opportunities)}",
         f"Medias: {sum(item.get('match_level') == 'Media' for item in opportunities)}",
-        f"Cierre próximo: {summary.get('closing_soon', 0)}",
+        f"Cierres próximos relevantes: {relevant_closing_soon}",
         "",
         "Recomendadas:",
     ]
     if recommended:
-        for item in recommended:
-            lines.append(f"- {item.get('match_score', 0)}% | {item.get('title', 'Sin título')}")
+        for index, item in enumerate(recommended, start=1):
+            lines.extend(_format_recommendation(index, item))
     else:
         lines.append("- No hay oportunidades recomendadas en este corte.")
     lines.extend(["", f"Dashboard: {DASHBOARD_URL}", "", "Envío manual seguro del radar laboral."])

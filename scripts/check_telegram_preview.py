@@ -22,17 +22,21 @@ def main() -> int:
     lowered = text.lower()
     if any(marker in lowered for marker in FORBIDDEN):
         errors.append("El preview contiene un marcador sensible de Telegram.")
-    for expected in ("Radar Laboral Público Chile", "Total oportunidades:", "Nuevas reales:", "Reporte generado desde GitHub Actions"):
+    for expected in ("Radar Laboral Público Chile", "Total oportunidades:", "Nuevas relevantes:", "Cierres próximos relevantes:", "Reporte generado desde GitHub Actions"):
         if expected not in text:
             errors.append(f"El preview no contiene: {expected}")
+    if len(text) > 4096:
+        errors.append("El preview supera el límite de 4096 caracteres de Telegram.")
 
     try:
         opportunities = json.loads((ROOT / "public" / "data" / "opportunities.json").read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError) as error:
         errors.append(f"No fue posible leer opportunities.json: {error}")
         opportunities = []
-    if any(item.get("match_level") in {"Alta", "Media"} for item in opportunities) and "- " not in text:
-        errors.append("Existen alertables pero el preview no muestra oportunidades.")
+    if any(item.get("match_level") in {"Alta", "Media"} for item in opportunities):
+        for expected in ("Recomendadas:", "Organismo:", "Ubicación:", "Cierre:", "Link:"):
+            if expected not in text:
+                errors.append(f"El preview accionable no contiene: {expected}")
 
     if errors:
         for error in errors:
