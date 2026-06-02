@@ -16,6 +16,11 @@ SLEP Los Cerezos, SLEP Colchagua y municipalidades de Romeral, Curicó y Rauco.
 El catastro territorial detallado está en `docs/source-discovery.md` y
 `data/source_candidates.json`.
 
+La Región Metropolitana ya no se interpreta solo como comuna de Santiago o SLEP
+Santiago Centro. El catastro incorpora una selección metropolitana de SLEP,
+municipios, servicios regionales y universidades estatales, siempre como candidatas
+documentales sin scraper implementado.
+
 ## Hipótesis de integración
 
 - **H1:** Municipalidad de Curicó. Su sección oficial de concursos tiene
@@ -27,6 +32,9 @@ El catastro territorial detallado está en `docs/source-discovery.md` y
   mezclarse con recomendaciones laborales personales.
 - **H4:** ampliar a otras regiones únicamente después de validar H1 y H2, y solo con
   aprobación explícita del usuario.
+
+La ampliación RM no altera H1 ni H2: siguen siendo pruebas acotadas antes de abrir
+nuevas integraciones reales.
 
 ## Criterios para agregar una fuente
 

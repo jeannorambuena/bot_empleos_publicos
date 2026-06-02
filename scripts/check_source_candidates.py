@@ -41,6 +41,7 @@ CATEGORIES = {
     "transparencia_activa",
     "chilecompra_mercado_publico",
     "empleos_publicos_complementario",
+    "directores_para_chile",
 }
 REGION_SCOPES = {"local", "regional", "national_filterable"}
 PRIORITIES = {"high", "medium", "low"}
