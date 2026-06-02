@@ -177,3 +177,19 @@ python scripts/check_priority_sources.py
 
 Las salidas quedan bajo `output/sources/`. Ninguna alimenta `public/data`, scoring
 ni alertas.
+
+## Cierre del MVP
+
+El MVP queda cerrado como version entregable. No se agregan nuevas fuentes ni
+scrapers en esta etapa. Empleos Publicos permanece activo y Rancagua conserva su
+publicacion municipal controlada; las demas capturas son diagnosticos locales.
+
+Proximos pasos opcionales para una version futura:
+
+1. Mejorar Talca cuando exista un indice laboral municipal trazable.
+2. Resolver la validacion TLS de SLEP Colchagua antes de interpretar contenido.
+3. Revisar SLEP Los Cerezos solo con autorizacion y revision humana.
+4. Explorar candidatas P2 mediante preflight antes de crear adaptadores.
+5. Separar una version comercial multiusuario con hosting y privacidad propios.
+
+El cierre operativo completo esta en `docs/final-mvp-handover.md`.

@@ -32,9 +32,9 @@ EXPECTED_SCORE_THRESHOLDS = (
 EXPECTED_DATA_MODE_LABEL = "Captura local de Empleos Públicos"
 EXPECTED_RELEVANCE_FILTER = (
     'id="relevance-filter"',
-    '<option value="relevant" selected>Relevantes</option>',
+    '<option value="relevant" selected>Recomendadas para mi perfil</option>',
     '<option value="discarded">Descartadas</option>',
-    '<option value="all">Todas</option>',
+    '<option value="all">Todas las oportunidades públicas</option>',
 )
 EXPECTED_DEFAULT_RELEVANCE_LOGIC = (
     'const RELEVANT_LEVELS = new Set(["Alta", "Media", "Baja"])',

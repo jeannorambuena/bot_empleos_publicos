@@ -274,3 +274,38 @@ python scripts/check_priority_sources.py
 
 Los artefactos quedan en `output/sources/`. Estas capturas no publican
 oportunidades ni activan alertas.
+
+## Estado MVP
+
+El MVP queda cerrado como radar operativo y reutilizable:
+
+- Empleos Publicos es la fuente activa principal.
+- Municipalidad de Rancagua aporta una publicacion municipal controlada.
+- Curico, Molina, GORE Maule, Rancagua, Talca, SLEP Colchagua y SLEP Los Cerezos
+  conservan dry-runs auditables.
+- Las demas fuentes permanecen catalogadas y priorizadas antes de cualquier
+  implementacion futura.
+
+Multi-fuente controlado significa que una fuente puede existir como candidata o
+dry-run sin alimentar el dashboard. Solo se publica cuando pasa contrato,
+sanitizacion, vigencia y reglas de seguridad.
+
+La validacion final antes de merge se ejecuta con un unico comando:
+
+```powershell
+python scripts/check_release_ready.py
+```
+
+Para operar el radar localmente:
+
+```powershell
+python scripts/fetch_empleos_publicos.py
+python scripts/check_real_data.py
+python scripts/build_public_data_from_real.py
+python scripts/check_release_ready.py
+python -m http.server 8000 --directory public
+```
+
+La entrega y el modelo de operacion se documentan en
+`docs/final-mvp-handover.md`, `docs/source-status-matrix.md` y
+`docs/service-model.md`.
