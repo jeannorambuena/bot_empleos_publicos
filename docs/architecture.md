@@ -1,14 +1,14 @@
-# Arquitectura propuesta
+# Arquitectura del radar
 
-Radar Laboral Público Chile evolucionará en componentes pequeños para que pueda ser
-reutilizado y auditado por la comunidad. El dashboard actual es un prototipo con datos
-demo; todavía no existe una conexión productiva entre esta arquitectura y el scraper
-histórico.
+Radar Laboral Público Chile evoluciona en componentes pequeños para que pueda ser
+reutilizado y auditado por la comunidad. El dashboard puede publicarse con datos
+reales normalizados desde Empleos Públicos. Las nuevas fuentes deben incorporarse de
+forma gradual sin acoplarse al scraper histórico ni romper el conector estable.
 
 ## Flujo general
 
 ```text
-fuentes -> scraper -> normalización -> scoring -> almacenamiento
+fuentes -> adaptadores -> normalización -> scoring -> almacenamiento
         -> JSON público -> dashboard
         -> alertas por correo
         -> recordatorios .ics
@@ -16,18 +16,25 @@ fuentes -> scraper -> normalización -> scoring -> almacenamiento
 
 ## Scraper y fuentes
 
-Cada fuente deberá contar con un adaptador responsable de obtener convocatorias desde
+Cada fuente debe contar con un adaptador responsable de obtener convocatorias desde
 una URL base institucional. Las primeras categorías previstas son Empleos Públicos,
 SLEP, ministerios, municipalidades y otras páginas institucionales.
 
 Los adaptadores no deben inventar URLs de convocatorias ni publicar información que
 no haya sido obtenida desde una fuente verificable.
 
+Empleos Públicos es la única fuente real activa. Una fuente futura se agrega mediante
+un PR propio: primero contrato y evidencia manual, después adaptador y validaciones,
+y finalmente publicación controlada. No se deben mezclar varios portales reales en
+un mismo PR porque dificulta rastrear duplicados, errores de parser y regresiones.
+
 ## Normalización
 
-Los resultados de distintas fuentes deberán transformarse al contrato común descrito
-en `docs/data-contract.md`. La normalización permitirá comparar, deduplicar y publicar
-convocatorias aunque sus sitios de origen tengan estructuras diferentes.
+Los resultados de distintas fuentes deben transformarse al contrato común descrito
+en `docs/source-contract.md` antes de entrar al scoring. La normalización permite
+comparar, deduplicar y publicar convocatorias aunque sus sitios de origen tengan
+estructuras diferentes. La salida pública final sigue el contrato de
+`docs/data-contract.md`.
 
 ## Scoring y coincidencia
 
@@ -50,11 +57,12 @@ retención, respaldo y tratamiento de datos sensibles.
 
 ## Generación JSON
 
-Un generador exportará archivos públicos sin secretos:
+El generador real exporta archivos públicos sin secretos:
 
 - `public/data/opportunities.json`
 - `public/data/summary.json`
 - `public/data/last_run.json`
+- `public/data/history.json`
 
 Estos archivos serán la interfaz entre el proceso de actualización y el dashboard.
 

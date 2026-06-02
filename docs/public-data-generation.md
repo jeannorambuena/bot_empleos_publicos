@@ -1,12 +1,13 @@
 # Generación de datos públicos
 
-El generador conecta el motor inicial de scoring con los archivos JSON consumidos por
-el dashboard estático. Por ahora trabaja exclusivamente con ejemplos demo y no llama
-al scraper histórico, internet ni servicios externos.
+Los generadores conectan entradas normalizadas con los archivos JSON consumidos por
+el dashboard estático. El repositorio conserva un flujo demo y un flujo real local
+para Empleos Públicos. Ambos mantienen separada la captura, la normalización, el
+scoring y la publicación.
 
 ## Ejecutar
 
-Desde la raíz del repositorio:
+Para regenerar datos demo desde la raíz del repositorio:
 
 ```powershell
 $env:PYTHONDONTWRITEBYTECODE='1'
@@ -22,11 +23,21 @@ El script:
 5. Ordena por puntaje, cierre próximo y fecha de detección.
 6. Regenera los JSON públicos.
 
+Para generar datos reales locales desde una captura normalizada de Empleos Públicos:
+
+```powershell
+.\venv\Scripts\python.exe scripts\fetch_empleos_publicos.py
+.\venv\Scripts\python.exe scripts\check_real_data.py
+.\venv\Scripts\python.exe scripts\build_public_data_from_real.py
+```
+
 ## Archivos producidos
 
 - `public/data/opportunities.json`: oportunidades normalizadas y puntuadas.
 - `public/data/summary.json`: métricas resumidas para las tarjetas superiores.
 - `public/data/last_run.json`: estado y hora de la última generación.
+- `public/data/history.json`: historial público versionable para distinguir nuevas
+  oportunidades y registros previamente vistos.
 
 ## Conexión con el dashboard
 
@@ -51,8 +62,13 @@ ficticias como si fueran reales.
 El validador comprueba archivos requeridos, contrato mínimo, rangos de scoring,
 coherencia de niveles y ausencia de URLs en registros demo.
 
-## Siguiente fase
+## Fuentes futuras
 
-La siguiente integración reemplazará el archivo de ejemplos por datos reales
-normalizados desde el scraper. Antes de habilitarla deberán revisarse deduplicación,
-URLs oficiales y publicación segura.
+Una fuente futura debe producir primero oportunidades normalizadas compatibles con
+`docs/source-contract.md`. Después se validan identificadores estables, URLs oficiales,
+vigencia, trazabilidad y duplicados antes de combinar su salida con el generador
+público.
+
+Cada nueva fuente real debe incorporarse mediante un PR independiente. Este enfoque
+protege la captura vigente de Empleos Públicos y permite auditar o revertir un parser
+sin afectar a los demás.

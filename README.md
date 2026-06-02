@@ -37,6 +37,7 @@ arquitectura reutilizable. En esta etapa:
 - Telegram dispone de preview local y envío real bloqueado por defecto.
 - `public/review.html` permite exportar feedback humano sin backend.
 - El dashboard muestra etiquetas operativas y explicaciones breves basadas en datos públicos.
+- Existe un reporte semanal local para priorizar revisión operativa sin publicar artefactos adicionales.
 - SLEP y municipalidades cercanas están declaradas como fuentes futuras.
 - Nitro/OpenClaw queda documentado como entorno de despliegue futuro controlado.
 
@@ -68,7 +69,8 @@ Desde la raíz del repositorio:
 .\venv\Scripts\python.exe -m http.server 8000 --directory public
 ```
 
-Luego abre `http://localhost:8000`. La página muestra exclusivamente datos demo.
+Luego abre `http://localhost:8000`. La página muestra los JSON públicos disponibles;
+pueden ser datos demo o una captura real local previamente validada.
 
 ## Publicación en GitHub Pages
 
@@ -115,6 +117,24 @@ real. El bot tampoco responde mensajes porque no tiene polling ni webhook. Consu
 
 Existe una simulación local de política futura para evaluar cuándo habría sido útil
 enviar un digest accionable. No activa envíos automáticos reales.
+
+## Reporte semanal local
+
+El reporte operativo semanal se genera desde los JSON públicos ya validados:
+
+```powershell
+python scripts/build_weekly_report.py
+```
+
+El archivo resultante queda en `output/reports/weekly-report.md`, ignorado por Git.
+Resume recomendaciones, cierres próximos y pendientes de revisión humana. Consulta
+`docs/reports.md`.
+
+## Agregar fuentes futuras
+
+Empleos Públicos sigue siendo la única fuente real activa. Las fuentes futuras deben
+incorporarse una por una mediante PRs separados, usando el contrato normalizado de
+`docs/source-contract.md` y la guía de `docs/sources-roadmap.md`.
 
 ## Configuración futura
 
