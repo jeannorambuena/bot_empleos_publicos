@@ -61,3 +61,18 @@ python scripts/check_source_candidates.py
 
 El catastro no es un feed operativo: documenta hipótesis, URLs oficiales y riesgos
 para decidir qué fuente merece un PR independiente.
+
+## Regla de fuente publicable
+
+Una fuente nueva solo puede pasar de `dry_run` a publicable si no contiene datos
+personales visibles, tiene `source_url` oficial, conserva trazabilidad de evidencia
+y pasa sus checks de contrato y sanitizacion. El `status` debe ser confiable; todo
+`open_confirmed` requiere `closing_date` futura. Una oferta OMIL externa privada no
+puede tratarse automaticamente como empleo publico.
+
+Los campos publicables deben sanearse antes de escribir la salida local. Consulta
+`docs/source-sanitization.md` y ejecuta:
+
+```powershell
+python scripts/check_source_sanitization.py
+```

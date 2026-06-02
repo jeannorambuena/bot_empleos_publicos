@@ -232,6 +232,19 @@ Consulta `docs/security.md` para más detalles.
 
 El detalle y los criterios de avance están en `docs/roadmap.md`.
 
+## Sanitizacion de fuentes nuevas
+
+Todas las fuentes nuevas deben pasar sanitizacion comun antes de una integracion
+futura. El check agregado revisa RUN/RUT visibles, variantes parcialmente
+enmascaradas y tablas extensas de resultados sin modificar `public/data`:
+
+```powershell
+python scripts/check_source_sanitization.py
+```
+
+Consulta `docs/source-sanitization.md`. Rancagua sigue siendo la primera candidata a
+integracion futura, pero todavia permanece aislada en `dry_run`.
+
 ## Contribuir
 
 Las contribuciones pueden mejorar documentación, contratos, parsers, pruebas y

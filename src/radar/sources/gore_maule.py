@@ -11,6 +11,8 @@ from urllib.parse import urlparse
 import requests
 from bs4 import BeautifulSoup
 
+from radar.sources.sanitization import sanitize_opportunity
+
 
 USER_AGENT = "RadarLaboralPublicoChile/0.2 (+https://github.com/jeannorambuena/bot_empleos_publicos; dry-run source audit)"
 TIMEOUT_SECONDS = 20
@@ -88,6 +90,7 @@ def fetch_gore_maule_candidates(discovery_url: str) -> tuple[list[dict[str, Any]
         source_id = _source_id(source_url)
         manual_review = status == "manual_review"
         opportunities.append(
+            sanitize_opportunity(
             {
                 "id": f"gore-maule-{source_id}",
                 "source_id": source_id,
@@ -116,6 +119,7 @@ def fetch_gore_maule_candidates(discovery_url: str) -> tuple[list[dict[str, Any]
                 "manual_review": manual_review,
                 "manual_review_reason": status_reason if manual_review else None,
             }
+            )
         )
 
     status_counts = {status: 0 for status in sorted(ALLOWED_STATUS)}

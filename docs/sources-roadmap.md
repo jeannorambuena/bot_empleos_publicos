@@ -137,3 +137,19 @@ de SLEP, municipalidades ni ChileCompra.
 El catastro inicial se limita a Región Metropolitana, O'Higgins y Maule. Los portales
 nacionales solo se incluyen cuando son filtrables o útiles para investigar estas
 tres regiones.
+
+## Sanitizacion y promocion futura
+
+GORE Maule es una fuente legible, historica o cerrada y util para monitoreo futuro.
+Sus descripciones historicas motivaron la capa comun de sanitizacion porque pueden
+incluir RUN/RUT y datos personales de resultados.
+
+Rancagua es la primera candidata a integracion futura por su deteccion de una oferta
+municipal `open_confirmed` con fecha de cierre confiable. Todavia no esta integrada:
+requiere sanitizacion, normalizacion y revision humana antes de publicarse.
+
+Una fuente solo puede pasar de `dry_run` a publicable si no contiene datos personales
+visibles, usa `source_url` oficial, mantiene evidencia trazable, pasa checks de
+sanitizacion y contrato, y entrega estados confiables. Todo `open_confirmed` requiere
+fecha de cierre futura. Las ofertas OMIL externas privadas no se promueven
+automaticamente como empleo publico.
