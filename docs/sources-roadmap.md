@@ -80,6 +80,21 @@ descargarlos y conserva reglas de vigencia conservadoras. Todavía no se combina
 con Empleos Públicos, scoring, dashboard ni alertas. Consulta
 `docs/sources/gore-maule.md`.
 
+## Rancagua en dry-run
+
+Municipalidad de Rancagua cuenta con un cuarto adaptador aislado:
+
+```powershell
+python scripts/fetch_rancagua.py
+python scripts/check_rancagua_source.py
+```
+
+La salida permanece en `output/sources/rancagua/`. El adaptador descubre el RSS
+oficial anunciado por la página configurada y separa ofertas municipales de ofertas
+externas intermediadas por OMIL. Las externas permanecen en `manual_review`.
+Todavía no se combina con scoring, dashboard ni alertas. Consulta
+`docs/sources/rancagua.md`.
+
 ## Criterios para agregar una fuente
 
 Antes de crear un parser se debe confirmar que la página sea institucional,
