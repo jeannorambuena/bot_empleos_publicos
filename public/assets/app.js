@@ -54,6 +54,54 @@ function feedbackLabel(opportunity) {
   return "";
 }
 
+function operationalBadges(opportunity) {
+  const badges = [];
+  if (opportunity.is_new_since_last_run === true) badges.push(["NUEVA", "new"]);
+  if (opportunity.match_level === "Alta") badges.push(["ALTA", "high"]);
+  if (opportunity.urgency === "proximo") badges.push(["CIERRE PRÓXIMO", "closing"]);
+  if (opportunity.human_feedback_action === "false_positive") {
+    badges.push(["FALSO POSITIVO", "false-positive"]);
+  } else if (opportunity.human_reviewed === true) {
+    badges.push(["REVISADA", "reviewed"]);
+  }
+  if (opportunity.manual_review === true || opportunity.human_feedback_action === "review") {
+    badges.push(["REVISAR", "review"]);
+  }
+  return badges;
+}
+
+function matchExplanation(opportunity) {
+  const messages = [];
+  if (opportunity.human_feedback_action === "false_positive") {
+    messages.push("Descartada por revisión humana: falso positivo.");
+  } else if (opportunity.human_feedback_action === "useful") {
+    messages.push("Subió por feedback humano: marcada como útil.");
+  } else if (opportunity.human_feedback_action === "boost_priority") {
+    messages.push("Subió por feedback humano: prioridad ajustada.");
+  } else if (opportunity.human_feedback_action === "lower_priority") {
+    messages.push("Bajó por feedback humano: prioridad ajustada.");
+  }
+  if (opportunity.manual_review === true || opportunity.human_feedback_action === "review") {
+    messages.push("Pendiente de revisión humana.");
+  }
+  if (!messages.length && opportunity.match_level === "Alta") {
+    messages.push("Alta coincidencia por puntaje.");
+  }
+  if (opportunity.urgency === "proximo") {
+    messages.push("Cierre próximo: revisar pronto.");
+  }
+  if (opportunity.human_feedback_reason) {
+    messages.push(`Motivo humano: ${opportunity.human_feedback_reason}`);
+  }
+  return messages.join(" ");
+}
+
+function locationLabel(opportunity) {
+  return [opportunity.region, opportunity.commune]
+    .filter((value) => value && value !== "No especificada")
+    .join(" / ") || "No especificada";
+}
+
 function renderDataMode(opportunities) {
   const badge = document.querySelector(".prototype-badge");
   const realCount = opportunities.filter(({ is_demo: isDemo }) => isDemo === false).length;
@@ -115,6 +163,13 @@ function renderOpportunities() {
     card.querySelector(".area").textContent = opportunity.area;
     card.querySelector(".source").textContent = opportunity.source;
     card.querySelector(".description").textContent = opportunity.description;
+    const baseMatch =
+      Number.isInteger(opportunity.base_match_score) && opportunity.base_match_level
+        ? ` · Base: ${opportunity.base_match_score}% (${opportunity.base_match_level})`
+        : "";
+    card.querySelector(".operational-meta").textContent =
+      `Ubicación: ${locationLabel(opportunity)} · Cierre: ${opportunity.closing_date || "No especificado"} · Nivel: ${opportunity.match_level || "No especificado"}${baseMatch}`;
+    card.querySelector(".match-explanation").textContent = matchExplanation(opportunity);
     score.textContent = `${opportunity.match_score}%`;
     score.classList.add(scoreClass(opportunity.match_score));
     const feedbackText = feedbackLabel(opportunity);
@@ -123,6 +178,12 @@ function renderOpportunities() {
       feedbackBadge.hidden = false;
       feedbackBadge.classList.toggle("false-positive", opportunity.human_feedback_action === "false_positive");
     }
+    operationalBadges(opportunity).forEach(([label, className]) => {
+      const badge = document.createElement("span");
+      badge.textContent = label;
+      badge.className = `operational-badge ${className}`;
+      card.querySelector(".operational-badges").append(badge);
+    });
 
     opportunity.tags.forEach((tag) => {
       const tagElement = document.createElement("span");
