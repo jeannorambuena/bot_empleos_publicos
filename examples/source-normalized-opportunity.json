@@ -1,0 +1,21 @@
+{
+  "id": "fuente-ejemplo-12345",
+  "source_id": "12345",
+  "title": "Profesional de soporte de plataformas",
+  "institution": "Institución pública de ejemplo",
+  "source": "Fuente institucional de ejemplo",
+  "source_url": "https://institucion.example/convocatorias/12345",
+  "listing_url": "https://institucion.example/convocatorias",
+  "region": "Maule",
+  "commune": "Talca",
+  "closing_date": "2026-06-30",
+  "detected_at": "2026-06-02T09:00:00-04:00",
+  "status": "abierta",
+  "description": "Ejemplo normalizado sin datos sensibles para validar el contrato de una fuente futura.",
+  "tags": [
+    "soporte TI",
+    "plataformas"
+  ],
+  "is_demo": true,
+  "url_status": "demo"
+}
