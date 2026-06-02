@@ -23,13 +23,19 @@ El script:
 5. Ordena por puntaje, cierre próximo y fecha de detección.
 6. Regenera los JSON públicos.
 
-Para generar datos reales locales desde una captura normalizada de Empleos Públicos:
+Para generar datos reales locales desde una captura normalizada de Empleos Públicos
+y la integración municipal controlada de Rancagua:
 
 ```powershell
 .\venv\Scripts\python.exe scripts\fetch_empleos_publicos.py
 .\venv\Scripts\python.exe scripts\check_real_data.py
 .\venv\Scripts\python.exe scripts\build_public_data_from_real.py
 ```
+
+El flujo real agrega una captura directa del adaptador de Rancagua y publica solo
+registros con `status = "open_confirmed"`, `offer_scope = "municipal"`, cierre
+vigente, URL trazable y textos sanitizados. Las ofertas OMIL externas privadas y los
+registros `manual_review` permanecen fuera de `public/data`.
 
 ## Archivos producidos
 
@@ -69,6 +75,7 @@ Una fuente futura debe producir primero oportunidades normalizadas compatibles c
 vigencia, trazabilidad y duplicados antes de combinar su salida con el generador
 público.
 
-Cada nueva fuente real debe incorporarse mediante un PR independiente. Este enfoque
+Rancagua es la primera integración municipal controlada. Cada nueva fuente real debe
+incorporarse mediante un PR independiente. Este enfoque
 protege la captura vigente de Empleos Públicos y permite auditar o revertir un parser
 sin afectar a los demás.

@@ -22,6 +22,7 @@ SOURCE_OUTPUTS = {
     "gore_maule": ROOT / "output" / "sources" / "gore_maule" / "opportunities.json",
     "rancagua": ROOT / "output" / "sources" / "rancagua" / "opportunities.json",
 }
+PUBLIC_OPPORTUNITIES_PATH = ROOT / "public" / "data" / "opportunities.json"
 PUBLICABLE_FIELDS = ("title", "description", "evidence", "status_reason", "manual_review_reason")
 PARTIAL_RUT_REGRESSION_CASES = (
     "10.979.3XX-X",
@@ -79,6 +80,16 @@ def main() -> int:
         for index, item in enumerate(opportunities):
             checked_items += 1
             errors.extend(opportunity_sanitization_errors(item, f"{source}.opportunities[{index}]"))
+    try:
+        public_opportunities = json.loads(PUBLIC_OPPORTUNITIES_PATH.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError) as error:
+        errors.append(f"public_data: no fue posible leer {PUBLIC_OPPORTUNITIES_PATH}: {error}")
+    else:
+        if not isinstance(public_opportunities, list):
+            errors.append("public_data: opportunities.json debe contener una lista.")
+        else:
+            for index, item in enumerate(public_opportunities):
+                errors.extend(opportunity_sanitization_errors(item, f"public_data.opportunities[{index}]"))
     if errors:
         for error in errors:
             print(f"ERROR: {error}", file=sys.stderr)

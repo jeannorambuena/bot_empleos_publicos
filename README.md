@@ -167,12 +167,16 @@ python scripts/fetch_gore_maule.py
 python scripts/check_gore_maule_source.py
 ```
 
-Municipalidad de Rancagua dispone de un cuarto adaptador aislado en dry-run:
+Municipalidad de Rancagua dispone de un cuarto adaptador con dry-run auditable:
 
 ```powershell
 python scripts/fetch_rancagua.py
 python scripts/check_rancagua_source.py
 ```
+
+Rancagua es también la primera integración municipal controlada del dashboard. El
+generador real publica solo ofertas municipales `open_confirmed`, sanitizadas y con
+cierre futuro. Las ofertas OMIL externas privadas permanecen fuera de `public/data`.
 
 ## Configuración futura
 
@@ -242,8 +246,9 @@ enmascaradas y tablas extensas de resultados sin modificar `public/data`:
 python scripts/check_source_sanitization.py
 ```
 
-Consulta `docs/source-sanitization.md`. Rancagua sigue siendo la primera candidata a
-integracion futura, pero todavia permanece aislada en `dry_run`.
+Consulta `docs/source-sanitization.md`. El dry-run completo de Rancagua permanece
+aislado para auditoria aunque una oportunidad municipal segura pueda promocionarse
+al dashboard.
 
 ## Contribuir
 

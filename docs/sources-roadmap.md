@@ -80,19 +80,20 @@ descargarlos y conserva reglas de vigencia conservadoras. Todavía no se combina
 con Empleos Públicos, scoring, dashboard ni alertas. Consulta
 `docs/sources/gore-maule.md`.
 
-## Rancagua en dry-run
+## Rancagua en publicacion controlada
 
-Municipalidad de Rancagua cuenta con un cuarto adaptador aislado:
+Municipalidad de Rancagua cuenta con un cuarto adaptador auditable:
 
 ```powershell
 python scripts/fetch_rancagua.py
 python scripts/check_rancagua_source.py
 ```
 
-La salida permanece en `output/sources/rancagua/`. El adaptador descubre el RSS
+La auditoria completa permanece en `output/sources/rancagua/`. El adaptador descubre el RSS
 oficial anunciado por la página configurada y separa ofertas municipales de ofertas
 externas intermediadas por OMIL. Las externas permanecen en `manual_review`.
-Todavía no se combina con scoring, dashboard ni alertas. Consulta
+El generador publico promueve unicamente ofertas municipales `open_confirmed`,
+sanitizadas y con cierre futuro. No se activa Telegram multi-fuente. Consulta
 `docs/sources/rancagua.md`.
 
 ## Criterios para agregar una fuente
@@ -144,9 +145,9 @@ GORE Maule es una fuente legible, historica o cerrada y util para monitoreo futu
 Sus descripciones historicas motivaron la capa comun de sanitizacion porque pueden
 incluir RUN/RUT y datos personales de resultados.
 
-Rancagua es la primera candidata a integracion futura por su deteccion de una oferta
-municipal `open_confirmed` con fecha de cierre confiable. Todavia no esta integrada:
-requiere sanitizacion, normalizacion y revision humana antes de publicarse.
+Rancagua es la primera integracion municipal controlada por su deteccion de una
+oferta `open_confirmed` con fecha de cierre confiable. Las ofertas OMIL externas
+privadas permanecen fuera del dashboard principal.
 
 Una fuente solo puede pasar de `dry_run` a publicable si no contiene datos personales
 visibles, usa `source_url` oficial, mantiene evidencia trazable, pasa checks de

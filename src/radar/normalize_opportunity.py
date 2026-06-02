@@ -29,7 +29,9 @@ def normalize_real_opportunity(
     normalized["commune"] = _optional_text(normalized.get("commune")) or "No especificada"
     normalized["closing_date"] = _optional_text(normalized.get("closing_date"))
     normalized["detected_at"] = _optional_text(normalized.get("detected_at")) or capture_time.isoformat(timespec="seconds")
-    normalized["status"] = "abierta" if normalized.get("closing_date") else "desconocido"
+    normalized["status"] = _optional_text(normalized.get("status")) or (
+        "abierta" if normalized.get("closing_date") else "desconocido"
+    )
     normalized["tags"] = list(normalized.get("tags") or [])
     normalized["alert_reasons"] = list(normalized.get("alert_reasons") or [])
     normalized["description"] = _optional_text(normalized.get("description")) or "Descripción no disponible"
