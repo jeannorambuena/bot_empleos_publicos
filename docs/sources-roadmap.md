@@ -158,3 +158,22 @@ visibles, usa `source_url` oficial, mantiene evidencia trazable, pasa checks de
 sanitizacion y contrato, y entrega estados confiables. Todo `open_confirmed` requiere
 fecha de cierre futura. Las ofertas OMIL externas privadas no se promueven
 automaticamente como empleo publico.
+
+## Batch P1 en dry-run
+
+Las tres candidatas P1 cuentan con diagnóstico local aislado:
+
+```powershell
+python scripts/fetch_priority_sources.py
+python scripts/check_priority_sources.py
+```
+
+- Municipalidad de Talca: la portada no expone hoy un índice laboral municipal
+  trazable; permanece en monitoreo.
+- SLEP Colchagua: la consulta HTTPS falla validación TLS; permanece en revisión
+  manual sin omitir controles de certificado.
+- SLEP Los Cerezos: enlaza una ficha DEP de concurso interno con documentos, pero
+  sin cierre confiable para promoción; permanece en revisión manual.
+
+Las salidas quedan bajo `output/sources/`. Ninguna alimenta `public/data`, scoring
+ni alertas.
