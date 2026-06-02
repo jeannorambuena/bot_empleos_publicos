@@ -1,17 +1,17 @@
 {
   "sources_reviewed": 1,
   "active_opportunities": 111,
-  "new_opportunities": 2,
+  "new_opportunities": 0,
   "high_match": 6,
   "closing_soon": 89,
   "total_opportunities": 111,
-  "previously_seen": 109,
-  "first_seen_this_run": 2,
+  "previously_seen": 111,
+  "first_seen_this_run": 0,
   "not_seen_in_latest_capture": 22,
   "high_relevance": 6,
   "human_feedback_applied": 8,
-  "human_false_positives": 0,
+  "human_false_positives": 2,
   "human_boosted": 6,
   "human_lowered": 0,
-  "manual_review_count": 2
+  "manual_review_count": 0
 }
