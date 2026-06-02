@@ -1,6 +1,12 @@
 {
-  "last_auto_sent_at": null,
-  "sent_opportunity_ids": [],
-  "last_mode": null,
-  "last_reason": null
+  "last_auto_sent_at": "2026-06-02T06:52:07+00:00",
+  "sent_opportunity_ids": [
+    "empleos-publicos-140502",
+    "empleos-publicos-140504",
+    "empleos-publicos-140510",
+    "empleos-publicos-140511",
+    "empleos-publicos-140631"
+  ],
+  "last_mode": "automatic",
+  "last_reason": "Hay oportunidades Alta con cierre próximo pendientes de envío."
 }
