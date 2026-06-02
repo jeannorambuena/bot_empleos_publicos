@@ -309,3 +309,13 @@ python -m http.server 8000 --directory public
 La entrega y el modelo de operacion se documentan en
 `docs/final-mvp-handover.md`, `docs/source-status-matrix.md` y
 `docs/service-model.md`.
+
+## Telegram por novedades relevantes
+
+La revision automatica puede correr de lunes a viernes, pero Telegram no envia un
+resumen por simple ejecucion programada. Solo avisa oportunidades `Alta` nuevas o
+con cierre proximo que sean seguras, relevantes para el perfil y no notificadas.
+Excluye descartadas, `manual_review`, `external_private` y publicaciones OMIL.
+
+En el dashboard, los niveles son umbrales minimos: `Alta`, `Media o superior`,
+`Baja o superior` y `Todas las oportunidades publicas`.

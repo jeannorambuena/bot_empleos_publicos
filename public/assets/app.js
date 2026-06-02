@@ -87,7 +87,12 @@ function matchesRelevance(opportunity, relevance) {
   if (relevance === "relevant") {
     return RELEVANT_LEVELS.has(opportunity.match_level) || opportunity.is_alertable === true;
   }
-  return opportunity.match_level === relevance;
+  const thresholds = {
+    Alta: new Set(["Alta"]),
+    Media: new Set(["Alta", "Media"]),
+    Baja: RELEVANT_LEVELS,
+  };
+  return thresholds[relevance]?.has(opportunity.match_level) || false;
 }
 
 function matchesText(opportunity, query) {

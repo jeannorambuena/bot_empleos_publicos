@@ -18,6 +18,7 @@ from build_telegram_preview import (
     MAX_RECOMMENDATIONS,
     ROOT,
     _format_recommendation,
+    is_profile_relevant,
     load_public_data,
 )
 
@@ -64,8 +65,7 @@ def is_automatic_candidate(item: dict[str, Any], sent_ids: set[str]) -> bool:
     return (
         bool(item_id)
         and item_id not in sent_ids
-        and item.get("match_level") == "Alta"
-        and item.get("human_feedback_action") != "false_positive"
+        and is_profile_relevant(item, levels={"Alta"})
         and is_trigger
     )
 
@@ -78,6 +78,17 @@ def evaluate_automatic_policy(
 ) -> tuple[bool, str, list[dict[str, Any]]]:
     """Evaluate rate limit, duplicates and relevance without sending anything."""
     current_time = now or datetime.now(AUTOMATION_TIMEZONE)
+    sent_ids = {str(item_id) for item_id in state.get("sent_opportunity_ids", [])}
+    relevant = [
+        item
+        for item in opportunities
+        if is_profile_relevant(item, levels={"Alta"})
+        and (item.get("is_new_since_last_run") is True or item.get("urgency") == "proximo")
+    ]
+    if not relevant:
+        return False, "No hay oportunidades nuevas relevantes para el perfil.", []
+    if not any(is_automatic_candidate(item, sent_ids) for item in relevant):
+        return False, "No hay oportunidades relevantes no notificadas.", []
     if _same_day(state.get("last_auto_sent_at"), current_time):
         return False, "Ya existe un envío automático registrado para el día de hoy.", []
 
@@ -115,6 +126,9 @@ def _automatic_message(opportunities: list[dict[str, Any]], reason: str, generat
 
 
 def _send_message(message: str, token: str, chat_id: str) -> int:
+    if not message.strip():
+        print("ERROR: Telegram bloqueado: el mensaje no puede estar vacío.", file=sys.stderr)
+        return 1
     data = urlencode({"chat_id": chat_id, "text": message, "disable_web_page_preview": "true"}).encode("utf-8")
     request = Request(f"https://api.telegram.org/bot{token}/sendMessage", data=data, method="POST")
     try:
@@ -155,6 +169,10 @@ def _run_automatic(*, send: bool, state_path: Path) -> int:
     if not send:
         print("DRY-RUN SOLAMENTE: no se llamó a Telegram y no se modificó el estado.")
         return 0
+
+    if os.environ.get("TELEGRAM_AUTO_ENABLED") != "true":
+        print("ERROR: envío automático bloqueado: TELEGRAM_AUTO_ENABLED debe valer true.", file=sys.stderr)
+        return 1
 
     token = os.environ.get("TELEGRAM_BOT_TOKEN")
     chat_id = os.environ.get("TELEGRAM_CHAT_ID")
