@@ -12,7 +12,7 @@ from typing import Any
 
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "output" / "telegram"
-DASHBOARD_URL = os.environ.get("PUBLIC_SITE_URL") or "dashboard local/no configurado"
+DASHBOARD_URL = os.environ.get("PUBLIC_SITE_URL") or "https://jeannorambuena.github.io/bot_empleos_publicos/"
 
 
 def _load(path: Path) -> Any:
@@ -40,7 +40,7 @@ def main() -> int:
     generated_at = last_run.get("finished_at") or datetime.now().astimezone().isoformat(timespec="seconds")
     lines = [
         "Radar Laboral Público Chile",
-        "Preview local, no enviado",
+        "Reporte generado desde GitHub Actions",
         f"Fecha/hora: {generated_at}",
         "",
         f"Total oportunidades: {summary.get('total_opportunities', len(opportunities))}",
@@ -56,7 +56,7 @@ def main() -> int:
             lines.append(f"- {item.get('match_score', 0)}% | {item.get('title', 'Sin título')}")
     else:
         lines.append("- No hay oportunidades recomendadas en este corte.")
-    lines.extend(["", f"Dashboard: {DASHBOARD_URL}", "", "Preview local, no enviado"])
+    lines.extend(["", f"Dashboard: {DASHBOARD_URL}", "", "Envio manual seguro del radar laboral."])
 
     OUTPUT.mkdir(parents=True, exist_ok=True)
     (OUTPUT / "telegram-preview.txt").write_text("\n".join(lines) + "\n", encoding="utf-8")

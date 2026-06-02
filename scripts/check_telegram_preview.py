@@ -22,7 +22,7 @@ def main() -> int:
     lowered = text.lower()
     if any(marker in lowered for marker in FORBIDDEN):
         errors.append("El preview contiene un marcador sensible de Telegram.")
-    for expected in ("Radar Laboral Público Chile", "Total oportunidades:", "Nuevas reales:", "Preview local, no enviado"):
+    for expected in ("Radar Laboral Público Chile", "Total oportunidades:", "Nuevas reales:", "Reporte generado desde GitHub Actions"):
         if expected not in text:
             errors.append(f"El preview no contiene: {expected}")
 
