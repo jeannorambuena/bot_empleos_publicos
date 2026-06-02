@@ -261,3 +261,16 @@ Las contribuciones pueden mejorar documentación, contratos, parsers, pruebas y
 fuentes compatibles. Antes de publicar cambios, verifica que no incluyan secretos,
 logs privados ni datos personales innecesarios. El proyecto debe seguir siendo
 comprensible y reutilizable por la comunidad.
+
+## Batch P1 de diagnóstico
+
+Municipalidad de Talca, SLEP Colchagua y SLEP Los Cerezos cuentan con dry-runs
+locales aislados:
+
+```powershell
+python scripts/fetch_priority_sources.py
+python scripts/check_priority_sources.py
+```
+
+Los artefactos quedan en `output/sources/`. Estas capturas no publican
+oportunidades ni activan alertas.

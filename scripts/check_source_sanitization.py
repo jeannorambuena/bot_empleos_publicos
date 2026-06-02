@@ -21,6 +21,9 @@ SOURCE_OUTPUTS = {
     "molina": ROOT / "output" / "sources" / "molina" / "opportunities.json",
     "gore_maule": ROOT / "output" / "sources" / "gore_maule" / "opportunities.json",
     "rancagua": ROOT / "output" / "sources" / "rancagua" / "opportunities.json",
+    "talca": ROOT / "output" / "sources" / "talca" / "opportunities.json",
+    "slep_colchagua": ROOT / "output" / "sources" / "slep_colchagua" / "opportunities.json",
+    "slep_los_cerezos": ROOT / "output" / "sources" / "slep_los_cerezos" / "opportunities.json",
 }
 PUBLIC_OPPORTUNITIES_PATH = ROOT / "public" / "data" / "opportunities.json"
 PUBLICABLE_FIELDS = ("title", "description", "evidence", "status_reason", "manual_review_reason")

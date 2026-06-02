@@ -994,11 +994,11 @@
       "mobility_rule": "relocation_for_strong_fit",
       "rm_policy": "not_applicable",
       "profile_fit": "ti_adjacent",
-      "source_quality": "unknown",
+      "source_quality": "weak",
       "privacy_risk": "low",
-      "publishability": "candidate_only",
+      "publishability": "manual_review_only",
       "priority_tier": "P1",
-      "next_action": "dry_run_candidate",
+      "next_action": "manual_review_only",
       "rationale": "Tercera recomendacion territorial: O Higgins puede justificar traslado para cargos TI fuertes; medir duplicados con Empleos Publicos."
     },
     {
@@ -1186,11 +1186,11 @@
       "mobility_rule": "local_preferred",
       "rm_policy": "not_applicable",
       "profile_fit": "ti_adjacent",
-      "source_quality": "unknown",
-      "privacy_risk": "low",
-      "publishability": "candidate_only",
+      "source_quality": "readable",
+      "privacy_risk": "medium",
+      "publishability": "manual_review_only",
       "priority_tier": "P1",
-      "next_action": "dry_run_candidate",
+      "next_action": "manual_review_only",
       "rationale": "Primera recomendacion territorial: cubre Curico, Molina, Rauco, Romeral y Teno; evaluar cargos TI y administrativos tecnologicos."
     },
     {
@@ -1412,9 +1412,9 @@
       "profile_fit": "administrative_public",
       "source_quality": "readable",
       "privacy_risk": "medium",
-      "publishability": "candidate_only",
+      "publishability": "dry_run_only",
       "priority_tier": "P1",
-      "next_action": "dry_run_candidate",
+      "next_action": "keep_monitoring",
       "rationale": "Segunda recomendacion territorial: municipio cercano con fichas y bases; separar concursos de planta, DAEM y OMIL."
     },
     {
