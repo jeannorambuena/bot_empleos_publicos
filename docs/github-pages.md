@@ -62,6 +62,15 @@ $env:PYTHONDONTWRITEBYTECODE='1'
 El validador comprueba estructura estática, JSON válidos, título esperado, ausencia
 de `.env` en la raíz y ausencia de `output/` dentro de `public/`.
 
+## Lectura operativa del dashboard
+
+La página principal muestra etiquetas para distinguir nuevas oportunidades,
+prioridad alta, cierres próximos y estados de revisión humana. Las tarjetas también
+presentan una explicación breve basada en los campos públicos existentes.
+
+El panel `public/review.html` sigue siendo la herramienta para exportar feedback
+humano. La publicación estática no aplica marcas nuevas por sí sola.
+
 ## Seguridad
 
 Nunca subir:

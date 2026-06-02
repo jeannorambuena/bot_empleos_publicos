@@ -36,6 +36,7 @@ arquitectura reutilizable. En esta etapa:
 - `public/data/history.json` distingue oportunidades nuevas reales de registros ya vistos.
 - Telegram dispone de preview local y envío real bloqueado por defecto.
 - `public/review.html` permite exportar feedback humano sin backend.
+- El dashboard muestra etiquetas operativas y explicaciones breves basadas en datos públicos.
 - SLEP y municipalidades cercanas están declaradas como fuentes futuras.
 - Nitro/OpenClaw queda documentado como entorno de despliegue futuro controlado.
 

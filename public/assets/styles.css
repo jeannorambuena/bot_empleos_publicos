@@ -359,7 +359,8 @@ a {
 }
 
 .card-meta,
-.tags {
+.tags,
+.operational-badges {
   display: flex;
   flex-wrap: wrap;
   gap: 7px;
@@ -381,6 +382,62 @@ a {
   color: var(--muted);
   font-size: 0.87rem;
   line-height: 1.55;
+}
+
+.operational-badges {
+  margin-top: 14px;
+}
+
+.operational-badge {
+  padding: 5px 8px;
+  border-radius: 999px;
+  color: #27575b;
+  background: #e8f1f2;
+  font-size: 0.68rem;
+  font-weight: 850;
+  letter-spacing: 0.05em;
+}
+
+.operational-badge.new {
+  color: #765415;
+  background: #fff0c9;
+}
+
+.operational-badge.high {
+  color: #056141;
+  background: #dff5eb;
+}
+
+.operational-badge.closing,
+.operational-badge.review {
+  color: #8a4d10;
+  background: #fff0e1;
+}
+
+.operational-badge.reviewed {
+  color: #175f56;
+  background: #dff5f0;
+}
+
+.operational-badge.false-positive {
+  color: #8d3a2d;
+  background: #ffebe7;
+}
+
+.operational-meta,
+.match-explanation {
+  margin: 10px 0 0;
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.operational-meta {
+  color: var(--muted);
+}
+
+.match-explanation {
+  color: #315e61;
+  font-weight: 700;
 }
 
 .tags {
