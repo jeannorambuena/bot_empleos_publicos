@@ -1,7 +1,8 @@
 # Dry-run Municipalidad de Rancagua
 
-Municipalidad de Rancagua es la cuarta fuente adicional evaluada mediante un
-adaptador aislado. Este lote no publica resultados ni conecta Rancagua al dashboard.
+Municipalidad de Rancagua es la primera fuente municipal integrada de forma
+controlada al dashboard. El adaptador conserva su dry-run completo para auditoria
+local, pero la publicacion solo admite ofertas municipales seguras y vigentes.
 
 ## URL usada
 
@@ -29,7 +30,7 @@ existen, documentos institucionales.
 
 Las ofertas externas se conservan únicamente como auditoría local con
 `offer_scope = "external_private"` y `status = "manual_review"`. No deben tratarse
-como empleo público recomendado.
+como empleo público recomendado ni entrar a `public/data`.
 
 ## Reglas de vigencia
 
@@ -64,9 +65,11 @@ En la revisión del `2026-06-02`, el adaptador detectó 5 ofertas:
 - 5 fechas de cierre explícitas;
 - 1 documento institucional detectado sin descarga.
 
-La fuente es técnicamente legible, pero no debe publicarse completa en el radar de
-empleo público porque el RSS mezcla contratación municipal e intermediación OMIL
-privada.
+La fuente es técnicamente legible, pero no se publica completa porque el RSS mezcla
+contratación municipal e intermediación OMIL privada. El generador público vuelve a
+sanear la captura y selecciona únicamente la oferta municipal `open_confirmed` con
+cierre futuro. La marca `implementation_status = "published_controlled"` permite
+distinguir esa promoción explícita del dry-run local.
 
 ## Ejecutar
 
@@ -83,7 +86,7 @@ output/sources/rancagua/diagnostics.json
 output/sources/rancagua/report.md
 ```
 
-`output/` está ignorado por Git. El adaptador no modifica `public/data/`, scoring,
-feedback, workflows ni Telegram. Rancagua todavía no se publica porque primero se
-debe definir una separación explícita entre convocatorias municipales y ofertas
-externas intermediadas por OMIL.
+`output/` está ignorado por Git. El adaptador aislado no modifica `public/data/`,
+scoring, feedback, workflows ni Telegram. `scripts/build_public_data_from_real.py`
+es el único punto que promueve registros de Rancagua al dashboard y excluye las
+ofertas externas intermediadas por OMIL.

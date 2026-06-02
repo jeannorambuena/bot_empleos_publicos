@@ -162,8 +162,20 @@ def main() -> int:
                 or item.get("source") == "Municipalidad de Rancagua"
             )
         ]
-        if published_rancagua:
-            errors.append("Rancagua debe permanecer aislado: se detectaron registros en public/data.")
+        for index, item in enumerate(published_rancagua):
+            label = f"public_rancagua[{index}]"
+            if item.get("status") != "open_confirmed" or item.get("offer_scope") != "municipal":
+                errors.append(f"{label}: solo puede publicarse open_confirmed municipal.")
+            if item.get("manual_review") is True or item.get("implementation_status") != "published_controlled":
+                errors.append(f"{label}: publicacion controlada invalida.")
+            try:
+                closing_date = date.fromisoformat(str(item.get("closing_date")))
+            except ValueError:
+                errors.append(f"{label}: requiere closing_date ISO.")
+            else:
+                if closing_date < date.today():
+                    errors.append(f"{label}: no puede tener cierre pasado.")
+            errors.extend(opportunity_sanitization_errors(item, label))
 
     if errors:
         for error in errors:

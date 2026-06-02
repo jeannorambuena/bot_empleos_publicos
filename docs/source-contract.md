@@ -76,3 +76,11 @@ Los campos publicables deben sanearse antes de escribir la salida local. Consult
 ```powershell
 python scripts/check_source_sanitization.py
 ```
+
+## Publicacion municipal controlada
+
+Rancagua inaugura una promocion acotada desde `dry_run`: el dashboard solo admite
+registros `open_confirmed`, municipales, con cierre futuro, URL trazable y
+sanitizacion vigente. La salida publica usa
+`implementation_status = "published_controlled"`. Las ofertas OMIL externas privadas
+y los registros `manual_review` permanecen fuera de `public/data`.
