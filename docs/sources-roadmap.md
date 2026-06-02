@@ -45,9 +45,10 @@ python scripts/fetch_curico.py
 python scripts/check_curico_source.py
 ```
 
-La salida permanece en `output/sources/curico/`. Las publicaciones detectadas quedan
-como `manual_review`; todavía no se combinan con Empleos Públicos, scoring, dashboard
-ni alertas. Consulta `docs/sources/curico.md`.
+La salida permanece en `output/sources/curico/`. R2 consulta detalles oficiales,
+registra documentos sin descargarlos y solo confirma apertura o cierre cuando existe
+evidencia clara. Todavía no se combina con Empleos Públicos, scoring, dashboard ni
+alertas. Consulta `docs/sources/curico.md`.
 
 ## Criterios para agregar una fuente
 
