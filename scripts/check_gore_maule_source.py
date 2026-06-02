@@ -9,6 +9,8 @@ from pathlib import Path
 from typing import Any
 from urllib.parse import urlparse
 
+from check_source_sanitization import opportunity_sanitization_errors
+
 
 ROOT = Path(__file__).resolve().parents[1]
 OPPORTUNITIES_PATH = ROOT / "output" / "sources" / "gore_maule" / "opportunities.json"
@@ -128,6 +130,7 @@ def main() -> int:
             errors.append(f"{label}.evidence debe contener trazabilidad.")
         if item.get("is_demo") is not False or item.get("url_status") != "ok":
             errors.append(f"{label} debe conservar URL real sin presentarse como demo.")
+        errors.extend(opportunity_sanitization_errors(item, label))
     if len(ids) != len(set(ids)):
         errors.append("Los IDs GORE Maule deben ser únicos.")
     if not REPORT_PATH.exists():
