@@ -112,6 +112,9 @@ El envío sigue siendo deliberadamente manual. Requiere los secrets
 real. El bot tampoco responde mensajes porque no tiene polling ni webhook. Consulta
 `docs/telegram-alerts.md` para conocer los controles y la política recomendada.
 
+Existe una simulación local de política futura para evaluar cuándo habría sido útil
+enviar un digest accionable. No activa envíos automáticos reales.
+
 ## Configuración futura
 
 Los archivos de `config/` son ejemplos públicos y no contienen secretos:
