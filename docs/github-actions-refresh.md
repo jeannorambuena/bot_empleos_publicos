@@ -39,6 +39,7 @@ build_telegram_preview.py
 check_telegram_preview.py
 check_sources_config.py
 check_review_panel.py
+build_weekly_report.py
 ```
 
 Si los datos públicos cambian, el workflow crea un commit automático en `main`.
@@ -55,6 +56,7 @@ El commit automático puede incluir exclusivamente:
 - `public/data/summary.json`
 - `public/data/last_run.json`
 - `public/data/history.json`
+- `public/data/telegram_alert_state.json`
 
 El workflow no debe versionar:
 
@@ -67,10 +69,26 @@ El workflow no debe versionar:
 Los previews de correo, calendario y Telegram se generan solo como validación local
 dentro del runner. No se envían correos reales ni se conecta Google Calendar.
 
-Telegram real permanece desactivado por defecto. Solo se intenta desde una
-ejecución manual con `send_telegram=true`, secretos configurados y llamada
-explícita a `scripts/send_telegram_alerts.py --send`. La programación horaria nunca
-activa ese paso.
+Telegram manual permanece disponible con `send_telegram=true`, secretos configurados
+y llamada explícita a `scripts/send_telegram_alerts.py --send`.
+
+La programación horaria evalúa además una política automática controlada. Por defecto
+ejecuta solo `--automatic --dry-run`. El envío real programado se habilita únicamente
+si la variable de repositorio `TELEGRAM_AUTO_ENABLED` vale exactamente `true`; incluso
+entonces el script exige oportunidades `Alta` nuevas o con cierre próximo, excluye
+falsos positivos, evita IDs repetidos y limita el envío automático a una vez al día.
+
+Para probar manualmente la política sin enviar, ejecuta el workflow con
+`run_telegram_auto_policy=true` y deja `send_telegram_auto=false`. Para volver al modo
+manual seguro, elimina `TELEGRAM_AUTO_ENABLED` o configúrala como `false`.
+
+El estado anti-duplicados se versiona en `public/data/telegram_alert_state.json`
+porque los runners son efímeros. Solo contiene timestamp, IDs públicos, modo y motivo.
+El límite diario se calcula en UTC para mantener comportamiento reproducible en
+GitHub Actions y equipos Windows sin dependencias adicionales.
+
+El reporte semanal se genera dentro del runner como preview local en `output/`. No se
+versiona, publica ni envía automáticamente.
 
 ## Limitaciones
 

@@ -1,83 +1,96 @@
 # Alertas Telegram
 
-Telegram se prepara en dos modos separados: preview local y envío real controlado.
-Por defecto no se envía ningún mensaje.
+Telegram opera con preview local, envío manual seguro y una política automática
+controlada. El modo automático real permanece desactivado por defecto.
 
-## Estado de la Fase W
+## Estado operativo
 
-La Fase W — Telegram manual seguro — está cerrada. Se ejecutó manualmente el
-workflow **Refresh real data** con `workflow_dispatch` y `send_telegram=true`. El
-mensaje real llegó correctamente al bot `@RADARLABORALJPBOT`.
+La Fase W de Telegram manual seguro fue probada con `workflow_dispatch` y
+`send_telegram=true`. El modo manual sigue disponible y exige confirmación explícita.
 
-El envío continúa siendo manual. No se activa Telegram real desde la ejecución
-horaria o programada.
+La política automática agrega `dry-run`, deduplicación y límite diario. Una ejecución
+programada solo envía realmente si la variable de repositorio
+`TELEGRAM_AUTO_ENABLED` vale exactamente `true`.
 
 ## Preview local
-
-Ejecuta:
 
 ```powershell
 python scripts/build_telegram_preview.py
 python scripts/check_telegram_preview.py
 ```
 
-El archivo `output/telegram/telegram-preview.txt` resume total de oportunidades,
-nuevas relevantes, altas, medias, cierres próximos relevantes y hasta cinco recomendaciones
-accionables. Cada recomendación intenta incluir puntaje, nivel, título, organismo,
-ubicación, fecha de cierre, marca `NUEVA` cuando corresponde y enlace directo.
-`output/` está ignorado por Git.
+`output/telegram/telegram-preview.txt` contiene hasta cinco recomendaciones
+accionables. `output/` está ignorado por Git.
 
-## Envío real controlado
+## Envío manual seguro
 
-El script `scripts/send_telegram_alerts.py` exige simultáneamente:
+El modo manual exige simultáneamente:
 
-- variable de entorno `TELEGRAM_BOT_TOKEN`
-- variable de entorno `TELEGRAM_CHAT_ID`
+- `TELEGRAM_BOT_TOKEN`
+- `TELEGRAM_CHAT_ID`
 - argumento explícito `--send`
 
-En GitHub Actions el envío solo se intenta desde `workflow_dispatch` cuando el
-operador activa `send_telegram=true` y existen los secretos
-`TELEGRAM_BOT_TOKEN` y `TELEGRAM_CHAT_ID`. La ejecución horaria nunca activa el
-envío real.
-
-Prueba segura sin enviar:
+Prueba bloqueada sin enviar:
 
 ```powershell
 python scripts/send_telegram_alerts.py
 ```
 
-Envío manual deliberado, después de revisar el preview:
+Envío manual deliberado después de revisar el preview:
 
 ```powershell
 python scripts/send_telegram_alerts.py --send
 ```
 
-Nunca publiques tokens ni identificadores privados. El script no imprime el token
-y enmascara el identificador del chat si necesita informar un resultado.
+## Política automática controlada
+
+La política automática solo permite enviar cuando se cumplen todas estas reglas:
+
+1. La ejecución programada o manual habilita explícitamente el modo automático.
+2. Existe al menos una oportunidad `Alta` nueva o `Alta` con cierre próximo.
+3. La oportunidad no está marcada como `false_positive`.
+4. La oportunidad no aparece en los IDs enviados previamente.
+5. No existe otro envío automático registrado durante el mismo día.
+6. El modo real está habilitado y existen los secrets de Telegram.
+
+El límite diario usa UTC para mantener comportamiento reproducible en GitHub Actions
+y equipos Windows sin dependencias adicionales.
+
+Prueba local segura:
+
+```powershell
+python scripts/send_telegram_alerts.py --automatic --dry-run
+python scripts/simulate_telegram_policy.py
+```
+
+Ambos comandos muestran qué ocurriría sin llamar a Telegram ni modificar estado.
+
+## Estado anti-duplicados
+
+`public/data/telegram_alert_state.json` conserva únicamente fecha del último envío
+automático, IDs públicos de oportunidades enviadas, modo y motivo. Se versiona porque
+los runners de GitHub Actions son efímeros y necesitan recuperar el estado entre
+ejecuciones.
+
+El archivo nunca debe contener tokens, chat IDs ni secretos. El ejemplo
+`data/telegram_alert_state.example.json` documenta su estructura mínima.
+
+## Activación y rollback
+
+- Modo seguro predeterminado: no definir `TELEGRAM_AUTO_ENABLED` o usar un valor
+  distinto de `true`. La ejecución programada hará solamente dry-run.
+- Prueba manual sin enviar: ejecutar **Refresh real data** con
+  `run_telegram_auto_policy=true` y `send_telegram_auto=false`.
+- Envío automático controlado manual: usar además `send_telegram_auto=true`.
+- Activación programada deliberada: configurar la variable de repositorio
+  `TELEGRAM_AUTO_ENABLED=true` después de revisar logs en dry-run.
+- Rollback inmediato: cambiar `TELEGRAM_AUTO_ENABLED` a `false` o eliminarla.
+
+Si Telegram empieza a enviar ruido, desactiva primero `TELEGRAM_AUTO_ENABLED`, revisa
+los logs del workflow y audita `public/data/telegram_alert_state.json`. No borres el
+historial sin revisión: perderlo puede permitir alertas duplicadas.
 
 ## Alcance intencional
 
 El bot no responde mensajes porque no tiene polling ni webhook. Tampoco incorpora
-lógica conversacional. Esa limitación es intencional: esta fase valida únicamente
-el envío saliente manual y controlado.
-
-El próximo paso recomendado es mantener el modo manual o definir por PR una política
-futura de envío automático con límites claros de frecuencia, contenido y operación.
-
-## Simulación de política futura
-
-La simulación local permite observar qué habría ocurrido sin enviar mensajes:
-
-```powershell
-python scripts/simulate_telegram_policy.py
-```
-
-La política candidata informa que habría enviado Telegram si existe al menos una
-oportunidad nueva relevante o una oportunidad de coincidencia Alta con cierre
-próximo. También reporta nuevas relevantes, altas, cierres próximos y las
-oportunidades que habría incluido.
-
-Esta política no está conectada al workflow ni al emisor real. Antes de considerar
-una automatización futura se debe aprobar otro PR con límites de frecuencia,
-deduplicación, ventanas horarias y criterios operativos explícitos. La ejecución
-programada actual sigue sin enviar Telegram real.
+lógica conversacional. El workflow no envía correo ni conecta Google Calendar real.

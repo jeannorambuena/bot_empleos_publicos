@@ -28,6 +28,10 @@ Cuando existan workflows de GitHub Actions, las credenciales deberán guardarse 
 GitHub Secrets. Los workflows no deben imprimir secretos ni volcarlos a archivos que
 se publiquen como artefactos.
 
+Telegram usa los secrets `TELEGRAM_BOT_TOKEN` y `TELEGRAM_CHAT_ID`. El estado
+versionado `public/data/telegram_alert_state.json` nunca debe contener esos valores:
+solo puede registrar timestamps, IDs públicos de oportunidades, modo y motivo.
+
 ## Datos personales
 
 Evitar almacenar o publicar información personal innecesaria. Si una fuente incluye

@@ -110,13 +110,15 @@ La Fase W está cerrada. El envío real de Telegram fue probado correctamente me
 el workflow **Refresh real data** usando `workflow_dispatch` con
 `send_telegram=true`. El mensaje llegó al bot `@RADARLABORALJPBOT`.
 
-El envío sigue siendo deliberadamente manual. Requiere los secrets
-`TELEGRAM_BOT_TOKEN` y `TELEGRAM_CHAT_ID`; la ejecución horaria no envía Telegram
-real. El bot tampoco responde mensajes porque no tiene polling ni webhook. Consulta
-`docs/telegram-alerts.md` para conocer los controles y la política recomendada.
+El envío manual requiere los secrets `TELEGRAM_BOT_TOKEN` y `TELEGRAM_CHAT_ID`.
+El bot no responde mensajes porque no tiene polling ni webhook. Consulta
+`docs/telegram-alerts.md` para conocer los controles, el dry-run automático y el
+rollback recomendado.
 
-Existe una simulación local de política futura para evaluar cuándo habría sido útil
-enviar un digest accionable. No activa envíos automáticos reales.
+Existe una política automática controlada con dry-run, deduplicación y límite diario.
+Permanece desactivada por defecto y solo se habilita deliberadamente con la variable
+de repositorio `TELEGRAM_AUTO_ENABLED=true`. Consulta `docs/telegram-alerts.md` antes
+de activarla.
 
 ## Reporte semanal local
 
