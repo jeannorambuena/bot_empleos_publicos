@@ -18,7 +18,7 @@ PUBLICABLE_TEXT_FIELDS = (
 )
 
 _RUT_VALUE = r"(?:\d{1,2}(?:\.\d{3}){2}|[0-9Xx]{7,9})\s*-\s*[0-9KkXx]"
-_PARTIAL_RUT_VALUE = r"(?:\d{1,2}(?:\.\d{3})?\.[Xx]{2,3}|[0-9]{5,8}[Xx]{1,3})\s*(?:-\s*[0-9KkXx])?"
+_PARTIAL_RUT_VALUE = r"(?:\d{1,2}(?:\.\d{3})?\.[0-9]?[Xx]{2,3}|[0-9]{5,8}[Xx]{1,3})\s*(?:-\s*[0-9KkXx])?"
 _RUT_LABEL = r"(?:RUN|RUT)\s*(?:N\s*[°ºo.]?\s*)?"
 _LABELED_RUT_PATTERN = re.compile(rf"\b{_RUT_LABEL}:?\s*(?:{_RUT_VALUE}|{_PARTIAL_RUT_VALUE})", re.IGNORECASE)
 _RUT_PATTERN = re.compile(rf"(?<![0-9A-Za-z]){_RUT_VALUE}(?![0-9A-Za-z])", re.IGNORECASE)

@@ -23,6 +23,14 @@ SOURCE_OUTPUTS = {
     "rancagua": ROOT / "output" / "sources" / "rancagua" / "opportunities.json",
 }
 PUBLICABLE_FIELDS = ("title", "description", "evidence", "status_reason", "manual_review_reason")
+PARTIAL_RUT_REGRESSION_CASES = (
+    "10.979.3XX-X",
+    "13.856.7XX-X",
+    "12.345.6XX-X",
+    "12.345.XXX-X",
+    "157368XX-X",
+    "1186164xx",
+)
 
 
 def opportunity_sanitization_errors(item: Any, label: str) -> list[str]:
@@ -56,6 +64,9 @@ def _value_errors(value: Any, label: str) -> list[str]:
 def main() -> int:
     errors = []
     checked_items = 0
+    for value in PARTIAL_RUT_REGRESSION_CASES:
+        if not sensitive_personal_data_reasons(value):
+            errors.append(f"regresion: no se detecta RUN/RUT parcialmente visible: {value}")
     for source, path in SOURCE_OUTPUTS.items():
         try:
             opportunities = json.loads(path.read_text(encoding="utf-8"))
