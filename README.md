@@ -145,6 +145,14 @@ Existe un catastro acotado para Región Metropolitana, O'Higgins y Maule en
 python scripts/check_source_candidates.py
 ```
 
+Municipalidad de Curicó dispone de un primer adaptador aislado en dry-run. Genera
+solo artefactos locales ignorados:
+
+```powershell
+python scripts/fetch_curico.py
+python scripts/check_curico_source.py
+```
+
 ## Configuración futura
 
 Los archivos de `config/` son ejemplos públicos y no contienen secretos:

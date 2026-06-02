@@ -36,6 +36,19 @@ documentales sin scraper implementado.
 La ampliación RM no altera H1 ni H2: siguen siendo pruebas acotadas antes de abrir
 nuevas integraciones reales.
 
+## H1 en dry-run
+
+Municipalidad de Curicó cuenta con un primer adaptador aislado:
+
+```powershell
+python scripts/fetch_curico.py
+python scripts/check_curico_source.py
+```
+
+La salida permanece en `output/sources/curico/`. Las publicaciones detectadas quedan
+como `manual_review`; todavía no se combinan con Empleos Públicos, scoring, dashboard
+ni alertas. Consulta `docs/sources/curico.md`.
+
 ## Criterios para agregar una fuente
 
 Antes de crear un parser se debe confirmar que la página sea institucional,
