@@ -49,3 +49,15 @@ explícitamente antes de publicar: dos portales pueden difundir la misma convoca
 Consulta `examples/source-normalized-opportunity.json` para ver un ejemplo seguro.
 El ejemplo usa el dominio reservado `.example`: ilustra el contrato, no representa
 una convocatoria real ni debe publicarse como dato capturado.
+
+## Catastro previo a una integración
+
+Antes de implementar un adaptador, registrar la fuente en
+`data/source_candidates.json` y validar:
+
+```powershell
+python scripts/check_source_candidates.py
+```
+
+El catastro no es un feed operativo: documenta hipótesis, URLs oficiales y riesgos
+para decidir qué fuente merece un PR independiente.

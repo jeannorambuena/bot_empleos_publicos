@@ -13,6 +13,29 @@ SLEP Los Cerezos, SLEP Colchagua y municipalidades de Romeral, Curicó y Rauco.
 3. SLEP Colchagua.
 4. Municipalidades cercanas.
 
+El catastro territorial detallado está en `docs/source-discovery.md` y
+`data/source_candidates.json`.
+
+La Región Metropolitana ya no se interpreta solo como comuna de Santiago o SLEP
+Santiago Centro. El catastro incorpora una selección metropolitana de SLEP,
+municipios, servicios regionales y universidades estatales, siempre como candidatas
+documentales sin scraper implementado.
+
+## Hipótesis de integración
+
+- **H1:** Municipalidad de Curicó. Su sección oficial de concursos tiene
+  publicaciones y bases descargables; permite probar un adaptador municipal acotado.
+- **H2:** SLEP Los Cerezos. Tiene alta utilidad territorial para Curicó, Molina,
+  Rauco, Romeral y Teno, pero primero debe identificarse una sección estable de
+  convocatorias y medirse duplicación con Empleos Públicos.
+- **H3:** Mercado Público y Compra Ágil como radar comercial Nexus separado. No debe
+  mezclarse con recomendaciones laborales personales.
+- **H4:** ampliar a otras regiones únicamente después de validar H1 y H2, y solo con
+  aprobación explícita del usuario.
+
+La ampliación RM no altera H1 ni H2: siguen siendo pruebas acotadas antes de abrir
+nuevas integraciones reales.
+
 ## Criterios para agregar una fuente
 
 Antes de crear un parser se debe confirmar que la página sea institucional,
@@ -51,3 +74,7 @@ auditar qué portal originó cada oportunidad.
 
 Este macro-lote solo prepara arquitectura y documentación. No agrega scrapers reales
 de SLEP, municipalidades ni ChileCompra.
+
+El catastro inicial se limita a Región Metropolitana, O'Higgins y Maule. Los portales
+nacionales solo se incluyen cuando son filtrables o útiles para investigar estas
+tres regiones.
