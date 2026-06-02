@@ -65,6 +65,21 @@ confirma vigencia cuando el HTML carece de fecha de cierre explícita. Todavía 
 combina con Empleos Públicos, scoring, dashboard ni alertas. Consulta
 `docs/sources/molina.md`.
 
+## GORE Maule en dry-run
+
+Gobierno Regional del Maule cuenta con un tercer adaptador aislado:
+
+```powershell
+python scripts/fetch_gore_maule.py
+python scripts/check_gore_maule_source.py
+```
+
+La salida permanece en `output/sources/gore_maule/`. El adaptador consulta el
+listado oficial y únicamente sus detalles directos, registra documentos sin
+descargarlos y conserva reglas de vigencia conservadoras. Todavía no se combina
+con Empleos Públicos, scoring, dashboard ni alertas. Consulta
+`docs/sources/gore-maule.md`.
+
 ## Criterios para agregar una fuente
 
 Antes de crear un parser se debe confirmar que la página sea institucional,
