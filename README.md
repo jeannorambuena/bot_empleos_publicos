@@ -160,6 +160,13 @@ python scripts/fetch_molina.py
 python scripts/check_molina_source.py
 ```
 
+Gobierno Regional del Maule dispone de un tercer adaptador aislado en dry-run:
+
+```powershell
+python scripts/fetch_gore_maule.py
+python scripts/check_gore_maule_source.py
+```
+
 ## Configuración futura
 
 Los archivos de `config/` son ejemplos públicos y no contienen secretos:
