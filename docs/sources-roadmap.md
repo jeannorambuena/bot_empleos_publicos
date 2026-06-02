@@ -50,6 +50,21 @@ registra documentos sin descargarlos y solo confirma apertura o cierre cuando ex
 evidencia clara. Todavía no se combina con Empleos Públicos, scoring, dashboard ni
 alertas. Consulta `docs/sources/curico.md`.
 
+## Molina en dry-run
+
+Municipalidad de Molina cuenta con un segundo adaptador aislado:
+
+```powershell
+python scripts/fetch_molina.py
+python scripts/check_molina_source.py
+```
+
+La salida permanece en `output/sources/molina/`. El adaptador consulta únicamente
+la ficha oficial configurada, conserva enlaces a documentos sin descargarlos y no
+confirma vigencia cuando el HTML carece de fecha de cierre explícita. Todavía no se
+combina con Empleos Públicos, scoring, dashboard ni alertas. Consulta
+`docs/sources/molina.md`.
+
 ## Criterios para agregar una fuente
 
 Antes de crear un parser se debe confirmar que la página sea institucional,

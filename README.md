@@ -153,6 +153,13 @@ python scripts/fetch_curico.py
 python scripts/check_curico_source.py
 ```
 
+Municipalidad de Molina dispone de un segundo adaptador aislado en dry-run:
+
+```powershell
+python scripts/fetch_molina.py
+python scripts/check_molina_source.py
+```
+
 ## Configuración futura
 
 Los archivos de `config/` son ejemplos públicos y no contienen secretos:
