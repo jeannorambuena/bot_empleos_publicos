@@ -54,15 +54,18 @@ def _write_report(candidate: dict[str, Any], diagnostics: dict[str, Any]) -> Non
         "",
         f"- URL configurada: {candidate['discovery_url']}",
         f"- Artículos revisados: {diagnostics['articles_reviewed']}",
-        f"- Publicaciones candidatas: {diagnostics['candidates_detected']}",
-        f"- Resultados de selección excluidos: {diagnostics['selection_results_skipped']}",
+        f"- Detalles consultados: {diagnostics['details_checked']}",
+        f"- Documentos detectados: {diagnostics['documents_detected']}",
+        f"- Abiertos confirmados: {diagnostics['status_counts']['open_confirmed']}",
+        f"- Cerrados confirmados: {diagnostics['status_counts']['closed']}",
+        f"- Pendientes de revisión manual: {diagnostics['status_counts']['manual_review']}",
+        f"- Errores HTTP de detalle: {len(diagnostics['detail_errors'])}",
         "",
         "## Alcance",
         "",
-        "La captura consulta una sola página configurada, no sigue paginación ni enlaces",
-        "de detalle y no publica datos en el dashboard. Cada publicación detectada queda",
-        "marcada para revisión manual porque el listado no entrega cierre ni vigencia",
-        "inequívocos.",
+        "La captura consulta una sola página configurada y únicamente sus detalles",
+        "oficiales directos. No sigue paginación ni descarga documentos. Los estados se",
+        "asignan con reglas conservadoras y la salida no se publica en el dashboard.",
     ]
     _write_text(REPORT_PATH, "\n".join(lines) + "\n")
 
@@ -83,8 +86,12 @@ def main() -> int:
     print("------------------------------")
     print(f"URL configurada: {candidate['discovery_url']}")
     print(f"Artículos revisados: {diagnostics['articles_reviewed']}")
-    print(f"Publicaciones candidatas: {diagnostics['candidates_detected']}")
-    print(f"Resultados de selección excluidos: {diagnostics['selection_results_skipped']}")
+    print(f"Detalles consultados: {diagnostics['details_checked']}")
+    print(f"Documentos detectados: {diagnostics['documents_detected']}")
+    print(f"Abiertos confirmados: {diagnostics['status_counts']['open_confirmed']}")
+    print(f"Cerrados confirmados: {diagnostics['status_counts']['closed']}")
+    print(f"Pendientes de revisión manual: {diagnostics['status_counts']['manual_review']}")
+    print(f"Errores HTTP de detalle: {len(diagnostics['detail_errors'])}")
     print(f"Salida local: {OPPORTUNITIES_PATH}")
     print("No se modificó public/data ni se enviaron alertas.")
     return 0
