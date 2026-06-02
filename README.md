@@ -138,6 +138,13 @@ Empleos Públicos sigue siendo la única fuente real activa. Las fuentes futuras
 incorporarse una por una mediante PRs separados, usando el contrato normalizado de
 `docs/source-contract.md` y la guía de `docs/sources-roadmap.md`.
 
+Existe un catastro acotado para Región Metropolitana, O'Higgins y Maule en
+`docs/source-discovery.md`. Se valida con:
+
+```powershell
+python scripts/check_source_candidates.py
+```
+
 ## Configuración futura
 
 Los archivos de `config/` son ejemplos públicos y no contienen secretos:
