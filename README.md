@@ -145,6 +145,11 @@ Existe un catastro acotado para Región Metropolitana, O'Higgins y Maule en
 python scripts/check_source_candidates.py
 ```
 
+El catastro incluye prioridad territorial, ajuste al perfil, calidad de fuente,
+riesgo de privacidad y siguiente accion. Consulta `docs/source-prioritization.md`.
+Las proximas pruebas recomendadas son SLEP Los Cerezos, Municipalidad de Talca y
+SLEP Colchagua, cada una mediante un PR dry-run separado.
+
 Municipalidad de Curicó dispone de un primer adaptador aislado en dry-run. Genera
 solo artefactos locales ignorados:
 

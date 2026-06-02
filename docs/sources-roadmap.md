@@ -9,12 +9,16 @@ SLEP Los Cerezos, SLEP Colchagua y municipalidades de Romeral, Curicó y Rauco.
 ## Prioridad recomendada
 
 1. Empleos Públicos.
-2. SLEP Los Cerezos.
-3. SLEP Colchagua.
-4. Municipalidades cercanas.
+2. Municipalidad de Rancagua en publicacion controlada.
+3. SLEP Los Cerezos como siguiente dry-run.
+4. Municipalidad de Talca como siguiente dry-run.
+5. SLEP Colchagua como siguiente dry-run regional.
 
 El catastro territorial detallado está en `docs/source-discovery.md` y
 `data/source_candidates.json`.
+
+La clasificacion completa por territorio, ajuste al perfil, calidad, privacidad y
+publicabilidad se documenta en `docs/source-prioritization.md`.
 
 La Región Metropolitana ya no se interpreta solo como comuna de Santiago o SLEP
 Santiago Centro. El catastro incorpora una selección metropolitana de SLEP,

@@ -28,6 +28,18 @@ FIELDS = {
     "priority",
     "implementation_status",
     "notes",
+    "region",
+    "commune",
+    "geo_priority",
+    "mobility_rule",
+    "rm_policy",
+    "profile_fit",
+    "source_quality",
+    "privacy_risk",
+    "publishability",
+    "priority_tier",
+    "next_action",
+    "rationale",
 }
 TARGET_REGIONS = {"metropolitana", "ohiggins", "maule", "nacional_filtrable"}
 CATEGORIES = {
@@ -49,6 +61,41 @@ DIFFICULTIES = {"low", "medium", "high"}
 STATUSES = {"candidate", "not_implemented"}
 TRISTATE = {True, False, "unknown"}
 SECRET_MARKERS = ("token", "secret", "password", "api_key", "chat_id")
+GEO_PRIORITIES = {"local_or_near", "regional_possible", "rm_high_salary_or_strong_ti_only", "out_of_scope"}
+MOBILITY_RULES = {
+    "local_preferred",
+    "relocation_for_strong_fit",
+    "rm_strong_ti_salary_or_hybrid_only",
+    "territorial_filter_only",
+    "out_of_scope",
+}
+RM_POLICIES = {"not_applicable", "strong_ti_salary_or_hybrid_only"}
+PROFILE_FITS = {"ti_direct", "ti_adjacent", "administrative_public", "generic_low_fit", "unknown"}
+SOURCE_QUALITIES = {"proven", "readable", "unknown", "weak"}
+PRIVACY_RISKS = {"low", "medium", "high"}
+PUBLISHABILITY = {
+    "active_published",
+    "tested_publishable_controlled",
+    "dry_run_only",
+    "manual_review_only",
+    "candidate_only",
+    "blocked",
+}
+PRIORITY_TIERS = {"P0", "P1", "P2", "P3", "P4"}
+NEXT_ACTIONS = {
+    "keep_active",
+    "keep_monitoring",
+    "evaluate_next",
+    "dry_run_candidate",
+    "manual_review_only",
+    "defer",
+    "block",
+}
+CONSERVATIVE_STATES = {
+    "municipalidad-curico": {"dry_run_only"},
+    "municipalidad-molina": {"dry_run_only", "manual_review_only"},
+    "gore-maule": {"dry_run_only", "manual_review_only"},
+}
 
 
 def _valid_url(value: Any) -> bool:
@@ -99,6 +146,56 @@ def main() -> int:
             for field in ("passes_through_empleos_publicos", "requires_login", "structured_data"):
                 if source.get(field) not in TRISTATE:
                     errors.append(f"{label}.{field} debe ser booleano o unknown.")
+            if source.get("geo_priority") not in GEO_PRIORITIES:
+                errors.append(f"{label}.geo_priority no permitido.")
+            if source.get("mobility_rule") not in MOBILITY_RULES:
+                errors.append(f"{label}.mobility_rule no permitido.")
+            if source.get("rm_policy") not in RM_POLICIES:
+                errors.append(f"{label}.rm_policy no permitido.")
+            if source.get("profile_fit") not in PROFILE_FITS:
+                errors.append(f"{label}.profile_fit no permitido.")
+            if source.get("source_quality") not in SOURCE_QUALITIES:
+                errors.append(f"{label}.source_quality no permitido.")
+            if source.get("privacy_risk") not in PRIVACY_RISKS:
+                errors.append(f"{label}.privacy_risk no permitido.")
+            if source.get("publishability") not in PUBLISHABILITY:
+                errors.append(f"{label}.publishability no permitido.")
+            if source.get("priority_tier") not in PRIORITY_TIERS:
+                errors.append(f"{label}.priority_tier no permitido.")
+            if source.get("next_action") not in NEXT_ACTIONS:
+                errors.append(f"{label}.next_action no permitido.")
+            if not isinstance(source.get("region"), str) or not str(source.get("region") or "").strip():
+                errors.append(f"{label}.region debe ser texto no vacío.")
+            if not isinstance(source.get("commune"), str) or not str(source.get("commune") or "").strip():
+                errors.append(f"{label}.commune debe ser texto no vacío.")
+            if not isinstance(source.get("rationale"), str) or not str(source.get("rationale") or "").strip():
+                errors.append(f"{label}.rationale debe explicar la prioridad.")
+
+            is_rm = "metropolitana" in (regions or [])
+            if is_rm and source.get("rm_policy") != "strong_ti_salary_or_hybrid_only":
+                errors.append(f"{label}: RM requiere política explícita de TI fuerte, sueldo o modalidad conveniente.")
+            if is_rm and source.get("priority_tier") == "P0":
+                rationale = str(source.get("rationale") or "").lower()
+                if not any(marker in rationale for marker in ("ti fuerte", "sueldo", "hibrida", "remota")):
+                    errors.append(f"{label}: RM no puede quedar P0 sin justificación TI, sueldo o modalidad.")
+            if source.get("privacy_risk") == "high" and source.get("next_action") == "keep_active":
+                errors.append(f"{label}: privacy_risk high no permite keep_active.")
+            if source.get("publishability") == "manual_review_only" and source.get("next_action") == "keep_active":
+                errors.append(f"{label}: manual_review_only no puede marcarse como fuente activa.")
+            if source.get("priority_tier") == "P0" and source.get("publishability") not in {
+                "active_published",
+                "tested_publishable_controlled",
+            }:
+                errors.append(f"{label}: P0 se reserva para fuentes activas o publicadas controladamente.")
+
+            source_id = source.get("id")
+            if source_id == "municipalidad-rancagua":
+                if source.get("publishability") != "tested_publishable_controlled" or source.get("next_action") != "keep_monitoring":
+                    errors.append(f"{label}: Rancagua debe conservar publicación controlada y monitoreo.")
+            if source_id in CONSERVATIVE_STATES and source.get("publishability") not in CONSERVATIVE_STATES[source_id]:
+                errors.append(f"{label}: {source_id} debe conservar estado dry-run o revisión manual.")
+            if source_id == "gore-maule" and source.get("privacy_risk") != "high":
+                errors.append(f"{label}: GORE Maule debe conservar advertencia de privacidad histórica.")
         if len(ids) != len(set(ids)):
             errors.append("Los ids de fuentes candidatas deben ser únicos.")
 
