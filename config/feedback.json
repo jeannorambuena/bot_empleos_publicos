@@ -10,14 +10,14 @@
     },
     {
       "opportunity_id": "empleos-publicos-140210",
-      "action": "review",
+      "action": "false_positive",
       "created_at": "2026-06-02T00:22:18.932Z",
       "title": "ANALISTA DE TRANSFERENCIA TECNOLÓGICA - CENTRO TECNOLÓGICO UCAMPUS - FACULTAD DE CIENCIAS FÍSICAS Y MATEMÁTICAS (FCFM)",
       "source_url": "https://www.empleospublicos.cl/pub/convocatorias/convpostularavisoTrabajo.aspx?i=140210&c=0&j=0&tipo=convpostularavisoTrabajo"
     },
     {
       "opportunity_id": "empleos-publicos-140372",
-      "action": "review",
+      "action": "false_positive",
       "created_at": "2026-06-02T00:23:11.602Z",
       "title": "JEFATURA DE UNIDAD",
       "source_url": "https://www.empleospublicos.cl/pub/convocatorias/convpostularavisoTrabajo.aspx?i=140372&c=0&j=0&tipo=convpostularavisoTrabajo"
