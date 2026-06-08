@@ -52,6 +52,9 @@ function hasValidSourceUrl(opportunity) {
 }
 
 function sourceKind(opportunity) {
+  if (opportunity.source === "Municipalidad de Romeral" || opportunity.local_priority === true) {
+    return ["Fuente local prioritaria", "local-priority"];
+  }
   if (opportunity.source === "Municipalidad de Rancagua") return ["Municipal controlada", "controlled"];
   return ["Fuente pública activa", ""];
 }
@@ -68,6 +71,7 @@ function operationalBadges(opportunity) {
   if (opportunity.manual_review === true || opportunity.human_feedback_action === "review") {
     badges.push(["REVISAR", "review"]);
   }
+  if (opportunity.review_label) badges.push([opportunity.review_label, "review"]);
   if (opportunity.economic_label) {
     badges.push([opportunity.economic_label, economicBadgeClass(opportunity.economic_viability)]);
   }
@@ -181,6 +185,7 @@ function renderOpportunities() {
     const sourceBadge = card.querySelector(".source-kind-badge");
     sourceBadge.textContent = sourceLabel;
     sourceBadge.classList.toggle("controlled", sourceClass === "controlled");
+    sourceBadge.classList.toggle("local-priority", sourceClass === "local-priority");
     urgency.textContent = opportunity.urgency === "proximo" ? "Cierre próximo" : "Plazo normal";
     urgency.classList.toggle("normal", opportunity.urgency !== "proximo");
     card.querySelector(".opportunity-title").textContent = opportunity.title || "Convocatoria sin título";

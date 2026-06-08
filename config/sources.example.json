@@ -37,10 +37,10 @@
       "id": "municipalidad-romeral",
       "name": "Municipalidad de Romeral",
       "type": "municipalidad",
-      "url": "https://muniromeral.cl/",
+      "url": "https://muniromeral.cl/romeral/?page_id=3217",
       "enabled": false,
       "priority": 4,
-      "notes": "Fuente municipal cercana; iniciar con revisión manual.",
+      "notes": "Fuente local prioritaria; monitoreo dry-run de concursos publicos.",
       "status": "manual_review",
       "parser": "manual"
     },

@@ -18,6 +18,9 @@ RELEVANT_LEVELS = {"Alta", "Media", "Baja"}
 RECOMMENDED_LEVELS = {"Alta", "Media"}
 MAX_RECOMMENDATIONS = 5
 VERY_HIGH_MANUAL_REVIEW_SCORE = 90
+LOCAL_SOURCE_DIAGNOSTICS = (
+    ROOT / "output" / "sources" / "romeral" / "diagnostics.json",
+)
 
 
 def _load(path: Path) -> Any:
@@ -138,6 +141,24 @@ def _format_recommendation(index: int, opportunity: dict[str, Any]) -> list[str]
     return lines
 
 
+def local_source_notices() -> list[str]:
+    """Return controlled local-source notices from optional dry-run diagnostics."""
+    notices = []
+    for path in LOCAL_SOURCE_DIAGNOSTICS:
+        if not path.exists():
+            continue
+        try:
+            diagnostics = _load(path)
+        except (OSError, json.JSONDecodeError):
+            continue
+        if not isinstance(diagnostics, dict):
+            continue
+        notice = diagnostics.get("telegram_notice")
+        if diagnostics.get("source_change_detected") is True and isinstance(notice, str) and notice.strip():
+            notices.append(notice.strip())
+    return notices
+
+
 def main() -> int:
     try:
         opportunities, summary, last_run = load_public_data()
@@ -169,6 +190,11 @@ def main() -> int:
             lines.extend(_format_recommendation(index, item))
     else:
         lines.append("- No hay oportunidades recomendadas en este corte.")
+
+    notices = local_source_notices()
+    if notices:
+        lines.extend(["", "Avisos fuentes locales:"])
+        lines.extend(f"- {notice}" for notice in notices)
 
     lines.extend(
         [

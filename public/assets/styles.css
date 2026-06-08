@@ -92,6 +92,7 @@ input::placeholder { color: #9aabb6; }
 .source-kind-badge, .urgency-tag, .feedback-badge, .operational-badge, .tags span { border-radius: 999px; font-size: .65rem; font-weight: 850; }
 .source-kind-badge { padding: 5px 8px; color: #215f91; background: #e9f5ff; }
 .source-kind-badge.controlled { color: #087255; background: #e2f8ef; }
+.source-kind-badge.local-priority { color: #7a4e08; background: #fff3cf; }
 .urgency-tag { padding: 5px 8px; color: #a35b05; background: #fff2d9; }
 .urgency-tag.normal { color: #718393; background: #f1f5f7; }
 .operational-badges, .tags, .card-meta { display: flex; flex-wrap: wrap; gap: 6px; }
