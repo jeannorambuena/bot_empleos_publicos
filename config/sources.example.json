@@ -48,7 +48,7 @@
       "id": "municipalidad-curico",
       "name": "Municipalidad de Curicó",
       "type": "municipalidad",
-      "url": "https://curico.cl/",
+      "url": "https://www.curico.cl/home/category/concursos/",
       "enabled": false,
       "priority": 5,
       "notes": "Fuente municipal cercana; iniciar con revisión manual.",
@@ -56,12 +56,23 @@
       "parser": "manual"
     },
     {
+      "id": "municipalidad-molina",
+      "name": "Municipalidad de Molina",
+      "type": "municipalidad",
+      "url": "https://web2.molina.cl/concursos-publicos/",
+      "enabled": false,
+      "priority": 6,
+      "notes": "Fuente local prioritaria; monitoreo dry-run/manual_review_only de concursos publicos.",
+      "status": "manual_review",
+      "parser": "manual"
+    },
+    {
       "id": "municipalidad-rauco",
       "name": "Municipalidad de Rauco",
       "type": "municipalidad",
-      "url": "https://munirauco.cl/",
+      "url": "https://munirauco.cl/pages/concurso",
       "enabled": false,
-      "priority": 6,
+      "priority": 7,
       "notes": "Fuente municipal cercana; iniciar con revisión manual.",
       "status": "manual_review",
       "parser": "manual"

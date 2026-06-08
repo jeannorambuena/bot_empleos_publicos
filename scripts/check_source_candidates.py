@@ -92,8 +92,9 @@ NEXT_ACTIONS = {
     "block",
 }
 CONSERVATIVE_STATES = {
-    "municipalidad-curico": {"dry_run_only"},
+    "municipalidad-curico": {"dry_run_only", "manual_review_only"},
     "municipalidad-molina": {"dry_run_only", "manual_review_only"},
+    "municipalidad-rauco": {"dry_run_only", "manual_review_only"},
     "gore-maule": {"dry_run_only", "manual_review_only"},
     "municipalidad-talca": {"dry_run_only"},
     "slep-colchagua": {"manual_review_only"},

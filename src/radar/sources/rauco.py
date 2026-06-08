@@ -1,4 +1,4 @@
-"""Dry-run monitor for Municipalidad de Curico contest publications."""
+"""Dry-run monitor for Municipalidad de Rauco contest publications."""
 
 from __future__ import annotations
 
@@ -7,25 +7,22 @@ from typing import Any
 from radar.sources.local_municipal_watch import MunicipalSourceConfig, fetch_municipal_candidates
 
 
-SOURCE_NAME = "Municipalidad de Curico"
-INSTITUTION = "Ilustre Municipalidad de Curico"
-SOURCE_ID = "municipalidad-curico"
-DEFAULT_DISCOVERY_URLS = (
-    "https://www.curico.cl/home/category/concursos/",
-    "https://www.curico.cl/home/concursos-publicos/",
-)
+SOURCE_NAME = "Municipalidad de Rauco"
+INSTITUTION = "Ilustre Municipalidad de Rauco"
+SOURCE_ID = "municipalidad-rauco"
+DEFAULT_DISCOVERY_URLS = ("https://munirauco.cl/pages/concurso",)
 CONFIG = MunicipalSourceConfig(
-    key="curico",
+    key="rauco",
     source_id=SOURCE_ID,
     source_name=SOURCE_NAME,
     institution=INSTITUTION,
-    commune="Curico",
+    commune="Rauco",
     urls=DEFAULT_DISCOVERY_URLS,
-    allowed_hosts=("curico.cl",),
+    allowed_hosts=("munirauco.cl",),
 )
 
 
-def fetch_curico_candidates(
+def fetch_rauco_candidates(
     discovery_urls: tuple[str, ...] | list[str] | None = None,
     *,
     previous_state: dict[str, Any] | None = None,

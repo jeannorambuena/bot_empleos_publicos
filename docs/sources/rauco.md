@@ -1,23 +1,22 @@
-# Dry-run Municipalidad de Molina
+# Dry-run Municipalidad de Rauco
 
 Fuente local prioritaria de Maule norte integrada en modo `dry_run` y
 `manual_review_only`.
 
-## URLs revisadas
+## URL revisada
 
 ```text
-https://web2.molina.cl/concursos-publicos/
-https://web.molina.cl/?page_id=71592
+https://munirauco.cl/pages/concurso
 ```
 
 ## Alcance
 
-El monitor revisa paginas oficiales, normaliza texto visible, calcula hash por
+El monitor revisa la pagina oficial, normaliza texto visible, calcula hash de
 pagina y hash agregado del listado. Las publicaciones detectadas se guardan solo
 en:
 
 ```text
-output/sources/molina/
+output/sources/rauco/
 ```
 
 No descarga documentos, no modifica `public/data`, no cambia scoring y no envia

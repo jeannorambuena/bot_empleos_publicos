@@ -1,4 +1,4 @@
-"""Generate an isolated local dry-run capture for Municipalidad de Molina."""
+"""Generate an isolated local dry-run capture for Municipalidad de Rauco."""
 
 from __future__ import annotations
 
@@ -12,15 +12,15 @@ if str(SRC) not in sys.path:
     sys.path.insert(0, str(SRC))
 
 from fetch_local_municipal_source_common import run_fetch
-from radar.sources.molina import DEFAULT_DISCOVERY_URLS, SOURCE_ID, fetch_molina_candidates
+from radar.sources.rauco import DEFAULT_DISCOVERY_URLS, SOURCE_ID, fetch_rauco_candidates
 
 
 if __name__ == "__main__":
     raise SystemExit(
         run_fetch(
-            key="molina",
+            key="rauco",
             source_id=SOURCE_ID,
             default_urls=DEFAULT_DISCOVERY_URLS,
-            fetcher=fetch_molina_candidates,
+            fetcher=fetch_rauco_candidates,
         )
     )
