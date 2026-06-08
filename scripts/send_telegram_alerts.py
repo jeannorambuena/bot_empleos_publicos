@@ -66,6 +66,7 @@ def is_automatic_candidate(item: dict[str, Any], sent_ids: set[str]) -> bool:
         and item_id not in sent_ids
         and item.get("match_level") == "Alta"
         and item.get("human_feedback_action") != "false_positive"
+        and item.get("economic_viability") != "bajo_piso"
         and is_trigger
     )
 

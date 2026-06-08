@@ -8,6 +8,7 @@ from datetime import date, datetime, timedelta
 from pathlib import Path
 from typing import Any, Iterable
 
+from .economic_viability import apply_santiago_economic_viability
 from .scoring import calculate_match
 
 
@@ -46,6 +47,7 @@ def normalize_opportunity(
     normalized["match_level"] = score["match_level"]
     normalized["alert_reasons"] = score["alert_reasons"]
     normalized["is_demo"] = is_demo
+    normalized = apply_santiago_economic_viability(normalized, profile)
 
     if is_demo:
         normalized["source_url"] = None

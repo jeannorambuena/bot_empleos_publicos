@@ -16,6 +16,7 @@ DASHBOARD_URL = os.environ.get("PUBLIC_SITE_URL") or "https://jeannorambuena.git
 RELEVANT_LEVELS = {"Alta", "Media", "Baja"}
 RECOMMENDED_LEVELS = {"Alta", "Media"}
 MAX_RECOMMENDATIONS = 5
+VERY_HIGH_MANUAL_REVIEW_SCORE = 90
 
 
 def _load(path: Path) -> Any:
@@ -35,7 +36,11 @@ def load_public_data() -> tuple[list[dict[str, Any]], dict[str, Any], dict[str, 
 
 def select_recommended(opportunities: list[dict[str, Any]]) -> list[dict[str, Any]]:
     """Return a short actionable selection for a Telegram digest."""
-    recommended = [item for item in opportunities if item.get("match_level") in RECOMMENDED_LEVELS]
+    recommended = [
+        item
+        for item in opportunities
+        if item.get("match_level") in RECOMMENDED_LEVELS and _can_be_telegram_recommendation(item)
+    ]
     recommended.sort(
         key=lambda item: (
             item.get("is_new_since_last_run") is not True,
@@ -45,6 +50,13 @@ def select_recommended(opportunities: list[dict[str, Any]]) -> list[dict[str, An
         )
     )
     return recommended[:MAX_RECOMMENDATIONS]
+
+
+def _can_be_telegram_recommendation(item: dict[str, Any]) -> bool:
+    if item.get("economic_viability") != "bajo_piso":
+        return True
+    comparison_score = int(item.get("pre_economic_match_score") or item.get("match_score") or 0)
+    return comparison_score >= VERY_HIGH_MANUAL_REVIEW_SCORE
 
 
 def is_new_relevant(opportunity: dict[str, Any]) -> bool:
@@ -75,13 +87,17 @@ def _location(opportunity: dict[str, Any]) -> str:
 
 def _format_recommendation(index: int, opportunity: dict[str, Any]) -> list[str]:
     new_marker = " | NUEVA" if opportunity.get("is_new_since_last_run") is True else ""
-    return [
+    lines = [
         f"{index}. [{opportunity.get('match_level', 'Sin nivel')} | {opportunity.get('match_score', 0)}%{new_marker}] {_short(opportunity.get('title'), limit=120)}",
         f"   Organismo: {_short(opportunity.get('institution'), limit=90)}",
         f"   Ubicación: {_location(opportunity)}",
         f"   Cierre: {opportunity.get('closing_date') or 'No especificado'}",
         f"   Link: {opportunity.get('source_url') or 'Sin enlace directo'}",
     ]
+    if opportunity.get("economic_alert"):
+        suffix = " | RevisiÃ³n manual" if opportunity.get("economic_viability") == "bajo_piso" else ""
+        lines.insert(3, f"   Alerta econÃ³mica: {opportunity['economic_alert']}{suffix}")
+    return lines
 
 
 def main() -> int:

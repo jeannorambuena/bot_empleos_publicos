@@ -7,6 +7,7 @@ from copy import deepcopy
 from datetime import date, datetime, timedelta
 from typing import Any, Iterable
 
+from .economic_viability import apply_santiago_economic_viability
 from .scoring import calculate_match
 
 
@@ -72,6 +73,7 @@ def score_real_opportunity(opportunity: dict[str, Any], profile: dict[str, Any])
     normalized["alert_reasons"] = scoring["alert_reasons"]
     normalized["matched_keywords"] = scoring["matched_keywords"]
     normalized["excluded_keywords"] = scoring["excluded_keywords"]
+    normalized = apply_santiago_economic_viability(normalized, profile)
     return normalized
 
 

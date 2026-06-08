@@ -22,6 +22,11 @@ python scripts/check_telegram_preview.py
 `output/telegram/telegram-preview.txt` contiene hasta cinco recomendaciones
 accionables. `output/` está ignorado por Git.
 
+Para oportunidades Santiago/RM, cada recomendacion puede incluir una alerta breve:
+`Cumple piso Santiago`, `Revisar renta Santiago` o `Bajo piso economico Santiago`.
+Las ofertas bajo piso economico solo entran al preview si la coincidencia previa es
+muy alta y se marcan como revision manual.
+
 ## Envío manual seguro
 
 El modo manual exige simultáneamente:
@@ -49,9 +54,10 @@ La política automática solo permite enviar cuando se cumplen todas estas regla
 1. La ejecución programada o manual habilita explícitamente el modo automático.
 2. Existe al menos una oportunidad `Alta` nueva o `Alta` con cierre próximo.
 3. La oportunidad no está marcada como `false_positive`.
-4. La oportunidad no aparece en los IDs enviados previamente.
-5. No existe otro envío automático registrado durante el mismo día.
-6. El modo real está habilitado y existen los secrets de Telegram.
+4. La oportunidad no esta marcada como `bajo_piso` economico para Santiago/RM.
+5. La oportunidad no aparece en los IDs enviados previamente.
+6. No existe otro envío automático registrado durante el mismo día.
+7. El modo real está habilitado y existen los secrets de Telegram.
 
 El límite diario usa UTC para mantener comportamiento reproducible en GitHub Actions
 y equipos Windows sin dependencias adicionales.
