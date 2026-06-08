@@ -82,6 +82,11 @@ Para probar manualmente la política sin enviar, ejecuta el workflow con
 `run_telegram_auto_policy=true` y deja `send_telegram_auto=false`. Para volver al modo
 manual seguro, elimina `TELEGRAM_AUTO_ENABLED` o configúrala como `false`.
 
+La revisión programada puede correr de lunes a viernes sin enviar un resumen diario.
+El paso automático real recibe `TELEGRAM_AUTO_ENABLED` desde las variables del
+repositorio y el script vuelve a exigir que valga exactamente `true`. Si no hay
+oportunidades `Alta` seguras y no notificadas, Telegram no envía ningún mensaje.
+
 El estado anti-duplicados se versiona en `public/data/telegram_alert_state.json`
 porque los runners son efímeros. Solo contiene timestamp, IDs públicos, modo y motivo.
 El límite diario se calcula en UTC para mantener comportamiento reproducible en

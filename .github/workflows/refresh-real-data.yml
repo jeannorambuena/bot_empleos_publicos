@@ -126,6 +126,7 @@ jobs:
           (github.event_name == 'schedule' && vars.TELEGRAM_AUTO_ENABLED == 'true') ||
           (github.event_name == 'workflow_dispatch' && inputs.run_telegram_auto_policy == true && inputs.send_telegram_auto == true)
         env:
+          TELEGRAM_AUTO_ENABLED: ${{ vars.TELEGRAM_AUTO_ENABLED }}
           TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
           TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
         run: python scripts/send_telegram_alerts.py --automatic --send

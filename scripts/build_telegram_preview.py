@@ -33,9 +33,27 @@ def load_public_data() -> tuple[list[dict[str, Any]], dict[str, Any], dict[str, 
     return opportunities, summary, last_run
 
 
+def is_profile_relevant(opportunity: dict[str, Any], *, levels: set[str] = RECOMMENDED_LEVELS) -> bool:
+    """Return whether an opportunity is safe and relevant for Jean's profile."""
+    markers = " ".join(
+        [
+            str(opportunity.get("source") or ""),
+            *(str(tag) for tag in opportunity.get("tags") or []),
+            *(str(category) for category in opportunity.get("categories") or []),
+        ]
+    ).lower()
+    return (
+        opportunity.get("match_level") in levels
+        and opportunity.get("human_feedback_action") != "false_positive"
+        and opportunity.get("manual_review") is not True
+        and opportunity.get("offer_scope") != "external_private"
+        and "omil" not in markers
+    )
+
+
 def select_recommended(opportunities: list[dict[str, Any]]) -> list[dict[str, Any]]:
     """Return a short actionable selection for a Telegram digest."""
-    recommended = [item for item in opportunities if item.get("match_level") in RECOMMENDED_LEVELS]
+    recommended = [item for item in opportunities if is_profile_relevant(item)]
     recommended.sort(
         key=lambda item: (
             item.get("is_new_since_last_run") is not True,
@@ -48,15 +66,15 @@ def select_recommended(opportunities: list[dict[str, Any]]) -> list[dict[str, An
 
 
 def is_new_relevant(opportunity: dict[str, Any]) -> bool:
-    return opportunity.get("is_new_since_last_run") is True and opportunity.get("match_level") in RELEVANT_LEVELS
+    return opportunity.get("is_new_since_last_run") is True and is_profile_relevant(opportunity, levels=RELEVANT_LEVELS)
 
 
 def is_high_closing_soon(opportunity: dict[str, Any]) -> bool:
-    return opportunity.get("match_level") == "Alta" and opportunity.get("urgency") == "proximo"
+    return opportunity.get("urgency") == "proximo" and is_profile_relevant(opportunity, levels={"Alta"})
 
 
 def is_relevant_closing_soon(opportunity: dict[str, Any]) -> bool:
-    return opportunity.get("match_level") in RELEVANT_LEVELS and opportunity.get("urgency") == "proximo"
+    return opportunity.get("urgency") == "proximo" and is_profile_relevant(opportunity, levels=RELEVANT_LEVELS)
 
 
 def _short(value: Any, *, limit: int) -> str:
