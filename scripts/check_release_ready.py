@@ -30,6 +30,7 @@ NEW_SOURCE_NAMES = {
     "Municipalidad de Curico",
     "Municipalidad de Curicó",
     "Municipalidad de Molina",
+    "Municipalidad de Rauco",
     "Gobierno Regional del Maule",
     "Municipalidad de Talca",
     "SLEP Colchagua",

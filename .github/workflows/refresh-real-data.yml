@@ -78,6 +78,24 @@ jobs:
       - name: Validate Romeral dry-run source monitor
         run: python scripts/check_romeral_source.py
 
+      - name: Run Curico dry-run source monitor
+        run: python scripts/fetch_curico.py --dry-run
+
+      - name: Validate Curico dry-run source monitor
+        run: python scripts/check_curico_source.py
+
+      - name: Run Molina dry-run source monitor
+        run: python scripts/fetch_molina.py --dry-run
+
+      - name: Validate Molina dry-run source monitor
+        run: python scripts/check_molina_source.py
+
+      - name: Run Rauco dry-run source monitor
+        run: python scripts/fetch_rauco.py --dry-run
+
+      - name: Validate Rauco dry-run source monitor
+        run: python scripts/check_rauco_source.py
+
       - name: Build email alert preview
         run: python scripts/build_alert_preview.py
 
