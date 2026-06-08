@@ -69,6 +69,7 @@ a { color: inherit; }
 .section-heading { display: flex; gap: 20px; align-items: end; justify-content: space-between; margin-bottom: 18px; }
 .section-heading h2, .guide-card h2 { margin-bottom: 6px; color: var(--navy); font-size: clamp(1.65rem, 3vw, 2.2rem); font-weight: 800; letter-spacing: -.04em; }
 .section-copy { margin-bottom: 0; color: var(--muted); font-size: .9rem; }
+.economic-copy { max-width: 760px; margin-top: 7px; color: #476b7f; font-size: .78rem; }
 .results-count { margin-bottom: 1px; color: var(--muted); font-size: .8rem; font-weight: 700; white-space: nowrap; }
 
 .filters { padding: 17px; border: 1px solid var(--line); border-radius: 16px; background: var(--surface); box-shadow: 0 8px 22px rgba(19,52,77,.04); }
@@ -103,6 +104,9 @@ input::placeholder { color: #9aabb6; }
 .operational-badge.discarded, .operational-badge.false-positive { color: #995252; background: #ffebeb; }
 .operational-badge.closing, .operational-badge.review { color: #9b5e09; background: #fff2d9; }
 .operational-badge.reviewed { color: #23688e; background: #e9f5ff; }
+.operational-badge.economic-ok { color: #087255; background: #e2f8ef; }
+.operational-badge.economic-review { color: #8f5d08; background: #fff4d8; }
+.operational-badge.economic-low { color: #995252; background: #ffebeb; }
 .opportunity-title { margin: 14px 0 7px; color: var(--navy); font-size: 1.04rem; font-weight: 800; line-height: 1.42; }
 .institution { margin-bottom: 11px; color: var(--teal); font-size: .84rem; font-weight: 800; }
 .card-meta span { color: var(--muted); font-size: .7rem; }

@@ -8,6 +8,7 @@ const filters = {
   commune: document.querySelector("#commune-filter"),
   source: document.querySelector("#source-filter"),
   urgency: document.querySelector("#urgency-filter"),
+  economic: document.querySelector("#economic-filter"),
 };
 const relevanceFilter = document.querySelector("#relevance-filter");
 const textFilter = document.querySelector("#text-filter");
@@ -67,7 +68,17 @@ function operationalBadges(opportunity) {
   if (opportunity.manual_review === true || opportunity.human_feedback_action === "review") {
     badges.push(["REVISAR", "review"]);
   }
+  if (opportunity.economic_label) {
+    badges.push([opportunity.economic_label, economicBadgeClass(opportunity.economic_viability)]);
+  }
   return badges;
+}
+
+function economicBadgeClass(status) {
+  if (status === "bajo_piso") return "economic-low";
+  if (status === "renta_no_informada") return "economic-review";
+  if (["cumple_bueno", "cumple_recomendable", "viable_justo"].includes(status)) return "economic-ok";
+  return "review";
 }
 
 function matchExplanation(opportunity) {
@@ -78,7 +89,19 @@ function matchExplanation(opportunity) {
   else if (opportunity.human_feedback_action === "lower_priority") messages.push("Prioridad reducida por feedback.");
   if (!messages.length && opportunity.match_level === "Alta") messages.push("Alta coincidencia con el perfil.");
   if (opportunity.urgency === "proximo") messages.push("Revisar pronto: cierre próximo.");
+  if (opportunity.economic_note) messages.push(opportunity.economic_note);
+  if (opportunity.economic_review_required === true) messages.push("Revisar renta antes de postular.");
   return messages.join(" ");
+}
+
+function matchesEconomicFilter(opportunity, value) {
+  if (!value) return true;
+  if (value === "review") return opportunity.economic_viability === "renta_no_informada";
+  if (value === "low") return opportunity.economic_viability === "bajo_piso";
+  if (value === "meets") {
+    return ["cumple_bueno", "cumple_recomendable", "viable_justo"].includes(opportunity.economic_viability);
+  }
+  return true;
 }
 
 function matchesRelevance(opportunity, relevance) {
@@ -136,7 +159,8 @@ function renderOpportunities() {
     state.opportunities.filter((opportunity) =>
       matchesRelevance(opportunity, relevanceFilter.value) &&
       matchesText(opportunity, textFilter.value) &&
-      Object.entries(selected).every(([key, value]) => !value || opportunity[key] === value),
+      matchesEconomicFilter(opportunity, selected.economic) &&
+      Object.entries(selected).every(([key, value]) => key === "economic" || !value || opportunity[key] === value),
     ),
   );
   const list = document.querySelector("#opportunities-list");

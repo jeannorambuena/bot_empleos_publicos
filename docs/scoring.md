@@ -33,6 +33,28 @@ de compras públicas según corresponda.
 El resultado final se limita a un máximo de 100 puntos. Además del puntaje, el motor
 devuelve palabras clave encontradas y motivos legibles para futuras alertas.
 
+## Viabilidad economica Santiago/RM
+
+Despues del scoring profesional se aplica una regla economica solo para oportunidades
+ubicadas en Santiago o Region Metropolitana. La deteccion usa `region`, `commune`,
+`title`, `listing_url` y `source_url`, normalizados sin tildes, buscando senales como
+`Metropolitana` o `Santiago`.
+
+La renta se lee desde campos estructurados si existen (`salary`, `renta`,
+`renta_bruta`, `renta_liquida`, `sueldo`, etc.) y, como respaldo, desde montos en
+texto libre con signo `$`. Los montos menores a `$500.000` se ignoran para evitar
+confundir valores por hora o viaticos con renta mensual. Si el texto indica renta
+liquida se compara contra pisos liquidos; si indica bruta o no lo aclara se compara
+contra equivalencias brutas configurables en `santiago_economic_viability`:
+
+- `cumple_bueno`: desde `$2.500.000` bruto o `$2.000.000` liquido.
+- `cumple_recomendable`: desde `$2.250.000` bruto o `$1.800.000` liquido.
+- `viable_justo`: desde `$2.000.000` bruto o `$1.600.000` liquido.
+- `bajo_piso`: bajo esos montos; baja prioridad.
+- `renta_no_informada`: queda visible y marcada para revisar renta antes de postular.
+
+Esta regla no se aplica a Maule, O'Higgins ni oportunidades cercanas al domicilio.
+
 ## Qué descarta
 
 Si aparece una palabra negativa general configurada, la oportunidad se descarta con

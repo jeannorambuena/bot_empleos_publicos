@@ -129,6 +129,14 @@
     "psicóloga clínica"
   ],
   "minimum_alert_score": 70,
+  "santiago_economic_viability": {
+    "minimum_net": 1600000,
+    "recommended_net": 1800000,
+    "good_net": 2000000,
+    "minimum_gross": 2000000,
+    "recommended_gross": 2250000,
+    "good_gross": 2500000
+  },
   "areas_of_interest": [
     "Talca",
     "Curicó",

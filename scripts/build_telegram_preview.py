@@ -13,9 +13,11 @@ from typing import Any
 ROOT = Path(__file__).resolve().parents[1]
 OUTPUT = ROOT / "output" / "telegram"
 DASHBOARD_URL = os.environ.get("PUBLIC_SITE_URL") or "https://jeannorambuena.github.io/bot_empleos_publicos/"
+
 RELEVANT_LEVELS = {"Alta", "Media", "Baja"}
 RECOMMENDED_LEVELS = {"Alta", "Media"}
 MAX_RECOMMENDATIONS = 5
+VERY_HIGH_MANUAL_REVIEW_SCORE = 90
 
 
 def _load(path: Path) -> Any:
@@ -28,8 +30,10 @@ def load_public_data() -> tuple[list[dict[str, Any]], dict[str, Any], dict[str, 
     opportunities = _load(ROOT / "public" / "data" / "opportunities.json")
     summary = _load(ROOT / "public" / "data" / "summary.json")
     last_run = _load(ROOT / "public" / "data" / "last_run.json")
+
     if not isinstance(opportunities, list) or not isinstance(summary, dict) or not isinstance(last_run, dict):
         raise ValueError("JSON público inválido para preview Telegram.")
+
     return opportunities, summary, last_run
 
 
@@ -42,6 +46,7 @@ def is_profile_relevant(opportunity: dict[str, Any], *, levels: set[str] = RECOM
             *(str(category) for category in opportunity.get("categories") or []),
         ]
     ).lower()
+
     return (
         opportunity.get("match_level") in levels
         and opportunity.get("human_feedback_action") != "false_positive"
@@ -51,9 +56,23 @@ def is_profile_relevant(opportunity: dict[str, Any], *, levels: set[str] = RECOM
     )
 
 
+def _can_be_telegram_recommendation(item: dict[str, Any]) -> bool:
+    """Return whether an item passes the Santiago/RM economic viability rule for Telegram preview."""
+    if item.get("economic_viability") != "bajo_piso":
+        return True
+
+    comparison_score = int(item.get("pre_economic_match_score") or item.get("match_score") or 0)
+    return comparison_score >= VERY_HIGH_MANUAL_REVIEW_SCORE
+
+
 def select_recommended(opportunities: list[dict[str, Any]]) -> list[dict[str, Any]]:
     """Return a short actionable selection for a Telegram digest."""
-    recommended = [item for item in opportunities if is_profile_relevant(item)]
+    recommended = [
+        item
+        for item in opportunities
+        if is_profile_relevant(item) and _can_be_telegram_recommendation(item)
+    ]
+
     recommended.sort(
         key=lambda item: (
             item.get("is_new_since_last_run") is not True,
@@ -62,19 +81,29 @@ def select_recommended(opportunities: list[dict[str, Any]]) -> list[dict[str, An
             item.get("closing_date") or "9999-12-31",
         )
     )
+
     return recommended[:MAX_RECOMMENDATIONS]
 
 
 def is_new_relevant(opportunity: dict[str, Any]) -> bool:
-    return opportunity.get("is_new_since_last_run") is True and is_profile_relevant(opportunity, levels=RELEVANT_LEVELS)
+    return opportunity.get("is_new_since_last_run") is True and is_profile_relevant(
+        opportunity,
+        levels=RELEVANT_LEVELS,
+    )
 
 
 def is_high_closing_soon(opportunity: dict[str, Any]) -> bool:
-    return opportunity.get("urgency") == "proximo" and is_profile_relevant(opportunity, levels={"Alta"})
+    return opportunity.get("urgency") == "proximo" and is_profile_relevant(
+        opportunity,
+        levels={"Alta"},
+    )
 
 
 def is_relevant_closing_soon(opportunity: dict[str, Any]) -> bool:
-    return opportunity.get("urgency") == "proximo" and is_profile_relevant(opportunity, levels=RELEVANT_LEVELS)
+    return opportunity.get("urgency") == "proximo" and is_profile_relevant(
+        opportunity,
+        levels=RELEVANT_LEVELS,
+    )
 
 
 def _short(value: Any, *, limit: int) -> str:
@@ -93,13 +122,20 @@ def _location(opportunity: dict[str, Any]) -> str:
 
 def _format_recommendation(index: int, opportunity: dict[str, Any]) -> list[str]:
     new_marker = " | NUEVA" if opportunity.get("is_new_since_last_run") is True else ""
-    return [
+
+    lines = [
         f"{index}. [{opportunity.get('match_level', 'Sin nivel')} | {opportunity.get('match_score', 0)}%{new_marker}] {_short(opportunity.get('title'), limit=120)}",
         f"   Organismo: {_short(opportunity.get('institution'), limit=90)}",
         f"   Ubicación: {_location(opportunity)}",
         f"   Cierre: {opportunity.get('closing_date') or 'No especificado'}",
         f"   Link: {opportunity.get('source_url') or 'Sin enlace directo'}",
     ]
+
+    if opportunity.get("economic_alert"):
+        suffix = " | Revisión manual" if opportunity.get("economic_viability") == "bajo_piso" else ""
+        lines.insert(3, f"   Alerta económica: {opportunity['economic_alert']}{suffix}")
+
+    return lines
 
 
 def main() -> int:
@@ -113,6 +149,7 @@ def main() -> int:
     new_relevant = sum(is_new_relevant(item) for item in opportunities)
     relevant_closing_soon = sum(is_relevant_closing_soon(item) for item in opportunities)
     generated_at = last_run.get("finished_at") or datetime.now().astimezone().isoformat(timespec="seconds")
+
     lines = [
         "Radar Laboral Público Chile",
         "Reporte generado desde GitHub Actions",
@@ -126,15 +163,25 @@ def main() -> int:
         "",
         "Recomendadas:",
     ]
+
     if recommended:
         for index, item in enumerate(recommended, start=1):
             lines.extend(_format_recommendation(index, item))
     else:
         lines.append("- No hay oportunidades recomendadas en este corte.")
-    lines.extend(["", f"Dashboard: {DASHBOARD_URL}", "", "Envío manual seguro del radar laboral."])
+
+    lines.extend(
+        [
+            "",
+            f"Dashboard: {DASHBOARD_URL}",
+            "",
+            "Envío manual seguro del radar laboral.",
+        ]
+    )
 
     OUTPUT.mkdir(parents=True, exist_ok=True)
     (OUTPUT / "telegram-preview.txt").write_text("\n".join(lines) + "\n", encoding="utf-8")
+
     print(f"OK: preview Telegram generado ({len(recommended)} recomendadas). No se envió ningún mensaje.")
     return 0
 
