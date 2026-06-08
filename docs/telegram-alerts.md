@@ -100,3 +100,34 @@ historial sin revisión: perderlo puede permitir alertas duplicadas.
 
 El bot no responde mensajes porque no tiene polling ni webhook. Tampoco incorpora
 lógica conversacional. El workflow no envía correo ni conecta Google Calendar real.
+
+## Politica de novedades relevantes
+
+La revision automatica puede ejecutarse de lunes a viernes sin enviar un mensaje
+diario. Telegram solo avisa cuando existe al menos una oportunidad `Alta` nueva o
+`Alta` con cierre proximo que todavia no fue notificada.
+
+Antes de incluir una oportunidad, la politica descarta:
+
+- falsos positivos y nivel `Descartada`;
+- registros `manual_review`;
+- ofertas `external_private`;
+- publicaciones OMIL;
+- IDs ya registrados en `sent_opportunity_ids`.
+
+Si no llega un mensaje, puede significar que no hubo novedades relevantes para el
+perfil o que las oportunidades aptas ya fueron notificadas. El envio real sigue
+requiriendo `TELEGRAM_AUTO_ENABLED=true`, secrets configurados y el modo deliberado
+del workflow.
+
+Prueba local sin enviar:
+
+```powershell
+python scripts/build_telegram_preview.py
+python scripts/check_telegram_preview.py
+python scripts/simulate_telegram_policy.py
+python scripts/send_telegram_alerts.py --automatic --dry-run
+```
+
+El filtro visual del dashboard usa umbrales minimos: `Alta`, `Media o superior`,
+`Baja o superior` y `Todas las oportunidades publicas`.

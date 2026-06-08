@@ -24,6 +24,7 @@ CHECKS = (
     "check_sources_config.py",
     "check_source_sanitization.py",
     "check_priority_sources.py",
+    "simulate_telegram_policy.py",
 )
 NEW_SOURCE_NAMES = {
     "Municipalidad de Curico",

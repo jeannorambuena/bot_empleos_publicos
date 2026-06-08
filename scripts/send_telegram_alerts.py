@@ -18,6 +18,7 @@ from build_telegram_preview import (
     MAX_RECOMMENDATIONS,
     ROOT,
     _format_recommendation,
+    is_profile_relevant,
     load_public_data,
 )
 
@@ -36,10 +37,13 @@ def _load_state(path: Path) -> dict[str, Any]:
         state = json.loads(path.read_text(encoding="utf-8"))
     except (OSError, json.JSONDecodeError) as error:
         raise ValueError(f"No fue posible leer estado Telegram {path}: {error}") from error
+
     if not isinstance(state, dict):
         raise ValueError("El estado Telegram debe ser un objeto JSON.")
+
     if not isinstance(state.get("sent_opportunity_ids"), list):
         raise ValueError("El estado Telegram requiere sent_opportunity_ids como lista.")
+
     return state
 
 
@@ -51,8 +55,12 @@ def _write_state(path: Path, state: dict[str, Any]) -> None:
 def _same_day(timestamp: Any, now: datetime) -> bool:
     if not timestamp:
         return False
+
     try:
-        return datetime.fromisoformat(str(timestamp)).astimezone(AUTOMATION_TIMEZONE).date() == now.astimezone(AUTOMATION_TIMEZONE).date()
+        return (
+            datetime.fromisoformat(str(timestamp)).astimezone(AUTOMATION_TIMEZONE).date()
+            == now.astimezone(AUTOMATION_TIMEZONE).date()
+        )
     except ValueError:
         return False
 
@@ -61,11 +69,11 @@ def is_automatic_candidate(item: dict[str, Any], sent_ids: set[str]) -> bool:
     """Return whether an opportunity may trigger a controlled automatic alert."""
     item_id = str(item.get("id") or "")
     is_trigger = item.get("is_new_since_last_run") is True or item.get("urgency") == "proximo"
+
     return (
         bool(item_id)
         and item_id not in sent_ids
-        and item.get("match_level") == "Alta"
-        and item.get("human_feedback_action") != "false_positive"
+        and is_profile_relevant(item, levels={"Alta"})
         and item.get("economic_viability") != "bajo_piso"
         and is_trigger
     )
@@ -79,10 +87,24 @@ def evaluate_automatic_policy(
 ) -> tuple[bool, str, list[dict[str, Any]]]:
     """Evaluate rate limit, duplicates and relevance without sending anything."""
     current_time = now or datetime.now(AUTOMATION_TIMEZONE)
+    sent_ids = {str(item_id) for item_id in state.get("sent_opportunity_ids", [])}
+
+    relevant = [
+        item
+        for item in opportunities
+        if is_profile_relevant(item, levels={"Alta"})
+        and (item.get("is_new_since_last_run") is True or item.get("urgency") == "proximo")
+    ]
+
+    if not relevant:
+        return False, "No hay oportunidades nuevas relevantes para el perfil.", []
+
+    if not any(is_automatic_candidate(item, sent_ids) for item in relevant):
+        return False, "No hay oportunidades relevantes no notificadas.", []
+
     if _same_day(state.get("last_auto_sent_at"), current_time):
         return False, "Ya existe un envío automático registrado para el día de hoy.", []
 
-    sent_ids = {str(item_id) for item_id in state.get("sent_opportunity_ids", [])}
     candidates = [item for item in opportunities if is_automatic_candidate(item, sent_ids)]
     candidates.sort(
         key=lambda item: (
@@ -92,11 +114,15 @@ def evaluate_automatic_policy(
             item.get("closing_date") or "9999-12-31",
         )
     )
+
     included = candidates[:MAX_RECOMMENDATIONS]
+
     if not included:
         return False, "No hay oportunidades Alta nuevas o con cierre próximo pendientes de envío.", []
+
     if any(item.get("is_new_since_last_run") is True for item in included):
         return True, "Hay oportunidades Alta nuevas pendientes de envío.", included
+
     return True, "Hay oportunidades Alta con cierre próximo pendientes de envío.", included
 
 
@@ -109,24 +135,48 @@ def _automatic_message(opportunities: list[dict[str, Any]], reason: str, generat
         "",
         "Recomendadas:",
     ]
+
     for index, item in enumerate(opportunities, start=1):
         lines.extend(_format_recommendation(index, item))
-    lines.extend(["", f"Dashboard: {DASHBOARD_URL}", "", "Envío automático limitado: máximo una alerta diaria."])
+
+    lines.extend(
+        [
+            "",
+            f"Dashboard: {DASHBOARD_URL}",
+            "",
+            "Envío automático limitado: máximo una alerta diaria.",
+        ]
+    )
+
     return "\n".join(lines) + "\n"
 
 
 def _send_message(message: str, token: str, chat_id: str) -> int:
-    data = urlencode({"chat_id": chat_id, "text": message, "disable_web_page_preview": "true"}).encode("utf-8")
+    if not message.strip():
+        print("ERROR: Telegram bloqueado: el mensaje no puede estar vacío.", file=sys.stderr)
+        return 1
+
+    data = urlencode(
+        {
+            "chat_id": chat_id,
+            "text": message,
+            "disable_web_page_preview": "true",
+        }
+    ).encode("utf-8")
+
     request = Request(f"https://api.telegram.org/bot{token}/sendMessage", data=data, method="POST")
+
     try:
         with urlopen(request, timeout=20) as response:
             payload = json.loads(response.read().decode("utf-8"))
     except (HTTPError, URLError, TimeoutError, json.JSONDecodeError) as error:
         print(f"ERROR: Telegram no confirmó el envío para chat {_masked_chat_id(chat_id)}: {error}", file=sys.stderr)
         return 1
+
     if payload.get("ok") is not True:
         print(f"ERROR: Telegram rechazó el envío para chat {_masked_chat_id(chat_id)}.", file=sys.stderr)
         return 1
+
     print(f"Telegram enviado correctamente al chat {_masked_chat_id(chat_id)}.")
     return 0
 
@@ -141,30 +191,39 @@ def _run_automatic(*, send: bool, state_path: Path) -> int:
 
     now = datetime.now(AUTOMATION_TIMEZONE)
     would_send, reason, included = evaluate_automatic_policy(opportunities, state, now=now)
+
     print("Política automática Telegram")
     print("---------------------------")
     print(f"Modo: {'REAL' if send else 'DRY-RUN'}")
     print(f"Corresponde enviar: {'Sí' if would_send else 'No'}")
     print(f"Motivo: {reason}")
     print(f"Oportunidades incluidas: {len(included)}")
+
     for item in included:
         print(f"- {item.get('id')} | {item.get('match_score', 0)}% | {item.get('title')}")
 
     if not would_send:
         print("Sin envío: la política no habilitó una alerta.")
         return 0
+
     if not send:
         print("DRY-RUN SOLAMENTE: no se llamó a Telegram y no se modificó el estado.")
         return 0
 
+    if os.environ.get("TELEGRAM_AUTO_ENABLED") != "true":
+        print("ERROR: envío automático bloqueado: TELEGRAM_AUTO_ENABLED debe valer true.", file=sys.stderr)
+        return 1
+
     token = os.environ.get("TELEGRAM_BOT_TOKEN")
     chat_id = os.environ.get("TELEGRAM_CHAT_ID")
+
     if not token or not chat_id:
         print("ERROR: envío automático bloqueado: faltan TELEGRAM_BOT_TOKEN o TELEGRAM_CHAT_ID.", file=sys.stderr)
         return 1
 
     generated_at = last_run.get("finished_at") or now.isoformat(timespec="seconds")
     result = _send_message(_automatic_message(included, reason, str(generated_at)), token, chat_id)
+
     if result:
         return result
 
@@ -179,6 +238,7 @@ def _run_automatic(*, send: bool, state_path: Path) -> int:
             "last_reason": reason,
         }
     )
+
     _write_state(state_path, state)
     print(f"Estado anti-duplicados actualizado: {state_path}")
     return 0
@@ -188,14 +248,18 @@ def _run_manual(*, send: bool) -> int:
     if not send:
         print("Envío bloqueado: falta confirmación explícita --send.")
         return 0
+
     token = os.environ.get("TELEGRAM_BOT_TOKEN")
     chat_id = os.environ.get("TELEGRAM_CHAT_ID")
+
     if not token or not chat_id:
         print("Envío bloqueado: configura TELEGRAM_BOT_TOKEN y TELEGRAM_CHAT_ID.")
         return 0
+
     if not PREVIEW.exists():
         print("ERROR: primero genera output/telegram/telegram-preview.txt.", file=sys.stderr)
         return 1
+
     return _send_message(PREVIEW.read_text(encoding="utf-8"), token, chat_id)
 
 
@@ -209,11 +273,14 @@ def main() -> int:
 
     if args.send and args.dry_run:
         parser.error("--send y --dry-run no pueden usarse juntos.")
+
     if args.automatic:
         return _run_automatic(send=args.send and not args.dry_run, state_path=args.state)
+
     if args.dry_run:
         print("DRY-RUN manual: no se llamó a Telegram.")
         return 0
+
     return _run_manual(send=args.send)
 
 

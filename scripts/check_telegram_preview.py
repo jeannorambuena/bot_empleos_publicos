@@ -6,6 +6,8 @@ import json
 import sys
 from pathlib import Path
 
+from build_telegram_preview import is_profile_relevant, select_recommended
+
 
 ROOT = Path(__file__).resolve().parents[1]
 PREVIEW = ROOT / "output" / "telegram" / "telegram-preview.txt"
@@ -37,6 +39,9 @@ def main() -> int:
         for expected in ("Recomendadas:", "Organismo:", "Ubicación:", "Cierre:", "Link:"):
             if expected not in text:
                 errors.append(f"El preview accionable no contiene: {expected}")
+    for item in select_recommended(opportunities):
+        if not is_profile_relevant(item):
+            errors.append(f"El preview incluye una oportunidad no apta: {item.get('id')}.")
 
     if errors:
         for error in errors:
