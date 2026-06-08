@@ -72,6 +72,12 @@ jobs:
       - name: Validate Pages readiness
         run: python scripts/check_pages_ready.py
 
+      - name: Run Romeral dry-run source monitor
+        run: python scripts/fetch_romeral.py --dry-run
+
+      - name: Validate Romeral dry-run source monitor
+        run: python scripts/check_romeral_source.py
+
       - name: Build email alert preview
         run: python scripts/build_alert_preview.py
 
