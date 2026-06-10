@@ -2,8 +2,8 @@
   {
     "id": "empleos-publicos-130706",
     "first_seen_at": "2026-06-05T13:15:02+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 5,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 6,
     "last_title": "REEMPLAZO POST NATAL - ABOGADA.O SECCIÓN BUEN TRATO Y DERECHOS HUMANOS",
     "last_institution": "Servicio Nacional del Adulto Mayor",
     "last_level": "Descartada",
@@ -13,12 +13,23 @@
   {
     "id": "empleos-publicos-133633",
     "first_seen_at": "2026-06-05T13:15:02+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 2,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 3,
     "last_title": "CONDUCTOR(A) DE RESIDENCIA FAMILIAR-DIRECCIÓN REGIONAL - REGIÓN DE O'HIGGINS PRS - 01-06-2026",
     "last_institution": "Dirección Regional de O´Higgins Servicio de Protección",
     "last_level": "Descartada",
     "last_score": 15,
+    "currently_visible": true
+  },
+  {
+    "id": "empleos-publicos-134449",
+    "first_seen_at": "2026-06-10T13:28:17+00:00",
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 1,
+    "last_title": "DESARROLLADOR(A) FULLSTACK",
+    "last_institution": "Dirección del Servicio de Salud Maule",
+    "last_level": "Media",
+    "last_score": 67,
     "currently_visible": true
   },
   {
@@ -35,8 +46,8 @@
   {
     "id": "empleos-publicos-135366",
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 26,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 27,
     "last_title": "MÉDICO CIRUJANO (A) CON EUNACOM PARA EL POOL DE REEMPLAZOS DEL SERVICIO DE SALUD O'HIGGINS",
     "last_institution": "Servicio de Salud O'Higgins",
     "last_level": "Descartada",
@@ -123,8 +134,8 @@
   {
     "id": "empleos-publicos-138285",
     "first_seen_at": "2026-06-05T13:15:02+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 5,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 6,
     "last_title": "TÉCNICO(A) EN ENFERMERÍA-DIRECCIÓN REGIONAL - REGIÓN DE O'HIGGINS PRS - 04-06-2026",
     "last_institution": "Dirección Regional de O´Higgins Servicio de Protección",
     "last_level": "Descartada",
@@ -134,8 +145,8 @@
   {
     "id": "empleos-publicos-138286",
     "first_seen_at": "2026-06-05T13:15:02+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 5,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 6,
     "last_title": "ASISTENTE DE RESIDENCIA FAMILIAR-DIRECCIÓN REGIONAL - REGIÓN DE O'HIGGINS PRS - 01-06-2026",
     "last_institution": "Dirección Regional de O´Higgins Servicio de Protección",
     "last_level": "Descartada",
@@ -184,7 +195,7 @@
     "last_institution": "Hospital Del Salvador",
     "last_level": "Descartada",
     "last_score": 15,
-    "currently_visible": true
+    "currently_visible": false
   },
   {
     "id": "empleos-publicos-139384",
@@ -233,8 +244,8 @@
   {
     "id": "empleos-publicos-139455",
     "first_seen_at": "2026-06-09T13:11:52+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 1,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 2,
     "last_title": "TÉCNICO PARAMÉDICO EN ANESTESIA, DIURNO (7:30 A 16:18 O 11:00 A 20:00 HRS)",
     "last_institution": "Hospital Clínico San Borja Arriarán",
     "last_level": "Descartada",
@@ -244,8 +255,8 @@
   {
     "id": "empleos-publicos-139456",
     "first_seen_at": "2026-06-09T13:11:52+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 1,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 2,
     "last_title": "TÉCNICO PARAMÉDICO EN ARSENALERÍA, DIURNO (7:30 A 16:18 O 11:00 A 20:00 HRS)",
     "last_institution": "Hospital Clínico San Borja Arriarán",
     "last_level": "Descartada",
@@ -310,9 +321,20 @@
   {
     "id": "empleos-publicos-139502",
     "first_seen_at": "2026-06-08T03:37:40+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 4,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 5,
     "last_title": "TÉCNICO GESTIÓN DEL RIESGO DE DESASTRES",
+    "last_institution": "Servicio de Salud Metropolitano Sur Oriente",
+    "last_level": "Descartada",
+    "last_score": 15,
+    "currently_visible": true
+  },
+  {
+    "id": "empleos-publicos-139503",
+    "first_seen_at": "2026-06-10T13:28:17+00:00",
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 1,
+    "last_title": "CONSTRUCTOR(A) CIVIL",
     "last_institution": "Servicio de Salud Metropolitano Sur Oriente",
     "last_level": "Descartada",
     "last_score": 15,
@@ -321,8 +343,8 @@
   {
     "id": "empleos-publicos-139598",
     "first_seen_at": "2026-06-03T13:53:27+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 7,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 8,
     "last_title": "REEMPLAZO PRE Y POST NATAL: TUTOR (A) DIURNO (A) DE PROTECCIÓN ESPECIALIZADA - RESIDENCIA FAMILIAR PADRE MARIANO - REGIÓN METROPOLITANA - PRS 02.06.2026",
     "last_institution": "Dirección Regional Metropolitana Servicio de Protección",
     "last_level": "Descartada",
@@ -365,8 +387,8 @@
   {
     "id": "empleos-publicos-139681",
     "first_seen_at": "2026-06-05T13:15:02+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 5,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 6,
     "last_title": "059-26 EJECUTIVO DE COMPRAS SENIOR",
     "last_institution": "Hospital Clínico Metropolitano Dra. Eloisa Díaz de La Florida",
     "last_level": "Descartada",
@@ -387,8 +409,8 @@
   {
     "id": "empleos-publicos-139689",
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 26,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 27,
     "last_title": "ENFERMEROA CLÍNICO PARA UNIDAD DE ANESTESIA Y PABELLONES QUIRÚRGICOS EN RECUPERACIÓN",
     "last_institution": "Hospital Félix Bulnes Cerda",
     "last_level": "Descartada",
@@ -409,8 +431,8 @@
   {
     "id": "empleos-publicos-139691",
     "first_seen_at": "2026-06-01T21:17:41+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 22,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 23,
     "last_title": "TÉCNICO EN ENFERMERÍA NIVEL SUPERIOR PARA UNIDAD DE PROCEDIMIENTOS",
     "last_institution": "Hospital Félix Bulnes Cerda",
     "last_level": "Descartada",
@@ -420,8 +442,8 @@
   {
     "id": "empleos-publicos-139692",
     "first_seen_at": "2026-06-01T21:17:41+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 22,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 23,
     "last_title": "PSICÓLOGO (A) PARA SERVICIO DE PEDIATRÍA",
     "last_institution": "Hospital Félix Bulnes Cerda",
     "last_level": "Descartada",
@@ -442,8 +464,8 @@
   {
     "id": "empleos-publicos-139711",
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 26,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 27,
     "last_title": "SUBDIRECTOR(A) MÉDICO(A) - HOSPITAL SAN LUIS DE BUIN – PAINE",
     "last_institution": "Servicio de Salud Metropolitano Sur",
     "last_level": "Descartada",
@@ -453,8 +475,8 @@
   {
     "id": "empleos-publicos-139741",
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 26,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 27,
     "last_title": "GUARDIA DE SEGURIDAD 3ER TURNO - GRADO 20 E.U.S",
     "last_institution": "Hospital de Niños Roberto del Río",
     "last_level": "Descartada",
@@ -497,8 +519,8 @@
   {
     "id": "empleos-publicos-139745",
     "first_seen_at": "2026-06-04T13:20:56+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 6,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 7,
     "last_title": "TÉCNICO DE EQUIPOS MÉDICOS - DIURNO - GRADO 18° - UNIDAD: EQUIPOS MÉDICOS",
     "last_institution": "Hospital de Niños Roberto del Río",
     "last_level": "Descartada",
@@ -525,14 +547,25 @@
     "last_institution": "Hospital de Niños Roberto del Río",
     "last_level": "Descartada",
     "last_score": 0,
-    "currently_visible": true
+    "currently_visible": false
   },
   {
     "id": "empleos-publicos-139748",
     "first_seen_at": "2026-06-04T13:20:56+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 6,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 7,
     "last_title": "TÉCNICO DE EQUIPOS MÉDICOS - DIURNO - GRADO 21° - UNIDAD: EQUIPOS MÉDICOS",
+    "last_institution": "Hospital de Niños Roberto del Río",
+    "last_level": "Descartada",
+    "last_score": 0,
+    "currently_visible": true
+  },
+  {
+    "id": "empleos-publicos-139750",
+    "first_seen_at": "2026-06-10T13:28:17+00:00",
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 1,
+    "last_title": "ENFERMERA(O) CLÍNICA(O), 4° TURNO SIN ASIGNACIÓN, UNIDAD UCI CARDIOVASCULAR",
     "last_institution": "Hospital de Niños Roberto del Río",
     "last_level": "Descartada",
     "last_score": 0,
@@ -541,8 +574,8 @@
   {
     "id": "empleos-publicos-139771",
     "first_seen_at": "2026-06-08T03:37:40+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 4,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 5,
     "last_title": "PSICOLOGO(A) CLINICO(A) 44 HRS CONTRATA CESFAM DR. NORMAN VOULLIEME- PROGRAMA DEL SERVICIO DE PROTECCIÓN ESPECIALIZADA Y SERVICIO DE REINSERCION JUVENIL - DIRECCIÓN DE ATENCIÓN PRIMARIA",
     "last_institution": "Dirección Atención Primaria SSMCentral",
     "last_level": "Descartada",
@@ -552,8 +585,8 @@
   {
     "id": "empleos-publicos-139772",
     "first_seen_at": "2026-06-08T03:37:40+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 4,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 5,
     "last_title": "PSICÓLOGO(A) CLÍNICO(A) 44 HRS SUPLENCIA EN VACANCIA – CESFAM N°1 - DIRECCIÓN DE ATENCIÓN PRIMARIA - SSMC",
     "last_institution": "Dirección Atención Primaria SSMCentral",
     "last_level": "Descartada",
@@ -563,8 +596,8 @@
   {
     "id": "empleos-publicos-139773",
     "first_seen_at": "2026-06-08T03:37:40+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 4,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 5,
     "last_title": "JEFE(A) UNIDAD DE REMUNERACIONES 44 HRS CONTRATA – DIRECCIÓN DE ATENCIÓN PRIMARIA - SSMC",
     "last_institution": "Dirección Atención Primaria SSMCentral",
     "last_level": "Descartada",
@@ -574,8 +607,8 @@
   {
     "id": "empleos-publicos-139828",
     "first_seen_at": "2026-06-04T13:20:56+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 6,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 7,
     "last_title": "TERAPEUTA PARA EQUIPO DE TERAPIA MULTISISTÉMICA LAMPA",
     "last_institution": "Subsecretaría de Prevención del Delito",
     "last_level": "Descartada",
@@ -585,8 +618,8 @@
   {
     "id": "empleos-publicos-139829",
     "first_seen_at": "2026-06-08T10:56:06+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 3,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 4,
     "last_title": "TERAPEUTA PARA EQUIPO DE TERAPIA MULTISISTÉMICA- REGIÓN METROPOLITANA, COMUNA DE RECOLETA.",
     "last_institution": "Subsecretaría de Prevención del Delito",
     "last_level": "Descartada",
@@ -596,8 +629,8 @@
   {
     "id": "empleos-publicos-139830",
     "first_seen_at": "2026-06-09T13:11:52+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 1,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 2,
     "last_title": "TERAPEUTA PARA EQUIPO DE TERAPIA MULTISISTÉMICA PEÑAFLOR",
     "last_institution": "Subsecretaría de Prevención del Delito",
     "last_level": "Descartada",
@@ -607,8 +640,8 @@
   {
     "id": "empleos-publicos-140139",
     "first_seen_at": "2026-06-04T13:20:56+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 6,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 7,
     "last_title": "ANALISTA EN INGENIERÍA SANITARIA, DEPARTAMENTO DE INFRAESTRUCTURA, UNIDAD DE PROYECTOS, DIRECCIÓN NACIONAL, REGIÓN METROPOLITANA.",
     "last_institution": "Instituto Nacional de Deportes de Chile",
     "last_level": "Descartada",
@@ -651,8 +684,8 @@
   {
     "id": "empleos-publicos-140156",
     "first_seen_at": "2026-06-05T13:15:02+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 5,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 6,
     "last_title": "AUXILIAR DE SERVICIO; CR CIRUGÍA",
     "last_institution": "Instituto Nacional del Cáncer",
     "last_level": "Descartada",
@@ -662,8 +695,8 @@
   {
     "id": "empleos-publicos-140157",
     "first_seen_at": "2026-06-09T13:11:52+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 1,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 2,
     "last_title": "ENFERMERO(A) PRE Y POST NATAL, UNIDAD DE ANESTESIA",
     "last_institution": "Instituto Nacional del Cáncer",
     "last_level": "Descartada",
@@ -684,8 +717,8 @@
   {
     "id": "empleos-publicos-140219",
     "first_seen_at": "2026-06-09T13:11:52+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 1,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 2,
     "last_title": "TÉCNICO DE SOPORTE INFORMÁTICO E INFRAESTRUCTURA DIURNO HLCM",
     "last_institution": "Hospital Luis Calvo Mackenna",
     "last_level": "Alta",
@@ -695,8 +728,8 @@
   {
     "id": "empleos-publicos-140220",
     "first_seen_at": "2026-06-05T13:15:02+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 5,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 6,
     "last_title": "TENS UNIDAD DE ONCOLOGÍA CUARTO TURNO HLCM",
     "last_institution": "Hospital Luis Calvo Mackenna",
     "last_level": "Descartada",
@@ -706,8 +739,8 @@
   {
     "id": "empleos-publicos-140221",
     "first_seen_at": "2026-06-05T13:15:02+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 5,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 6,
     "last_title": "PSICÓLOGO CLÍNICO INFANTO JUVENIL HLCM",
     "last_institution": "Hospital Luis Calvo Mackenna",
     "last_level": "Descartada",
@@ -717,8 +750,8 @@
   {
     "id": "empleos-publicos-140222",
     "first_seen_at": "2026-06-05T13:15:02+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 5,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 6,
     "last_title": "INGENIERO DE SISTEMAS DESARROLLADOR HLCM",
     "last_institution": "Hospital Luis Calvo Mackenna",
     "last_level": "Media",
@@ -728,8 +761,8 @@
   {
     "id": "empleos-publicos-140223",
     "first_seen_at": "2026-06-05T13:15:02+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 5,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 6,
     "last_title": "TÉCNICO EN PÁRVULOS UNIDAD DE CUIDADOS INFANTILES DIURNO HLCM",
     "last_institution": "Hospital Luis Calvo Mackenna",
     "last_level": "Descartada",
@@ -739,8 +772,8 @@
   {
     "id": "empleos-publicos-140224",
     "first_seen_at": "2026-06-04T13:20:56+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 6,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 7,
     "last_title": "TÉCNICO ENCARGADO DE REAS Y GESTIÓN AMBIENTAL HLCM",
     "last_institution": "Hospital Luis Calvo Mackenna",
     "last_level": "Descartada",
@@ -794,8 +827,8 @@
   {
     "id": "empleos-publicos-140243",
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 26,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 27,
     "last_title": "028-26 TÉCNICO DE EQUIPOS MÉDICOS, G°18, SUBDIRECCIÓN ADMINISTRATIVA",
     "last_institution": "Hospital Metropolitano de Santiago",
     "last_level": "Descartada",
@@ -805,8 +838,8 @@
   {
     "id": "empleos-publicos-140250",
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 26,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 27,
     "last_title": "MÉDICO PSIQUIATRA 22 HORAS",
     "last_institution": "Hospital San José de Parral",
     "last_level": "Descartada",
@@ -816,8 +849,8 @@
   {
     "id": "empleos-publicos-140251",
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 26,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 27,
     "last_title": "MÉDICO (A) ANESTESIÓLOGO (A)",
     "last_institution": "Hospital San José de Parral",
     "last_level": "Descartada",
@@ -827,8 +860,8 @@
   {
     "id": "empleos-publicos-140252",
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 26,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 27,
     "last_title": "MÉDICO CIRUJANO ESPECIALISTA EN CIRUGÍA GENERAL",
     "last_institution": "Hospital San José de Parral",
     "last_level": "Descartada",
@@ -860,9 +893,20 @@
   {
     "id": "empleos-publicos-140319",
     "first_seen_at": "2026-06-05T13:15:02+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 5,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 6,
     "last_title": "REEMPLAZO PROLONGADO AUXILIAR GENERAL VOLANTE",
+    "last_institution": "Hospital DIPRECA",
+    "last_level": "Descartada",
+    "last_score": 15,
+    "currently_visible": true
+  },
+  {
+    "id": "empleos-publicos-140320",
+    "first_seen_at": "2026-06-10T13:28:17+00:00",
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 1,
+    "last_title": "GENERALISTA DESARROLLO ORGANIZACIONAL",
     "last_institution": "Hospital DIPRECA",
     "last_level": "Descartada",
     "last_score": 15,
@@ -871,8 +915,8 @@
   {
     "id": "empleos-publicos-140342",
     "first_seen_at": "2026-06-08T03:37:40+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 4,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 5,
     "last_title": "PROFESIONAL DE LÍNEA UNIDAD DE PROTECCIÓN Y GARANTÍA DE DERECHOS DIRECCIÓN REGIONAL - REGIÓN DEL MAULE PRS: 12-2026",
     "last_institution": "Dirección Regional del Maule SNRSJ",
     "last_level": "Descartada",
@@ -882,8 +926,8 @@
   {
     "id": "empleos-publicos-140347",
     "first_seen_at": "2026-06-08T03:37:40+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 4,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 5,
     "last_title": "PSICÓLOGO(A) CENTRO IP IRC - REGIÓN DEL MAULE PRS: N° 18-2026",
     "last_institution": "Dirección Regional del Maule SNRSJ",
     "last_level": "Descartada",
@@ -893,8 +937,8 @@
   {
     "id": "empleos-publicos-140348",
     "first_seen_at": "2026-06-08T03:37:40+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 4,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 5,
     "last_title": "PROFESIONAL DE LÍNEA UNIDAD DE PLANIFICACIÓN TÉCNICA Y ESTUDIOS - DIRECCIÓN REGIONAL -REGIÓN MAULE PRS: 17-2026",
     "last_institution": "Dirección Regional del Maule SNRSJ",
     "last_level": "Descartada",
@@ -915,8 +959,8 @@
   {
     "id": "empleos-publicos-140363",
     "first_seen_at": "2026-06-03T13:53:27+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 7,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 8,
     "last_title": "CÓDIGO 013: NUTRICIONISTA – SERVICIO DE PROCEDIMIENTOS COMPLEJOS – CR ATENCIÓN AMBULARORIA - SUBDIRECCIÓN MÉDICA.",
     "last_institution": "Complejo Asistencial Dr. Sótero del Río",
     "last_level": "Descartada",
@@ -926,8 +970,8 @@
   {
     "id": "empleos-publicos-140364",
     "first_seen_at": "2026-06-04T13:20:56+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 6,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 7,
     "last_title": "CÓDIGO 014: TECNÓLOGO(A) MÉDICO – DEPARTAMENTO IMAGENOLOGÍA SUBDIRECCIÓN UNIDADES DE APOYO",
     "last_institution": "Complejo Asistencial Dr. Sótero del Río",
     "last_level": "Descartada",
@@ -937,8 +981,8 @@
   {
     "id": "empleos-publicos-140365",
     "first_seen_at": "2026-06-09T13:11:52+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 1,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 2,
     "last_title": "CÓDIGO 015: PSICÓLOGO(A) – PROGRAMA TRASTORNO DEL ESPECTRO AUTISTA – SERVICIO NINEAS – CR DEL NIÑO Y DEL ADOLESCENTE – SUBDIRECCIÓN MÉDICA",
     "last_institution": "Complejo Asistencial Dr. Sótero del Río",
     "last_level": "Descartada",
@@ -1003,8 +1047,8 @@
   {
     "id": "empleos-publicos-140386",
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 26,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 27,
     "last_title": "MÉDICO INTERNISTA – 22 HORAS – CONTRATA CRS DR. SALVADOR ALLENDE GOSSENS",
     "last_institution": "CRS \"Dr. Salvador Allende Gossens\"",
     "last_level": "Descartada",
@@ -1014,8 +1058,8 @@
   {
     "id": "empleos-publicos-140420",
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 26,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 27,
     "last_title": "PRESIDENTE(A) COMISIÓN DE APELACIONES",
     "last_institution": "Superintendencia de Pensiones",
     "last_level": "Descartada",
@@ -1113,8 +1157,8 @@
   {
     "id": "empleos-publicos-140430",
     "first_seen_at": "2026-06-02T13:32:18+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 10,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 11,
     "last_title": "ADMINISTRATIVO-A DE OFICINA DE PARTES Y ATENCION CIUDADANA",
     "last_institution": "Servicio Local de Educación Pública de Valle Cachapoal",
     "last_level": "Descartada",
@@ -1168,8 +1212,8 @@
   {
     "id": "empleos-publicos-140435",
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 26,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 27,
     "last_title": "BASE DE DATOS PROFESIONALES, MÉDICOS, TÉCNICOS Y AUXILIARES REFUERZO CAMPAÑA DE INVIERNO 2026",
     "last_institution": "Dirección del Servicio Salud O'Higgins",
     "last_level": "Descartada",
@@ -1201,8 +1245,8 @@
   {
     "id": "empleos-publicos-140456",
     "first_seen_at": "2026-06-09T13:11:52+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 1,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 2,
     "last_title": "ADMINISTRATIVO(A) OFICINA DE PARTES",
     "last_institution": "Instituto de Neurocirugía Dr. Alfonso Asenjo",
     "last_level": "Descartada",
@@ -1256,8 +1300,8 @@
   {
     "id": "empleos-publicos-140462",
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 26,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 27,
     "last_title": "MÉDICO ESPECIALISTA EN PEDIATRÍA PARA EL SERVICIO DE URGENCIA",
     "last_institution": "Hospital de Talagante",
     "last_level": "Descartada",
@@ -1267,8 +1311,8 @@
   {
     "id": "empleos-publicos-140468",
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 26,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 27,
     "last_title": "TÉCNICO EN PREVENCIÓN DE RIESGOS POOL DE REEMPLAZOS HOSPITAL DE LOLOL",
     "last_institution": "Hospital de Lolol",
     "last_level": "Descartada",
@@ -1394,7 +1438,7 @@
     "last_institution": "Hospital Santiago Oriente Dr. Luis Tisné Brousse",
     "last_level": "Descartada",
     "last_score": 0,
-    "currently_visible": true
+    "currently_visible": false
   },
   {
     "id": "empleos-publicos-140494",
@@ -1443,8 +1487,8 @@
   {
     "id": "empleos-publicos-140501",
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 26,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 27,
     "last_title": "CÓD.008.1-26 AUXILIAR HOSPITAL DE DÍA ADULTO",
     "last_institution": "CRS Hospital Provincia Cordillera",
     "last_level": "Descartada",
@@ -1460,13 +1504,13 @@
     "last_institution": "Dirección de Compras y Contratación Pública",
     "last_level": "Alta",
     "last_score": 100,
-    "currently_visible": true
+    "currently_visible": false
   },
   {
     "id": "empleos-publicos-140504",
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 26,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 27,
     "last_title": "TÉCNICO DE PLATAFORMA Y SERVICIOS DIGITALES - DIVISIÓN DE GESTIÓN TECNOLOGÍA Y PROCESOS - RM (TÉCNICO G°15 E.U.S)",
     "last_institution": "Secretaría y Administración General del Ministerio de Transportes",
     "last_level": "Alta",
@@ -1487,8 +1531,8 @@
   {
     "id": "empleos-publicos-140507",
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 26,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 27,
     "last_title": "OFICIAL ADMINISTRATIVO DE LABORATORIO POOL DE REEMPLAZOS PARA EL HOSPITAL DE LITUECHE",
     "last_institution": "Hospital de Litueche",
     "last_level": "Descartada",
@@ -1531,8 +1575,8 @@
   {
     "id": "empleos-publicos-140521",
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 26,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 27,
     "last_title": "AUXILIAR DE PORTERÍA - ÁREA SERVICIOS DE APOYO - FACULTAD DE CIENCIAS FÍSICAS Y MATEMÁTICAS (FCFM)",
     "last_institution": "Facultad de Ciencias Físicas y Matemáticas",
     "last_level": "Descartada",
@@ -1641,8 +1685,8 @@
   {
     "id": "empleos-publicos-140539",
     "first_seen_at": "2026-06-09T13:11:52+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 1,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 2,
     "last_title": "SUBDIRECTOR(A) DE ADMINISTRACIÓN Y FINANZAS",
     "last_institution": "Instituto Nacional del Tórax",
     "last_level": "Descartada",
@@ -1663,8 +1707,8 @@
   {
     "id": "empleos-publicos-140565",
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 26,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 27,
     "last_title": "MÉDICO(A) ESPECIALISTA EN OTORRINOLARINGOLOGÍA (11 HORAS)",
     "last_institution": "Centro de Referencia de Salud de Maipú",
     "last_level": "Descartada",
@@ -1685,8 +1729,8 @@
   {
     "id": "empleos-publicos-140569",
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 26,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 27,
     "last_title": "PSIQUIATRA INFANTO ADOLESCENTE, NEURÓLOGO(A) INFANTIL O MÉDICO FAMILIAR 11 HRS CENTRO TEAYUN PEÑALOLÉN.",
     "last_institution": "Dirección del Servicio de Salud Metropolitano Oriente",
     "last_level": "Descartada",
@@ -1727,6 +1771,17 @@
     "currently_visible": false
   },
   {
+    "id": "empleos-publicos-140582",
+    "first_seen_at": "2026-06-10T13:28:17+00:00",
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 1,
+    "last_title": "TECNICO GRADO 13° E.U.S., GESTOR ASEGURAMIENTO DE CALIDAD DE SOFTWARE, PARA DESEMPEÑARSE EN DEPARTAMENTO DE INFORMÁTICA",
+    "last_institution": "Gendarmería de Chile",
+    "last_level": "Media",
+    "last_score": 68,
+    "currently_visible": true
+  },
+  {
     "id": "empleos-publicos-140588",
     "first_seen_at": "2026-06-01T15:28:09-04:00",
     "last_seen_at": "2026-06-07T22:57:44-04:00",
@@ -1740,8 +1795,8 @@
   {
     "id": "empleos-publicos-140589",
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 26,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 27,
     "last_title": "035-26 TECNICO UNIDAD DE LABORATORIO CLINICO, 4TO TURNO, SUBDIRECCION DE APOYO CLINICO.",
     "last_institution": "Hospital Metropolitano de Santiago",
     "last_level": "Descartada",
@@ -1806,8 +1861,8 @@
   {
     "id": "empleos-publicos-140632",
     "first_seen_at": "2026-06-01T15:28:09-04:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 26,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 27,
     "last_title": "ANALISTA DE DATOS",
     "last_institution": "Central de Abastecimiento del Sistema Nacional de Servicios de Salud",
     "last_level": "Descartada",
@@ -1839,8 +1894,8 @@
   {
     "id": "empleos-publicos-140681",
     "first_seen_at": "2026-06-02T04:11:37+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 14,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 15,
     "last_title": "CÓD. 010.1-26 TÉCNICO PARAMÉDICO, UNIDAD FARMACIA",
     "last_institution": "CRS Hospital Provincia Cordillera",
     "last_level": "Descartada",
@@ -1872,8 +1927,8 @@
   {
     "id": "empleos-publicos-140684",
     "first_seen_at": "2026-06-01T21:17:41+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 22,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 23,
     "last_title": "AUXILIAR DE SERVICIO LAVANDERÍA",
     "last_institution": "Hospital Regional de Talca",
     "last_level": "Descartada",
@@ -1927,8 +1982,8 @@
   {
     "id": "empleos-publicos-140692",
     "first_seen_at": "2026-06-03T13:53:27+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 7,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 8,
     "last_title": "ASESOR EDUCATIVO INTEGRAL DE MEJORA CONTINUA Y ACOMPAÑAMIENTO TÉCNICO PEDAGÓGICO",
     "last_institution": "Servicio Local de Educación Pública de Colchagua",
     "last_level": "Descartada",
@@ -1955,13 +2010,13 @@
     "last_institution": "Oficina de Estudios y Políticas Agrarias",
     "last_level": "Descartada",
     "last_score": 15,
-    "currently_visible": true
+    "currently_visible": false
   },
   {
     "id": "empleos-publicos-140699",
     "first_seen_at": "2026-06-08T03:37:40+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 4,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 5,
     "last_title": "ENCARGADO(A) SUBUNIDAD DE GESTIÓN TERRITORIAL, CAMBIO CLIMÁTICO Y MEDIO AMBIENTE- SUBDIRECCIÓN DESARROLLO SERNATUR",
     "last_institution": "SERNATUR Región Metropolitana de Santiago",
     "last_level": "Descartada",
@@ -1982,8 +2037,8 @@
   {
     "id": "empleos-publicos-140703",
     "first_seen_at": "2026-06-04T13:20:56+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 6,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 7,
     "last_title": "026-26 AUXILIAR DE SERVICIO, UNIDAD UTI 2 SUR, SUBDIRECCIÓN GESTIÓN DEL CUIDADO.",
     "last_institution": "Hospital Metropolitano de Santiago",
     "last_level": "Descartada",
@@ -1993,8 +2048,8 @@
   {
     "id": "empleos-publicos-140719",
     "first_seen_at": "2026-06-03T13:53:27+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 7,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 8,
     "last_title": "BIOQUÍMICO LABORATORIO CLÍNICO (REEMPLAZO PRE Y POST NATAL)",
     "last_institution": "Hospital Regional de Talca",
     "last_level": "Descartada",
@@ -2010,7 +2065,7 @@
     "last_institution": "Hospital Padre Alberto Hurtado",
     "last_level": "Descartada",
     "last_score": 0,
-    "currently_visible": true
+    "currently_visible": false
   },
   {
     "id": "empleos-publicos-140722",
@@ -2026,8 +2081,8 @@
   {
     "id": "empleos-publicos-140724",
     "first_seen_at": "2026-06-03T13:53:27+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 7,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 8,
     "last_title": "TENS IV TURNO DE ATENCIÓN CERRADA",
     "last_institution": "Instituto Nacional de Geriatría",
     "last_level": "Descartada",
@@ -2043,13 +2098,13 @@
     "last_institution": "Instituto de Neurocirugía Dr. Alfonso Asenjo",
     "last_level": "Descartada",
     "last_score": 0,
-    "currently_visible": true
+    "currently_visible": false
   },
   {
     "id": "empleos-publicos-140731",
     "first_seen_at": "2026-06-04T13:20:56+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 6,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 7,
     "last_title": "GESTOR(A) SECCIÓN GESTIÓN ADQUISICIONES INTERMEDIACIÓN",
     "last_institution": "Central de Abastecimiento del Sistema Nacional de Servicios de Salud",
     "last_level": "Descartada",
@@ -2065,7 +2120,7 @@
     "last_institution": "Hospital Padre Alberto Hurtado",
     "last_level": "Descartada",
     "last_score": 15,
-    "currently_visible": true
+    "currently_visible": false
   },
   {
     "id": "empleos-publicos-140739",
@@ -2076,13 +2131,13 @@
     "last_institution": "CRS \"Dr. Salvador Allende Gossens\"",
     "last_level": "Descartada",
     "last_score": 0,
-    "currently_visible": true
+    "currently_visible": false
   },
   {
     "id": "empleos-publicos-140740",
     "first_seen_at": "2026-06-04T13:20:56+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 6,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 7,
     "last_title": "027-26 TÉCNICO DE NIVEL SUPERIOR EN ENFERMERIA, UNIDAD UTI 2 SUR, SUBDIRECCIÓN GESTIÓN DEL CUIDADO",
     "last_institution": "Hospital Metropolitano de Santiago",
     "last_level": "Descartada",
@@ -2092,8 +2147,8 @@
   {
     "id": "empleos-publicos-140743",
     "first_seen_at": "2026-06-04T13:20:56+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 6,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 7,
     "last_title": "CÓD. 26021 ADMINISTRATIVO (A) DE OFICINA GES, UNIDAD DE GES, SUBDIRECCIÓN DE GESTIÓN ASISTENCIAL (JORNADA DIURNA).",
     "last_institution": "Hospital Padre Alberto Hurtado",
     "last_level": "Descartada",
@@ -2109,7 +2164,7 @@
     "last_institution": "Hospital San Juan de Dios de Cauquenes",
     "last_level": "Descartada",
     "last_score": 15,
-    "currently_visible": true
+    "currently_visible": false
   },
   {
     "id": "empleos-publicos-140753",
@@ -2120,13 +2175,13 @@
     "last_institution": "Hospital San Juan de Dios de Cauquenes",
     "last_level": "Descartada",
     "last_score": 0,
-    "currently_visible": true
+    "currently_visible": false
   },
   {
     "id": "empleos-publicos-140757",
     "first_seen_at": "2026-06-05T13:15:02+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 5,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 6,
     "last_title": "MÉDICO GENERAL HOSPITAL SAN LUIS DE BUIN - PAINE",
     "last_institution": "Hospital San Luis de Buin",
     "last_level": "Descartada",
@@ -2134,10 +2189,21 @@
     "currently_visible": true
   },
   {
+    "id": "empleos-publicos-140759",
+    "first_seen_at": "2026-06-10T13:28:17+00:00",
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 1,
+    "last_title": "EJECUTIVO(A) DE COMUNICACIONES REGIONAL",
+    "last_institution": "Corporación de Fomento de la Producción",
+    "last_level": "Descartada",
+    "last_score": 18,
+    "currently_visible": true
+  },
+  {
     "id": "empleos-publicos-140760",
     "first_seen_at": "2026-06-05T13:15:02+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 5,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 6,
     "last_title": "MÉDICO PEDIATRIA 28 HRS. SERVICIO DE URGENCIAS - HOSPITAL SAN LUIS BUIN PAINE",
     "last_institution": "Hospital San Luis de Buin",
     "last_level": "Descartada",
@@ -2147,8 +2213,8 @@
   {
     "id": "empleos-publicos-140763",
     "first_seen_at": "2026-06-09T13:11:52+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 1,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 2,
     "last_title": "TECNÓLOGO MÉDICO DIURNO PROGRAMA TAMIZAJE VPH- CC CITOLOGÍA CR UNIDAD DE ANATOMÍA PATOLÓGICA (13° EUS)",
     "last_institution": "Hospital San Juan de Dios",
     "last_level": "Descartada",
@@ -2158,8 +2224,8 @@
   {
     "id": "empleos-publicos-140764",
     "first_seen_at": "2026-06-05T13:15:02+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 5,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 6,
     "last_title": "ANALISTA NORMATIVO, PROFESIONAL A CONTRATA, GRADO 12°",
     "last_institution": "Subsecretaría de Derechos Humanos",
     "last_level": "Descartada",
@@ -2169,8 +2235,8 @@
   {
     "id": "empleos-publicos-140787",
     "first_seen_at": "2026-06-05T13:15:02+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 5,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 6,
     "last_title": "CÓD.014-26 ENFERMERO(A) Y-O ENFERMERO(A) MATRÓN(A) AMBULATORIO Y HDD INFANTO- JUVENIL.",
     "last_institution": "CRS Hospital Provincia Cordillera",
     "last_level": "Descartada",
@@ -2180,8 +2246,8 @@
   {
     "id": "empleos-publicos-140792",
     "first_seen_at": "2026-06-08T03:37:40+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 4,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 5,
     "last_title": "PROFESIONAL PREVENCIÓN DE RIESGOS Y GESTIÓN AMBIENTAL",
     "last_institution": "Instituto Nacional de Geriatría",
     "last_level": "Descartada",
@@ -2191,8 +2257,8 @@
   {
     "id": "empleos-publicos-140793",
     "first_seen_at": "2026-06-08T03:37:40+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 4,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 5,
     "last_title": "CÓD. 26022 TECNÓLOGO MEDICO OFTALMOLOGÍA, CR DE ATENCIÓN AMBULATORIA, SUBDIRECCIÓN DE GESTIÓN ASISTENCIAL ( JORNADA 22 HORAS).",
     "last_institution": "Hospital Padre Alberto Hurtado",
     "last_level": "Descartada",
@@ -2202,8 +2268,8 @@
   {
     "id": "empleos-publicos-140801",
     "first_seen_at": "2026-06-08T13:40:27+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 2,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 3,
     "last_title": "CÓD. 26023 ADMINISTRATIVO (A) ADMISIÓN CR DE ATENCIÓN AMBULATORIA, SUBDIRECCIÓN DE GESTIÓN ASISTENCIAL (DIURNO).",
     "last_institution": "Hospital Padre Alberto Hurtado",
     "last_level": "Descartada",
@@ -2213,8 +2279,8 @@
   {
     "id": "empleos-publicos-140802",
     "first_seen_at": "2026-06-08T03:37:40+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 4,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 5,
     "last_title": "MÉDICO(A) PSIQUIATRA PACTO",
     "last_institution": "Hospital Del Salvador",
     "last_level": "Descartada",
@@ -2224,8 +2290,8 @@
   {
     "id": "empleos-publicos-140824",
     "first_seen_at": "2026-06-08T10:56:06+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 3,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 4,
     "last_title": "ASISTENTE DE DIRECCIÓN EJECUTIVA",
     "last_institution": "Servicio Local de Educación Pública de Santiago Centro",
     "last_level": "Descartada",
@@ -2235,8 +2301,8 @@
   {
     "id": "empleos-publicos-140826",
     "first_seen_at": "2026-06-09T13:11:52+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 1,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 2,
     "last_title": "ANALISTA DESARROLLADOR",
     "last_institution": "Subsecretaría para las Fuerzas Armadas",
     "last_level": "Media",
@@ -2246,8 +2312,8 @@
   {
     "id": "empleos-publicos-140828",
     "first_seen_at": "2026-06-09T13:11:52+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 1,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 2,
     "last_title": "PROFESIONAL STAFF SECCIÓN COMPRAS",
     "last_institution": "Instituto de Salud Pública",
     "last_level": "Descartada",
@@ -2257,8 +2323,8 @@
   {
     "id": "empleos-publicos-140832",
     "first_seen_at": "2026-06-09T13:11:52+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 1,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 2,
     "last_title": "NUTRICIONISTA DE PRODUCCIÓN",
     "last_institution": "Instituto Nacional de Geriatría",
     "last_level": "Descartada",
@@ -2268,8 +2334,8 @@
   {
     "id": "empleos-publicos-140833",
     "first_seen_at": "2026-06-09T13:11:52+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 1,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 2,
     "last_title": "ENFERMERA (O) CLÍNICA (O) SERVICIO MÉDICO QUIRÚRGICO PONIENTE",
     "last_institution": "Hospital San José de Parral",
     "last_level": "Descartada",
@@ -2279,8 +2345,8 @@
   {
     "id": "empleos-publicos-140836",
     "first_seen_at": "2026-06-09T13:11:52+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 1,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 2,
     "last_title": "CÓD. 26024 ADMINISTRATIVO (A) UNIDAD DE PSIQUIATRÍA COMUNITARIA, UNIDAD HOSPITALARIA DE CUIDADOS INTENSIVOS DE PSIQUIATRÍA INFANTO-JUVENIL (UHCIP) HOSPITAL DE DÍA (HDD). (JORNADA DIURNA).",
     "last_institution": "Hospital Padre Alberto Hurtado",
     "last_level": "Descartada",
@@ -2290,8 +2356,8 @@
   {
     "id": "empleos-publicos-140837",
     "first_seen_at": "2026-06-09T13:11:52+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 1,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 2,
     "last_title": "MÉDICOS RESIDENTES (LEY 15076)",
     "last_institution": "Hospital Regional de Talca",
     "last_level": "Descartada",
@@ -2301,8 +2367,8 @@
   {
     "id": "empleos-publicos-140839",
     "first_seen_at": "2026-06-09T13:11:52+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 1,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 2,
     "last_title": "MÉDICOS LEY 19664 (44-33-22-11 HORAS)",
     "last_institution": "Hospital Regional de Talca",
     "last_level": "Descartada",
@@ -2312,8 +2378,8 @@
   {
     "id": "empleos-publicos-140840",
     "first_seen_at": "2026-06-09T13:11:52+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 1,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 2,
     "last_title": "ADMINISTRATIVO SERVICIO DE BIENESTAR (REEMPLAZO)",
     "last_institution": "Instituto de Salud Pública",
     "last_level": "Descartada",
@@ -2323,8 +2389,8 @@
   {
     "id": "empleos-publicos-140842",
     "first_seen_at": "2026-06-09T13:11:52+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 1,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 2,
     "last_title": "01 CARGO DE MÉDICO CIRUJANO PARA UNIDAD HOSPITALIZACIÓN DOMICILIARIA, CONTRATA EN JORNADA DIURNA. (44 HORAS)",
     "last_institution": "Hospital San Juan de Dios de Curicó",
     "last_level": "Descartada",
@@ -2332,12 +2398,78 @@
     "currently_visible": true
   },
   {
+    "id": "empleos-publicos-140843",
+    "first_seen_at": "2026-06-10T13:28:17+00:00",
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 1,
+    "last_title": "INGENIERO(A) EN DESCARBONIZACIÓN Y GESTIÓN DE PILOTOS INDUSTRIALES EN MINERÍA - CENTRO AVANZADO DE TECNOLOGÍA PARA LA MINERÍA (AMTC) - FACULTAD DE CIENCIAS FÍSICAS Y MATEMÁTICAS (FCFM)",
+    "last_institution": "Facultad de Ciencias Físicas y Matemáticas",
+    "last_level": "Descartada",
+    "last_score": 15,
+    "currently_visible": true
+  },
+  {
     "id": "empleos-publicos-140844",
     "first_seen_at": "2026-06-09T13:11:52+00:00",
-    "last_seen_at": "2026-06-09T13:11:52+00:00",
-    "seen_count": 1,
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 2,
     "last_title": "01 CARGO DE MÉDICO CIRUJANO CON ESPECIALIDAD EN MEDICINA INTERNA PARA DESEMPEÑARSE EN SERVICIO MEDICINA INTERNA Y SUBESPECIALIDADES YO SERVICIO UPC ADULTO (28 HORAS)",
     "last_institution": "Hospital San Juan de Dios de Curicó",
+    "last_level": "Descartada",
+    "last_score": 0,
+    "currently_visible": true
+  },
+  {
+    "id": "empleos-publicos-140847",
+    "first_seen_at": "2026-06-10T13:28:17+00:00",
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 1,
+    "last_title": "INGENIERO(A) EN AUTOMATIZACIÓN DE PROCESOS MINEROS - CENTRO AVANZADO DE TECNOLOGÍA PARA LA MINERÍA (AMTC) - FACULTAD DE CIENCIAS FÍSICAS Y MATEMÁTICAS (FCFM)",
+    "last_institution": "Facultad de Ciencias Físicas y Matemáticas",
+    "last_level": "Descartada",
+    "last_score": 15,
+    "currently_visible": true
+  },
+  {
+    "id": "empleos-publicos-140849",
+    "first_seen_at": "2026-06-10T13:28:17+00:00",
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 1,
+    "last_title": "EJECUTIVO(A) DE ATENCIÓN",
+    "last_institution": "Servicio de Registro Civil e Identificación",
+    "last_level": "Descartada",
+    "last_score": 15,
+    "currently_visible": true
+  },
+  {
+    "id": "empleos-publicos-140856",
+    "first_seen_at": "2026-06-10T13:28:17+00:00",
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 1,
+    "last_title": "JEFATURA DEPARTAMENTO GESTIÓN FINANCIERA",
+    "last_institution": "Hospital Regional de Talca",
+    "last_level": "Descartada",
+    "last_score": 15,
+    "currently_visible": true
+  },
+  {
+    "id": "empleos-publicos-140865",
+    "first_seen_at": "2026-06-10T13:28:17+00:00",
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 1,
+    "last_title": "CÓD. 015.1-26 MÉDICO CIRUJANO, ESPECIALISTA EN MEDICINA INTERNA, SUBESPECIALIDAD ENDOCRINOLOGÍA (22 HORAS FRACCIONABLES)",
+    "last_institution": "CRS Hospital Provincia Cordillera",
+    "last_level": "Descartada",
+    "last_score": 0,
+    "currently_visible": true
+  },
+  {
+    "id": "empleos-publicos-140873",
+    "first_seen_at": "2026-06-10T13:28:17+00:00",
+    "last_seen_at": "2026-06-10T13:28:17+00:00",
+    "seen_count": 1,
+    "last_title": "TÉCNICO(A) EN ENFERMERÍA DE NIVEL SUPERIOR CON APOYO EN GESTIÓN ADMINISTRATIVA Y SOME",
+    "last_institution": "Dirección del Servicio de Salud Metropolitano Occidente",
     "last_level": "Descartada",
     "last_score": 0,
     "currently_visible": true
