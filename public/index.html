@@ -36,6 +36,14 @@
           >
             Ver repositorio
           </a>
+          <a
+            class="header-link d-none d-lg-inline-flex"
+            href="https://github.com/jeannorambuena/bot_empleos_publicos/tree/main/docs"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Documentacion
+          </a>
         </div>
       </nav>
     </header>
@@ -45,6 +53,7 @@
         <div class="container-xl">
           <div class="hero-grid">
             <div class="hero-content">
+              <p class="portfolio-title">Radar Laboral Publico Chile</p>
               <p class="eyebrow">Monitor automatizado de oportunidades públicas</p>
               <h1>Convocatorias públicas priorizadas para tomar mejores decisiones.</h1>
               <p class="hero-copy">
@@ -53,7 +62,15 @@
               </p>
               <div class="hero-actions">
                 <a class="hero-button" href="#oportunidades">Explorar oportunidades</a>
-                <span class="mvp-status"><span aria-hidden="true"></span>MVP operativo multi-fuente controlado</span>
+                <a
+                  class="hero-button hero-button-secondary"
+                  href="https://github.com/jeannorambuena/bot_empleos_publicos"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Ver codigo y docs
+                </a>
+                <span class="mvp-status"><span aria-hidden="true"></span>MVP funcional validado localmente</span>
               </div>
             </div>
             <aside class="update-panel" aria-label="Estado de actualización">
@@ -63,6 +80,20 @@
               </div>
               <strong id="last-updated">Cargando actualización...</strong>
               <p id="run-status">Consultando estado del radar</p>
+              <dl class="update-facts">
+                <div>
+                  <dt>Oportunidades</dt>
+                  <dd id="hero-opportunities">--</dd>
+                </div>
+                <div>
+                  <dt>Fuente principal</dt>
+                  <dd id="hero-main-source">Empleos Publicos</dd>
+                </div>
+                <div>
+                  <dt>Alta coincidencia</dt>
+                  <dd id="hero-high-match">--</dd>
+                </div>
+              </dl>
               <div class="update-note">Fuentes públicas · Sanitización activa · Revisión humana</div>
             </aside>
           </div>
@@ -81,8 +112,8 @@
           <article class="metric-card">
             <span class="metric-icon" aria-hidden="true">FR</span>
             <div>
-              <p>Fuentes revisadas</p>
-              <strong id="sources-reviewed">--</strong>
+              <p>Fuente principal activa</p>
+              <strong id="main-source">--</strong>
             </div>
           </article>
           <article class="metric-card">
@@ -109,12 +140,36 @@
         </div>
       </section>
 
+      <section class="container-xl trust-section" aria-label="Alcance y controles del MVP">
+        <div class="trust-grid">
+          <article>
+            <strong>Estado del MVP</strong>
+            <p>Validado localmente con QA integral. No automatiza postulaciones ni reemplaza revision humana.</p>
+          </article>
+          <article>
+            <strong>Alta coincidencia</strong>
+            <p>Senal de prioridad basada en scoring del perfil, palabras clave, territorio y urgencia de cierre.</p>
+          </article>
+          <article>
+            <strong>Verificacion oficial</strong>
+            <p>Antes de postular, abre siempre la fuente oficial y confirma bases, requisitos y fecha de cierre.</p>
+          </article>
+          <article>
+            <strong>Privacidad</strong>
+            <p>El dashboard publica datos sanitizados y evita RUN/RUT, nominas sensibles, secrets y archivos locales.</p>
+          </article>
+        </div>
+      </section>
+
       <section class="container-xl dashboard-section" id="oportunidades">
         <div class="section-heading">
           <div>
             <p class="eyebrow">Radar de convocatorias</p>
             <h2>Oportunidades públicas detectadas</h2>
             <p class="section-copy">Filtra, compara y abre siempre la fuente oficial antes de postular.</p>
+            <p class="section-copy portfolio-copy">
+              Datos publicos normalizados para analisis. Cada convocatoria debe verificarse en el portal oficial.
+            </p>
             <p class="section-copy economic-copy">
               Para Santiago/RM se considera un piso económico por arriendo, pensión, transporte y viajes de fin de semana.
             </p>

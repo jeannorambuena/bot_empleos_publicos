@@ -14,6 +14,7 @@ const relevanceFilter = document.querySelector("#relevance-filter");
 const textFilter = document.querySelector("#text-filter");
 const sortFilter = document.querySelector("#sort-filter");
 const RELEVANT_LEVELS = new Set(["Alta", "Media", "Baja"]);
+const MAIN_SOURCE_LABEL = "Empleos Publicos";
 
 function formatDate(value) {
   if (!value) return "No disponible";
@@ -241,8 +242,11 @@ function renderMetrics(summary, lastRun) {
   document.querySelector("#last-updated").textContent = updated;
   document.querySelector("#footer-last-updated").textContent = `Última actualización: ${updated}`;
   document.querySelector("#run-status").textContent = lastRun.message;
-  document.querySelector("#sources-reviewed").textContent = summary.sources_reviewed;
+  document.querySelector("#main-source").textContent = MAIN_SOURCE_LABEL;
   document.querySelector("#active-opportunities").textContent = summary.active_opportunities;
+  document.querySelector("#hero-opportunities").textContent = summary.active_opportunities;
+  document.querySelector("#hero-main-source").textContent = MAIN_SOURCE_LABEL;
+  document.querySelector("#hero-high-match").textContent = summary.high_match;
   document.querySelector("#new-opportunities-label").textContent =
     "first_seen_this_run" in summary ? "Nuevas desde última actualización" : "Nuevas oportunidades";
   document.querySelector("#new-opportunities").textContent = summary.new_opportunities;
