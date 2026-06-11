@@ -29,6 +29,9 @@ Estado validado del cierre profesional:
 
 Mas detalle: [docs/project-status.md](docs/project-status.md).
 
+Release de portafolio: [CHANGELOG.md](CHANGELOG.md) y
+[docs/final-release-checklist.md](docs/final-release-checklist.md).
+
 ## Problema que resuelve
 
 Las oportunidades laborales del sector publico chileno se publican en portales y

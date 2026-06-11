@@ -7,6 +7,9 @@ localmente. El sistema captura, normaliza y publica oportunidades laborales
 publicas en una vista estatica, con priorizacion, historial, sanitizacion,
 revision humana y preview controlado de Telegram.
 
+El proyecto queda preparado como release de portafolio `v1.0.0`, sujeto al commit
+final, revision de GitHub Pages y creacion deliberada del tag correspondiente.
+
 Este estado corresponde al Lote A del cierre profesional del proyecto: deja
 constancia del alcance validado, los comandos de control y las limitaciones que
 debe conocer un analista externo antes de presentar, publicar o extender el MVP.
