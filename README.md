@@ -293,3 +293,10 @@ criterio profesional:
 Como pieza de portafolio, muestra capacidad para convertir un problema operativo
 real en un sistema auditable, documentado y mantenible, con controles antes de
 automatizar decisiones sensibles.
+
+Materiales listos para compartir:
+
+- [portfolio/case-study.md](portfolio/case-study.md)
+- [portfolio/executive-summary.md](portfolio/executive-summary.md)
+- [portfolio/technical-summary.md](portfolio/technical-summary.md)
+- [portfolio/cv-description.md](portfolio/cv-description.md)
