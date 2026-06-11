@@ -1,47 +1,133 @@
-# Radar Laboral Público Chile
+# Radar Laboral Publico Chile
 
-Herramienta comunitaria en evolución para detectar, ordenar y publicar oportunidades
-laborales del sector público chileno. El objetivo es facilitar el seguimiento de
-convocatorias relevantes mediante filtros configurables, alertas y una vista pública
-simple de consultar.
+Radar Laboral Publico Chile es un MVP funcional validado localmente para
+monitorear oportunidades laborales publicas en Chile, normalizarlas, priorizarlas
+y publicarlas en un dashboard estatico revisable.
 
-> Estado actual: prototipo en desarrollo. El dashboard de `public/` puede regenerarse
-> con datos demo o con una captura real local explícita. Todavía no existe publicación
-> automática ni operación productiva.
+El proyecto esta construido como un caso profesional de automatizacion responsable
+con datos publicos: no automatiza postulaciones, no accede a portales privados, no
+usa credenciales personales para capturar oportunidades y no reemplaza la revision
+humana. Su objetivo es reducir trabajo manual de seguimiento y mejorar la
+trazabilidad de convocatorias publicas.
 
-## Qué problema resuelve
+## Resumen ejecutivo
 
-Las oportunidades públicas suelen estar distribuidas entre portales generales,
-ministerios, municipalidades, SLEP y otras instituciones. Radar Laboral Público Chile
-busca reunir señales útiles en una estructura común para reducir la revisión manual,
-priorizar convocatorias afines y recordar fechas de cierre.
+El MVP toma oportunidades desde fuentes publicas, las transforma a un contrato de
+datos comun, aplica reglas de scoring y sanitizacion, y genera una vista publica
+en `public/`. Tambien incluye historial, panel de revision, reporte semanal local,
+preview de alertas y controles para Telegram sin envio automatico por defecto.
 
-## Estado del proyecto
+Estado validado del cierre profesional:
 
-El repositorio conserva una implementación histórica local y suma gradualmente una
-arquitectura reutilizable. En esta etapa:
+- 101 oportunidades publicas validas.
+- 53 fuentes candidatas catalogadas.
+- 7 fuentes configuradas.
+- Telegram en modo preview/controlado.
+- Fuentes locales municipales en dry-run o revision manual, salvo integraciones
+  ya documentadas explicitamente.
+- Validacion final reproducible con `python scripts/check_release_ready.py`.
 
-- Existe un dashboard estático responsivo en `public/`.
-- Los JSON públicos pueden regenerarse con oportunidades demo o datos reales locales.
-- Hay archivos de configuración de referencia en `config/`.
-- Están documentados el contrato de datos, la arquitectura, la seguridad y el roadmap.
-- El scraper antiguo no se conecta al dashboard público; existe un flujo local nuevo y controlado.
-- GitHub Pages y GitHub Actions están preparados; correo, calendario y Telegram real
-  permanecen desactivados por defecto.
+Mas detalle: [docs/project-status.md](docs/project-status.md).
 
-## Estado actual del bot
+## Problema que resuelve
 
-- El dashboard público puede publicarse mediante GitHub Pages.
-- La captura real puede ejecutarse manualmente o una vez al día hábil desde GitHub Actions.
-- `public/data/history.json` distingue oportunidades nuevas reales de registros ya vistos.
-- Telegram dispone de preview local y envío real bloqueado por defecto.
-- `public/review.html` permite exportar feedback humano sin backend.
-- El dashboard muestra etiquetas operativas y explicaciones breves basadas en datos públicos.
-- Existe un reporte semanal local para priorizar revisión operativa sin publicar artefactos adicionales.
-- SLEP y municipalidades cercanas están declaradas como fuentes futuras.
-- Nitro/OpenClaw queda documentado como entorno de despliegue futuro controlado.
+Las oportunidades laborales del sector publico chileno se publican en portales y
+sitios institucionales dispersos. Eso obliga a revisar manualmente muchas paginas,
+comparar requisitos, detectar fechas de cierre y decidir que convocatorias son
+relevantes.
 
-## Instalación en Windows
+Radar Laboral Publico Chile organiza esas senales en una estructura comun para:
+
+- Reducir revision manual repetitiva.
+- Priorizar oportunidades segun criterios configurables.
+- Mantener trazabilidad hacia la fuente original.
+- Separar oportunidades publicables de fuentes que requieren revision humana.
+- Preparar alertas sin enviar mensajes automaticos no revisados.
+
+## Demo publica / dashboard
+
+El dashboard estatico vive en `public/` y puede publicarse mediante GitHub Pages o
+ejecutarse localmente.
+
+Para verlo en local:
+
+```powershell
+python -m http.server 8000 --directory public
+```
+
+Luego abrir:
+
+```text
+http://localhost:8000
+```
+
+El dashboard consume los JSON versionados en `public/data/`. En este cierre no se
+modifican esos datos: ya fueron validados como parte del MVP funcional.
+
+## Funcionalidades implementadas
+
+- Captura local de oportunidades publicas desde Empleos Publicos.
+- Normalizacion a JSON publicos usados por el dashboard.
+- Dashboard estatico responsivo en `public/`.
+- Historial de oportunidades y deteccion de novedades.
+- Scoring y etiquetas operativas para priorizacion.
+- Panel de revision humana exportable sin backend.
+- Sanitizacion comun para reducir exposicion de datos personales.
+- Catalogo territorial de fuentes candidatas.
+- Fuentes locales municipales aisladas como dry-run o revision manual.
+- Reporte semanal local en `output/`.
+- Preview de alertas de correo, calendario y Telegram.
+- Politica Telegram simulable y desactivada por defecto para envios reales.
+- Checks de release para validar datos, dashboard, fuentes, privacidad y alertas.
+
+## Arquitectura resumida
+
+El proyecto usa una arquitectura simple y auditable:
+
+```text
+Fuentes publicas
+  -> scripts de captura
+  -> datos reales locales
+  -> normalizacion y sanitizacion
+  -> public/data/*.json
+  -> dashboard estatico en public/
+  -> previews y checks de validacion
+```
+
+Componentes principales:
+
+- `scripts/`: captura, normalizacion, previews y validaciones.
+- `src/`: logica reutilizable del radar.
+- `public/`: dashboard estatico y datos publicables.
+- `data/`: catalogos y datos de trabajo.
+- `docs/`: arquitectura, seguridad, fuentes, operacion y checklist de release.
+- `output/`: artefactos locales no publicables, ignorados por Git.
+
+Documentacion tecnica relacionada:
+
+- [docs/architecture.md](docs/architecture.md)
+- [docs/data-contract.md](docs/data-contract.md)
+- [docs/source-contract.md](docs/source-contract.md)
+
+## Flujo de datos
+
+El flujo operativo con datos reales es:
+
+```powershell
+python scripts/fetch_empleos_publicos.py
+python scripts/check_real_data.py
+python scripts/build_public_data_from_real.py
+python scripts/check_release_ready.py
+```
+
+Ese flujo captura oportunidades publicas, valida la salida real, reconstruye los
+JSON publicos y ejecuta el control final de release.
+
+Las fuentes candidatas o municipales en dry-run no alimentan automaticamente el
+dashboard. Para publicar una fuente nueva debe existir evidencia de trazabilidad,
+vigencia, sanitizacion y decision explicita de promocion.
+
+## Instalacion local en Windows
 
 Requisitos recomendados:
 
@@ -49,273 +135,150 @@ Requisitos recomendados:
 - Python 3.10 o superior.
 - Git.
 
-Crear un entorno virtual local:
+Instalacion:
 
 ```powershell
 git clone <URL-DEL-REPOSITORIO>
 cd bot_empleos_publicos
 py -m venv venv
 .\venv\Scripts\Activate.ps1
+python -m pip install --upgrade pip
+python -m pip install -r requirements.txt
 ```
 
-Esta fase documental no requiere instalar paquetes adicionales. La lógica histórica
-puede tener requisitos propios que deberán revisarse antes de reutilizarla.
+El archivo `.env.example` es solo una plantilla. No escribas secretos reales en
+archivos versionados.
 
-## Ejecutar la página local
+## Ejecucion local del dashboard
 
-Desde la raíz del repositorio:
-
-```powershell
-.\venv\Scripts\python.exe -m http.server 8000 --directory public
-```
-
-Luego abre `http://localhost:8000`. La página muestra los JSON públicos disponibles;
-pueden ser datos demo o una captura real local previamente validada.
-
-## Publicación en GitHub Pages
-
-El repositorio está preparado para publicar `public/` mediante GitHub Pages después
-de revisión y merge a `main`. La publicación puede no estar activa todavía. Consulta
-`docs/github-pages.md` para validar el sitio y conocer los pasos manuales futuros.
-
-## Flujo local con datos reales
-
-El primer conector local puede capturar convocatorias públicas desde Empleos Públicos
-y regenerar el dashboard sin modificar el scraper histórico:
+Desde la raiz del repositorio:
 
 ```powershell
-python scripts/fetch_empleos_publicos.py
-python scripts/check_real_data.py
-python scripts/build_public_data_from_real.py
 python -m http.server 8000 --directory public
 ```
 
-Este flujo todavía no se ejecuta automáticamente y no envía alertas ni recordatorios
-reales. Consulta `docs/real-data.md` antes de publicar resultados.
+Abrir:
 
-## Actualización manual desde GitHub Actions
-
-El workflow **Refresh real data** permite ejecutar manualmente la captura real,
-validar el resultado y actualizar solo los JSON públicos del dashboard. Si hay
-cambios, el commit automático en `main` solicita el despliegue existente de GitHub
-Pages mediante `workflow_dispatch`. Consulta `docs/github-actions-refresh.md` para
-conocer el alcance y las limitaciones.
-
-También existe una ejecución horaria segura de lunes a viernes a las `12:00 UTC`.
-Telegram real permanece desactivado en esa programación.
-
-## Fase W: Telegram manual seguro
-
-La Fase W está cerrada. El envío real de Telegram fue probado correctamente mediante
-el workflow **Refresh real data** usando `workflow_dispatch` con
-`send_telegram=true`. El mensaje llegó al bot `@RADARLABORALJPBOT`.
-
-El envío manual requiere los secrets `TELEGRAM_BOT_TOKEN` y `TELEGRAM_CHAT_ID`.
-El bot no responde mensajes porque no tiene polling ni webhook. Consulta
-`docs/telegram-alerts.md` para conocer los controles, el dry-run automático y el
-rollback recomendado.
-
-Existe una política automática controlada con dry-run, deduplicación y límite diario.
-Permanece desactivada por defecto y solo se habilita deliberadamente con la variable
-de repositorio `TELEGRAM_AUTO_ENABLED=true`. Consulta `docs/telegram-alerts.md` antes
-de activarla.
-
-## Reporte semanal local
-
-El reporte operativo semanal se genera desde los JSON públicos ya validados:
-
-```powershell
-python scripts/build_weekly_report.py
+```text
+http://localhost:8000
 ```
 
-El archivo resultante queda en `output/reports/weekly-report.md`, ignorado por Git.
-Resume recomendaciones, cierres próximos y pendientes de revisión humana. Consulta
-`docs/reports.md`.
+Para detener el servidor local, usar `Ctrl+C` en la terminal.
 
-## Agregar fuentes futuras
+## Pruebas y validacion
 
-Empleos Públicos sigue siendo la única fuente real activa. Las fuentes futuras deben
-incorporarse una por una mediante PRs separados, usando el contrato normalizado de
-`docs/source-contract.md` y la guía de `docs/sources-roadmap.md`.
-
-Existe un catastro acotado para Región Metropolitana, O'Higgins y Maule en
-`docs/source-discovery.md`. Se valida con:
-
-```powershell
-python scripts/check_source_candidates.py
-```
-
-El catastro incluye prioridad territorial, ajuste al perfil, calidad de fuente,
-riesgo de privacidad y siguiente accion. Consulta `docs/source-prioritization.md`.
-Las proximas pruebas recomendadas son SLEP Los Cerezos, Municipalidad de Talca y
-SLEP Colchagua, cada una mediante un PR dry-run separado.
-
-Municipalidad de Curicó dispone de un primer adaptador aislado en dry-run. Genera
-solo artefactos locales ignorados:
-
-```powershell
-python scripts/fetch_curico.py
-python scripts/check_curico_source.py
-```
-
-Municipalidad de Molina dispone de un segundo adaptador aislado en dry-run:
-
-```powershell
-python scripts/fetch_molina.py
-python scripts/check_molina_source.py
-```
-
-Gobierno Regional del Maule dispone de un tercer adaptador aislado en dry-run:
-
-```powershell
-python scripts/fetch_gore_maule.py
-python scripts/check_gore_maule_source.py
-```
-
-Municipalidad de Rancagua dispone de un cuarto adaptador con dry-run auditable:
-
-```powershell
-python scripts/fetch_rancagua.py
-python scripts/check_rancagua_source.py
-```
-
-Rancagua es también la primera integración municipal controlada del dashboard. El
-generador real publica solo ofertas municipales `open_confirmed`, sanitizadas y con
-cierre futuro. Las ofertas OMIL externas privadas permanecen fuera de `public/data`.
-
-## Configuración futura
-
-Los archivos de `config/` son ejemplos públicos y no contienen secretos:
-
-- `config/profile.example.json`: regiones, áreas, palabras clave, zonas y puntaje
-  mínimo de alerta.
-- `config/sources.example.json`: fuentes configurables y URLs base o placeholders.
-- `config/alerts.example.json`: reglas de alerta por correo y preparación para
-  recordatorios de calendario.
-
-Para una instalación local futura, estos ejemplos podrán copiarse a archivos locales
-ignorados o transformarse en una configuración administrada por el bot. Todavía no
-están conectados a la lógica histórica.
-
-## Alertas y variables locales
-
-`.env.example` enumera variables esperadas para SMTP, destinatarios, zona horaria y
-URL pública. Es solo una plantilla. Nunca escribas secretos reales en ese archivo.
-
-Las credenciales locales deberán almacenarse en `.env`, que está excluido por Git.
-Cuando exista automatización con GitHub Actions, los secretos deberán configurarse
-mediante GitHub Secrets.
-
-## Archivos que no deben subirse
-
-No publiques:
-
-- `.env` ni variantes con credenciales.
-- Contraseñas SMTP, tokens o claves.
-- Bases de datos reales.
-- Logs privados.
-- Reportes locales con datos sensibles.
-- Información personal innecesaria de postulantes o contactos.
-
-Consulta `docs/security.md` para más detalles.
-
-## Documentación
-
-- `docs/architecture.md`: flujo técnico propuesto.
-- `docs/data-contract.md`: contrato de los JSON públicos.
-- `docs/security.md`: prácticas mínimas de seguridad.
-- `docs/roadmap.md`: evolución por fases.
-- `docs/parametros-iniciales.md`: alcance funcional inicial.
-
-## Roadmap resumido
-
-1. Dashboard demo.
-2. Documentación y configuración comunitaria.
-3. Motor de filtros y scoring.
-4. Datos reales locales.
-5. Alertas por correo.
-6. Recordatorios de calendario `.ics`.
-7. Publicación con GitHub Pages.
-8. Automatización con GitHub Actions.
-9. Incorporación gradual de múltiples fuentes.
-
-El detalle y los criterios de avance están en `docs/roadmap.md`.
-
-## Sanitizacion de fuentes nuevas
-
-Todas las fuentes nuevas deben pasar sanitizacion comun antes de una integracion
-futura. El check agregado revisa RUN/RUT visibles, variantes parcialmente
-enmascaradas y tablas extensas de resultados sin modificar `public/data`:
-
-```powershell
-python scripts/check_source_sanitization.py
-```
-
-Consulta `docs/source-sanitization.md`. El dry-run completo de Rancagua permanece
-aislado para auditoria aunque una oportunidad municipal segura pueda promocionarse
-al dashboard.
-
-## Contribuir
-
-Las contribuciones pueden mejorar documentación, contratos, parsers, pruebas y
-fuentes compatibles. Antes de publicar cambios, verifica que no incluyan secretos,
-logs privados ni datos personales innecesarios. El proyecto debe seguir siendo
-comprensible y reutilizable por la comunidad.
-
-## Batch P1 de diagnóstico
-
-Municipalidad de Talca, SLEP Colchagua y SLEP Los Cerezos cuentan con dry-runs
-locales aislados:
-
-```powershell
-python scripts/fetch_priority_sources.py
-python scripts/check_priority_sources.py
-```
-
-Los artefactos quedan en `output/sources/`. Estas capturas no publican
-oportunidades ni activan alertas.
-
-## Estado MVP
-
-El MVP queda cerrado como radar operativo y reutilizable:
-
-- Empleos Publicos es la fuente activa principal.
-- Municipalidad de Rancagua aporta una publicacion municipal controlada.
-- Curico, Molina, GORE Maule, Rancagua, Talca, SLEP Colchagua y SLEP Los Cerezos
-  conservan dry-runs auditables.
-- Las demas fuentes permanecen catalogadas y priorizadas antes de cualquier
-  implementacion futura.
-
-Multi-fuente controlado significa que una fuente puede existir como candidata o
-dry-run sin alimentar el dashboard. Solo se publica cuando pasa contrato,
-sanitizacion, vigencia y reglas de seguridad.
-
-La validacion final antes de merge se ejecuta con un unico comando:
+El control principal antes de publicar o presentar es:
 
 ```powershell
 python scripts/check_release_ready.py
 ```
 
-Para operar el radar localmente:
+Resultado esperado:
 
-```powershell
-python scripts/fetch_empleos_publicos.py
-python scripts/check_real_data.py
-python scripts/build_public_data_from_real.py
-python scripts/check_release_ready.py
-python -m http.server 8000 --directory public
+```text
+OK: release MVP listo
 ```
 
-La entrega y el modelo de operacion se documentan en
-`docs/final-mvp-handover.md`, `docs/source-status-matrix.md` y
-`docs/service-model.md`.
+Ese check valida datos publicos, dashboard, catalogo de fuentes, configuracion,
+sanitizacion, fuentes prioritarias, politica Telegram y preview Telegram.
 
-## Telegram por novedades relevantes
+Checklist completa: [docs/release-checklist.md](docs/release-checklist.md).
 
-La revision automatica puede correr de lunes a viernes, pero Telegram no envia un
-resumen por simple ejecucion programada. Solo avisa oportunidades `Alta` nuevas o
-con cierre proximo que sean seguras, relevantes para el perfil y no notificadas.
-Excluye descartadas, `manual_review`, `external_private` y publicaciones OMIL.
+## Automatizacion con GitHub Actions
 
-En el dashboard, los niveles son umbrales minimos: `Alta`, `Media o superior`,
-`Baja o superior` y `Todas las oportunidades publicas`.
+El workflow de refresco de datos reales puede capturar desde fuentes publicas,
+validar los resultados, regenerar `public/data/` y preparar la publicacion del
+dashboard cuando corresponde.
+
+La automatizacion esta disenada con controles:
+
+- Instala dependencias desde `requirements.txt`.
+- Ejecuta scripts de captura, validacion y previews.
+- Versiona solo archivos publicos autorizados cuando hay cambios.
+- No publica `output/`, logs locales, `.env` ni secretos.
+- Telegram programado permanece en modo seguro salvo activacion deliberada.
+
+Detalle operativo: [docs/github-actions-refresh.md](docs/github-actions-refresh.md).
+
+## Seguridad y privacidad
+
+El proyecto trabaja con fuentes publicas y evita publicar informacion sensible.
+Reglas centrales:
+
+- No automatiza postulaciones.
+- No usa credenciales personales para entrar a portales.
+- No accede a portales privados.
+- No publica RUN/RUT ni datos personales sensibles.
+- No publica nominas, resultados historicos sensibles ni anexos riesgosos.
+- No reemplaza la revision humana en fuentes con riesgo de privacidad.
+- No versiona `.env`, tokens, claves, logs privados ni artefactos locales.
+
+Telegram real requiere secretos y activacion explicita. Por defecto el proyecto
+usa preview, validacion y simulacion de politica.
+
+Referencias:
+
+- [docs/security.md](docs/security.md)
+- [docs/telegram-alerts.md](docs/telegram-alerts.md)
+
+## Estado actual del proyecto
+
+Radar Laboral Publico Chile esta en estado MVP funcional validado localmente. No
+debe presentarse como una plataforma comercial completa ni como un servicio SaaS
+multiusuario.
+
+Estado resumido:
+
+- Fuente principal activa: Empleos Publicos.
+- Publicacion municipal controlada: solo lo ya documentado y validado.
+- Fuentes locales adicionales: dry-run o revision manual.
+- Catalogo de fuentes: priorizado, pero no completamente implementado.
+- Dashboard: estatico, publicable y verificable.
+- Alertas: previews y controles; envio real no automatico por defecto.
+
+Detalle actualizado: [docs/project-status.md](docs/project-status.md).
+
+## Limitaciones conocidas
+
+- No tiene cuentas de usuario, permisos ni perfiles aislados.
+- No garantiza exhaustividad de todas las oportunidades publicas de Chile.
+- La captura puede fallar si una fuente publica cambia su estructura.
+- Las fuentes nuevas requieren PR, revision y validaciones separadas.
+- Los checks automaticos no sustituyen la revision humana de privacidad.
+- El dashboard publica datos ya normalizados; no es un motor transaccional.
+- Telegram real requiere configuracion deliberada y controles previos.
+
+## Roadmap hacia v1.0
+
+Prioridades sugeridas:
+
+1. Consolidar observabilidad de capturas y fallos de fuente.
+2. Ampliar pruebas automatizadas sobre parsers y contratos de datos.
+3. Incorporar nuevas fuentes una por una, con dry-run y revision humana.
+4. Mejorar UX del panel de revision y feedback.
+5. Formalizar politicas de retencion de datos y auditoria.
+6. Evaluar perfiles de usuario solo si el proyecto evoluciona fuera del MVP.
+7. Definir infraestructura productiva antes de operar como servicio continuo.
+
+Referencias:
+
+- [docs/roadmap.md](docs/roadmap.md)
+- [docs/sources-roadmap.md](docs/sources-roadmap.md)
+- [docs/service-model.md](docs/service-model.md)
+
+## Valor profesional / portafolio
+
+Este repositorio demuestra una implementacion concreta de automatizacion con
+criterio profesional:
+
+- Extraccion y normalizacion de datos publicos.
+- Separacion entre datos publicables, artefactos locales y fuentes en revision.
+- Dashboard estatico facil de desplegar.
+- Validaciones reproducibles para release.
+- Seguridad y privacidad documentadas desde el diseno.
+- Automatizacion responsable con GitHub Actions.
+- Alcance honesto: MVP validado, no producto comercial terminado.
+
+Como pieza de portafolio, muestra capacidad para convertir un problema operativo
+real en un sistema auditable, documentado y mantenible, con controles antes de
+automatizar decisiones sensibles.
