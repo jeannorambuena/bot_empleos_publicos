@@ -185,6 +185,12 @@ OK: release MVP listo
 Ese check valida datos publicos, dashboard, catalogo de fuentes, configuracion,
 sanitizacion, fuentes prioritarias, politica Telegram y preview Telegram.
 
+Para ejecutar la suite local integral:
+
+```powershell
+python scripts/check_all.py
+```
+
 Checklist completa: [docs/release-checklist.md](docs/release-checklist.md).
 
 ## Automatizacion con GitHub Actions

@@ -12,6 +12,15 @@ validan y que riesgo cubren.
 | Resultado esperado | `OK: release MVP listo` |
 | Riesgos cubiertos | Publicar datos invalidos, romper dashboard, promover fuentes inseguras o dejar Telegram sin control. |
 
+## QA integral local
+
+| Item | Detalle |
+| --- | --- |
+| Comando | `python scripts/check_all.py` |
+| Valida | Ejecuta en orden las validaciones principales, incluyendo datos reales, datos publicos, historial, dashboard, fuentes, sanitizacion, panel de revision, Telegram y release final. |
+| Resultado esperado | `OK: todas las pruebas integrales pasaron` |
+| Riesgos cubiertos | Cerrar un lote con una validacion parcial, omitir checks importantes o depender de una secuencia manual incompleta. |
+
 ## Datos publicos
 
 | Item | Detalle |
@@ -113,6 +122,7 @@ validan y que riesgo cubren.
 Un cambio puede considerarse listo para presentacion local cuando:
 
 - `python scripts/check_release_ready.py` pasa;
+- `python scripts/check_all.py` pasa cuando se requiere QA integral;
 - el dashboard local carga;
 - no hay cambios no autorizados en `public/data`, workflows, scripts o secrets;
 - las fuentes no promovidas siguen fuera del dashboard;
