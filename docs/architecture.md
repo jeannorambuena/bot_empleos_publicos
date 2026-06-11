@@ -1,96 +1,188 @@
-# Arquitectura del radar
+# Arquitectura tecnica
 
-Radar Laboral Público Chile evoluciona en componentes pequeños para que pueda ser
-reutilizado y auditado por la comunidad. El dashboard puede publicarse con datos
-reales normalizados desde Empleos Públicos. Las nuevas fuentes deben incorporarse de
-forma gradual sin acoplarse al scraper histórico ni romper el conector estable.
+Radar Laboral Publico Chile es un MVP funcional validado localmente. Su
+arquitectura prioriza trazabilidad, separacion entre datos publicables y artefactos
+locales, y controles antes de automatizar fuentes o alertas.
 
-## Flujo general
+No es una plataforma comercial completa ni un SaaS multiusuario. Es un radar
+estatico y auditable que usa fuentes publicas, genera datos normalizados y permite
+revision humana antes de ampliar automatizaciones sensibles.
 
-```text
-fuentes -> adaptadores -> normalización -> scoring -> almacenamiento
-        -> JSON público -> dashboard
-        -> alertas por correo
-        -> recordatorios .ics
+## Componentes principales
+
+| Componente | Ruta | Responsabilidad |
+| --- | --- | --- |
+| Scripts de captura | `scripts/fetch_*.py` | Consultar fuentes publicas o generar dry-runs locales. |
+| Logica reutilizable | `src/radar/` | Adaptadores, sanitizacion, scoring y utilidades compartidas. |
+| Datos de trabajo | `data/` | Capturas reales locales, datos normalizados y catalogos. |
+| Datos publicos | `public/data/` | JSON versionables consumidos por el dashboard. |
+| Dashboard estatico | `public/` | Interfaz publicable por GitHub Pages o servidor local. |
+| Documentacion | `docs/` | Arquitectura, operacion, seguridad, fuentes y checklist. |
+| Artefactos locales | `output/` | Reportes, previews y dry-runs no versionables. |
+| Workflows | `.github/workflows/` | Automatizacion controlada de refresco y publicacion. |
+
+## Scripts de captura
+
+La fuente activa principal es Empleos Publicos:
+
+```powershell
+python scripts/fetch_empleos_publicos.py
 ```
 
-## Scraper y fuentes
+Ese script captura oportunidades publicas, las normaliza y deja salidas locales
+que luego pueden validarse y convertirse a `public/data`.
 
-Cada fuente debe contar con un adaptador responsable de obtener convocatorias desde
-una URL base institucional. Las primeras categorías previstas son Empleos Públicos,
-SLEP, ministerios, municipalidades y otras páginas institucionales.
+Las fuentes municipales y territoriales se manejan como adaptadores aislados. Por
+ejemplo:
 
-Los adaptadores no deben inventar URLs de convocatorias ni publicar información que
-no haya sido obtenida desde una fuente verificable.
+```powershell
+python scripts/fetch_curico.py
+python scripts/fetch_molina.py
+python scripts/fetch_romeral.py
+python scripts/fetch_rauco.py
+python scripts/fetch_rancagua.py
+python scripts/fetch_priority_sources.py
+```
 
-Empleos Públicos es la única fuente real activa. Una fuente futura se agrega mediante
-un PR propio: primero contrato y evidencia manual, después adaptador y validaciones,
-y finalmente publicación controlada. No se deben mezclar varios portales reales en
-un mismo PR porque dificulta rastrear duplicados, errores de parser y regresiones.
+Esos flujos escriben en `output/sources/` y no publican automaticamente en el
+dashboard. Rancagua conserva un dry-run auditable, pero puede aportar registros
+municipales controlados cuando pasan las reglas documentadas de promocion.
 
-## Normalización
+## Normalizacion
 
-Los resultados de distintas fuentes deben transformarse al contrato común descrito
-en `docs/source-contract.md` antes de entrar al scoring. La normalización permite
-comparar, deduplicar y publicar convocatorias aunque sus sitios de origen tengan
-estructuras diferentes. La salida pública final sigue el contrato de
-`docs/data-contract.md`.
+Cada adaptador transforma la fuente original a un contrato comun antes de cualquier
+publicacion. La normalizacion busca que oportunidades de portales distintos tengan
+campos comparables: identificador, titulo, institucion, region, comuna, fechas,
+URL oficial, evidencia, estado y metadatos de revision.
 
-## Scoring y coincidencia
+Referencias:
 
-El motor de scoring comparará cada oportunidad con el perfil configurable:
+- `docs/source-contract.md`
+- `docs/data-contract.md`
 
-- Regiones, comunas o zonas priorizadas.
-- Áreas laborales.
-- Palabras clave positivas y negativas.
-- Cercanía de la fecha de cierre.
-- Fuentes priorizadas.
+## Validacion
 
-El resultado será un puntaje entre 0 y 100 y un nivel: `Alta`, `Media`, `Baja` o
-`Descartada`.
+El proyecto usa validadores especificos y un check compuesto de release.
 
-## Almacenamiento
+Validaciones principales:
 
-El almacenamiento local conservará convocatorias normalizadas, historial de cambios
-y marcas de alerta emitida. Antes de publicar una base real se deberán definir
-retención, respaldo y tratamiento de datos sensibles.
+```powershell
+python scripts/check_real_data.py
+python scripts/check_public_data.py
+python scripts/check_pages_ready.py
+python scripts/check_source_candidates.py
+python scripts/check_sources_config.py
+python scripts/check_source_sanitization.py
+python scripts/check_priority_sources.py
+python scripts/check_telegram_preview.py
+python scripts/check_release_ready.py
+```
 
-## Generación JSON
+El comando final obligatorio es:
 
-El generador real exporta archivos públicos sin secretos:
+```powershell
+python scripts/check_release_ready.py
+```
 
-- `public/data/opportunities.json`
-- `public/data/summary.json`
-- `public/data/last_run.json`
-- `public/data/history.json`
+Resultado esperado:
 
-Estos archivos serán la interfaz entre el proceso de actualización y el dashboard.
+```text
+OK: release MVP listo
+```
 
-## Dashboard público
+## Sanitizacion
 
-`public/` contiene una página estática compatible con GitHub Pages. Carga JSON mediante
-JavaScript, muestra métricas, filtros y tarjetas, y diferencia explícitamente los
-datos demo de futuras convocatorias reales.
+La sanitizacion comun reduce el riesgo de publicar datos personales. Los checks
+buscan RUN/RUT visibles, variantes parcialmente enmascaradas, nombres de documentos
+riesgosos y tablas extensas de resultados.
 
-## Alertas por correo
+La regla operativa es conservadora: si una fuente contiene nominas, resultados,
+RUN/RUT, anexos sensibles o evidencia insuficiente de vigencia, queda local como
+dry-run o `manual_review`.
 
-Las alertas futuras podrán activarse por nueva oportunidad, alta coincidencia,
-actualización y proximidad de cierre. Las credenciales SMTP vivirán solo en variables
-locales o GitHub Secrets.
+## Scoring
 
-## Calendario
+El scoring asigna prioridad a las oportunidades publicables segun coincidencia con
+criterios del perfil, territorio, palabras clave, fuente, vigencia y proximidad de
+cierre. El dashboard muestra niveles operativos para facilitar revision, no para
+garantizar postulaciones ni decisiones automaticas.
 
-Una fase posterior generará archivos `.ics` con recordatorios de cierre. El calendario
-será un artefacto derivado; no deberá contener más información de la necesaria.
+Referencias:
 
-## GitHub Pages
+- `docs/scoring.md`
+- `docs/scoring-calibration.md`
 
-GitHub Pages podrá servir exclusivamente el contenido estático de `public/`. La
-publicación debe ocurrir solo cuando los JSON estén revisados y no contengan datos
-sensibles.
+## public/data
+
+`public/data/` es la frontera publica del sistema. Los archivos principales son:
+
+- `opportunities.json`
+- `summary.json`
+- `last_run.json`
+- `history.json`
+- `telegram_alert_state.json`
+
+Solo deben entrar oportunidades publicas normalizadas, sanitizadas y trazables. Los
+dry-runs, reportes locales, logs, datos crudos y secretos permanecen fuera de esta
+carpeta.
+
+## Dashboard estatico
+
+`public/index.html` y sus assets consumen los JSON publicos mediante JavaScript. El
+dashboard puede levantarse localmente con:
+
+```powershell
+python -m http.server 8000 --directory public
+```
+
+Tambien puede publicarse como sitio estatico mediante GitHub Pages cuando el release
+check pasa y los datos fueron revisados.
 
 ## GitHub Actions
 
-La automatización futura podrá ejecutar validaciones, actualizar JSON públicos y
-publicar el sitio. Las credenciales deberán configurarse mediante GitHub Secrets y
-los workflows tendrán permisos mínimos.
+La automatizacion de GitHub Actions refresca datos reales bajo controles definidos:
+
+- instala dependencias desde `requirements.txt`;
+- ejecuta captura y validaciones;
+- regenera JSON publicos solo cuando corresponde;
+- no versiona `output/`, `.env`, logs ni secretos;
+- mantiene Telegram real desactivado salvo activacion explicita.
+
+Referencia: `docs/github-actions-refresh.md`.
+
+## Telegram preview y envio controlado
+
+Telegram funciona en tres capas:
+
+1. Preview local de mensajes candidatos.
+2. Simulacion de politica automatica sin envio real.
+3. Envio real solo con secrets, variables y ejecucion explicita.
+
+Comandos de control:
+
+```powershell
+python scripts/build_telegram_preview.py
+python scripts/check_telegram_preview.py
+python scripts/simulate_telegram_policy.py
+```
+
+Por defecto no hay envio automatico. Telegram real requiere `TELEGRAM_BOT_TOKEN`,
+`TELEGRAM_CHAT_ID` y una decision operacional deliberada.
+
+## Fuentes locales dry-run
+
+Las fuentes locales o territoriales no promovidas permanecen en `output/sources/`.
+Su objetivo es diagnosticar estructura, trazabilidad, vigencia y riesgo de
+privacidad sin contaminar `public/data`.
+
+Una fuente solo puede pasar a publicacion controlada si:
+
+- usa fuente institucional publica;
+- tiene URL oficial y evidencia trazable;
+- entrega estado y fecha de cierre confiables;
+- no contiene datos personales visibles;
+- pasa validaciones de contrato y sanitizacion;
+- no duplica indebidamente Empleos Publicos;
+- queda documentada con decision explicita de promocion.
+
+Estado detallado: `docs/local-sources-status.md`.

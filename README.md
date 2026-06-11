@@ -106,6 +106,9 @@ Componentes principales:
 Documentacion tecnica relacionada:
 
 - [docs/architecture.md](docs/architecture.md)
+- [docs/data-flow.md](docs/data-flow.md)
+- [docs/operations.md](docs/operations.md)
+- [docs/testing.md](docs/testing.md)
 - [docs/data-contract.md](docs/data-contract.md)
 - [docs/source-contract.md](docs/source-contract.md)
 
@@ -219,6 +222,7 @@ usa preview, validacion y simulacion de politica.
 Referencias:
 
 - [docs/security.md](docs/security.md)
+- [docs/security-review.md](docs/security-review.md)
 - [docs/telegram-alerts.md](docs/telegram-alerts.md)
 
 ## Estado actual del proyecto
@@ -264,6 +268,7 @@ Referencias:
 
 - [docs/roadmap.md](docs/roadmap.md)
 - [docs/sources-roadmap.md](docs/sources-roadmap.md)
+- [docs/local-sources-status.md](docs/local-sources-status.md)
 - [docs/service-model.md](docs/service-model.md)
 
 ## Valor profesional / portafolio
