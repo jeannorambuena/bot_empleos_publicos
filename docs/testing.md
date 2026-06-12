@@ -21,6 +21,21 @@ validan y que riesgo cubren.
 | Resultado esperado | `OK: todas las pruebas integrales pasaron` |
 | Riesgos cubiertos | Cerrar un lote con una validacion parcial, omitir checks importantes o depender de una secuencia manual incompleta. |
 
+## Pruebas deterministas P0
+
+| Item | Detalle |
+| --- | --- |
+| Comando | `python -m pytest` |
+| Valida | Gate de integridad de captura, promocion segura del normalizado, bloqueo de capturas parciales y politica Telegram con estado temporal. |
+| Resultado esperado | Todas las pruebas pasan sin Internet ni llamadas reales a Telegram. |
+| Riesgos cubiertos | Sobrescribir el ultimo dataset normalizado valido con captura parcial, modificar `public/data` o estado Telegram ante fallos, y romper limite diario o anti-duplicados. |
+
+Si `pytest` no esta instalado, usar dependencias de desarrollo:
+
+```powershell
+python -m pip install -r requirements-dev.txt
+```
+
 ## Datos publicos
 
 | Item | Detalle |
@@ -47,6 +62,11 @@ validan y que riesgo cubren.
 | Valida | Captura real local, estructura normalizada y campos necesarios antes de regenerar `public/data`. |
 | Resultado esperado | Mensaje `OK` del validador. |
 | Riesgos cubiertos | Capturas rotas por cambios HTML, datos incompletos o fuente no trazable. |
+
+La captura principal se promueve solo si `scripts/fetch_empleos_publicos.py` aprueba
+el gate de integridad: todas las URLs regionales obligatorias responden, tienen
+diagnostico valido, no declaran errores, no retornan cero resultados y la caida de
+volumen no supera el umbral configurado.
 
 ## Catalogo de fuentes
 
@@ -123,6 +143,7 @@ Un cambio puede considerarse listo para presentacion local cuando:
 
 - `python scripts/check_release_ready.py` pasa;
 - `python scripts/check_all.py` pasa cuando se requiere QA integral;
+- `python -m pytest` pasa para cambios de integridad, workflow o Telegram;
 - el dashboard local carga;
 - no hay cambios no autorizados en `public/data`, workflows, scripts o secrets;
 - las fuentes no promovidas siguen fuera del dashboard;

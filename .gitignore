@@ -23,6 +23,7 @@ ep_state.json
 output/
 data/raw/
 data/normalized/
+data/staging/
 data/feedback/
 
 # Opcional (si no quieres versionar .ini personales)

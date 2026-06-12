@@ -194,6 +194,12 @@ Para ejecutar la suite local integral:
 python scripts/check_all.py
 ```
 
+Para cambios de integridad de captura o Telegram:
+
+```powershell
+python -m pytest
+```
+
 Checklist completa: [docs/release-checklist.md](docs/release-checklist.md).
 
 ## Automatizacion con GitHub Actions
@@ -227,6 +233,10 @@ Reglas centrales:
 
 Telegram real requiere secretos y activacion explicita. Por defecto el proyecto
 usa preview, validacion y simulacion de politica.
+
+La cadena de refresco bloquea capturas parciales de Empleos Publicos antes de
+regenerar `public/data` o evaluar Telegram real. El ultimo normalizado valido se
+preserva si falla una URL regional, parsing, diagnostico, volumen o completitud.
 
 Referencias:
 

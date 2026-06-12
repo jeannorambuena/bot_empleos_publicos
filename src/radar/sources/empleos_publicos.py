@@ -31,6 +31,7 @@ POSTULATION_DATES = re.compile(
 class SourceDiagnostic:
     source: str
     url: str
+    region: str
     detected: int = 0
     added_unique: int = 0
     error: str | None = None
@@ -45,8 +46,8 @@ def fetch_empleos_publicos(
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
     """Fetch regional listing pages and return semi-normalized opportunities.
 
-    Network errors are recorded per URL so one unavailable page does not abort the
-    complete local capture.
+    Network errors are recorded per URL. The caller decides whether a partial
+    capture can be promoted.
     """
     http = session or requests.Session()
     headers = {"User-Agent": USER_AGENT, "Accept": "text/html,application/xhtml+xml"}
@@ -56,14 +57,15 @@ def fetch_empleos_publicos(
     seen = set()
 
     for url in urls:
-        diagnostic = SourceDiagnostic(source=SOURCE_NAME, url=url)
+        region = _region_from_url(url)
+        diagnostic = SourceDiagnostic(source=SOURCE_NAME, url=url, region=region)
         try:
             response = http.get(url, headers=headers, timeout=timeout)
             response.raise_for_status()
             parsed = parse_listing_html(
                 response.text,
                 listing_url=url,
-                region=_region_from_url(url),
+                region=region,
                 detected_at=capture_time,
             )
             diagnostic.detected = len(parsed)

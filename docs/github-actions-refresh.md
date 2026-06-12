@@ -31,16 +31,29 @@ check_public_data.py
 check_history.py
 analyze_real_scoring.py
 check_pages_ready.py
+check_source_candidates.py
+check_sources_config.py
+check_source_sanitization.py
 build_alert_preview.py
 check_alert_preview.py
 build_calendar_preview.py
 check_calendar_preview.py
 build_telegram_preview.py
 check_telegram_preview.py
-check_sources_config.py
 check_review_panel.py
 build_weekly_report.py
 ```
+
+`fetch_empleos_publicos.py` contiene el gate P0 de integridad. Escribe primero en
+`data/staging/empleos_publicos/` y solo promueve
+`data/normalized/empleos_publicos_normalized.json` si todas las URLs regionales
+obligatorias tienen diagnostico valido, no hay errores, no hay regiones sin
+resultados y la caida de volumen queda dentro del umbral configurado. El valor
+predeterminado bloquea caidas superiores a 35% contra el ultimo normalizado valido.
+
+Si ese gate falla, el job se detiene antes de `build_public_data_from_real.py`. Por
+lo tanto no se modifica `public/data`, no se evalua Telegram real, no se actualiza
+`telegram_alert_state.json`, no se crea commit automatico y no se despacha Pages.
 
 Si los datos públicos cambian, el workflow crea un commit automático en `main`.
 Ese commit modifica `public/**`. Como GitHub no inicia otros workflows a partir de

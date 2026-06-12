@@ -80,6 +80,12 @@ Por defecto:
 - la politica automatica no envia si `TELEGRAM_AUTO_ENABLED` no vale exactamente
   `true`.
 
+La evaluacion y envio real de Telegram deben ocurrir solo despues de aprobar el
+gate de integridad de captura, la generacion de `public/data` y los checks publicos
+de seguridad. Una captura parcial no debe marcar IDs como enviados, cambiar
+`last_auto_sent_at`, agregar `sent_opportunity_ids` ni generar alertas con datos
+incompletos.
+
 ## Fuentes locales y privacidad
 
 Las fuentes municipales y SLEP pueden contener documentos con datos personales,
@@ -94,6 +100,7 @@ con cierre futuro, mientras las ofertas externas OMIL permanecen fuera de
 ## Checklist antes de publicar
 
 - Ejecutar `python scripts/check_release_ready.py`.
+- Ejecutar `python scripts/check_all.py` y, para cambios P0, `python -m pytest`.
 - Confirmar que no hay `.env` ni secrets en `git status --short`.
 - Confirmar que `public/data` solo cambio si el lote autoriza refresco de datos.
 - Revisar que Telegram este en preview/controlado.

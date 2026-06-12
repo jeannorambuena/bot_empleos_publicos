@@ -40,8 +40,18 @@ python scripts/build_public_data_from_real.py
 python scripts/check_release_ready.py
 ```
 
-Este flujo puede modificar `public/data/` porque regenera los datos publicos. Solo
-debe ejecutarse cuando el objetivo de trabajo autoriza refrescar datos.
+`fetch_empleos_publicos.py` escribe primero una captura staging bajo
+`data/staging/empleos_publicos/`. Solo reemplaza el normalizado vigente si aprueba
+completitud regional, ausencia de errores, estructura, cantidad minima y control de
+caida de volumen.
+
+El umbral predeterminado bloquea una disminucion superior a 35% respecto del ultimo
+normalizado valido. Puede ajustarse con `RADAR_CAPTURE_MAX_DROP_RATIO` sin depender
+de una cifra rigida de oportunidades actuales.
+
+Este flujo puede modificar `public/data/` porque regenera los datos publicos, pero
+solo despues de que la captura principal fue promovida como integra. Debe ejecutarse
+cuando el objetivo de trabajo autoriza refrescar datos.
 
 ## Validar release
 
@@ -124,6 +134,15 @@ Referencia: `docs/github-actions-refresh.md`.
 7. Corregir de forma acotada y volver a ejecutar el check especifico.
 8. Ejecutar nuevamente `python scripts/check_release_ready.py`.
 
+Si falla el gate de integridad de Empleos Publicos:
+
+- revisar `data/staging/empleos_publicos/`;
+- no ejecutar `build_public_data_from_real.py`;
+- preservar `data/normalized/empleos_publicos_normalized.json`;
+- no evaluar Telegram real;
+- no modificar `public/data/telegram_alert_state.json`;
+- volver a capturar cuando la fuente publica este estable.
+
 ## Comandos de diagnostico utiles
 
 ```powershell
@@ -132,6 +151,7 @@ git rev-parse --short HEAD
 python scripts/check_public_data.py
 python scripts/check_pages_ready.py
 python scripts/check_source_sanitization.py
+python -m pytest
 ```
 
 Antes de cerrar un lote documental, confirmar que solo cambiaron archivos de
