@@ -53,6 +53,12 @@ Este flujo puede modificar `public/data/` porque regenera los datos publicos, pe
 solo despues de que la captura principal fue promovida como integra. Debe ejecutarse
 cuando el objetivo de trabajo autoriza refrescar datos.
 
+La generacion publica usa publicacion transaccional logica: prepara
+`opportunities.json`, `summary.json`, `last_run.json`, `history.json` y
+`manifest.json` en staging; valida JSON, conteos, checksums e identidad de
+generacion; respalda el bundle vigente; promueve `manifest.json` al final; y hace
+rollback del conjunto si falla un reemplazo intermedio.
+
 ## Validar release
 
 Comando unico de cierre:
@@ -149,6 +155,7 @@ Si falla el gate de integridad de Empleos Publicos:
 git status --short --branch
 git rev-parse --short HEAD
 python scripts/check_public_data.py
+python scripts/check_public_bundle.py
 python scripts/check_pages_ready.py
 python scripts/check_source_sanitization.py
 python -m pytest

@@ -86,6 +86,12 @@ de seguridad. Una captura parcial no debe marcar IDs como enviados, cambiar
 `last_auto_sent_at`, agregar `sent_opportunity_ids` ni generar alertas con datos
 incompletos.
 
+El estado Telegram se escribe con archivo temporal y reemplazo atomico individual.
+Si Telegram confirma el envio y luego falla la persistencia, commit o push, existe
+riesgo residual porque Telegram es un efecto externo fuera de la transaccion local.
+El sistema registra `last_alert_batch_id` y conserva anti-duplicados por IDs para
+reducir duplicados previsibles, sin prometer exactly-once.
+
 ## Fuentes locales y privacidad
 
 Las fuentes municipales y SLEP pueden contener documentos con datos personales,
@@ -101,6 +107,7 @@ con cierre futuro, mientras las ofertas externas OMIL permanecen fuera de
 
 - Ejecutar `python scripts/check_release_ready.py`.
 - Ejecutar `python scripts/check_all.py` y, para cambios P0, `python -m pytest`.
+- Ejecutar `python scripts/check_public_bundle.py`.
 - Confirmar que no hay `.env` ni secrets en `git status --short`.
 - Confirmar que `public/data` solo cambio si el lote autoriza refresco de datos.
 - Revisar que Telegram este en preview/controlado.

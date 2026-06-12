@@ -27,10 +27,10 @@ from radar.history import (
     build_history_summary,
     load_history,
     update_history,
-    write_history,
 )
 from radar.normalize_opportunity import score_real_opportunity
-from radar.public_data import summarize_opportunities, write_public_data
+from radar.public_data import summarize_opportunities
+from radar.atomic_publication import build_public_bundle, publish_public_bundle
 from radar.sources.rancagua import SOURCE_ID as RANCAGUA_SOURCE_ID
 from radar.sources.rancagua import fetch_rancagua_candidates
 from radar.sources.sanitization import has_sensitive_personal_data, sanitize_opportunity
@@ -151,8 +151,14 @@ def main() -> int:
         "status": "real-local",
         "message": "Datos reales locales generados correctamente",
     }
-    write_public_data(PUBLIC_DATA, scored, summary, last_run)
-    write_history(HISTORY_PATH, history)
+    bundle = build_public_bundle(
+        scored,
+        summary,
+        last_run,
+        history,
+        generated_at=generated_at,
+    )
+    publish_public_bundle(PUBLIC_DATA, bundle)
 
     levels = {"Alta": 0, "Media": 0, "Baja": 0, "Descartada": 0}
     for item in scored:

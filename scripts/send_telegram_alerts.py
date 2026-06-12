@@ -3,6 +3,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 import sys
@@ -21,6 +22,12 @@ from build_telegram_preview import (
     is_profile_relevant,
     load_public_data,
 )
+
+SRC = ROOT / "src"
+if str(SRC) not in sys.path:
+    sys.path.insert(0, str(SRC))
+
+from radar.atomic_io import atomic_write_json
 
 
 PREVIEW = ROOT / "output" / "telegram" / "telegram-preview.txt"
@@ -48,8 +55,12 @@ def _load_state(path: Path) -> dict[str, Any]:
 
 
 def _write_state(path: Path, state: dict[str, Any]) -> None:
-    path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(state, ensure_ascii=False, indent=2) + "\n", encoding="utf-8")
+    atomic_write_json(path, state)
+
+
+def _alert_batch_id(opportunities: list[dict[str, Any]], generated_at: str) -> str:
+    raw = "|".join([generated_at, *sorted(str(item.get("id") or "") for item in opportunities)])
+    return hashlib.sha256(raw.encode("utf-8")).hexdigest()[:20]
 
 
 def _same_day(timestamp: Any, now: datetime) -> bool:
@@ -222,6 +233,7 @@ def _run_automatic(*, send: bool, state_path: Path) -> int:
         return 1
 
     generated_at = last_run.get("finished_at") or now.isoformat(timespec="seconds")
+    alert_batch_id = _alert_batch_id(included, str(generated_at))
     result = _send_message(_automatic_message(included, reason, str(generated_at)), token, chat_id)
 
     if result:
@@ -236,6 +248,7 @@ def _run_automatic(*, send: bool, state_path: Path) -> int:
             ),
             "last_mode": "automatic",
             "last_reason": reason,
+            "last_alert_batch_id": alert_batch_id,
         }
     )
 

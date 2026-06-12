@@ -19,6 +19,7 @@ from radar.sources.sanitization import sensitive_personal_data_reasons
 
 CHECKS = (
     "check_public_data.py",
+    "check_public_bundle.py",
     "check_pages_ready.py",
     "check_source_candidates.py",
     "check_sources_config.py",

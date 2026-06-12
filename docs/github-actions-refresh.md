@@ -29,6 +29,7 @@ check_feedback_config.py
 build_public_data_from_real.py
 check_public_data.py
 check_history.py
+check_public_bundle.py
 analyze_real_scoring.py
 check_pages_ready.py
 check_source_candidates.py
@@ -54,6 +55,12 @@ predeterminado bloquea caidas superiores a 35% contra el ultimo normalizado vali
 Si ese gate falla, el job se detiene antes de `build_public_data_from_real.py`. Por
 lo tanto no se modifica `public/data`, no se evalua Telegram real, no se actualiza
 `telegram_alert_state.json`, no se crea commit automatico y no se despacha Pages.
+
+La escritura de `public/data` se publica como bundle logico. El build prepara todos
+los payloads en staging, valida `manifest.json`, checksums y conteos, respalda el
+bundle anterior y promueve `manifest.json` al final. Si falla una promocion
+intermedia, el rollback restaura los archivos anteriores y el workflow se detiene
+antes de Telegram, commit o Pages.
 
 Si los datos públicos cambian, el workflow crea un commit automático en `main`.
 Ese commit modifica `public/**`. Como GitHub no inicia otros workflows a partir de
@@ -107,6 +114,11 @@ GitHub Actions y equipos Windows sin dependencias adicionales.
 
 El reporte semanal se genera dentro del runner como preview local en `output/`. No se
 versiona, publica ni envía automáticamente.
+
+Telegram real no forma parte de la transaccion del bundle publico. Si Telegram
+confirma envio y luego falla commit o push del estado, el riesgo residual se gestiona
+con `last_alert_batch_id`, IDs enviados, limite diario y revision de logs. No se
+promete exactly-once.
 
 ## Limitaciones
 

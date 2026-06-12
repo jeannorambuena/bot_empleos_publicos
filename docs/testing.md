@@ -36,6 +36,24 @@ Si `pytest` no esta instalado, usar dependencias de desarrollo:
 python -m pip install -r requirements-dev.txt
 ```
 
+## Pruebas deterministas P1
+
+| Item | Detalle |
+| --- | --- |
+| Comando | `python -m pytest` |
+| Valida | Publicacion transaccional del bundle publico, manifest, checksums, rollback, deteccion de mezcla de generaciones y escritura atomica de estado Telegram. |
+| Resultado esperado | Todas las pruebas pasan sin tocar `public/data` real ni llamar a Telegram. |
+| Riesgos cubiertos | Mezcla de archivos de ejecuciones distintas, archivos truncados, manifest inconsistente, estado Telegram corrupto o actualizado tras error externo. |
+
+## Bundle publico
+
+| Item | Detalle |
+| --- | --- |
+| Comando | `python scripts/check_public_bundle.py` |
+| Valida | Manifest cuando existe, checksums, conteos, JSON parseable, archivos obligatorios y coherencia basica de historial. |
+| Resultado esperado | `OK: bundle publico valido (...)` |
+| Riesgos cubiertos | Publicar un conjunto incompleto o mezclar archivos de distintas generaciones. |
+
 ## Datos publicos
 
 | Item | Detalle |
@@ -144,6 +162,7 @@ Un cambio puede considerarse listo para presentacion local cuando:
 - `python scripts/check_release_ready.py` pasa;
 - `python scripts/check_all.py` pasa cuando se requiere QA integral;
 - `python -m pytest` pasa para cambios de integridad, workflow o Telegram;
+- `python scripts/check_public_bundle.py` pasa;
 - el dashboard local carga;
 - no hay cambios no autorizados en `public/data`, workflows, scripts o secrets;
 - las fuentes no promovidas siguen fuera del dashboard;

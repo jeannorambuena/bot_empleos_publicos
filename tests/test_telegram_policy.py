@@ -57,6 +57,7 @@ def test_automatic_state_updates_only_after_success(monkeypatch, tmp_path) -> No
     state = json.loads(state_path.read_text(encoding="utf-8"))
     assert state["last_mode"] == "automatic"
     assert state["sent_opportunity_ids"] == ["new"]
+    assert state["last_alert_batch_id"]
     assert calls
 
 
@@ -75,4 +76,27 @@ def test_automatic_state_not_updated_after_telegram_error(monkeypatch, tmp_path)
     monkeypatch.setattr(telegram, "_send_message", lambda message, token, chat_id: 1)
 
     assert telegram._run_automatic(send=True, state_path=state_path) == 1
+    assert state_path.read_text(encoding="utf-8") == original
+
+
+def test_telegram_state_atomic_write_success(tmp_path) -> None:
+    state_path = tmp_path / "telegram_state.json"
+    telegram._write_state(state_path, {"sent_opportunity_ids": ["one"]})
+    state = json.loads(state_path.read_text(encoding="utf-8"))
+    assert state == {"sent_opportunity_ids": ["one"]}
+
+
+def test_telegram_state_write_failure_preserves_previous(monkeypatch, tmp_path) -> None:
+    state_path = tmp_path / "telegram_state.json"
+    original = '{"sent_opportunity_ids": ["old"]}\n'
+    state_path.write_text(original, encoding="utf-8")
+
+    def failing_atomic(path, state):
+        raise OSError("cannot write temp")
+
+    monkeypatch.setattr(telegram, "atomic_write_json", failing_atomic)
+    try:
+        telegram._write_state(state_path, {"sent_opportunity_ids": ["new"]})
+    except OSError:
+        pass
     assert state_path.read_text(encoding="utf-8") == original

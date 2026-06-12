@@ -14,6 +14,7 @@ CHECKS = (
     "check_real_data.py",
     "check_public_data.py",
     "check_history.py",
+    "check_public_bundle.py",
     "check_pages_ready.py",
     "check_sources_config.py",
     "check_source_candidates.py",

@@ -200,6 +200,12 @@ Para cambios de integridad de captura o Telegram:
 python -m pytest
 ```
 
+El bundle publico se valida con:
+
+```powershell
+python scripts/check_public_bundle.py
+```
+
 Checklist completa: [docs/release-checklist.md](docs/release-checklist.md).
 
 ## Automatizacion con GitHub Actions
@@ -237,6 +243,9 @@ usa preview, validacion y simulacion de politica.
 La cadena de refresco bloquea capturas parciales de Empleos Publicos antes de
 regenerar `public/data` o evaluar Telegram real. El ultimo normalizado valido se
 preserva si falla una URL regional, parsing, diagnostico, volumen o completitud.
+La publicacion de `public/data` usa staging, manifest, checksums, backup y rollback
+para evitar mezclar archivos de distintas ejecuciones. Telegram real sigue siendo
+un efecto externo con garantia best-effort idempotent, no exactly-once.
 
 Referencias:
 

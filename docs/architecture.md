@@ -120,11 +120,20 @@ Referencias:
 - `summary.json`
 - `last_run.json`
 - `history.json`
+- `manifest.json`
 - `telegram_alert_state.json`
 
 Solo deben entrar oportunidades publicas normalizadas, sanitizadas y trazables. Los
 dry-runs, reportes locales, logs, datos crudos y secretos permanecen fuera de esta
 carpeta.
+
+La publicacion de `opportunities`, `summary`, `last_run` e `history` se trata como
+un bundle transaccional logico: se prepara en staging, se valida, se respalda el
+bundle anterior, se promueve con reemplazos individuales y se usa rollback si falla
+un reemplazo intermedio. `manifest.json` se promueve al final e incluye
+`generation_id`, `generated_at`, conteos y checksums SHA-256. Esto no promete
+atomicidad multiarchivo absoluta del sistema operativo; ofrece consistencia practica
+con staging, manifest, backup y rollback.
 
 ## Dashboard estatico
 
@@ -168,6 +177,11 @@ python scripts/simulate_telegram_policy.py
 
 Por defecto no hay envio automatico. Telegram real requiere `TELEGRAM_BOT_TOKEN`,
 `TELEGRAM_CHAT_ID` y una decision operacional deliberada.
+
+`telegram_alert_state.json` tiene escritura atomica individual. Telegram es un
+efecto externo: si Telegram confirma envio y luego falla commit o push, no existe
+transaccion distribuida. El sistema registra `last_alert_batch_id` para trazabilidad
+y mantiene una garantia best-effort idempotent con anti-duplicados y limite diario.
 
 ## Fuentes locales dry-run
 
