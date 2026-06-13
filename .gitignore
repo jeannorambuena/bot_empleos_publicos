@@ -28,3 +28,6 @@ data/feedback/
 
 # Opcional (si no quieres versionar .ini personales)
 *.ini
+
+# Entorno local Python
+.venv/
